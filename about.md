@@ -1,6 +1,6 @@
 ---
 layout: page_with_comment
-title: About
+title: 关于
 permalink: /about/
 comments: false
 author_footer: false

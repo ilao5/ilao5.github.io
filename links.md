@@ -1,6 +1,6 @@
 ---
 layout: page_with_comment
-title: Links
+title: 链接
 permalink: /links/
 comments: false
 author_footer: false
