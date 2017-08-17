@@ -1,4 +1,5 @@
 ---
+layout:     post
 title: Git+Jekyll=Blog
 date: 2017-08-16 18:30:00
 summary:    Pixyll is a simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
