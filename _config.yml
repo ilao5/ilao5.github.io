@@ -1,14 +1,14 @@
 # Site settings
-title: 生命不止，折腾不息
-author: MonsterSlayer
+title: Lao5's World
+author: Lao5
 author_avatar: /images/header.jpg
-email: alias@domain.tld
-description: 生命不止，折腾不息 
+email: i3town@163.com
+description: 为了记忆而记录 
 url: "https://ilao5.github.io"
 domain: "http://ilao5.cn"
 github_username: ilao5
 github_site_repo: ilao5/ilao5.github.io
-disqus: monsterslayer
+#disqus: monsterslayer
 
 
 # Build settings
