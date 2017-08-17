@@ -1,12 +1,11 @@
 ---
-layout:post
-title: Git+Jekyll=Blog
+layout: post
+title: Git+Jekyll架设Blog
 date: 2017-08-16
 categories:
 - Web
 - Jekyll
-- Markdown
-tags:[web,jekyll]
+tags: [web,jekyll]
 status: publish
 type: post
 published: true
