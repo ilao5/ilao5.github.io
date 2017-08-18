@@ -1,6 +1,6 @@
 ---
 layout: page_with_comment
-title: 工程
+title: 链接
 permalink: /links/
 comments: false
 author_footer: false
