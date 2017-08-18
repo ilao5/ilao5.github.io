@@ -11,5 +11,4 @@ published: true
 ---
 
 
-![转海][id]
-[id]: http://ilao5.github.io/contents/20141001/assets/img/cover.jpg
+![image](http://ilao5.github.io/contents/20141001/assets/img/cover.jpg)
