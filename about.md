@@ -8,7 +8,7 @@ author_footer: false
 
 ## 个人信息
 
-dongyado, 1990, ShenZhen
+lao5, Wuhan
 
 喜欢两句话：
 
