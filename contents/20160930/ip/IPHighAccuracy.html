@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	高精度IP定位-openGPS.cn
+</title>
+    <style type="text/css">
+        html, body, form, div, ul, li, iframe, dd, dl, dt, p, img {
+            border: medium none;
+            margin: 0;
+            padding: 0;
+        }
+        html, body, form{
+            border: medium none;
+            margin: 0;
+            padding: 0;
+            font-size:14px;
+            font-weight:bolder; 
+            width:100%;
+            height: 100%;
+            overflow: hidden;
+            color: #294c96;
+            font-family: "微软雅黑";
+        }
+        #header 
+        {
+            text-align:left; 
+            color:White; 
+            font-weight:bolder; 
+            background-color: #0075c7;
+            min-height: 50px;
+            width: 100%;
+            font-size:26px;
+            vertical-align:middle;
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none;  /*webkit浏览器*/
+            -ms-user-select: none;   /*IE10*/
+            -khtml-user-select: none; /*早期浏览器*/
+        }
+         #content 
+         {
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            min-width:200px;
+            min-height:200px;
+            position: absolute;
+            top:40px;
+            bottom: 20px;
+            left:0px;
+            right:0px;
+        }
+        #footer {
+            background-color: #0075c7;
+            height: 20px;
+            font-size:14px; 
+            color:#fff;
+            position: absolute;
+            width: 100%;
+            text-align:center;
+            bottom:0px;
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none;  /*webkit浏览器*/
+            -ms-user-select: none;   /*IE10*/
+            -khtml-user-select: none; /*早期浏览器*/
+        }
+        #container
+        {
+            width: 100%;
+	        height: 100%;
+	        overflow: hidden;
+	        margin:0;
+            z-index:-10;
+            font-size:12px;
+            color: black;            
+        }
+         .clearfix {
+            display: block;
+        }
+        .clearfix::after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script src="opengps.cn.js" type="text/javascript"></script>
+    <script src="jquery-1.11.0.min.js" type="text/javascript"></script>
+    <!-- 百度地图基础类库 -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=QCIr4l4KI3O8NjqmIHborXnm0XyZt0Dt&s=1"></script>
+</head>
+<body>
+    <form method="post" action="./IPHighAccuracy.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODg4MTI0NDE5ZGTmoph+vX61OFn37EIETQK5R/QpNFaeK+gWGtxWmdgrZw==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="35C5D0D7" />
+</div>
+    <div id="header">
+        <span style=" margin-left:14px;">高精度IP定位 - openGPS.cn</span>
+    </div>
+    <div id="content" class="clearfix">
+        <div id="container"></div>
+        <div id="divTool" style=" width:190px; min-height:50px; position:absolute; left:68px; top:1px; color:#111111; padding:2px;background-color: #dddddd; border:2px solid #000000;">
+            <input id="txtIP" type="text" style=" width:106px;" value="58.19.78.198" />
+            <input id="btnSearch" type="button" value="查询IP" onclick="searchIP();" /><br />
+            <input id="cbxKeepOld" type="checkbox" />保留原有标记<br />
+            <a href="IPSearch.aspx" target="_blank">切换到传统IP定位</a><br />
+            <a href="http://blog.csdn.net/cuitang1031/article/details/52787772" target="_blank">精度误差说明</a><br />
+            <a href="###" onclick="clearMap();">清空地图标注</a><br />
+            <span id="msg" style=" font-weight :normal; color:Red;"></span>
+        </div>
+    </div>
+    <div id="footer">www.opengps.cn - 高精度IP定位</div>
+    
+    <!-- 百度地图基础js -->
+    <script type="text/javascript">
+        //先定位到青岛，在使用IP定位纠正
+        var map = new BMap.Map("container", { enableMapClick: false });
+
+        map.enableDragging();
+        map.enableInertialDragging();
+        map.enableScrollWheelZoom();
+        map.enablePinchToZoom();
+        map.enableContinuousZoom();
+        map.enableKeyboard();
+        map.addControl(new BMap.NavigationControl({ offset: new BMap.Size(10, 10) })); //缩放比例控件
+        map.addControl(new BMap.MapTypeControl({ mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP] })); //图层控件：2D图，卫星图
+        map.addControl(new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT })); //比例尺
+        map.addControl(new BMap.GeolocationControl()); //定位到当前
+        //map.addControl(new BMap.CityListControl({ anchor: BMAP_ANCHOR_TOP_LEFT, offset: new BMap.Size(66, 20) })); //城市控件
+
+        var zoom = 15;
+        var pointCenter = new BMap.Point(120.434206, 36.14606);
+        //map.centerAndZoom(point, zoom);
+
+        function searchIP() {
+            var ip = $("#txtIP").val();
+            if (ip.length == 0) {
+                alert("请输入要查询的IP");
+                return;
+            }
+            if (!$("#cbxKeepOld").get(0).checked) {
+                clearMap();
+            }
+            $.post("IPLocHiAcc.ashx",
+                { ip: ip, random: Math.random() }
+                , function (data) {
+                    if (!data.success) {
+                        $("#msg").html(data.msg);
+                    } else {
+                        if (data.values[0].resultCode == "161") {
+                            var ip = data.values[0].ip;
+                            var service = data.values[0].service;
+                            var lng = data.values[0].lng;
+                            var lat = data.values[0].lat;
+                            var radius = data.values[0].radius;
+                            var confidence = data.values[0].confidence;
+                            var address = data.values[0].address;
+                            var loc_Time = data.values[0].loc_Time;
+                            $("#msg").html("【" + ip + "】定位成功");
+                            var point = new BMap.Point(lng, lat);
+                            var marker = new BMap.Marker(point);
+                            var tips = "IP：" + ip + "<br />"
+                            //+ "服务商：" + service + "<br />"
+                                + "可信度：" + confidence + "<br />"
+                                + "精度：" + radius + "米<br />"
+                                + "地址：" + address;
+                            var label = new BMap.Label(tips, { offset: new BMap.Size(20, -10) });
+                            label.setStyle({
+                                color: "blue",
+                                borderColor: "bule", //"white",
+                                paddingLeft: "10px",
+                                lineHeight: "16px",
+                                fontFamily: "微软雅黑",
+                                fontWeight:"bolder",
+                                filter: "alpha(opacity=70)",
+                                opacity: "0.7"
+                            });
+                            marker.setLabel(label);
+                            map.addOverlay(marker);
+                            
+                            if (parseInt(radius) >= 10000) {
+                                map.zoomTo(7); //缩放功能已经包含中心坐标逻辑
+                            } else if (10000 > parseInt(radius) && parseInt(radius) > 1000) {
+                                map.zoomTo(10);
+                            } else {
+
+                            }
+                            setTimeout(function(){
+                                map.panTo(point);
+                            },200);
+
+                            var circle = new BMap.Circle(point, radius, {fillOpacity:0.5, strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0.8 }); //创建圆
+                            map.addOverlay(circle);
+
+                        } else {
+                            $("#msg").html("查询不到数据！错误码：" + data.values[0].resultCode);
+                        }
+                    }
+                }
+            )
+        }
+        $(document).ready(function () {
+            map.centerAndZoom(pointCenter, zoom);
+            setTimeout(function () {
+                searchIP();
+            },200);
+        })
+        function clearMap() {
+            map.clearOverlays();
+            $("#msg").html("");
+        }
+    </script>
+
+    <!-- 插件：51la -->
+    
+    <!-- 插件：百度站长推送 -->
+    <script type="text/javascript">
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <!-- 插件：百度tongji -->
+	<script type="text/javascript">
+	    var _hmt = _hmt || [];
+	    (function () {
+	        var hm = document.createElement("script");
+	        hm.src = "//hm.baidu.com/hm.js?f26b48fbcea97496b4e2ca3d64b9e295";
+	        var s = document.getElementsByTagName("script")[0];
+	        s.parentNode.insertBefore(hm, s);
+	    })();
+	</script>
+    </form>
+</body>
+</html>
