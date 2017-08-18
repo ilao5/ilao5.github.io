@@ -13,5 +13,9 @@ published: true
 
 ![image](https://ilao5.github.io/contents/20141001/assets/img/cover.jpg)
 
-[pagelink][] 专题页
-[pagelink]: https://ilao5.github.io/contents/20141001/20141001.html
+
+* [专题页][] - 》》
+
+
+
+[专题页]: http://ilao5.github.io/contents/20141001/20141001.html
