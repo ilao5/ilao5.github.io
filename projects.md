@@ -1,6 +1,6 @@
 ---
 layout: page_with_comment
-title: DoIt
+title: 制作
 permalink: /projects/
 comments: false
 author_footer: false
