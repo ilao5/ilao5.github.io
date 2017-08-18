@@ -1,7 +1,7 @@
 ---
 layout: page_with_comment
 title: 工程
-permalink: /projects/
+permalink: /links/
 comments: false
 author_footer: false
 ---
