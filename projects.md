@@ -18,4 +18,5 @@ author_footer: false
 
 [map20160930]: http://ilao5.github.io/contents/20160930/20160930.html
 [转海]: http://ilao5.github.io/contents/20141001/20141001.html
+[狮子的魂]: http://my.oschina.net/jcseg/blog/
 [forsigner]: http://forsigner.com/
