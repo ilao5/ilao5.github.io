@@ -108,8 +108,9 @@ published: true
 
 ##### 变量定义方式：
 ```
-[var百度][] - 变量方式
-[var百度]: http://www.baidu.com
+[定义][] - 变量方式
+[定义]: http://www.baidu.com
 ```
-[var百度][] - 变量方式
-[var百度]: http://www.baidu.com
+[定义][] - 变量方式
+
+[定义]: http://www.baidu.com
