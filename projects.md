@@ -11,12 +11,10 @@ author_footer: false
 ## 旅行
 * [转海][] - 2014国庆环青海湖骑行
 
-## 博客 
-* [狮子的魂][] - 领我入坑的大神，标杆
-* [forsigner][] - 设计出身，node.js粉丝，前端牛人
+
+
 
 
 [map20160930]: http://ilao5.github.io/contents/20160930/20160930.html
 [转海]: http://ilao5.github.io/contents/20141001/20141001.html
-[狮子的魂]: http://my.oschina.net/jcseg/blog/
-[forsigner]: http://forsigner.com/
+
