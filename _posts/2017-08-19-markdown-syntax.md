@@ -12,8 +12,6 @@ published: true
 
 ## 1.标题
 
-书写方式: ##、### + 空格 + 内容
-
 ```
 # H1
 ## H2
@@ -85,8 +83,6 @@ published: true
 	
 ## 3.分割线
 
-书写方式: ***、---等
-
 ```
 * * *
 ***
@@ -103,10 +99,17 @@ published: true
 
 ## 4.超链接
 
-书写方式: [title](href)
-
+##### 简单方式：
 ```
 [百度](http://www.baidu.com)
 ```
 
 [百度](http://www.baidu.com)
+
+##### 变量定义方式：
+```
+[var百度][] - 变量方式
+[var百度]: http://www.baidu.com
+```
+[var百度][] - 变量方式
+[var百度]: http://www.baidu.com
