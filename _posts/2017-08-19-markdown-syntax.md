@@ -85,7 +85,7 @@ published: true
 	
 ## 3.分割线
 
-书写方式: ***、---、\n +> + \n
+书写方式: ***、---等
 
 ```
 * * *
@@ -100,3 +100,13 @@ published: true
 *****
 - - -
 ---
+
+## 4.超链接
+
+书写方式: [title](href)
+
+```
+[百度](http://www.baidu.com)
+```
+
+[百度](http://www.baidu.com)
