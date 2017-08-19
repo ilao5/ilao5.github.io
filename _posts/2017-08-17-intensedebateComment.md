@@ -4,7 +4,7 @@ title: Github+Jekyll添加评论支持
 date: 2017-08-17
 categories:
 - 一作
-tags: [web, jekyll]
+tags: [jekyll]
 status: publish
 type: post
 published: true

@@ -4,7 +4,7 @@ title: Git+Jekyll架设Blog
 date: 2017-08-16
 categories:
 - 一作
-tags: [web,jekyll]
+tags: [jekyll]
 status: publish
 type: post
 published: true
