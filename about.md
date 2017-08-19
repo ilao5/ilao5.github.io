@@ -8,6 +8,10 @@ author_footer: false
 
 ## 个人信息
 
-lao5, Wuhan
+[Lao5][], Wuhan
 
+
+
+
+[Lao5]: https://ilao5.github.io/contents/intro/intro.html
 
