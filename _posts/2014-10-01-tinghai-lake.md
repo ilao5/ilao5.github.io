@@ -14,7 +14,7 @@ published: true
 ![image](https://ilao5.github.io/contents/20141001/assets/img/cover.jpg)
 
 
-* [专题页][] - 》》
+* 2014年环青海湖骑行,制作了[专题页][],以表纪念。
 
 
 
