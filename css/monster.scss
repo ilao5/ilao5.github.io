@@ -338,6 +338,12 @@ em {
     margin: 30px auto;
 }
 
+blockquote {
+  padding: 0 15px;
+  color: #666;
+  border-left: 4px solid #ddd;
+}
+
 @media all and (max-width: 1000px) {
     #site-title img {
         width: 25px;
