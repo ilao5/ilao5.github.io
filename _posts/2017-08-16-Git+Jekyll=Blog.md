@@ -3,8 +3,7 @@ layout: post
 title: Git+Jekyll架设Blog
 date: 2017-08-16
 categories:
-- Web
-- Jekyll
+- 一作
 tags: [web,jekyll]
 status: publish
 type: post

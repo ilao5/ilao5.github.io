@@ -3,8 +3,8 @@ layout: post
 title: 环青海湖骑行
 date: 2014-10-01
 categories:
-- Travel
-tags: [travel]
+- 一行
+tags: [cycling]
 status: publish
 type: post
 published: true

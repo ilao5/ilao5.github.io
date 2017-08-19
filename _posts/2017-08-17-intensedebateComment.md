@@ -3,8 +3,7 @@ layout: post
 title: Github+Jekyll添加评论支持
 date: 2017-08-17
 categories:
-- Web
-- Jekyll
+- 一作
 tags: [web, jekyll]
 status: publish
 type: post
