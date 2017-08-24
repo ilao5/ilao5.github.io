@@ -25,6 +25,9 @@ sass:
 permalink: pretty
 excerpt_separator: "<!-- more -->"
 
+#enable intensedebate_comments or not
+intensedebate_comments: true
+
 # path
 categories_path: categories/
 tags_path: tags/
