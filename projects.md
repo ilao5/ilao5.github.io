@@ -11,10 +11,11 @@ author_footer: false
 ## 旅行
 * [转海][] - 2014国庆环青海湖骑行
 
-
+## G.O.T
+* [GameOfThrones][] - 我大权游
 
 
 
 [map20160930]: http://ilao5.github.io/contents/20160930/20160930.html
 [转海]: http://ilao5.github.io/contents/20141001/20141001.html
-
+[GameOfThrones]: http://www.ilao5.cn/contents/got/
