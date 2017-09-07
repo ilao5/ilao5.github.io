@@ -75,12 +75,12 @@ author:
 以下6个属性设置在容器上。
 
 ```
-* flex-direction
-* flex-wrap
-* flex-flow
-* justify-content
-* align-items
-* align-content
+■ flex-direction
+■ flex-wrap
+■ flex-flow
+● justify-content
+● align-items
+● align-content
 ```
 
 #### 3.1 flex-direction属性
