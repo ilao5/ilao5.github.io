@@ -344,6 +344,7 @@ blockquote {
   border-left: 4px solid #ddd;
 }
 
+
 @media all and (max-width: 1000px) {
     #site-title img {
         width: 25px;
@@ -389,4 +390,4 @@ blockquote {
 
 @import "base";
 @import "syntax-highlighting";
-
+@import "rouge-monkai";
