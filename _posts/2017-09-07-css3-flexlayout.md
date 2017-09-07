@@ -27,8 +27,14 @@ author:
 Flex 布局将成为未来布局的首选方案。本文介绍它的语法，下一篇文章给出常见布局的 Flex 写法。网友 [JailBreak](http://vgee.cn/) 为本文的所有示例制作了[Demo](http://static.vgee.cn/static/index.html)，也可以参考。
 以下内容主要参考了下面两篇文章：[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 和 [A Visual Guide to CSS3 Flexbox Properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)。
 
+## 一、Flex 布局是什么？
 
+Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
 
+任何一个容器都可以指定为 Flex 布局。
 
-
-
+```
+.box{
+  display: flex;
+}
+```
