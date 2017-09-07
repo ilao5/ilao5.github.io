@@ -19,7 +19,7 @@ author:
 
 　　网页布局（layout）是 CSS 的一个重点应用。
 
-![](/images/flexlayout/bg2015071001.gif)
+![img1](/images/flexlayout/bg2015071001.gif)
 
 　　布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。
 
@@ -62,30 +62,47 @@ author:
 ---
 　　采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称"项目"。
 
-![](/images/flexlayout/bg2015071004.png)
+![img2](/images/flexlayout/bg2015071004.png)
 
 　　容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。
 
 　　项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。
 
 
+## 三、容器的属性
+---
 
+以下6个属性设置在容器上。
 
+```
+* flex-direction
+* flex-wrap
+* flex-flow
+* justify-content
+* align-items
+* align-content
+```
 
+#### 3.1 flex-direction属性
 
+flex-direction属性决定主轴的方向（即项目的排列方向）。
 
+```
+.box {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
 
+![img3](/images/flexlayout/bg2015071005.png)
 
+它可能有4个值。
 
-
-
-
-
-
-
-
-
-
+```
+* row（默认值）：主轴为水平方向，起点在左端。
+* row-reverse：主轴为水平方向，起点在右端。
+* column：主轴为垂直方向，起点在上沿。
+* column-reverse：主轴为垂直方向，起点在下沿。
+```
 
 
 
