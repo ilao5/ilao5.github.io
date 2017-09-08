@@ -13,9 +13,6 @@ published: true
 
 ![image](/images/teacher.jpg)
 
-
-* 2017年教师节献礼
-
-
+* [查看地址][] - 2017年教师节献礼
 
 [查看地址]: http://www.ilao5.cn/contents/20170910/
