@@ -4,7 +4,7 @@ title: 老师必须听我的
 date: 2017-09-10
 categories:
 - 一业
-tags: [cycling]
+tags: [teacher]
 status: publish
 type: post
 published: true
