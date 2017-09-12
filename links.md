@@ -15,6 +15,10 @@ author_footer: false
 * [有道][] - 云笔记
 * [RGB][] - 在线取色
 * [CodePen][] - 在线html,js,css
+* [纽扣词云][] - 中文在线词云工具
+* [创造狮导航][] - 一个面向设计的导航
+* [中国历史地图][] - 哈佛大学世界地图平台
+* [知酷笔记][] - Markdown的云笔记
 
 ## 设计
 * [全球酷站中心][] - 酷站汇总
@@ -33,6 +37,10 @@ author_footer: false
 [有道]: https://note.youdao.com/web/
 [RGB]: http://link.fobshanghai.com/rgbcolor.htm
 [CodePen]: https://codepen.io/
+[纽扣词云]: http://cloud.niucodata.com/
+[创造狮导航]: http://chuangzaoshi.com/
+[中国历史地图]: http://worldmap.harvard.edu/maps/chinaX
+[知酷笔记]: https://zhiku.io/
 
 [全球酷站中心]: https://www.iiiimg.com/
 
