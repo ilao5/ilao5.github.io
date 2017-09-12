@@ -19,6 +19,7 @@ author_footer: false
 * [创造狮导航][] - 一个面向设计的导航
 * [中国历史地图][] - 哈佛大学世界地图平台
 * [知酷笔记][] - Markdown的云笔记
+* [墨刀][] - 在线原型设计
 
 ## 设计
 * [全球酷站中心][] - 酷站汇总
@@ -41,6 +42,7 @@ author_footer: false
 [创造狮导航]: http://chuangzaoshi.com/
 [中国历史地图]: http://worldmap.harvard.edu/maps/chinaX
 [知酷笔记]: https://zhiku.io/
+[墨刀]: https://modao.cc
 
 [全球酷站中心]: https://www.iiiimg.com/
 
