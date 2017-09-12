@@ -20,6 +20,9 @@ author_footer: false
 * [中国历史地图][] - 哈佛大学世界地图平台
 * [知酷笔记][] - Markdown的云笔记
 * [墨刀][] - 在线原型设计
+* [ChartMage][] - 基于文本的时序图&流程图的快速画图工具
+* [壹伴][] - 公众号小插件
+* [柴都定位][] - 根据IP实时定位
 
 ## 设计
 * [全球酷站中心][] - 酷站汇总
@@ -28,6 +31,7 @@ author_footer: false
 * [Codrops][] - Web功能，视觉效果1
 * [CodyHouse][] - Web功能，视觉效果2
 * [Bootstrap][] - Bootstrap 菜鸟教程
+* [MarkdownIME][] - 网页嵌入马克档
 
 
 
@@ -43,9 +47,13 @@ author_footer: false
 [中国历史地图]: http://worldmap.harvard.edu/maps/chinaX
 [知酷笔记]: https://zhiku.io/
 [墨刀]: https://modao.cc
+[ChartMage]: http://chartmage.com/intro.html
+[壹伴]: https://yiban.io/
+[柴都定位]: https://www.chaidu.com/App/Web/IP/
 
 [全球酷站中心]: https://www.iiiimg.com/
 
 [Codrops]: https://tympanus.net/codrops/
 [CodyHouse]: https://codyhouse.co/library/
 [Bootstrap]: http://www.runoob.com/bootstrap/bootstrap-tutorial.html
+[MarkdownIME]: https://laobubu.net/MarkdownIME/index.zh.html
