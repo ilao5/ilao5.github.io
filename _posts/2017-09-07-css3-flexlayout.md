@@ -83,6 +83,8 @@ author:
 ■ align-content
 ```
 
+![flex-css](/images/flexlayout/css-flex.jpg)
+
 #### 3.1 flex-direction属性
 ---
 
