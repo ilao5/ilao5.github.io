@@ -10,28 +10,24 @@ type: post
 published: true
 ---
 
-
-
 ## Day01 （10月3日）
 ---
 
-###### 宜城—阳日镇 
+###### 宜城—阳日镇
 
-###### ![1](/images/travel/1.jpg)
-
-
+![1](/images/travel/1.jpg)
 
 ###### 里程：180KM 预计驾车3小时
 
 ###### 安排:   中午前后到达阳日镇，选位置搭帐篷，周边探险。
 
 
-
 ## Day02（10月4日）
 ---
+
 ###### 阳日镇—红坪镇
 
-###### ![2](/images/travel/2.jpg)
+![2](/images/travel/2.jpg)
 
 ###### 里程：65KM 预计驾车2小时
 
@@ -40,10 +36,9 @@ published: true
 ![2_1](/images/travel/2_1.jpg)
 
 
-
-
 ## Day03（10月5日）
 ---
+
 ###### 红坪镇—木鱼镇
 
 ![3](/images/travel/3.jpg)
