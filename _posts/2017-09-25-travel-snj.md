@@ -11,9 +11,9 @@ published: true
 ---
 
 
-### 
 
 ## Day01 （10月3日）
+---
 
 ###### 宜城—阳日镇 
 
@@ -28,7 +28,7 @@ published: true
 
 
 ## Day02（10月4日）
-
+---
 ###### 阳日镇—红坪镇
 
 ###### ![2](/images/travel/2.jpg)
@@ -43,7 +43,7 @@ published: true
 
 
 ## Day03（10月5日）
-
+---
 ###### 红坪镇—木鱼镇
 
 ![3](/images/travel/3.jpg)
