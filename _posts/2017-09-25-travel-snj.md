@@ -18,7 +18,6 @@ published: true
 ![1](/images/travel/1.jpg)
 
 ###### 里程：180KM 预计驾车3小时
-
 ###### 安排:   中午前后到达阳日镇，选位置搭帐篷，周边探险。
 
 
@@ -30,7 +29,6 @@ published: true
 ![2](/images/travel/2.jpg)
 
 ###### 里程：65KM 预计驾车2小时
-
 ###### 安排：红坪画廊谷，神农架机场，阴峪河。
 
 ![2_1](/images/travel/2_1.jpg)
@@ -44,5 +42,4 @@ published: true
 ![3](/images/travel/3.jpg)
 
 ###### 里程：55KM 预计驾车2小时
-
 ###### 安排：选择性周边景点。
