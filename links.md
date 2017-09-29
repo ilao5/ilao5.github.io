@@ -23,6 +23,7 @@ author_footer: false
 * [ChartMage][] - 基于文本的时序图&流程图的快速画图工具
 * [壹伴][] - 公众号小插件
 * [柴都定位][] - 根据IP实时定位
+* [UZER.ME][] - 云端超级应用空间
 
 ## 设计
 * [全球酷站中心][] - 酷站汇总
@@ -50,6 +51,7 @@ author_footer: false
 [ChartMage]: http://chartmage.com/intro.html
 [壹伴]: https://yiban.io/
 [柴都定位]: https://www.chaidu.com/App/Web/IP/
+[UZER.ME]: https://uzer.me/
 
 [全球酷站中心]: https://www.iiiimg.com/
 
