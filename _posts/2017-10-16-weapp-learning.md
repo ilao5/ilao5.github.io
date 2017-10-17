@@ -14,7 +14,7 @@ author:
   display_name: lao5
 ---
 
-##官方
+## 官方
 * [Official_1][] - 组件文档
 
 
