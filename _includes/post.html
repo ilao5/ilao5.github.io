@@ -17,6 +17,11 @@
 
 <div class="article-meta">
     {{ page.date | date: "%Y-%m-%d" }}
+    
+</div>
+<!--
+<div class="article-meta">
+    {{ page.date | date: "%Y-%m-%d" }}
     {% if page.categories %} • category: 
         {% for category in page.categories %}
         <a href="/{{site.categories_path}}/#{{category}}-ref" >{{ category|capitalize }}</a>
@@ -28,6 +33,7 @@
         {% endfor%}
     {% endif %}
 </div>
+-->
 
 {% if content and page.author_footer != false %}
 
