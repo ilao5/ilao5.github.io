@@ -1,29 +1,100 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" >
 
-<div>
+<head>
+  <meta charset="UTF-8">
+  <title>iLao5</title>
+  
 
-  	{% assign index = true %}
-  	{% assign year  = '' %}
+	<link rel="stylesheet" href="landingpage/css/style.css">
+	<link rel='stylesheet' href='landingpage/css/xjvpgo.css'>
 
-    <ul class="article-list">
-    {% for post in site.posts %}
-		{% assign page = post %}
-        {% assign date = page.date | date: "%Y" %}
+	<link rel="stylesheet" href="landingpage/css/style2.css">
+	
+	
+  
+</head>
 
-        {% if year != date %}
-            {% assign year = date %}
-            <li class="list-year"> {{year}} </li>
-        {% endif%}
+<body>
 
-        <li class="list-item">
-            <span class="list-date" >{{ page.date | date: "%Y-%m-%d" }}</span> <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
 
-  <!--<p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a> or browse <a href="https://github.com/{{ site.github_site_repo }}" target="_blank">source on GitHub</a>.</p>-->
-  <!--<p class="rss-subscribe">Copyright ilao 2017</p>-->
 
+
+  
+
+
+
+<div class="landscape">
+	<h1>iLao5</h1>
+	<hr />
+	<p>
+	  兴趣使然的创作者们
+	</p>
 </div>
+
+
+
+  
+  <div class="footer">
+	<div class="contain">
+	  <div class="col">
+		<h1>更多</h1>
+		<ul>
+		  <li><a href="indexblog.html" target="blank">博客</a></li>
+		  <li>案例</li>
+		  <li>实验室</li>
+		  <li>BIGDAY</li>
+		  <li>导航</li>
+		</ul>
+	  </div>
+	  <div class="col">
+		<h1>创作者们</h1>
+		<ul>
+		  <li>老崔</li>
+		  <li>老东</li>
+		  <li>老刘</li>
+		</ul>
+	  </div>
+	  <div class="col">
+		<h1>联系</h1>
+		<ul>
+		  <li>邮箱</li>
+		  <li>电话</li>
+		</ul>
+	  </div>
+	  <div class="col">
+		<h1>支持</h1>
+		<ul>
+		  <li>阿里云</li>
+		  <li>Github</li>
+		</ul>
+	  </div>
+	  <div class="col social">
+		<h1>社交</h1>
+		<ul>
+		  <li><img src="landingpage/img/wb.png" width="32" style="width: 32px;"></li>
+		  <li><img src="landingpage/img/wx.png" width="32" style="width: 32px;"></li>
+		  <li><img src="landingpage/img/qq.png" width="32" style="width: 32px;"></li>
+		</ul>
+	  </div>
+	  <div class="clearfix"></div>
+	 </div>
+	</div>
+	
+	
+	<div class="bottom-bar">
+      All Rights Reserved © 2016 ilao5.cn
+	</div>
+  
+  
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>-->
+	<script  src="landingpage/js/jquery-1.11.0.min.js"></script>
+	<script  src="landingpage/js/index.js"></script>
+    
+
+
+
+
+</body>
+
+</html>
