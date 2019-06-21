@@ -1,6 +1,6 @@
 <div class="navi">
     {% assign current = page.title %}
-    <a href="/" class="page-link{% if current == null %} active{% endif %}">Blog</a>
+    <a href="/" class="page-link{% if current == null %} active{% endif %}">主页</a>
     {% for page in site.pages %}
     {% if page.title and page.permalink != "/404.html" %}
       <a class="page-link{% if current == page.title %} active{% endif %}"
