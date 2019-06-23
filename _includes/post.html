@@ -43,6 +43,14 @@
 
 {% endif %}
 
+
+{% if content and page.author_statistics != false %}
+
+    {% include statistics.html %}
+
+{% endif %}
+
+
 {% if site.intensedebate_comments %}
       {% include intensedebate-comments.html %}  
 {% endif %}
