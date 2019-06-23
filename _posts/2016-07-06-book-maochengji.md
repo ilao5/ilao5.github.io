@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 >假如磨烦等于作事，猫人是最会作事的。

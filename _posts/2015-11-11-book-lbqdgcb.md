@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 >她不诚实得无可救药。她无法忍受落人下风，我想正是由于这种争强好胜的性格，导致她从小就学会了各种骗人的花招，这样她才能对世人摆出冷漠而倨傲的笑脸，却还能满足她那漂亮结实的身体的各种需求。

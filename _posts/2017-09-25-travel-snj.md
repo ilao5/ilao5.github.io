@@ -8,6 +8,8 @@ tags: [travel]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 ## Day01 （10月3日）

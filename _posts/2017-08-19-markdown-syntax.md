@@ -8,6 +8,8 @@ tags: [markdown]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 ## 1.标题

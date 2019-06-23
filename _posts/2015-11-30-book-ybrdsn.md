@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 >以我的感受，大人物的经历不管多悲惨，也不能和小百姓们相比。大人物的冤枉总容易解决，小百姓们如果没碰对了人，碰巧了机会，也许很难得到命运的晴天，就像梁山的李老师正好碰上我读过使他冤屈的故事那样。我想，至今天下还有多少人含冤未平，无论是活着还是已经死去的？ 

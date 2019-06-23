@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 >永远是这样的。一群你看不上，也看不上你的粗人一再挫折你的希望，最后他们和你的希望一起成为泡影流沙。在经历四年败战和几千公里的溃退之后，我的连队终于全军尽墨。

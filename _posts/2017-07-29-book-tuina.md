@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 >二十年前，这地方还是农田呢。但这年头的城市不是别的，是一个热衷于隆胸的女人，贪大，就喜欢把不是乳房的地方变成乳房。这一“隆”，好了，真的值钱了，水稻田和棉花地也成二类地区了。

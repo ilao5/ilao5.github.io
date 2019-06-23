@@ -8,6 +8,8 @@ tags: [cycling]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 ---
 
 
@@ -18,4 +20,4 @@ published: true
 
 
 
-[专题页]: http://ilao5.github.io/contents/20141001/20141001.html
+[专题页]: https://www.ilao5.cn/lab/contents/20141001/20141001.html

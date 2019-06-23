@@ -8,6 +8,8 @@ tags: [jekyll]
 status: publish
 type: post
 published: true
+author_copyright: true
+author_footer: false
 author:
   login: lao5
   email: i3town@163.com

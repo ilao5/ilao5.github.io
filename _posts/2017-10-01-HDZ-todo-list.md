@@ -8,6 +8,8 @@ tags: [大事件]
 status: publish
 type: post
 published: false
+author_copyright: false
+author_footer: false
 author:
   login: lao5
   email: i3town@163.com
