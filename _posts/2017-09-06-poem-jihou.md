@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 季候
+title: ℗季候
 date: 2017-09-06
 categories:
 - 一字

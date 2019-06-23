@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 错误
+title: ℗错误
 date: 2013-10-28
 categories:
 - 一字
