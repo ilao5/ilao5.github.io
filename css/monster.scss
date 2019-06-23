@@ -139,16 +139,7 @@ em {
         }
     }
 
-    .stat{
-        position:fixed; 
-        right:0; 
-        bottom:0; 
-        width:100px; 
-        height:40px; 
-        background-color:green;
-        font-size:14px;
-        color:#ddd;
-    }
+    
 }
 
 
@@ -296,6 +287,17 @@ em {
             margin-start:0;
             margin-end:0;
         }
+    }
+
+    .stat{
+        position:fixed; 
+        right:0; 
+        bottom:0; 
+        width:100px; 
+        height:40px; 
+        background-color:green;
+        font-size:14px;
+        color:#ddd;
     }
 } 
 
