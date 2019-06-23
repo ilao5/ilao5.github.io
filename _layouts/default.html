@@ -19,6 +19,14 @@
 
     </div>
 
+
+    {% if content and page.author_copyright != false %}
+
+      {% include copyright.html %}
+
+    {% endif %}
+
+
     {% include statistics.html %}
 
     </body>

@@ -338,9 +338,14 @@ em {
 }
 
 .rss-subscribe {
-    /**line-height: 36px;
+    line-height: 36px;
     margin: 30px auto;
-    text-align:center;*/
+    text-align:center;
+}
+
+
+
+.copyright {
 
     position: absolute;
     height: 20px;
@@ -350,8 +355,9 @@ em {
 
     font-size:16px;
     color:#ccc;
-
 }
+
+
 
 blockquote {
   padding: 0 15px;
