@@ -289,16 +289,7 @@ em {
         }
     }
 
-    .stat{
-        position:fixed; 
-        right:0; 
-        bottom:0; 
-        width:100px; 
-        height:40px; 
-        background-color:green;
-        font-size:14px;
-        color:#ddd;
-    }
+
 } 
 
 .cnzz {
@@ -355,6 +346,17 @@ blockquote {
   padding: 0 15px;
   color: #666;
   border-left: 4px solid #ddd;
+}
+
+.stat{
+    position:fixed; 
+    right:0; 
+    bottom:0; 
+    width:80px; 
+    height:40px; 
+    background-color:green;
+    font-size:14px;
+    color:#ddd;
 }
 
 
