@@ -8,6 +8,8 @@ tags: [book]
 status: publish
 type: post
 published: true
+author_copyright: false
+author_footer: false
 ---
 
 >《嫌疑人X的献身》
