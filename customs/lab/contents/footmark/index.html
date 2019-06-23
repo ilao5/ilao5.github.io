@@ -1,0 +1,102 @@
+﻿<meta  charset="UTF-8">
+<script type="text/javascript"  src="jquery-1.9.1.min.js"></script>
+<script  type="text/javascript" src="jquery-jvectormap-2.0.3.min.js"></script>
+<script  type="text/javascript"  src="jquery-jvectormap-cn-merc-cn.js"></script>
+<link  href="jquery-jvectormap-2.0.3.css"  rel="stylesheet"  media="screen">
+<div id="map" style="background-color:#22a2c3">
+
+</div>
+<script>
+var markdata = [
+	{latLng: [30.581179,114.307251], name: '武汉'},
+	{latLng: [30.660261,113.83605], name: '汉川'},
+	{latLng: [31.713921,112.271453], name: '宜城'},
+	{latLng: [31.725348,110.507864,], name: '神农架'},
+	
+	{latLng: [31.231592,121.475830], name: '上海'},
+	
+	{latLng: [30.254443,120.169355], name: '杭州'},
+	{latLng: [32.184911,119.432373], name: '镇江'},
+	{latLng: [30.950989,120.899947], name: '西塘'},
+	
+	{latLng: [24.469854,118.092473], name: '厦门'},
+	
+    {latLng: [22.251888,113.556102], name: '珠海'},
+	{latLng: [22.547,114.085947], name: '深圳'},
+	{latLng: [22.278931,114.169922], name: '香港'},
+	{latLng: [22.192468,113.56645], name: '澳门'},
+	{latLng: [23.136388,113.266057], name: '广州'},
+    {latLng: [23.722102,113.023443], name: '清远'},
+	{latLng: [22.253895,112.800088], name: '台山'},
+	{latLng: [21.943133,113.738063], name: '万山岛'},
+	
+    {latLng: [28.226970,112.933960], name: '长沙'},
+	
+    
+    {latLng: [21.24613,110.400391], name: '湛江'},
+    {latLng: [20.274344,110.203482], name: '徐闻'},
+    {latLng: [20.031098,110.35066], name: '海口'},
+    
+	
+	{latLng: [36.864043,100.251371], name: '青海湖'},
+
+];
+	
+	
+var regdata = {
+    //"CN-41": 1, // 河南
+    "CN-31": 0, // 上海
+	"CN-32": 0, // 江苏
+    "CN-33": 1, // 浙江
+    "CN-44": 0, // 广东
+    //"CN-61": 1, // 陕西
+    "CN-63": 1, // 青海
+	//"CN-62": 1, // 甘肃
+	//"CN-64": 1, // 宁夏
+	//"CN-34": 0, // 安徽
+    "CN-43": 0, // 湖南
+	//"CN-45": 0, // 广西
+	"CN-42": 0, // 湖北
+	"CN-46": 1, // 海南
+    //"CN-22": 1, // 吉林
+    //"CN-23": 1, // 黑龙江
+    //"CN-54": 1, // 西藏
+    //"CN-18": 1  // 台湾
+	//"CN-11": 0, // 北京
+    //"CN-13": 1, // 河北
+    //"CN-14": 0, // 山西
+    "CN-35": 1, // 福建
+	//"CN-51": 0, // 四川
+    //"CN-53": 0, // 云南
+	//"CN-15": 0, // 内蒙古
+	//"CN-50": 0, // 重庆
+	//"CN-52": 0, // 贵州
+	//"CN-21": 0, // 辽宁
+};
+$('#map').vectorMap({
+    map: 'cn_merc_en',
+    backgroundColor: 'transparent',
+    scaleColors: ['#C8EEFF', '#0071A4'],
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    //--- 标记
+    markerStyle: {
+        initial: {
+            fill: '#fd8888',
+            stroke: '#fff'
+        }
+    },
+    markers: markdata,
+    //--- 改变地区颜色
+    series: {
+        regions: [{
+            values: regdata,
+            //scale: ['#FFDD00','#87CEEB'],
+            scale: ['#e5e5e5'],
+            normalizeFunction: 'polynomial'
+        }]
+    },
+  
+});
+</script>
