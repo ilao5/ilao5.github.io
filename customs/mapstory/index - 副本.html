@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8"><!-- 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> -->
+	<meta name="apple-mobile-web-app-title" content="地图上的事儿">
+	
+	<link href="bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	
+	<script src="jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=YWdGplhYjUGQ3GtpKNeuTM2S"></script>
+	
+	<style type="text/css">  
+ 
+		#container-map{height:540px;margin: 0px;} 
+		#container-side{height:540px;margin: 0px;overflow:hidden;} 
+
+	</style> 
+	
+</head>
+
+
+
+<body class="single p_indent">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	
+		<div class="container">
+		
+			<div class="navbar-header">
+			
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			
+				<a class="navbar-brand" href="#">地图上的事儿</a>
+			</div>
+			
+			
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					 <li class="active">西游记</li>
+					
+					<li class="active"><a href="#">西游记</a></li>
+					<li><a href="#">水浒传</a></li>
+					<li><a href="#">三国演义</a></li>
+					<li><a href="#">红楼梦</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">著名建筑 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">国内</li>
+							<li><a href="#">中华名楼</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">海外</li>
+							<li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	
+	</nav>
+	
+	
+	<div class="content-box">
+	
+	
+		<section class="container container-page">
+	<div class="pageside">
+	<div class="pagemenus">
+		<ul class="pagemenu" id="result">
+<li onclick="getmap(1);"><a href="javacript:void(0);">1.长安[西安]</a></li>
+<li onclick="getmap(2);"><a href="javacript:void(0);">2.秦州[天水]</a></li>
+<li onclick="getmap(3);"><a href="javacript:void(0);">3.兰州</a></li>
+<li onclick="getmap(4);"><a href="javacript:void(0);">4.凉州[武威]</a></li>
+<li onclick="getmap(5);"><a href="javacript:void(0);">5.甘州[张掖]</a></li>
+<li onclick="getmap(6);"><a href="javacript:void(0);">6.肃州[酒泉]</a></li>
+<li onclick="getmap(7);"><a href="javacript:void(0);">7.瓜州[安西]</a></li>
+<li onclick="getmap(8);"><a href="javacript:void(0);">8.玉门关</a></li>
+<li onclick="getmap(9);"><a href="javacript:void(0);">9.伊吾[哈密]</a></li>
+<li onclick="getmap(10);"><a href="javacript:void(0);">10.白力城[鄯善]</a></li>
+<li onclick="getmap(11);"><a href="javacript:void(0);">11.高昌[吐鲁番]</a></li>
+<li onclick="getmap(12);"><a href="javacript:void(0);">12.阿耆尼国[焉耆]</a></li>
+<li onclick="getmap(13);"><a href="javacript:void(0);">13.龟兹[库车]深</a></li>
+<li onclick="getmap(14);"><a href="javacript:void(0);">114.克孜尔[拜城]</a></li>
+<li onclick="getmap(15);"><a href="javacript:void(0);">15.跋逯迦国[阿克苏]</a></li>
+<li onclick="getmap(16);"><a href="javacript:void(0);">16.凌山[乌什]</a></li>
+<li onclick="getmap(17);"><a href="javacript:void(0);">17.大清池[伊塞克湖]</a></li>
+<li onclick="getmap(18);"><a href="javacript:void(0);">18.碎叶[比什凯克]</a></li>
+<li onclick="getmap(19);"><a href="javacript:void(0);">19.石头城[塔什干]</a></li>
+<li onclick="getmap(20);"><a href="javacript:void(0);">20.飒秣建国[撒马尔罕]</a></li>
+<li onclick="getmap(21);"><a href="javacript:void(0);">21.咀密国[铁尔梅兹]</a></li>
+<li onclick="getmap(22);"><a href="javacript:void(0);">22.活国[昆都士]</a></li>
+<li onclick="getmap(23);"><a href="javacript:void(0);">23.梵衍那国[巴米扬]</a></li>
+<li onclick="getmap(24);"><a href="javacript:void(0);">24.迦毕试国[喀布尔]</a></li>
+<li onclick="getmap(25);"><a href="javacript:void(0);">25.健陀罗国[白沙瓦城]</a></li>
+<li onclick="getmap(26);"><a href="javacript:void(0);">26.犍陀罗[塔克西拉]</a></li>
+<li onclick="getmap(27);"><a href="javacript:void(0);">27.拉合尔</a></li>
+<li onclick="getmap(28);"><a href="javacript:void(0);">28.兰毗尼[鲁潘德希]</a></li>
+<li onclick="getmap(29);"><a href="javacript:void(0);">29.瓦拉纳西</a></li>
+<li onclick="getmap(30);"><a href="javacript:void(0);">30.那烂陀</a></li>
+<li onclick="getmap(31);"><a href="javacript:void(0);">31.烂陀寺遗址</a></li>
+<li onclick="getmap(32);"><a href="javacript:void(0);">32.摩揭陀国[巴特那]</a></li>
+		</ul>
+	</div>
+</div>
+ <div class="content">
+   <header class="article-header">
+     <h1 class="article-title"><a href="/map/index.html">西游地图</a></h1>
+   </header>
+   <!--内容开始-->
+<article class="article-content">
+ <div id="container-map"></div>
+</article>
+</section>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- <div>
+	
+		<div class="row">
+		
+			<div class="col-sm-2">
+				<div class="panel panel-default">
+					<div class="panel-heading">面板标题</div>
+					<div class="panel-body">
+						<p>这是一个基本的面板内容。这是一个基本的面板内容。
+							这是一个基本的面板内容。这是一个基本的面板内容。
+							这是一个基本的面板内容。这是一个基本的面板内容。
+							这是一个基本的面板内容。这是一个基本的面板内容。
+						</p>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">免费域名注册</li>
+						<li class="list-group-item">免费 Window 空间托管</li>
+						<li class="list-group-item">图像的数量</li>
+						<li class="list-group-item">24*7 支持</li>
+						<li class="list-group-item">每年更新成本</li>
+						<li class="list-group-item">每年更新成本</li>
+						<li class="list-group-item">每年更新成本</li>
+						<li class="list-group-item">每年更新成本</li>
+						<li class="list-group-item">每年更新成本</li>
+						<li class="list-group-item">每年更新成本</li>
+					</ul>
+				</div>
+		
+			</div>
+		</div>
+	
+	
+	</div> -->
+	
+	
+	
+
+	
+	<script type="text/javascript"> 
+
+
+		var map = new BMap.Map('container-map');
+		var poi = new BMap.Point(114.29845,30.597183);
+		map.centerAndZoom(poi, 10);
+		map.enableScrollWheelZoom();
+
+
+		//var cr = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT});   //设置版权控件位置
+		//map.addControl(cr); //添加版权控件
+	
+	</script> 
+	
+	
+	
+</body>
+
+
+
+
+
+
+
+<!-- <body class="single p_indent">
+
+	<header class="header">
+		<div class="container">
+
+		</div>
+		
+	</header>
+	
+	
+	<section class="container container-page">
+		<div class="pageside">
+			<div class="pagemenus">
+			</div>
+		</div>
+		
+		
+		<div class="content">
+		
+		</div>
+		
+	</section>
+
+</body> -->

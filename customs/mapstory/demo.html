@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="四大名著">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="dns-prefetch" href="//apps.bdimg.com">
+<link rel="dns-prefetch" href="//hm.baidu.com">
+<link rel="dns-prefetch" href="//changyan.sohu.com">
+<link rel="dns-prefetch" href="//changyan.itc.cn">
+<link rel='stylesheet' href='http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='common.css' type='text/css' media='all'/>
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js'></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link rel="shortcut icon" href="http://www.sdmz.net/favicon.ico">
+<!--[if lt IE 9]><script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
+<script src="http://www.sdmz.net/e/data/js/ajax.js"></script>
+<script src="http://www.sdmz.net/skin/v2/js/content.js"></script>
+<title>玄奘西行地图|玄奘西天取经路线图|西游记地图|四大名著地图_四大名著</title>
+<meta name="keywords" content="西游地图，取经地图，玄奘西行">
+<meta name="description" content="西游地图，取经地图，玄奘西行">
+<meta property="og:type" content="news"/>
+<meta property="og:title" content="西游地图"/>
+<meta property="og:description" content="西游地图，取经地图，玄奘西行"/>
+<link  href="http://www.sdmz.net/skin/v2/leaflet/leaflet.css" rel="stylesheet" />
+<script src="http://www.sdmz.net/skin/v2/leaflet/leaflet.js"></script>
+<script src="http://www.sdmz.net/skin/v2/leaflet/leaflet.ChineseTmsProviders.js"></script>
+
+<style type="text/css">
+#tip1{
+			height:35px;
+			background-color:#fff;
+			padding-left:10px;
+			padding-right:10px;
+			border:1px solid #969696;
+			position:absolute;
+			font-size:12px;
+			right:10px;
+			top:20px;
+			border-radius:3px;
+			line-height:35px;
+}
+		
+#tip1 input[type='button']{
+			height:22px;
+			line-height:22px;
+			outline:none;
+			text-align:center;
+			padding-left:5px;
+			padding-right:5px;
+			color:#FFF;
+			background-color:#0D9BF2;
+			border:0;
+			border-radius: 3px;
+			margin-top:8px;
+			margin-left:5px;
+			cursor:pointer;
+			margin-right:10px;
+}
+
+#mappan {height:500px;}
+/*
+1px  solid
+*/
+
+#result {float:left;height:610px;overflow-y:scroll;}
+#result a{font-size:12px;}
+
+/*
+.Popupinfo{text-indent:10px}
+*/
+
+.Popupinfo p{text-indent:0}
+
+.Popupinfo p,.Popupinfo h3{margin:0;padding:0;}
+.Popupinfo a:link,.Popupinfo a:visited {color:#333;text-decoration:none}
+.Popupinfo a:hover,.Popupinfo a:active {color:#333;text-decoration:underline}
+
+</style>
+</head>
+<body class="single p_indent">
+<!-- <header class="header">
+<div class="container">
+<div class="logo"><a href="http://www.sdmz.net" title="四大名著"><img src="/skin/v2/images/logo.png">四大名著</a></div>
+<div class="brand">玄奘之路<br>公元七世纪，一个大唐的僧人踏上了丝绸之路，他要前往遥远的西方，寻求佛法。</div>
+<ul class="site-nav site-navbar">
+<li id="menu-item-1"><a href="http://www.sdmz.net/">首页</a>
+<li id="menu-item-2" class="current-menu-item"><a href="javacript:void(0);" title="西游地图">西游地图<i class="fa fa-angle-down"></i></a>
+<ul class="sub-menu"><li><a href="/map/index.html">西游地图</a></li><li><a href="/map/dtjy.html">大唐疆域</a></li><li><a href="/map/81nan.html">八十一难</a></li> 
+</ul>
+<li id="menu-item-3" class=""><a href="javacript:void(0);" title="红楼地图">红楼地图<i class="fa fa-angle-down"></i></a>
+<ul class="sub-menu"><li><a href="/map/hldgy.html">大观园图</a></li><li><a href="/map/txhj.html">太虚幻境</a></li><li><a href="/map/jfpm.html">贾府平面图</a></li><li><a href="/map/jfnk.html">贾府鸟瞰图</a></li> 
+</ul>
+
+<li id="menu-item-4" class=""><a href="javacript:void(0);" title="三国地图">三国地图<i class="fa fa-angle-down"></i></a>
+<ul class="sub-menu"><li><a href="/map/sgst.html">三国史图</a></li><li><a href="/map/sggcc.html">古今城池对照</a></li><li><a href="/map/sgxws.html">三国兴亡史</a></li><li><a href="/map/sgbns.html">三国编年史</a></li><li><a href="/map/sgxt.html">三国详图</a></li><li><a href="/map/sgdl.html">三国鼎立</a></li><li><a href="/map/sgyxb.html">三国英雄谱</a></li><li><a href="/map/sgyyrwgxt.html">三国人物关系图</a></li> 
+</ul>
+<li id="menu-item-5" class=""><a href="javacript:void(0);" title="水浒地图">水浒地图<i class="fa fa-angle-down"></i></a>
+<ul class="sub-menu"><li><a href="/map/sh108.html">水浒108将</a></li><li><a href="/map/shbsdt.html">北宋疆域</a></li><li><a href="/map/shqydt.html">起义地图</a></li> 
+</ul>
+<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+</ul>
+<div class="topbar">
+<ul class="site-nav topmenu">
+<span id="loginjs"><script src="http://www.sdmz.net/e/member/login/loginjs.php"></script></span>
+<li></li> 
+<li>关注 <i class="fa fa-angle-down"></i>
+<ul class="sub-menu">
+<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=378080686&site=qq&menu=yes" rel="nofollow"><i class="fa fa-qq"></i> 378080686</a></li>
+<li><a target="_blank" href="http://www.sdmz.net/e/web/?type=rss2"><i class="fa fa-rss"></i>RSS订阅</a></li>
+</ul></li> 
+<li></li>  
+<li><a target="_blank" href="http://www.sdmz.net/e/web/?type=rss2">RSS订阅<i class="fa fa-rss"></i></a>
+</li>
+</ul></div><i class="fa fa-bars m-icon-nav"></i>
+</div>
+</header>
+<div class="site-search"><div class="container"><form method="post" class="site-search-form" action="http://www.sdmz.net/e/search/index.php"><input class="search-input" name="keyboard" type="text" placeholder="输入关键字搜索"><input type="hidden" name="show" value="title"/><button class="search-btn" type="submit"><i class="fa fa-search"></i></button></form></div></div>
+ -->
+<section class="container container-page">
+
+	<div class="pageside">
+		<div class="pagemenus">
+			<ul class="pagemenu" id="result">
+				<li onclick="getmap(1);"><a href="javacript:void(0);">1.长安[西安]</a></li>
+				<li onclick="getmap(2);"><a href="javacript:void(0);">2.秦州[天水]</a></li>
+				<li onclick="getmap(3);"><a href="javacript:void(0);">3.兰州</a></li>
+				<li onclick="getmap(4);"><a href="javacript:void(0);">4.凉州[武威]</a></li>
+				<li onclick="getmap(5);"><a href="javacript:void(0);">5.甘州[张掖]</a></li>
+				<li onclick="getmap(6);"><a href="javacript:void(0);">6.肃州[酒泉]</a></li>
+				<li onclick="getmap(7);"><a href="javacript:void(0);">7.瓜州[安西]</a></li>
+				<li onclick="getmap(8);"><a href="javacript:void(0);">8.玉门关</a></li>
+				<li onclick="getmap(9);"><a href="javacript:void(0);">9.伊吾[哈密]</a></li>
+				<li onclick="getmap(10);"><a href="javacript:void(0);">10.白力城[鄯善]</a></li>
+				<li onclick="getmap(11);"><a href="javacript:void(0);">11.高昌[吐鲁番]</a></li>
+				<li onclick="getmap(12);"><a href="javacript:void(0);">12.阿耆尼国[焉耆]</a></li>
+				<li onclick="getmap(13);"><a href="javacript:void(0);">13.龟兹[库车]深</a></li>
+				<li onclick="getmap(14);"><a href="javacript:void(0);">114.克孜尔[拜城]</a></li>
+				<li onclick="getmap(15);"><a href="javacript:void(0);">15.跋逯迦国[阿克苏]</a></li>
+				<li onclick="getmap(16);"><a href="javacript:void(0);">16.凌山[乌什]</a></li>
+				<li onclick="getmap(17);"><a href="javacript:void(0);">17.大清池[伊塞克湖]</a></li>
+				<li onclick="getmap(18);"><a href="javacript:void(0);">18.碎叶[比什凯克]</a></li>
+				<li onclick="getmap(19);"><a href="javacript:void(0);">19.石头城[塔什干]</a></li>
+				<li onclick="getmap(20);"><a href="javacript:void(0);">20.飒秣建国[撒马尔罕]</a></li>
+				<li onclick="getmap(21);"><a href="javacript:void(0);">21.咀密国[铁尔梅兹]</a></li>
+				<li onclick="getmap(22);"><a href="javacript:void(0);">22.活国[昆都士]</a></li>
+				<li onclick="getmap(23);"><a href="javacript:void(0);">23.梵衍那国[巴米扬]</a></li>
+				<li onclick="getmap(24);"><a href="javacript:void(0);">24.迦毕试国[喀布尔]</a></li>
+				<li onclick="getmap(25);"><a href="javacript:void(0);">25.健陀罗国[白沙瓦城]</a></li>
+				<li onclick="getmap(26);"><a href="javacript:void(0);">26.犍陀罗[塔克西拉]</a></li>
+				<li onclick="getmap(27);"><a href="javacript:void(0);">27.拉合尔</a></li>
+				<li onclick="getmap(28);"><a href="javacript:void(0);">28.兰毗尼[鲁潘德希]</a></li>
+				<li onclick="getmap(29);"><a href="javacript:void(0);">29.瓦拉纳西</a></li>
+				<li onclick="getmap(30);"><a href="javacript:void(0);">30.那烂陀</a></li>
+				<li onclick="getmap(31);"><a href="javacript:void(0);">31.烂陀寺遗址</a></li>
+				<li onclick="getmap(32);"><a href="javacript:void(0);">32.摩揭陀国[巴特那]</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+	<div class="content">
+		<header class="article-header">
+			<h1 class="article-title"><a href="/map/index.html">西游地图</a></h1>
+		</header>
+		<!--内容开始-->
+		<article class="article-content">
+			<div id="mappan"></div>
+		</article>
+		<!--内容结束-->
+	</div>
+</section>
+
+
+<footer class="footer"><div class="container"><p>Copyright &copy; 2017 <a href="http://www.sdmz.net">四大名著</a> <span class="tongji"><script src="https://s19.cnzz.com/z_stat.php?id=992227&web_id=992227" language="JavaScript"></script></span></p><p>普及四大名著知识，传播四大名著文化，引领四大名著研究。</p></div></footer>
+<!--右侧浮动导航-->
+<div id="rightshare">
+ <ol class="bdsharebuttonbox">
+  <li><a href="#" title="" data-cmd="weixin"></a></li><li><a href="#" title="" data-cmd="qzone"></a></li><li><a href="#" title="" data-cmd="tsina"></a></li><li><a href="#" title=""></a></li>
+ </ol>
+</div>
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='http://www.sdmz.net/skin/v2/js/common.js'></script>
+
+
+<script language="javascript">   
+    /*** 高德地图*/
+    var Gaode = L.tileLayer.chinaProvider('GaoDe.Normal.Map', {maxZoom: 18,minZoom: 5});
+    var Gaodimgem = L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {maxZoom: 18,minZoom: 5});
+    var Gaodimga = L.tileLayer.chinaProvider('GaoDe.Satellite.Annotion', {maxZoom: 18,minZoom: 5});
+    var Gaodimage = L.layerGroup([Gaodimgem, Gaodimga]);
+
+   var baseLayers = {
+        "高德地图": Gaode,
+        "高德影像": Gaodimage
+    }
+
+    var map = L.map("mappan", {
+        center: [36.17336, 89.73633],
+        zoom: 4,
+        layers: [Gaodimga],
+        zoomControl: false
+    });
+ 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.sdmz.net/map/">sdmz.net</a>'}).addTo(map);
+
+    L.control.layers(baseLayers, null).addTo(map);
+    L.control.zoom({
+        zoomInTitle: '放大',
+        zoomOutTitle: '缩小'
+    }).addTo(map);
+
+
+     // 使用用户自己的图标     
+     var greenIcon = L.icon({
+            iconUrl: 'http://www.sdmz.net/d/map/xy/tsqm.png', 
+            iconSize:     [26,42],    // size of the icon          
+            iconAnchor:   [14,42], // point of the icon which will correspond to marker's location          
+            popupAnchor:  [-5, -40] // point from which the popup should open relative to the iconAnchor
+      }); 
+     //L.marker([31.52587, 106.83655], {icon: greenIcon}).addTo(map);
+
+/*默认：36.3461, 118.94348 */
+var list =[
+
+[1,'长安[西安]',[34.22543, 108.90747],'http://www.sdmz.net/d/map/xy/xzxx/1.jpg','西安，古称长安，是陕西省的省会，历史上先后有13个王朝在西安建都。公元 628年玄奘自长安西行，历经艰难险阻到达印度取佛经，公元645年回到祖国带回佛经657部，先后在弘福寺、慈恩寺、玉华寺等处翻译佛经74部，共计1335卷。玄奘应唐太宗的嘱托，由他口述，其弟子笔录，将他17年旅途中经历的110个城邑和传闻的28个地区和国家的历史、山川交通、民俗风情、物产气候、政治文化、宗教信仰等，整理成《大唐西域记》。玄奘不畏艰难，排除九九八十一难前往西天取经的故事，自唐代以来以来广为流传。明代小说家吴承恩在此基础上写成了脍炙人口的中国古代四大小说之一《西游记》。2015年5月14日，印度总理莫迪就职后首次访华，第一站即抵达西安，并登上慈恩寺的大雁塔纪念玄奘西行。','http://www.sdmz.net'],
+[2,'秦州[天水]',[34.59704, 105.73242],'http://www.sdmz.net/d/map/xy/xzxx/2.jpg','天水，位于甘肃省东南部，陕、甘、川、宁四省区交汇处，跨黄河、长江两大水系，是传说中伏羲、女娲的故乡，被誉为“陇上小江南”。天水历史古迹众多，文化积淀深厚，有与敦煌艺术齐名的麦积山石窟艺术。麦积山石窟从一个侧面反映了佛教思想及其产生发展过程，并且曲折地再现了历代人物的生活景象和当时的社会和政治、经济状况。如果说敦煌是一个壁画宫的话，那么麦积山则是一座宏大的泥塑艺术陈列馆。','http://www.sdmz.net'],
+[3,'兰州',[36.07574, 103.83728],'http://www.sdmz.net/d/map/xy/xzxx/3.jpg','兰州是古丝绸之路上的重镇。早在5000年前，人类就在这里繁衍生息。西汉设立县治，取"金城汤池"之意而称金城。隋初改置兰州总管府，始称兰州。自汉至唐、宋时期，随着丝绸之路的开通，出现了丝绸西去、天马东来的盛况，兰州逐渐成为丝绸之路重要的交通要道和商埠重镇，联系西域少数民族的重要都会和纽带，在沟通和促进中西经济文化交流中发挥了重要作用。','http://www.sdmz.net'],
+[4,'凉州[武威]',[37.95286, 102.64526],'http://www.sdmz.net/d/map/xy/xzxx/4.jpg','武威，古称凉州，为河西走廊东端之咽喉。因公元前121年，汉武帝大将霍去病出征河西，西击匈奴，大获全胜，以彰其“武功军威”而得名。武威属冷温带干旱区，年平均降雨量约160毫米。武威是丝绸之路的必经之地，312国道和兰新铁路复线横贯全境，交通相对便利。石羊河由南向北流经全境，物产丰饶，古称“银武威”，有“凉州不凉米粮川”之说。','http://www.sdmz.net'],
+[5,'甘州[张掖]',[38.92096, 100.46448],'http://www.sdmz.net/d/map/xy/xzxx/5.jpg','甘州，即今天的甘肃省张掖市。 据文字记载，甘州已有5000年的历史。从夏商到春秋战国时期，先后有羌、戎、狄等少数民族居住，北凉沮渠蒙逊建郡至西魏废帝三年改为甘州，因甘泉清洌而名，甘州之称自此开始。 隋唐在甘州设立交市、西夏在甘州发迹崛起。元始祖忽必烈设甘肃行中书省省会，“甘肃省”首字即源于此。清为甘肃提督统军驻地。因地理位置重要，历来为兵家必争之地。','http://www.sdmz.net'],
+[6,'肃州[酒泉]',[39.72409, 98.49243],'http://www.sdmz.net/d/map/xy/xzxx/6.jpg','肃州，即今甘肃省酒泉市。 酒泉地区位于甘肃省西北部，河西走廊西端，东与张掖地区相连，南靠青海省，西邻新疆维吾尔自治区，北与内蒙古自治区的额济纳旗接壤，并与蒙古人民共和国交界。酒泉古称肃州，已有二百多年历史，历来是亚欧大陆东西往来的要冲，古丝绸之路的必经之地. 酒泉地区是我国西部土地开发利用最早的区域之一。 酒泉以“城下有泉”、“其水若酒”而得名。 唐高祖武德七年（公元624年）始置酒泉县，肃州的名称开始应用。','http://www.sdmz.net'],
+[7,'瓜州[安西]',[40.5305, 95.79529],'http://www.sdmz.net/d/map/xy/xzxx/7.jpg','敦煌一带，古为允姓之戎所居，号瓜州。北置瓜州，治敦煌(今县西)，辖酒泉以西。唐分置瓜州、沙州。瓜州治晋昌(今安西东南)；沙州位瓜州以西，治敦煌。','http://www.sdmz.net'],
+[8,'玉门关',[41.14557, 94.13086],'http://www.sdmz.net/d/map/xy/xzxx/8.jpg','玉门关，俗称小方盘城，在河西走廊西端的敦煌市境内，位于敦煌市城西北约90公里处。相传，古时候西域和田等地的美玉从塔里木盆地经此处输入中原，玉门关由此而得名。玉门关的设立，始自西汉武帝时,距今已有2千多年的历史。秦汉以来，好战的匈奴对汉民族威胁很大。汉初，匈奴东败东胡，西逐大月氏，占据河西，并以河西为基地，屡犯汉境。西汉接近匈奴的郡县，成为匈奴掠夺的对象。汉王朝曾对匈奴采取和亲政策，希图换取暂时的安宁。但是，这种希望被匈奴骑兵的频繁侵扰和掠夺所打破。汉武帝时，放弃了和亲政策，对匈奴发动了大规模的军事反击。元狩二年(公元前121年)，骠骑将军霍去病率兵西征，沉重打击了匈奴右部。同年，汉分河西为武威、酒泉两郡。元鼎六年(公元前111年)，又增设张掖、敦煌两郡。在此同时，又建玉门关和阳关。从此，玉门关和阳关就成为西汉王朝设在河西走廊西部的重要关隘。','http://www.sdmz.net'],
+[9,'伊吾[哈密]',[42.83167, 93.5321],'http://www.sdmz.net/d/map/xy/xzxx/9.jpg','哈密位于新疆最东端，是新疆的东大门。“哈密”正是维吾尔语“大门”的意思。哈密地区位于新疆东部，北面与蒙古国接壤，哈密古称“昆莫”，汉称“伊吾卢”，东汉置宜禾都尉，北魏置伊吾郡，隋设伊吾郡和柔远镇，唐置西伊洲，后、改称伊洲，称哈密力，隶属甘肃省，明永乐年间设哈密卫。乾隆二十四年设哈密厅，光绪十年升为直隶厅，民国2年（1913年）改厅为县。','http://www.sdmz.net'],
+[10,'白力城[鄯善]',[42.90011, 90.21423],'http://www.sdmz.net/d/map/xy/xzxx/10.jpg','鄯善县位吐鲁番盆地的东部，在汉代这里属于车师前王国。车师前国，王治交河城，交河城东南的柳中城，即今天鄯善县西南的鲁克沁一带。东汉安帝延光二年(123年)，班房率兵士五百人，以西域长史的头衔在这儿屯田。此后，东汉在西域只设长史，长史就代行了以前都扩的职责，可见柳中城地位的重要。唐朝在这儿设柳中县，属西州交河郡．宋称六种，属高昌．元朝叫做鲁克察克。明称柳城。清乾隆年间，这里建有郡王府。郡王属清代爵位的第二等，是十分显赫的。 今县城所在地，北魏时叫白棘城，也作白力、白刃，属高昌郡。唐时设蒲昌县。清雍正五年，在这里建城，名辟展。乾隆二十四年，设辟展办事大臣及同知，兼辖吐鲁番。后来，办事大臣和同知移驻吐鲁番，在辟展设巡检。光绪二十八年，在这儿设立鄯善县。','http://www.sdmz.net'],
+[11,'高昌[吐鲁番]',[42.93632, 89.198],'http://www.sdmz.net/d/map/xy/xzxx/11.jpg','高昌故城，曾是高昌王国的都城，位于吐鲁番东面40多公里的三堡乡。故城历史悠久，公元前一世纪始建高昌壁，于公元十三世纪未毁于战火。虽然经过2000多年的风吹日晒，故城轮廓犹存，城墙气势雄伟屹立在火焰山下。城郭高耸，街衙纵横，护城河道的残迹犹存，城垣保存基本完好，分内城、外城、宫城三重。外城内西南有一大型寺院，寺门东西长约130米，南北宽约85米，占地约１万平方米，大殿内尚残存壁画痕迹。唐代高僧玄奘西游取经，于贞观二年（628年）春，曾到高昌国讲经一月余，据即在此寺内。寺院附近，还残存手工作坊和集市遗址。外城内东南部有一小型寺院，残存的壁画较上述大寺完美。','http://www.sdmz.net'],
+[12,'阿耆尼国[焉耆]',[42.08192, 86.56677],'http://www.sdmz.net/d/map/xy/xzxx/12.jpg','阿耆尼国， 阿耆尼，梵名Agni 或 Akni。位于西域之古国名。又作乌耆国、乌夷国、焉耆国、婴夷国。东邻高昌，西接龟兹，以今新疆天山南路东北部之喀喇沙尔（ Karashahr）为中心。大唐西域记卷一载，阿耆尼国东西长六百余里，南北宽四百余里。国之都城周长六、七里，四面据山，道险易守，泉流交带，引水为田，出产穈黍、宿麦、香枣、蒲萄、梨奈等物。气候和畅，风俗质直。文字取之于印度。其国人民勇而寡略，好自称伐。国无纲纪，法不整肃。伽蓝十余所，僧徒二千余人，习学小乘教之说一切有部，经教律仪概遵印度。盖阿耆尼国之名称，系由于焉耆、乌耆等名含有火之意，玄奘乃因此附会梵语agin（火）而音译为阿耆尼。','http://www.sdmz.net'],
+[13,'龟兹[库车]',[41.73033, 82.97424],'http://www.sdmz.net/d/map/xy/xzxx/13.jpg','库车古称龟兹，在唐代被西方誉为“西域乐都”，素有“歌舞之乡”的美名，是东方艺术瑰宝——龟兹文化的发样地。龟兹石窟与敦煌莫高窟、洛阳龙门石窟和大同云岗石窟齐名，是中国建设最早、规模最大、数量最多的石窟群。境内星罗棋布有石窟、古城堡、烽火台等文物，洞窟壁画面积达2万平方米。','http://www.sdmz.net'],
+[14,'克孜尔[拜城]',[41.83274, 81.86462],'http://www.sdmz.net/d/map/xy/xzxx/14.jpg','克孜尔位于新疆拜城县，属于龟兹古国的疆域范围。千佛洞，位于拜城克孜尔镇东南15千米处，是戈壁尽头、古龟兹国的一处石窟寺群。它开拓于公元300年至11世纪前后，比莫高窟还早。历经千年，受到各方面破坏、侵蚀，至今还保存有236个洞窟和1万多平方米的壁画以及一批塑像的残躯，还有寺塔的断垣。','http://www.sdmz.net'],
+[15,'跋逯迦国[阿克苏]',[41.19932, 80.28259],'http://www.sdmz.net/d/map/xy/xzxx/15.jpg','阿克苏市位于塔克拉玛干沙漠西北边缘、塔里木河上游，因水得名，维吾尔语意为“白水城”， 古为秦汉之际西域三十六国的姑墨、温宿两国属地，是古丝绸之路上的重要驿站， 也是龟兹文化和多浪文化的发源地，素有“塞外江南”之美誉。','http://www.sdmz.net'],
+[16,'凌山[乌什]',[42.08803, 80.20294],'http://www.sdmz.net/d/map/xy/xzxx/16.jpg','乌什别迭里山口 乌什县别迭里烽燧，古时称拨达岭，位于乌什县城西40公里的乌一别路边戈壁滩上，西邻别迭里河，扼通往别迭里山中的要冲。 别迭里烽燧至今仍巍然屹立，外有台阶可至顶部，上有火烧红土遗存，进山口后，分水岭的西边，即为吉尔吉斯斯坦共和国。烽燧呈梯形状，东部东西长12.7米，南北宽9.8米，顶部东西长7.7米，南北宽3.5米，湔残高7.3米。烽燧为两次修筑，始建于东汉，原筑为夯土，层厚15—20厘米，夯土间类有木头层和柴枝层，木头直径6—12cm，层与层间距为10—15厘米；第二次修筑为唐代年间在距烽燧四周用长卵石垒砌、卵石间填有小砾石和土。现被中国长城学会、中华全国集邮联合会、北京市邮政局监制发行的万里长城百关纪念封采用，标志着别迭里烽燧为我国万里长城西部的最尾部。它同县城西南5公里处都鲁呼尔山的八卦墩烽火台同出一源，同建一时，保存尚为完好。','http://www.sdmz.net'],
+[17,'大清池[伊塞克湖]',[42.17155, 77.57721],'http://www.sdmz.net/d/map/xy/xzxx/17.jpg','伊塞克湖汇集了天山山脉流下来的雪水，形成了世界上第二大高山湖。伊塞克湖长170公里、宽70公里、深702米。中国古人称伊塞克湖为“热海”或“大清池”。玄奘西天取经西行时曾经路过这里。长途行走的马匹平均每天行走40公里。以此推算，玄奘沿着伊塞克湖南岸大约走了两天。伊塞克湖应该倒映过玄奘一行的身影。','http://www.sdmz.net'],
+[18,'碎叶[比什凯克]',[42.87395, 74.59442],'http://www.sdmz.net/d/map/xy/xzxx/18.jpg','碎叶，一个有着太多文化积淀的地方——相信很多中国人对它不会陌生，因为它与一个伟人的名字联系在一起，那就是诗仙李白。首先提出李白出生在碎叶的，是历史学家郭沫若。“从李白狂放不羁的性格来看，他的确带有胡人的特点。”葛剑雄教授说，“李白出生在碎叶也不足为奇。” 比什凯克位于吉尔吉斯斯坦山麓下的楚河河谷，是古代重镇和中亚名城。楚河河谷作为天山古道的一部分，是连接中亚草原与中国西北沙漠的捷径，也是古代“丝绸之路”上的重镇。唐朝势力扩展到中亚的楚河后，碎叶城就成了唐朝安西都护府最西边的城镇，它与龟兹、疏勒、于阗并称为唐代“安西四镇”。','http://www.sdmz.net'],
+[19,'石头城[塔什干]',[41.28813, 69.33472],'http://www.sdmz.net/d/map/xy/xzxx/19.jpg','乌兹别克斯坦首都塔什干是中亚地区第一大城市和重要的经济和文化中心。它位于乌兹别克斯坦东部、恰特卡尔山脉西面，地处锡尔河支流奇尔奇克河谷的绿洲中心，这座古城是古代东西方贸易的重要中心和交通要冲，著名的“丝绸之路”便经过这里。我国古代的张骞、法显、玄奘都曾留下过足迹。塔什干在乌兹别克语中意为“石头城”，因地处山麓冲积扇一带，有巨大卵石而得名。这是一座历史悠久的古城，早在公元前二世纪就建有城池，公元六世纪就以商业、手工业著称，成为古代丝绸之路的必经之地。公元十一世纪首见史书记载。1865年成为一座建有城墙的城市，后来并入俄罗斯帝国。1930年起成为乌兹别克共和国（苏联加盟共和国之一）首府，1991年８月３１日起成为独立的乌兹别克斯坦共和国的首都。','http://www.sdmz.net'],
+[20,'飒秣建国[撒马尔罕]',[39.6078, 66.98639],'http://www.sdmz.net/d/map/xy/xzxx/20.jpg','撒马尔罕是乌兹别克斯坦第二大城，撒马尔罕州首府。在国境东南部泽拉夫尚河谷地。中亚古城之一，有2500年的历史。撒马尔罕就是玄奘西行取经提到的飒秣建国，又称康国。 　　《大唐西域记》记载：飒秣建国方圆一千六七百里，东西长，南北狭窄。飒秣建国的都城方圆二十多里，地势极为险要而且城池坚固。四方的珍宝奇货往往都向这个国家汇集。（飒秣建国）土地肥沃，树木郁郁葱葱，花果鲜美茂盛。这里还盛产良种马匹。四季气候温和宜人，但是民风却很勇猛暴躁。所有胡国都把飒秣建国看作榜样，它们的举止、仪节也都取法于飒秣建国——不论它们距离飒秣建国有多远。飒秣建国国王非常勇猛，邻国都不得不顺从听命。他麾下兵马强盛，大多由赭羯族人组成，被称为赭羯武士。赭羯武士性格暴躁，打起仗来不惜命，所向披靡。','http://www.sdmz.net'],
+[21,'咀密国[铁尔梅兹]',[37.22377, 67.28851],'http://www.sdmz.net/d/map/xy/xzxx/21.jpg','铁尔梅兹古代遗址位于现在的铁尔梅兹市西北约14里。中亚佛教文化正是从铁尔梅兹传播开来的，据说，在当地的考古博物馆里展览着大量文物，大部分是佛教文物，包括佛陀雕塑，都是从这里出土的。','http://www.sdmz.net'],
+[22,'活国[昆都士]',[36.72127, 68.87878],'http://www.sdmz.net/d/map/xy/xzxx/22.jpg','活国(Qunduz，昆都士)， 中亚古国。本是民族名，中世纪转为地名。指乌浒水（今阿姆河）上游即缚刍河流域，以今昆都士（唐代活国）为中心的阿富汗北部地区。 公元前2世纪中叶，吐火罗灭掉以巴里黑（今阿富汗境内）为都城的大夏，于其地建国，是为贵霜王朝。629年（或630）玄奘行经该地，记吐火罗故国领域：东起帕米尔，西接波斯，北据铁门（今乌兹别克斯坦南部布兹嘎拉山口），南至大雪山（今阿富汗兴都库什山），相当于今阿富汗北部地区。此地在历史上一直是中国西域与伊朗、印度等地交通往来必经之处。玄奘时，吐火罗王族已绝嗣数百年，酋豪林立，分为27国（玄奘实际列出29国）。唐高宗显庆年间，以其境内的阿缓城（今阿富汗昆都士）置月氏都督府，授其王为吐火罗叶护、悒怛王、使持节25州诸军事。 8世纪初，大食东来，在萨珊王朝末代诸王、突厥和吐火罗故地的君主与大食交战的时期，吐火罗故地的君主号为叶护。大食进逼，吐火罗君主曾要求唐朝保护。8世纪中叶以后，大食人取得决定性胜利。安史之乱时，曾有吐火罗兵助唐平乱。13世纪后，吐火罗一名逐渐消失。','http://www.sdmz.net'],
+[23,'梵衍那国[巴米扬]',[34.87467, 67.72247],'http://www.sdmz.net/d/map/xy/xzxx/23.jpg','巴米扬是阿富汗著名的佛教圣地、巴米扬省的首府，位于中部巴米扬河谷，喀布尔西北１５０公里处。巴米扬是兴都库什山的重要隘口，是南下北上的商旅队的必经之地，也是佛教徒的朝拜之地，曾盛极一时。中国古代高僧法显和玄奘都曾先后在四世纪和七世纪时在此逗留，他们在各自的著作《佛国记》和《大唐西域记》中对巴米扬作了生动的描述。玄奘在《大唐西域记》中赞美“梵衍那”（即巴米安）“多小川泽”，“众池澄碧，林树青葱”“王城东北山阿有立佛石像，高百四五十尺，金光晃耀，宝饰焕烂。东有伽蓝……伽蓝东有输石释迦佛立像，高百余尺”。这里海拔2591米，夏季凉爽宜人，群山峰巅常年皑皑白雪，是著名的避暑胜地。','http://www.sdmz.net'],
+[24,'迦毕试国[喀布尔]',[34.77772, 69.20837],'http://www.sdmz.net/d/map/xy/xzxx/24.jpg','喀布尔是阿富汗共和国的首都和第一大城市，位于阿富汗东部，兴都库什山南麓。它四面环山，海拔1950米。喀布尔是世界上地势最高的首都之一，群山环抱呈U字形，城市开口处向着西面的高山峻岭。喀布尔河横贯全城，河南岸是旧城，北岸是新城。居民多信奉伊斯兰教。在古代，喀布尔是著名的东西方通商要道“丝绸之路”上的重要城镇，也是东西方文化交流的一个中心。1773年杜兰尼王朝统一阿富汗后定都于此。','http://www.sdmz.net'],
+[25,'健陀罗国[白沙瓦城]',[34.01397, 71.45508],'http://www.sdmz.net/d/map/xy/xzxx/25.jpg','健陀罗国都城布路沙布罗 白沙瓦城坐落在巴基斯坦西，和阿富汗直接接壤。该城拥有两千多年的历史。键陀罗国创始者——原公元1世纪入主其地的大月氏人（在敦煌附近），建立了今天巴基斯坦的白沙瓦城。自古代起就与周边国家有贸易往来。中国古代大旅行家法显、玄奘都曾到过此地。','http://www.sdmz.net'],
+[26,'犍陀罗[塔克西拉]',[33.73576, 72.82562],'http://www.sdmz.net/d/map/xy/xzxx/26.jpg','塔克西拉以北13公里的萨尔达山丘上，有一座孤零零的巴拉尔塔（Bhallar Stupa）。此塔在公元前三世纪由阿育王颁旨建造，当时“或至斋日，时放光明，神花天乐，颇有见闻”。从西侧看上去，这是一圆型塔。如果绕到北侧观看，塔的北侧平直如墙，好似利剑削掉了一样。玄奘称此为舍头塔。传说当地的月光国王乐善好施，一位婆罗门索要国王的头颅，月光国王便用利剑割下头颅送给了这位婆罗门。 　　塔克西拉在历史上曾经是犍陀罗的一部分。玄奘详细考察和记录了当地地理环境和风土民情：“健驮逻国东西千余里，南北八百余里，东临信度河。”他对白沙瓦也有精致的观察：“邑里空荒，居人稀少，宫城一隅有千余户。庄稼殷盛，花果繁茂，多甘蔗，出石蜜。气序温暑，略无霜雪。人性恇怯，好习典艺……”玄奘还详细叙述了犍陀罗各地的佛教圣地，其中有印度当时最高的佛塔，这一高塔曾是当地一大奇观。 　　雅利安人在公元前1500年从欧洲迁徙到这里时，称这里为犍陀罗（Gandhara），意思为“芳香之地”。公元前521至486年，这里成了阿黑门尼德帝国的一部分。公元前330年，马其顿亚历山大征服了阿黑门尼德帝国之后，率领大军进入了喀布尔流域和旁遮普，并在这里建立了大夏国。大批希腊人带来了钱币铸造技术和希腊雕塑技艺。公元1世纪，大月氏人驱除了希腊势力，建立了贵霜王国。贵霜王朝中心地带就是现在的白沙瓦和阿富汗东部，其疆土曾经包括阿富汗、克什米尔、旁遮普等地。当时正是大乘佛教的形成期，佛教徒的生活开始走向世俗化，力图参与和干预社会生活，他们提出“上求菩提，下渡众生”，形成了一股强大思潮，最后发展成了大乘佛教教派，对中国、朝鲜和日本文化产生了重要影响。','http://www.sdmz.net'],
+[27,'拉合尔',[31.94517, 74.68231],'http://www.sdmz.net/d/map/xy/xzxx/27.jpg','拉合尔 Lahore, Pakistan 巴基斯坦第二大城市、历史名城、旁遮普省首府拉合尔素有“花园城市”、“庭园之都”的美称，它位于国境东北部富饶的旁遮普平原拉维河西岸，拉合尔古堡和沙利马尔花园被誉为巴基斯坦历史上沙·贾汗皇帝时期莫卧儿王朝灿烂文明的杰出代表。拉合尔是一座拥有2000年历史的古老城市，始建于公元1世纪末至2世纪初。公元7世纪，中国高僧玄奘曾在其著作中详细介绍他在这座城市访问时的见闻，已成为历史上关于这座城市的最早记载。','http://www.sdmz.net'],
+[28,'兰毗尼[鲁潘德希]',[27.42054, 83.22144],'http://www.sdmz.net/d/map/xy/xzxx/28.jpg','尼泊尔南部鲁潘德希县的兰毗尼Lumbini，是世界著名的佛教圣地。公元前623年，佛教创始人释迦牟尼就诞生在这里。 　　尼泊尔虽然是一个高山之国，但南部与印度接壤的地带却是一个狭长的平原，通称特赖地区，属亚热带气候，平原土地肥沃、物产丰饶。鲁潘德希县的首府拜拉哈瓦又名悉达多城，“悉达多”就是释迦牟尼童年时的名字。从悉达多城西行，至兰毗尼仅十九公里。 　　兰毗尼是个不大的村庄，村头是一座两层的石砌平台，叫做玛雅黛维女神庙，绿荫掩映，显得庄严肃穆。玛雅黛维是北天竺迦毗罗卫国净饭王的妻子。相传她于尼泊尔阴历正月的望日，在回娘家的路上经过兰毗尼园林，她在一株娑罗树下休憩时生下了悉达多·乔达摩（即后来的释迦牟尼）。据说，现在神庙所处的位置就是当年悉达多·乔达摩出生的地方。 　　兰毗尼也是中尼两国人民早期交往的历史见证。早在公元406年，东晋高僧法显为寻找佛祖降生地就曾到过兰毗尼附近的迦毗罗卫城；公元635年，唐朝高僧玄奘去印度取经，专程来兰毗尼朝敬。法显和玄奘的游记中记载了兰毗尼当时佛教兴旺的场面，也正是根据玄奘游记的叙述。','http://www.sdmz.net'],
+[29,'瓦拉纳西',[25.28444, 83.0127],'http://www.sdmz.net/d/map/xy/xzxx/29.jpg','瓦拉纳西 Varanasi 公元7世纪，中国唐朝高僧玄奘当年历经千辛万苦，最终要到的极乐西天指的就是瓦拉纳西，在其所著《大唐西域记》中曾对该城风貌有过生动的描述。传说在西元前6世纪，瓦拉纳西便已经开始存在，这样算来，这座城市的历史已经有六千年，相传为婆罗门教和印度教主神之一的湿婆神（Shiva）所建。在公元前4世纪至公元6世纪，它曾是学术中心，公元12世纪时为古王朝都城。据说，公元前500 年，释迦牟尼第一次讲道就是在该城附近的鹿野苑。因此，这座城市被誉为“印度之光”。再加上印度人心目中的圣河 —恒河流经这里，于是瓦拉纳西就被视为“圣城中的圣城”。 其历史可以追溯到6000年前。中国高僧玄奘到访这里时，看到这里“天祠百余所，外道万余人”。','http://www.sdmz.net'],
+[30,'那烂陀',[24.56961, 86.07513],'http://www.sdmz.net/d/map/xy/xzxx/30.jpg','那烂陀(Nalanda)地名的由来，其中的一个说法是，古代梵文里“nalam”意思是莲花，“da”意思是给予，莲花在印度是知识的象征，因此，那烂陀的意思就是“知识的给予者”。那烂陀寺传说建于公元427年左右，在古摩揭陀国王舍城附近。它不仅是古代印度佛教的最高学府和学术中心，同时还教授哲学、逻辑、语言、天文、数学、医学等各类知识。在那烂陀最兴盛的时期，曾经藏书九百万卷，僧人学者超过万人，并且是世界上最早的国际学府，有中国、韩国、锡兰(古代斯里兰卡)和印度尼西亚的僧侣和学者前来学习。唐朝时期，玄奘法师在那烂陀寺学习了5年左右，义净法师在此学习了10年。玄奘《大唐西域记》和义净《大唐西域求法高僧传》对那烂陀寺都有说明。公元1193年，突厥人巴克赫提亚尔·卡尔积带兵侵占那烂陀寺，寺院和图书馆遭受严重破坏，大批僧侣逃往西藏避难，从此那烂陀寺失去昔日的光辉，这也是佛教在印度走向衰败的转折点。','http://www.sdmz.net'],
+[31,'烂陀寺遗址',[24.51464, 86.20972],'http://www.sdmz.net/d/map/xy/xzxx/31.jpg','那烂陀寺（Narlanda Temple），位于巴特那城西北113千米处。据《大唐西域记》载，当地的森林水池中有名那烂陀的神龙，寺因此得名。据说佛陀曾在此宣法，涅槃后不久，帝日王在此建寺。 玄奘描绘该寺："宝台星列，琼楼岳崎，观束烟中，殿飞霞上，生风云于户墉，交日月于轩檐，羯尼花树，晖焕其间，庵没罗林，森疏其处......印度伽蓝数乃千万，壮丽崇高，此为其极。" 据载，当时亚洲各国的僧人都来此求学，中国著名僧人玄奘、玄照、义净、智弘、无行、道希、道生、大乘灯和新罗僧禽业等都留学于此。玄类在寺学习十数载，掌握了佛教大小乘理论，并受戒日王的委托，辩赢了外道，声誉五印。寺内制度严格，凡要来寺参学者，须经辩论后，赢者才可入寺学习，否则“多屈而还”。僧人在寺学大小乘佛典。兼学因明、声明、医方、术数等各种知识。 那烂陀寺的印度僧人对中国西藏佛教的建设起过重要作用。中兴西藏佛教的印度僧人寂护、莲花生等皆为那烂陀寺僧。当时中国僧人也曾在此建立了汉寺，爪哇的国王则捐施了爪哇寺。13世纪左右，那烂陀寺毁于穆斯林军队的战火，僧人大最逃亡国外。以后曾一度恢复，但不久又遭毁灭，终于湮灭于杂草丛中。1861年遗址被发现，发掘出来的遗址是一片红色砖石砌成的建筑群，中心是一残塔，原高7层，现只剩4层。每层有很多巨大石柱，上面雕有姿态万千、栩栩如生的佛像，周围有花纹刻饰。塔东伸展一排排僧房遗址，西边为一排排残存佛塔，共有12座僧院。遗址中还有讲经用的庭院厅堂，院中水井仍然清澈如镜。','http://www.sdmz.net'],
+[32,'摩揭陀国[巴特那]',[24.67697, 86.28662],'http://www.sdmz.net/d/map/xy/xzxx/32.jpg','巴特那是印度的宗教圣地，位于比哈尔邦东部恒河南岸。城市历史悠久，已有2500年的历史，曾为公元前3世纪孔雀王朝阿育王的首府，佛经里多有记载，称为“华氏城”。4世纪时为芨多王朝的属地。该地早期曾为佛教重镇，为佛教护法王阿育王奉佛的中心，也是摩揭陀国的佛教基地，在佛教史上曾有过辉煌灿烂的时代。佛教在印度衰亡后，该城亦成为印度教的圣地。按婆罗门教文献《往世书》所载，相传大神湿婆亡妻萨蒂的身体服饰分成51部分，分往全国各地，凡能留住一部分的就是一个圣地。萨蒂的衣服落到了此地，成为教徒瞻拜之地。','http://www.sdmz.net']
+
+];
+
+
+/*
+for ($j=0;$j<list.length;$j++)    //正序
+for (var $j=list.length-1;$j>=0;$j--)  //倒序
+*/
+for (var $j=list.length-1;$j>=0;$j--) 
+{     
+    L.marker([list[$j][2][0],list[$j][2][1]],{icon: greenIcon}).addTo(map).bindPopup("<div class='Popupinfo'><h3><font color='#00a6ac'>" +list[$j][0] + ". " + list[$j][1] + "</font></h3><a  href='"+ list[$j][5] + "'  target=_blank><img style='width:150px;overflow:hidden;float:right;padding:5;'  src=" + list[$j][3] + " /></a>"+ list[$j][4]  + "<a  href='"+ list[$j][5] + "'  target=_blank>" +"更多信息"+"</a></div>");
+    //L.marker([list[$j][2][0],list[$j][2][1]],{icon: greenIcon}).addTo(map);
+   //L.marker([list[$j][2][0],list[$j][2][1]],{icon: greenIcon}).addTo(map).bindPopup("<div class='Popupinfo'><h3><font color='#00a6ac'>" +list[$j][0] + ". " + list[$j][1] + "</font></h3><a  href='"+ list[$j][5] + "'  target=_blank><img style='width:150px;overflow:hidden;float:right;padding:5;'  src=" + list[$j][3] + " /></a>"+ list[$j][4]  + "<a  href='"+ list[$j][5] + "'  target=_blank>" +"更多信息"+"</a></div>").openPopup();
+
+}
+
+
+for ($j=1;$j<list.length;$j++)
+{   
+    var latlngs =[[list[$j-1][2][0],list[$j-1][2][1]],[list[$j][2][0],list[$j][2][1]]]
+    var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+}
+
+//   L.marker([31.72817,106.52344],{icon: greenIcon}).addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.').openPopup();
+
+
+
+
+function getmap(picid) {   
+    $j=picid-1;
+    
+      var popup = L.popup().setLatLng([list[$j][2][0],list[$j][2][1]]).setContent("<div class='Popupinfo'><h3><font color='#00a6ac'>" +list[$j][0] + ". " + list[$j][1] + "</font></h3><a  href='"+ list[$j][5] + "'  target=_blank><img style='width:150px;overflow:hidden;float:right;padding:5;'  src=" + list[$j][3] + " /></a>"+ list[$j][4]  + "<a  href='"+ list[$j][5] + "'  target=_blank>" +"更多信息"+"</a></div>").openOn(map);
+
+     //L.marker([list[$j][2][0],list[$j][2][1]]).openPopup(map);
+
+     //L.marker([list[$j][2][0],list[$j][2][1]],{icon: greenIcon}).addTo(map).bindPopup("<div class='Popupinfo'><h3><font color='#00a6ac'>" +list[$j][0] + ". " + list[$j][1] + "</font></h3><a  href='"+ list[$j][5] + "'  target=_blank><img style='width:150px;overflow:hidden;float:right;padding:5;'  src=" + list[$j][3] + " /></a>"+ list[$j][4]  + "<a  href='"+ list[$j][5] + "'  target=_blank>" +"更多信息"+"</a></div>").openPopup();
+     //L.marker([list[$j][2][0],list[$j][2][1]],{icon: greenIcon}).addTo(map).bindPopup("<div class='Popupinfo'><h3><font color='#00a6ac'>" +list[$j][0] + ". " + list[$j][1] + "</font></h3>"+ list[$j][4]  + "<a  href='"+ list[$j][5] + "' target=_blank>" +"更多信息"+"</a></div>").openPopup();
+}
+
+/*
+L.control.attribution({position: 'bottomright', prefix: '<img src="/d/map/xy/xzzl.jpg">' }).addTo(map);
+*/
+
+/**/
+var popup = new L.popup();
+function onMapClick(e) {
+   popup.setLatLng(e.latlng).setContent("You clicked the map at " + e.latlng.toString()).openOn(map);
+}
+map.on('click', onMapClick);
+  
+if(top != self){ 
+ window.top.location.replace(self.location); 
+} 
+
+</script>
+
+
+
+
+
+</body></html>
