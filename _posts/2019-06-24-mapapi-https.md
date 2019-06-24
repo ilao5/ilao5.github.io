@@ -18,9 +18,10 @@ author:
 
 百度高德地图api，http转换https
 
-# 步骤
-1.百度地图的api由原先的
 
+#百度地图
+
+由原先的
 ```
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=密钥"></script>
 ```
@@ -32,7 +33,9 @@ author:
 
 ***
 
-2.高德地图的api由原先的
+#高德地图
+
+由原先的
 ```
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=密钥&plugin=AMap.Geocoder"></script>
 ```
