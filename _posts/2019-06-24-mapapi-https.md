@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Git+Jekyll架设Blog
-date: 2017-08-16
+title: 地图API的http转换https
+date: 2019-06-24
 categories:
 - 一业
 tags: [jekyll]
@@ -16,63 +16,29 @@ author:
   display_name: lao5
 ---
 
-使用Github Pages和Jekyll搭建个人博客
+百度高德地图api，http转换https
 
 # 步骤
-1.在github上面注册 username;
+1.百度地图的api由原先的
 
-2.创建仓库 username.github.io;
-
-3.下载,安装git命令行工具,地址:https://git-scm.com/download/win;
-
-4.下载,安装ruby(jekyll基于ruby),官方地址:http://rubyinstaller.org/downloads/;
-
-5.ruby安装完成后，命令行输入查看ruby安装成功与否;
 ```
-$ ruby -v
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=密钥"></script>
 ```
 
-6.命令行安装jekyll
+改成
 ```
-$ gem install jekyll
-```
-
-7.jekyll安装完成后，命令行输入查看jekyll安装成功与否;
-```
-$ jekyll -v
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=密钥&s=1"></script>
 ```
 
-8.克隆仓库到本地指定位置;
+***
+
+2.高德地图的api由原先的
 ```
-$ git clone https://github.com/username/username.github.io.git /f/wamp/www/username.github.io.git
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=密钥&plugin=AMap.Geocoder"></script>
 ```
 
-9.到http://jekyllthemes.org/找钟意到主题,下载;
-
-10.解压缩,拷贝到f/wamp/www/username.github.io;
-
-11.命令行进入/f/wamp/www/username.github.io;
+改成
 ```
-$ cd /f/wamp/www/username.github.io
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=密钥&plugin=AMap.Geocoder"></script>
 ```
 
-12.添加上传文件;
-```
-$ git add .
-```
-
-13.提交本地指令;
-```
-$ git commit -a -m "modiy somewhere"
-```
-
-14.会提示设置个人github信息，需要运行
-```
-$ git config --global user.email "xxx@163.com"
-$ git config --global user.name "username"
-```
-
-15.提交到github；
-```
-$ git push origin master
-```
