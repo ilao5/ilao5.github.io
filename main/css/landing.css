@@ -1,0 +1,44 @@
+.landscape {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom:200px;
+  min-height: 500px;
+  font-family: helvetica, arial;
+  font-size: 21px;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landscape h1 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  font-weight: 900;
+  margin: 3rem auto 0;
+  text-transform: uppercase;
+  text-shadow: 0px 0px #b9b9b9, 1px 1px #bbbbbb, 2px 2px #bdbdbd, 3px 3px #bfbfbf, 4px 4px #c1c1c1, 5px 5px #c3c3c3, 6px 6px #c5c5c5, 7px 7px #c7c7c7, 8px 8px #c9c9c9, 9px 9px #cbcbcb, 10px 10px #cdcdcd, 11px 11px #cfcfcf, 12px 12px #d1d1d1, 13px 13px #d4d4d4, 14px 14px #d6d6d6, 15px 15px #d8d8d8, 16px 16px #dadada, 17px 17px gainsboro, 18px 18px #dedede, 19px 19px #e0e0e0, 20px 20px #e2e2e2;
+}
+
+.landscape hr {
+  width: 33%;
+  height: 2px;
+  border: none;
+  background: #aaaaaa;
+  margin: 3rem auto;
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.9);
+}
+
+.landscape p {
+  width: 33%;
+  color: #aaaaaa;
+  font-size:16px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.9);
+  
+}
