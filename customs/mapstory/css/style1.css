@@ -1,0 +1,161 @@
+
+
+
+
+
+.content-box{
+	position:relative;
+	/*background-color:#333;*/
+}
+
+.container-box {
+	margin:0 auto;
+	padding:0;
+	max-width:75pc;
+
+}
+
+
+.container-page {
+	/*padding-left:215px*/
+
+}
+
+
+.pageside {
+	position:absolute;
+	top:0;
+	left:20px;
+	width:200px
+}
+
+.pagemenu {
+	overflow:hidden;
+	margin:0 0 15px;
+	padding:0;
+	border:1px solid #eaeaea;
+	border-radius:4px;
+	background-color:#fff;
+	list-style:none
+}
+
+.pagemenu li a {
+	display:block;
+	padding:9pt 20px;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	color:#999;
+	font-size:1pc
+}
+.pagemenu li a:hover {
+	color:#666
+}
+.pagemenu li.active a {
+	margin:0 -1px;
+	background-color:#45b6f7;
+	color:#fff
+}
+.pagemenu li:last-child a {
+	border-bottom:none
+}
+.pagemenu li .glyphicon {
+	font-size:14px
+}
+.pagemenu h4 {
+	margin:0
+}
+.pagemenu h4 a {
+	padding-top:15px;
+	background-color:#f9f9f9;
+	color:#666;
+	cursor:default;
+	border-bottom-color:#e6e6e6
+}
+
+/*#result {float:left;height:610px;overflow-y:scroll;}
+#result a{font-size:12px;}*/
+
+
+
+.container-page .content {
+	/*padding:20px;*/
+	/*padding: 5px 20px 20px 20px;*/
+	
+	/*margin-right:20px;*/
+	margin:10px auto;
+	margin-top:60px;
+	/*border:1px solid #eaeaea;
+	border-radius:4px;*/
+	background-color:#fff;
+	
+	/*height:610px;*/
+}
+
+
+.content {
+	position:relative;
+	/*margin-right:380px;*/
+	margin-bottom:15px;
+	min-height:500px
+}
+
+
+.article-header {
+	/*padding:0 0 5px 0;*/
+	text-align:center;
+}
+.article-title {
+	margin-bottom:5px;
+	font-weight:700;
+	font-size:16px;
+	line-height:22px;
+	color: #aaa;
+}
+
+.article-content {
+	/*font-size:15px;
+	line-height:24px*/
+}
+
+
+#container-map{
+	height: 560px;
+}
+
+
+
+.footer {
+	position:relative;
+	z-index:9;
+	clear:both;
+	padding:40px 30px;
+	border-top:1px solid #eaeaea;
+	background-color:#fff;
+	text-align:center;
+	font-size:9pt;
+	line-height:9pt
+}
+.footer,.footer a {
+	color:#999
+}
+.footer a:hover {
+	color:#666
+}
+
+.footer {
+	padding:30px 0 20px
+}
+.footer nav {
+	display:none
+}
+.footer {
+	padding:15px 10px
+}
+.footer .container {
+	/*overflow:hidden;*/
+	height:2pc;
+	line-height:1pc
+}
+.footer a:first-child {
+	display:block
+}

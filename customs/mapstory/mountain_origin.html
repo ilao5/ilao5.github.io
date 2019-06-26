@@ -12,7 +12,7 @@
 	<link href="css/style.css" rel="stylesheet">
 	
 	
-	<script src="jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery/1.12.4/jquery.min.js"></script>
 
     <script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
@@ -88,38 +88,18 @@
 			<div class="pagemenus">
 
 				<ul class="pagemenu" id="result">
-					<li onclick="getmap(1);"><a href="javacript:void(0);">1.长安[西安]</a></li>
-					<li onclick="getmap(2);"><a href="javacript:void(0);">2.秦州[天水]</a></li>
-					<li onclick="getmap(3);"><a href="javacript:void(0);">3.兰州</a></li>
-					<li onclick="getmap(4);"><a href="javacript:void(0);">4.凉州[武威]</a></li>
-					<li onclick="getmap(5);"><a href="javacript:void(0);">5.甘州[张掖]</a></li>
-					<li onclick="getmap(6);"><a href="javacript:void(0);">6.肃州[酒泉]</a></li>
-					<li onclick="getmap(7);"><a href="javacript:void(0);">7.瓜州[安西]</a></li>
-					<li onclick="getmap(8);"><a href="javacript:void(0);">8.玉门关</a></li>
-					<li onclick="getmap(9);"><a href="javacript:void(0);">9.伊吾[哈密]</a></li>
-					<li onclick="getmap(10);"><a href="javacript:void(0);">10.白力城[鄯善]</a></li>
-					<li onclick="getmap(11);"><a href="javacript:void(0);">11.高昌[吐鲁番]</a></li>
-					<li onclick="getmap(12);"><a href="javacript:void(0);">12.阿耆尼国[焉耆]</a></li>
-					<li onclick="getmap(13);"><a href="javacript:void(0);">13.龟兹[库车]深</a></li>
-					<li onclick="getmap(14);"><a href="javacript:void(0);">114.克孜尔[拜城]</a></li>
-					<li onclick="getmap(15);"><a href="javacript:void(0);">15.跋逯迦国[阿克苏]</a></li>
-					<li onclick="getmap(16);"><a href="javacript:void(0);">16.凌山[乌什]</a></li>
-					<li onclick="getmap(17);"><a href="javacript:void(0);">17.大清池[伊塞克湖]</a></li>
-					<li onclick="getmap(18);"><a href="javacript:void(0);">18.碎叶[比什凯克]</a></li>
-					<li onclick="getmap(19);"><a href="javacript:void(0);">19.石头城[塔什干]</a></li>
-					<li onclick="getmap(20);"><a href="javacript:void(0);">20.飒秣建国[撒马尔罕]</a></li>
-					<li onclick="getmap(21);"><a href="javacript:void(0);">21.咀密国[铁尔梅兹]</a></li>
-					<li onclick="getmap(22);"><a href="javacript:void(0);">22.活国[昆都士]</a></li>
-					<li onclick="getmap(23);"><a href="javacript:void(0);">23.梵衍那国[巴米扬]</a></li>
-					<li onclick="getmap(24);"><a href="javacript:void(0);">24.迦毕试国[喀布尔]</a></li>
-					<li onclick="getmap(25);"><a href="javacript:void(0);">25.健陀罗国[白沙瓦城]</a></li>
-					<li onclick="getmap(26);"><a href="javacript:void(0);">26.犍陀罗[塔克西拉]</a></li>
-					<li onclick="getmap(27);"><a href="javacript:void(0);">27.拉合尔</a></li>
-					<li onclick="getmap(28);"><a href="javacript:void(0);">28.兰毗尼[鲁潘德希]</a></li>
-					<li onclick="getmap(29);"><a href="javacript:void(0);">29.瓦拉纳西</a></li>
-					<li onclick="getmap(30);"><a href="javacript:void(0);">30.那烂陀</a></li>
-					<li onclick="getmap(31);"><a href="javacript:void(0);">31.烂陀寺遗址</a></li>
-					<li onclick="getmap(32);"><a href="javacript:void(0);">32.摩揭陀国[巴特那]</a></li>
+					<li onclick="getmap(1);"><a href="javacript:void(0);">1.华山</a></li>
+					<li onclick="getmap(2);"><a href="javacript:void(0);">2.黄山</a></li>
+					<li onclick="getmap(3);"><a href="javacript:void(0);">3.峨眉山</a></li>
+					<li onclick="getmap(4);"><a href="javacript:void(0);">4.庐山</a></li>
+					<li onclick="getmap(5);"><a href="javacript:void(0);">5.珠穆朗玛峰</a></li>
+					<li onclick="getmap(6);"><a href="javacript:void(0);">6.长白山</a></li>
+					<li onclick="getmap(7);"><a href="javacript:void(0);">7.泰山</a></li>
+					<li onclick="getmap(8);"><a href="javacript:void(0);">8.武夷山</a></li>
+					<li onclick="getmap(9);"><a href="javacript:void(0);">9.玉山</a></li>
+					<li onclick="getmap(10);"><a href="javacript:void(0);">10.五台山</a></li>
+
+					
 				</ul>
 			</div>
 		</div>
@@ -127,7 +107,7 @@
 
 		<div class="content">
 			<header class="article-header">
-				<h1 class="article-title"><a href="/map/index.html">西游地图</a></h1>
+				<h1 class="article-title"><a href="/map/index.html">十大名山</a></h1>
 			</header>
 			
 			<article class="article-content">
@@ -197,7 +177,7 @@
 		function loadjson() 
 		{
 
-	        $.getJSON("save1.json",function(data){ 
+	        $.getJSON("data/mountain.json",function(data){ 
 				//var $jsontip = $("#jsonTip"); 
 				//var strHtml = "123";//存储数据的变量 
 				//$jsontip.empty();//清空内容 
@@ -229,8 +209,8 @@
 
 	    	var pointsLen = points.length;
 
-	    	var myIcon = new BMap.Icon("point.ico", new BMap.Size(8, 8), {
-				offset: new BMap.Size(8, 8) 
+	    	var myIcon = new BMap.Icon("img/mountainsx32.png", new BMap.Size(48, 48), {
+				offset: new BMap.Size(48, 48) 
 			});
 
 			
@@ -251,7 +231,10 @@
 
 				if(mark == 1)
 				{
-					var p_marker = new BMap.Marker(dotPoint); 
+
+					linePoints.push(dotPoint);
+
+					var p_marker = new BMap.Marker(dotPoint,{icon: myIcon});
 
 					addClickHandler(p_marker);
 					//markPoins.push(p_marker);
@@ -260,7 +243,7 @@
 				}
 				else
 				{
-					linePoints.push(dotPoint);
+					
 
 					var point = new BMap.Point(points[i].lng,points[i].lat);
 					var marker = new BMap.Marker(point, {icon: myIcon});
@@ -273,10 +256,10 @@
 
 			}
 
-			var polyline = new BMap.Polyline(linePoints, {strokeColor:"red", strokeWeight:4, strokeOpacity:0.5});   
+			/*var polyline = new BMap.Polyline(linePoints, {strokeColor:"red", strokeWeight:4, strokeOpacity:0.5});   
 
 
-			map.addOverlay(polyline);   
+			map.addOverlay(polyline);  */ 
 
 
 			setZoom();
@@ -370,33 +353,3 @@
 	
 </body>
 
-
-
-
-
-
-
-<!-- <body class="single p_indent">
-
-	<header class="header">
-		<div class="container">
-
-		</div>
-		
-	</header>
-	
-	
-	<section class="container container-page">
-		<div class="pageside">
-			<div class="pagemenus">
-			</div>
-		</div>
-		
-		
-		<div class="content">
-		
-		</div>
-		
-	</section>
-
-</body> -->
