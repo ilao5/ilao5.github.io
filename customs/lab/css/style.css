@@ -64,7 +64,7 @@ p {
 }
 
 .card {
-  width: calc(33.3% - 1.6rem);
+  width: calc(25% - 1.6rem);/*25%是一行4格,33.33%是一行3格*/
   margin: 0.8rem;
   background: #fff;
   overflow: hidden;
