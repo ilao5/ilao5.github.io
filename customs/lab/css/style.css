@@ -49,6 +49,8 @@ h3:after {
 
 p {
   margin: .5rem 0;
+  font-size: 14px;
+  color: #aaa;
 }
 
 .container {
