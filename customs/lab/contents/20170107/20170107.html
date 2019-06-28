@@ -14,7 +14,7 @@
   <link href="css/foundation.css" rel="stylesheet" type="text/css" />
   <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/pageloader.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/pageloader.css" />
 	<!--<link rel="stylesheet" type="text/css" href="css/fakeLoader.css" />-->
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
   
@@ -28,11 +28,11 @@
   <body>
   	
   	<!--<div class="fakeloader"></div>-->
-  	<!-- <div class="page-loader" id="page-loader">
+  	<div class="page-loader" id="page-loader">
 		  	<div><i class="ion ion-loading-d"></i>
 				<p>Past VS Now</p>
 			</div>
-		</div> -->
+		</div>
   	
 		<div class="nav">
 			<h3>
@@ -311,12 +311,12 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
-    <script src="js/jquery.jplayer.min.js"></script> 
-    <!-- <script src="js/fakeLoader.min.js"></script> -->
+    <!-- <script src="js/jquery.jplayer.min.js"></script>  -->
+    <script src="js/fakeLoader.min.js"></script>
     <script>
 	    $(window).load(function()
 	    {
-	    	/*$('#page-loader').addClass('hidden');*/
+	    	$('#page-loader').addClass('hidden');
 	    	
 	      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
 	      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
