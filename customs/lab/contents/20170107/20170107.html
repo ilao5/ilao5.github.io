@@ -4,13 +4,13 @@
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" sizes="256x256" href="logo.jpg">
+  <!-- <link rel="icon" sizes="256x256" href="logo.jpg"> -->
   <title>武汉的过去和现在(一)</title>
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+  <!-- <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" /> -->
   <link href="css/foundation.css" rel="stylesheet" type="text/css" />
   <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
@@ -36,8 +36,8 @@
   	
 		<div class="nav">
 			<h3>
-				<a href="http://www.ilao5.cn">
-					<img src="img/logo.jpg" class="logo" alt=""><p>LAO5</p>
+				<a href="https://www.ilao5.cn">
+					<img src="img/logo.jpg" class="logo" alt=""><!-- <p>LAO5</p> -->
 					<span>大武汉过去Vs现在(一)</span>
 				</a>
 			</h3>
@@ -292,16 +292,20 @@
       </div>
     </div>
 
+
+    <div class="music163">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=421148387&auto=1&height=66"></iframe>
+   </div>
+
+    <div id="footer" style="margin-top: 2em;">All Rights Reserved &copy; 2016~2019 <a href="https://www.ilao5.cn" target="_blank">ilao5.cn</a></div>
     
-    <div id="footer" style="margin-top: 2em;">未完待续 | <a href="http://www.ilao5.cn" target="_blank">lao5的院子</a>诚意出品</div>
-    
-    <div id="jquery_jplayer_1"></div>
+    <!-- <div id="jquery_jplayer_1"></div>
 		<div id="jp_container_1"> <a href="#" class="jp-play">
 		  <li class="ion-music-note" data-pack="default" data-tags="songs"></li>
 		  </a> <a href="#" class="jp-pause">
 		  <li class="ion-headphone" data-pack="default" data-tags="music, earbuds, beats"></li>
 		  </a>
-		</div>
+		</div> -->
     
     
     <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
@@ -325,7 +329,7 @@
 	    
 	    });
 	    
-	     $(document).ready(function(){
+	     /*$(document).ready(function(){
 				  $("#jquery_jplayer_1").jPlayer({
 				   ready: function () {
 				    $(this).jPlayer("setMedia", {
@@ -339,7 +343,7 @@
 				   swfPath: "/js",
 				   supplied: "mp3"
 				  });
-			 });
+			 });*/
     </script>
   </body>
 </html>
