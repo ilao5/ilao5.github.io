@@ -20,16 +20,17 @@
   <h2>实验室</h2>
   <div class="grid">
 
-    <div class="card">
-      <div class="card--image"><img src="img/footmark.jpg"/></div>
-      <div class="card--content">
-        <div class="card--category">map</div>
-        <h3>地图上的事儿</h3>
-        <p>各种地图应用.</p>
+      <div class="card" url="../mapstory/footmark.html">
+        <div class="card--image"><img src="img/footmark.jpg"/></div>
+        <div class="card--content">
+          <div class="card--category">map</div>
+          <h3>地图上的事儿</h3>
+          <p>各种地图应用.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
+
+    <div class="card" url="contents/20170107/20170107.html">
       <div class="card--image"><img src="img/20170107.jpg"/></div>
       <div class="card--content">
         <div class="card--category">app</div>
@@ -38,7 +39,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" url="contents/20160930/20160930.html">
       <div class="card--image"><img src="img/20160930.jpg"/></div>
       <div class="card--content">
         <div class="card--category">游记</div>
@@ -47,7 +48,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" url="contents/20141001/20141001.html">
       <div class="card--image"><img src="img/20141001.jpg"/></div>
       <div class="card--content">
         <div class="card--category">游记</div>
@@ -59,6 +60,34 @@
   </div>
 </div>
   
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script>
+
+
+
+    $('.card').click(function(event) {
+      var event=event||e;
+      //console.log(event.currentTarget.id);  //获取id属性值
+      //console.log(event.currentTarget.dataset.name);  //获取自定义data-属性值
+
+      //获取div里的值  2种方法
+      //console.log($(this).html());
+      //console.log($(this).text());   
+      //获取自定义属性的属性值 
+      console.log($(this).attr("url"));  
+
+      var url = $(this).attr("url");
+      //获取当前操作下标
+      //console.log($(this).index());
+      //console.log($('.card').index(this));
+
+      window.open(url); 
+
+    });
+
+  </script>
+
   
 
 </body>
