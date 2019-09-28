@@ -33,7 +33,11 @@
 			  <a-asset-item id="dino" src="assets/scene.gltf"></a-asset-item>
 			</a-assets>
 			<!-- use your gltf model -->
-			<a-entity gltf-model="##dino"></a-entity>
+			<a-entity gltf-model="##dino" position="0 0 0"
+					rotation="0 0 0"
+					scale="0.001 0.001 0.001"></a-entity>
+					
+			<a-entity id="point_light_1" light="type: point; intensity: 5.1;" position="0 0 0"></a-entity>
 			
 			<a-marker-camera type='pattern' url='marker/pattern.patt'></a-marker-camera>
 		 </a-scene>
