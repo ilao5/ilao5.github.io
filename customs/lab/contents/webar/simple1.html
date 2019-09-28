@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>AR</title>
+	
+	<script src="js/aframe.min.js"></script>
+    <script src="js/aframe-ar.js"></script>
+	 <script src="js/aframe-extras.loaders.min.js"></script>
+    
+
+	
+  </head>
+
+	<body style="margin : 0px; overflow: hidden;">
+
+		
+	
+		
+		
+		
+		
+		<a-scene  embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline>
+			  
+			  <a-assets>
+				<!-- <a-asset-item id="dino" src="https://raw.githubusercontent.com/lajunex0/3dmodels/master/NSLogo7.gltf" crossOrigin="anonymous"></a-asset-item> -->
+			  
+				<a-asset-item id="dino" src="assets/scene.gltf" crossOrigin="anonymous"></a-asset-item>
+			  </a-assets>
+			  
+			  <a-marker preset='custom' type='pattern' url='markers/pattern.patt' size='1'>
+			  
+			  <!-- <a-marker preset='hiro'> -->
+				<a-entity scale="0.08 0.08 0.08">
+				  <a-entity mmd='outline: true' afterglow:2.0;>
+					<a-entity scale="0.03 0.03 0.03" gltf-model="#dino"></a-entity>
+				  </a-entity>
+				</a-entity>
+			  </a-marker>
+			  
+			  <a-entity camera></a-entity>
+			  
+			</a-scene>
+  
+		
+		
+		  
+  
+	</body>
+	
+	<!-- <script src="js/touchme.js"></script> -->
+</html>
