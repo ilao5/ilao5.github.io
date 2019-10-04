@@ -1,0 +1,54 @@
+﻿凤凰资讯,http://live.fengshows.com/live/PIN_500k/index.m3u8?ts=&token=
+凤凰香港,http://live.fengshows.com/live/PHK_500k/index.m3u8?ts=&token=
+凤凰中文HD,http://183.207.248.71:80/PLTV/3/224/3221226922/index.m3u8
+
+CCTV-5HD,http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221225497/index.m3u8
+CCTV-5蓝光,http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ/
+CCTV-5南京移动,http://223.110.243.155:80/PLTV/3/224/3221227468/index.m3u8
+CCTV风云足球,http://223.110.243.168/PLTV/2510088/224/3221227344/1.m3u8
+
+俄罗斯直播信号,http://playlist.onlybest.tv/en/channel/3dfec4b56a6fbb4052ceb76274060617/113/index.m3u8
+俄罗斯RT News(En),http://secure-streams.akamaized.net/rt/index.m3u8
+
+皇家马德里TV,http://rmtv24hweblive-lh.akamaihd.net/i/rmtv24hweben_1@300662/master.m3u8
+
+卫视电影,http://iss01.ott.net.tw:8090/live/coship_DCTV0001421917060555_1200.m3u8
+HBO强档,http://iss01.ott.net.tw:8090/live/coship_DCTV2291445940028640_1200.m3u8
+
+日本-NHK World 720P,http://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8
+
+台湾壹新闻,http://d2e6xlgy8sg8ji.cloudfront.net/liveedge/eratv3/chunklist.m3u8
+中天新闻HD,http://60.199.188.65/HLS/WG_ETTV-N/index.m3u8
+優視頻道,http://1-fss24-s0.streamhoster.com/lv_uchannel/_definst_/broadcast1/chunklist.m3u8
+
+英国-BBC WORLD NEWS,http://89.211.63.16:1935/HR06/HR06.stream/chunklist.m3u8
+英国-SkyNews,http://skydvn-nowtv-atv-prod.skydvn.com/atv/skynews/1404/live/04.m3u8
+爱尔兰-RTE News Now,http://wmsrtsp1.rte.ie/live/android.sdp/playlist.m3u8
+
+澳亚卫视,http://live.mastvnet.com/n1rtlHG/500/live.m3u8
+
+日本-NHK World 720P,http://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8
+
+美国CNN,http://unlimited1-us.dps.live/cnn/cnn.smil/playlist.m3u8
+US-ABC NEWS,https://abclive1-lh.akamaihd.net/i/abc_live02@423396/master.m3u8
+美國中文台,http://ec.sinovision.net/video/ts/lv.m3u8
+美国中文电视,http://media3.sinovision.net:1935/live/livestream/playlist.m3u8
+
+土耳其TRT-World,http://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/master.m3u8
+
+卡塔尔半岛台,http://aljazeera-doc-apple-live.adaptive.level3.net/apple/aljazeera/hq-doc/800kStream.m3u8
+
+印度- NDTV,http://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/master.m3u8
+
+韩国-SBS,http://123.108.164.71/etv2/phd847/playlist.m3u8
+韩国-CBS ,http://cbs-live.gscdn.com/cbs-live/cbs-live.stream/playlist.m3u8
+
+韩国中央台,http://122.202.129.136:1935/live/ch5/playlist.m3u8
+韩国朝鲜日报台,rtmp://live.chosun.gscdn.com/live/tvchosun1.stream
+韩国CBS,rtmp://cbs-live.gscdn.com/cbs-live/cbs-live.stream
+韩国PAXTV,rtmp://124.139.232.61:1935/live/livestream
+韩国KCTV-N,rtmp://122.202.129.136:1935/live/ch4
+
+生命电视台HD,http://211.73.19.201/live/E6290DC0-BE6A-B7C4-79F5-114BDB417F9E?fmt=x264_500K_ts&cpid=admin&size=1280X720&toflv=1
+耀才财经,rtmp://202.69.69.180:443/webcast/bshdlive-pc
+耀才财经1,rtmp://fc_video.bsgroup.com.hk:443/webcast/bshdlive-pc
