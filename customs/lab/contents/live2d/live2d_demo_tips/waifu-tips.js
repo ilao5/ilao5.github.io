@@ -94,7 +94,7 @@ $('.waifu-tool .fui-photo').click(function (){
 
 $.ajax({
     cache: true,
-    //url: "/usr/themes/Moricolor/assets/waifu-tips.json?v=0.0.20",
+    //url: "/usr/themes/Moricolor/assets/waifu-tips.json",
 	url: "waifu-tips.json",
     dataType: "json",
     success: function (result){
