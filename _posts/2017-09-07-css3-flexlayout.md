@@ -45,15 +45,15 @@ author:
 * 行内元素也可以使用 Flex 布局。
 ```
 .box{
-  display: inline-flex;
+	display: inline-flex;
 }
 ```
 
 * Webkit 内核的浏览器，必须加上-webkit前缀。
 ```
 .box{
-  display: -webkit-flex; /* Safari */
-  display: flex;
+	display: -webkit-flex; /* Safari */
+	display: flex;
 }
 ```
 
@@ -94,7 +94,7 @@ flex-direction属性决定主轴的方向（即项目的排列方向）。
 
 ```
 .box {
-  flex-direction: row | row-reverse | column | column-reverse;
+	flex-direction: row | row-reverse | column | column-reverse;
 }
 ```
 
@@ -167,7 +167,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
 ■ space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 ```
 
-#### 3.5 justify-content属性
+#### 3.5 align-items属性
 ---
 
 align-items属性定义项目在交叉轴上如何对齐。
@@ -306,6 +306,96 @@ flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 au
 该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
 
 建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+
+
+flex-grow:定义项目的放大比例，即项目分配容器剩余空间的比，默认为0，即如果存在剩余空间，也不放大。
+
+flex-shrink:定义项目的收缩比列，默认为1，即如果空间不足，该项目将缩小。
+
+flex-basis:定义项目的长度；合法值"auto","inherit"或者后面跟"%","px","em";默认为auto，为项目原来的长度
+
+
+flex的赋值说明:
+
+(1)flex:none；
+```
+{
+	flex-grow:0;
+	flex-shrink:0;
+	flex-basis:auto;
+}
+```
+
+(2)flex:auto;
+```
+{
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:auto;
+}
+```
+
+(3)当flex值为一个非负数字时，则该数字为flex-grow的值，flex-shrink:1;flex-basis:0%;
+
+flex:1;
+
+```
+{
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:0%;
+}
+```
+
+(4)当flex值为一个长度或百分比时，则该数字为flex-basis的值，flex-grow:1;flex-shrink:1;
+
+flex:0%;
+
+```
+{
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:0%;
+}
+```
+
+flex:24px;
+
+```
+{
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:24px;
+}
+
+(5)当flex取值为两个非负数字时，则分别为flex-grow，flex-shrink的值，flex-basis:0%;
+
+flex:2 3;
+
+```
+{
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:0%;
+}
+```
+
+(6)当flex取值为一个非负数字和一个长度或百分比时，则分别视为flex-grow，flex-basis的值，flex-shrink:1;
+
+flex:2333 455px;
+
+```
+{
+	flex-grow:2333;
+	flex-shrink:1;
+	flex-basis:455px;
+}
+```
+
+flex-basis:取值情况
+auto：首先检查该子元素的父元素尺寸，如果父元素尺寸不为auto，则使用值取父元素尺寸的值，如果父元素尺寸为auto，则使用值和content一样；
+content：指根据子元素的内容自动布局；取代方法：子元素和父元素的flex-basis都取auto；
+%：根据其包含块（即伸缩父容器）的尺寸计算，如果其包含块（即伸缩父容器）的尺寸未定义，则计算结果和auto一样；
 
 
 #### 4.6 align-self属性
