@@ -367,6 +367,7 @@ flex:24px;
 	flex-shrink:1;
 	flex-basis:24px;
 }
+```
 
 (5)当flex取值为两个非负数字时，则分别为flex-grow，flex-shrink的值，flex-basis:0%;
 
