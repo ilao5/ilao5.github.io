@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSphereViewer - cubemap demo</title>
+
+  <link rel="stylesheet" href="dist/photo-sphere-viewer.css">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    #photosphere {
+      width: 100%;
+      height: 100%;
+    }
+
+    .psv-button.custom-button {
+      font-size: 22px;
+      line-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="photosphere"></div>
+
+<!-- <script src="../node_modules/three/build/three.js"></script>
+<script src="../node_modules/promise-polyfill/dist/polyfill.js"></script>
+<script src="../node_modules/uevent/uevent.js"></script>
+<script src="../node_modules/dot/doT.js"></script>
+<script src="../node_modules/nosleep.js/dist/NoSleep.js"></script>
+<script src="../node_modules/three/examples/js/controls/DeviceOrientationControls.js"></script>
+<script src="../node_modules/three/examples/js/effects/StereoEffect.js"></script>
+<script src="../dist/photo-sphere-viewer.js"></script> -->
+
+<script src="node_modules/three.min.js"></script>
+<script src="node_modules/polyfill.min.js"></script>
+<script src="node_modules/uevent.min.js"></script>
+<script src="node_modules/doT.min.js"></script>
+<script src="dist/photo-sphere-viewer.js"></script>
+
+<script>
+  var panos = [
+    {
+      url: {
+        left: 'suntemple-cubemap/1.jpg',
+        front: 'suntemple-cubemap/2.jpg',
+        right: 'suntemple-cubemap/3.jpg',
+        back: 'suntemple-cubemap/4.jpg',
+        top: 'suntemple-cubemap/5.jpg',
+        bottom: 'suntemple-cubemap/6.jpg'
+      },
+      desc: '太和殿'
+    },
+    {
+      url: [
+        'test-cubemap/1.png',
+        'test-cubemap/2.png',
+        'test-cubemap/3.png',
+        'test-cubemap/4.png',
+        'test-cubemap/5.png',
+        'test-cubemap/6.png'
+      ],
+      desc: 'Test cubemap'
+    }
+  ];
+
+  var PSV = new PhotoSphereViewer({
+    container: 'photosphere',
+    panorama: panos[0].url,
+    caption: panos[0].desc,
+    //fisheye: true,
+	navbar: false,
+    time_anim: false,
+    default_long: Math.PI / 2,
+    loading_img: 'assets/photosphere-logo.gif',
+    
+    
+  });
+
+  
+</script>
+
+<script>
+  //document.write('<script src="//' + location.host.split(':')[0] + ':35729/livereload.js" async defer><' + '/script>');
+</script>
+</body>
+</html>
