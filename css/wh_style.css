@@ -83,6 +83,7 @@ a:hover i {
 }
 
 .love {
+  text-stroke: 1.0px #fff;
   -webkit-text-stroke: 1.0px #fff;
 }
 
