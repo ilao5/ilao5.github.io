@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 
 
-	var sound_path = '_/sound/';
+	var sound_path = 'sound/';
 
 	// Howler.ctx = new AudioContext();
 	// Howler.ctx.resume();
