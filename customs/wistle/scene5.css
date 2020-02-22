@@ -1,0 +1,72 @@
+/*body {
+  padding: 0;
+}*/
+#scene5{
+  position: relative;
+  min-height: 100vh;
+}
+
+#scene5 h1 {
+  margin: 0;
+}
+
+.wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #345;
+}
+
+.left {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.right {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #101010;
+  overflow: hidden;
+}
+.right .h1 {
+  left: -100%;
+  color: #fff;
+}
+
+.h1 {
+  width: 200%;
+  text-align: center;
+  position: absolute;
+  top: 42%;
+  color: #101010;
+  white-space: nowrap;
+  font-size: 5rem;
+  /*-webkit-animation: width-anim 1.42s 2.42s infinite alternate both;*/
+          /*animation: width-anim 1.42s 2.42s infinite alternate both;*/
+}
+
+@-webkit-keyframes width-anim {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 300%;
+  }
+}
+
+@keyframes width-anim {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 300%;
+  }
+}
