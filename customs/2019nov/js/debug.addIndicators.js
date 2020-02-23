@@ -42,7 +42,8 @@
 
 	// plugin settings
 	var
-		FONT_SIZE = "0.85em",
+		// FONT_SIZE = "0.85em",
+		FONT_SIZE = "0.14rem",
 		ZINDEX = "9999",
 		EDGE_OFFSET = 15; // minimum edge distance, added to indentation
 

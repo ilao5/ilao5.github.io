@@ -1,0 +1,314 @@
+/*//////////////////////////////////////////////////////////////*/
+/*============病毒区===========*/
+#virus-container .offset {top:600px;}
+
+#div-virus {
+	width:100%;
+	height: 400px;
+	top:600px;
+	/*background: #eee;*/
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*============引言区===========*/
+/*#intro-container {
+	widows: 100%;
+	height: 200px;
+}*/
+#intro-container .offset {top:12rem;}
+#div-intro {
+	/*left:50%;
+	margin-left:-488px;*/
+	/*right: 5%;
+	margin-right: 30px;*/
+	/*width:400px;
+	height: 200px;
+	top:600px;*/
+	/*background: #eee;*/
+	/*color: #fff;*/
+
+
+	text-align: center;
+  /*background-color: #fff;*/
+  /*border-radius: 20px;*/
+  width: 66%;
+  /*height: 350px;*/
+  height: auto;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  top:13rem;
+  cursor: none;
+
+  /*-webkit-transition: opacity 1s 2s;
+	transition: opacity 1s 2s;*/
+
+}
+
+.quote {
+  
+	font-size: 0.24rem;
+	line-height:0.4rem;
+	/*width: 600px;*/
+	height: auto;
+	margin: 0 auto;
+	color: #fff;
+  
+
+}
+
+.author {
+  /*text-align: right;*/
+	font-size: 0.16rem;
+  font-style: italic;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*============20191201===========*/
+
+#day_20191201 .offset {top:15rem;}
+
+
+#div-jonsnow {
+  text-align: center;
+  width: 50%;
+  height: auto;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  top:16rem;
+  /*cursor: pointer;*/
+
+    /*-webkit-transition: opacity 1s 2s;
+  	transition: opacity 1s 2s;*/
+
+}
+
+.img-jon {
+	width: 150px;
+	height: 193px;
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*============201912 08-10===========*/
+
+
+#day_20191208 .offset {top:19rem;}
+#day_20191210 .offset {top:21rem;}
+
+/*//////////////////////////////////////////////////////////////*/
+/*============20191212===========*/
+#day_20191212 .offset {top:25rem;}
+
+#div-20191212-anim {
+  text-align: center;
+  
+  left: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  top:27rem;
+
+}
+
+.img-20191212 {
+  background:url('../img/assets/20191212.png') no-repeat top center;
+  background-size: contain;
+  width: 3.34rem;
+  height: 3.66rem;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*============201912 13-29===========*/
+#day_20191213 .offset {top:30rem;}
+
+#day_20191215 .offset {top:42rem;}
+#day_20191216 .offset {top:44rem;}
+#day_20191217 .offset {top:52rem;}
+#day_20191218 .offset {top:58rem;}
+#day_20191219 .offset {top:60rem;}
+#day_20191220 .offset {top:65rem;}
+#day_20191221 .offset {top:76rem;}
+#day_20191222 .offset {top:78rem;}
+#day_20191223 .offset {top:80rem;}
+#day_20191224 .offset {top:82rem;}
+#day_20191225 .offset {top:86rem;}
+#day_20191226 .offset {top:91rem;}
+#day_20191227 .offset {top:96rem;}
+#day_20191228 .offset {top:104rem;}
+#day_20191229 .offset {top:107rem;}
+
+/*//////////////////////////////////////////////////////////////*/
+/*============day_20191230===========*/
+#day_20191230 .offset {top:127rem;}
+
+/*#day_20191230 .offset {top:1700px;}*/
+
+#div-20191230-anim1 {
+  text-align: center;
+  
+  left: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  top:131rem;
+
+}
+
+.img-20191230-1 {
+  background:url('../img/assets/20191230_1.png') no-repeat top center;
+  background-size: contain;
+  width: 3.36rem;
+  height: 6.60rem;
+}
+
+
+#div-20191230-anim2 {
+  text-align: center;
+  
+  left: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  top:143rem;
+
+}
+
+.img-20191230-2 {
+  background:url('../img/assets/20191230_2.png') no-repeat top center;
+  background-size: contain;
+  width: 2.65rem;
+  height: 5.24rem;
+}
+
+#div_whistle {
+  /*opacity:0;*/
+  /*left:50%;
+  margin-left:-488px;
+  width:976px;*/
+  left: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  top:138rem;
+}
+
+.whistle{
+  width: 20%;
+  fill: #f95959;
+  margin: 100px 40%;
+  /*margin: 1rem 2rem;*/
+  text-align: left;
+  transform: translate(-50%, -50%);
+  transform: rotate(0);
+  transform-origin: 80% 30%;
+  
+}
+
+.whistleActive{
+  animation: wiggle .2s infinite;
+}
+
+@keyframes wiggle {
+  0%{
+    transform: rotate(3deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(3deg);
+  }
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*============day_20191231===========*/
+#day_20191231 .offset {top:150rem;}
+
+#div-20191231-anim {
+  text-align: center;
+  
+  left: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  top:156rem;
+
+}
+
+.img-20191231 {
+  background:url('../img/assets/dalian1.jpg') no-repeat top center;
+  background-size: contain;
+  width: 2.5rem;
+  height: 1.87rem;
+}
+
+
+
+#day_20200101 .offset {top:2200px;}
+#day_20200102 .offset {top:2400px;}
+#day_20200103 .offset {top:2600px;}
+#day_20200105 .offset {top:2800px;}
+#day_20200106 .offset {top:3000px;}
+#day_20200108 .offset {top:3300px;}
+#day_20200110 .offset {top:3500px;}
+#day_20200111 .offset {top:3700px;}
+#day_20200115 .offset {top:4000px;}
+#day_20200116 .offset {top:4200px;}
+#day_20200117 .offset {top:4500px;}
+#day_20200118 .offset {top:4800px;}
+#day_20200119 .offset {top:5100px;}
+#day_20200120 .offset {top:5400px;}
+#day_20200122 .offset {top:5700px;}
+#day_20200123 .offset {top:6000px;}
+#day_20200124 .offset {top:6300px;}
+#day_20200125 .offset {top:6600px;}
+#day_20200126 .offset {top:7100px;}
+#day_20200127 .offset {top:8000px;}
+#day_20200128 .offset {top:8500px;}
+#day_20200129 .offset {top:9000px;}
+
+/*#day_20191230 {position: relative;}*/
+#day_20200130 .offset {top:9800px;}
+
+#day_20200131 .offset {top:10500px;}
+
+#day_20200201 .offset {top:12500px;}
+#day_20200202 .offset {top:13500px;}
+#day_20200203 .offset {top:14500px;}
+#day_20200204 .offset {top:15500px;}
+#day_20200205 .offset {top:16500px;}
+#day_20200206 .offset {top:18000px;}
+#day_20200207 .offset {top:19000px;}
+#day_20200208 .offset {top:20000px;}
+#day_20200209 .offset {top:21000px;}
+#day_20200210 .offset {top:22000px;}
+#day_20200211 .offset {top:24000px;}
+#day_20200212 .offset {top:25000px;}
+#day_20200213 .offset {top:26000px;}
+#day_20200214 .offset {top:27000px;}
+#day_20200215 .offset {top:28000px;}
+#day_20200216 .offset {top:29000px;}
+#day_20200217 .offset {top:30000px;}
+#day_20200218 .offset {top:30000px;}
+#day_20200219 .offset {top:31000px;}
+
+
+
+
+
+

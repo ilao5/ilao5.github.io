@@ -1,6 +1,7 @@
 .text-popup {
+    font-size: 0.2rem;
     animation: textPopup 1s;
-    color: #ffd700;
+    color: #ff4400;
     user-select: none;
     white-space: nowrap;
     position: absolute;
