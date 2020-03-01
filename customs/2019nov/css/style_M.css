@@ -1,3 +1,23 @@
+:root {
+	--color-bg : #253138;/*#001919;*//*#ecf0f3;*/
+	--color-gold : #ffd700;
+	--color-text1: #ddd;
+	--color-text2: #dac9a6;/*#b4a582*/
+	--color-white: #fff;
+	--color-link-red: #ef8b80;
+	--color-hightlight: #ff4400;
+	--color-underline: #ef8b80;
+	--layer-txt: 1000;
+	--layer-anim: 2000;
+
+	--size-18:0.18rem; 
+	--size-20:0.20rem;
+	--size-24:0.24rem; 
+
+}
+
+
+
 html {
 	height:100%;
 	overflow-y: scroll;
@@ -6,7 +26,7 @@ html {
 body {
 	margin:0px;
 	padding:0px;
-	background:#253138;/*#001919;*//*#ecf0f3;*/
+	background:var(--color-bg);
 	overflow-x: hidden;
 
 	font-family: '微软雅黑', serif;
@@ -52,11 +72,11 @@ h1 {
 }
 
 .highlight {
-	background: #ff4400; 
-  	color: #fff;
+	background: var(--color-hightlight); 
+  	color: var(--color-white); 
 }
 
-a {text-decoration:none;}
+
 
 .underline1 {
 	color : #fff;
@@ -67,15 +87,21 @@ a {text-decoration:none;}
 	transition: background 0.1s cubic-bezier(.33,.66,.66,1);
 }
 
+a {text-decoration:none;}
 a.underline1:hover {background: #ef8b80;}
 
 /*.out {
 	opacity: 0;
 }*/
 
+.indent{
+	text-indent:2em;
+}
+
+
 .fade {
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .fade.out {
   opacity: 0;
@@ -99,7 +125,8 @@ a.underline1:hover {background: #ef8b80;}
 
 
 #wrapper {
-	height:600px;
+	/*height:600px;*/
+	height: 100vh;
 	overflow: hidden;
 	position:relative;
 }
@@ -116,11 +143,13 @@ body.pace-running #wrapper {height:600px;}
 /*body.pace-done #wrapper {height:94545px;}*/
 body.pace-done #wrapper {height:194545px;}
 
+
 .marker h3,p.notice,.base-info {
-	/*font-family:'微软雅黑',sans-serif;font-weight:700;*/
+
 }
 
 
+/*logo标题图片*/
 #space-race-logo {
 	/*width:500px;*/
 	width: 80%;
@@ -134,7 +163,7 @@ body.pace-done #wrapper {height:194545px;}
     transform: translate(-50%,0);
 
 	/*margin-left:-250px;*/
-	background:url('../img/elements/space-race-logo2.png') no-repeat top center;
+	background:url('../img/assets/logo_title.png') no-repeat top center;
 	background-size: contain;/*图片自适应*/
 	z-index:999;
 	height:200px;
@@ -163,25 +192,15 @@ body.pace-done #wrapper {height:194545px;}
 }
 
 /*.section-one {height:10545px;}*/
-.section-one {height:30545px;}
+.section-one {height:90545px;}
 
-
-
-.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
-@keyframes sakura{
-	0% {transform:rotate3d(0, 0, 0, 0deg);}
-	25%{transform:rotate3d(1, 1, 0, 60deg);}
-	50%{transform:rotate3d(1, 1, 0, 0deg);}
-	75%{transform:rotate3d(1, 0, 0, 60deg);}
-	100% {transform:rotate3d(1, 0, 0, 0deg);}
-}
 
 
 .padded-element {position:absolute;}
 
-/*//////////////////////////////////////////////////////////////*/
-/*============时间轴点===========*/
-
+/*======================================================*/
+/*============时间轴 Marker===========*/
+/*======================================================*/
 .marker {
 	position:absolute;
 	/*width:976px;*/
@@ -201,7 +220,7 @@ body.pace-done #wrapper {height:194545px;}
 	/*width:250px;*/
 	width: 0.4rem;
 	display: block;
-	border-top:2px solid #ffd700;
+	border-top:1px solid var(--color-gold);
 	/*border-top:2px dotted #999;*/
 	position:relative;
 	/*left:-260px;*/
@@ -212,57 +231,128 @@ body.pace-done #wrapper {height:194545px;}
 
 .marker h3 {
 	font-size:0.2rem;
-	/*color:#eee;*/
+	color:var(--color-gold);
 	position:relative;
 	/*left:5px;*/
 	width: auto;
 	left: 0.45rem;
 	top:-0.1rem;
 }
-.marker h4 {
+/* .marker h4 {
 	font-size:0.18rem;
 	color:#ddd;
 	position:relative;
-	/*left:5px;*/
+	left:5px;
 	left: 0.45rem;
-	/*top:-7px;*/
+	top:-7px;
 	top:0.05rem;
-}
+} */
 
 /*rgb(243,146,0)*/
 .marker p {
 	/*color:#394a56;*/
-	color:#fff;
-	font-size:0.18rem;
+	
+
+	color:var(--color-white);
+	font-size:var(--size-18);
 	position:relative;
 	width:3rem;
-	letter-spacing: 1px;
+	
+	letter-spacing: 0.05rem;
 	line-height:0.3rem;
 	/*opacity: .6;*/
+
+	text-align: justify;
+	/*padding: 0.3rem auto 0.3rem auto;*/
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
-.marker p.title {
+
+.marker p.desc {
+	color:var(--color-text1);
+	/*left:5px;*/
+	left: 0.45rem;
+	top: 0.05rem;
+	/*width: auto;
+	margin: 0 auto;*/
+	/*right: 0.45rem;*/
+	letter-spacing: 0.05rem;
+
+	/*line-height:0.2rem;*/
+
+}
+
+.marker p.full {
+	/*color:#394a56;*/
+	/*width:90%;*/
+	width: auto;
+	margin: 0 auto;
+	/*right: 0;*/
+	padding-right: 0.8rem;
+	/*margin-right:0.5rem;*/
+	
+
+	/*opacity: .6;*/
+}
+
+/*.marker p:not(.thelink):nth-child(2n+2){*/
+.marker p:nth-child(2n+2){
+	color:var(--color-text2);
+	/*margin-top: 0.2rem;*/
+}
+
+.marker p:not(.thelink){
+
+	margin-top: 0.2rem;
+}
+
+/*.marker p:first-child {
+	margin-top: 0;
+}*/
+
+.mt{
+	margin-top: 0.2rem;
+}
+
+/*.marker p.title {
 	text-transform: uppercase;
 	left:5px;
 	top:-11px;
 	letter-spacing: 2px;
-	/*opacity: .6;*/
-}
-.marker p.w {}
-.marker p.o2 {}
-.marker p.cgold {color:#ffd700;}
-.marker p.clink {color:#ef8b80;}
+	opacity: .6;
+}*/
+/*.marker p.w {}*/
+/*.marker p.o2 {}*/
+/*.marker p.cgold {color:#ffd700;}*/
+.marker p.clink {color:var(--color-underline);}
+.marker p.clink-a {color:var(--color-white);}
 
-.marker h3.o{color:#ffd700;}
-.marker h4.o{}
-.marker p.desc {
-	/*left:5px;*/
-	left: 0.45rem;
-	top: 0.05rem;
-	letter-spacing: 0.05rem;
-	/*line-height:0.2rem;*/
 
-}
+/*.marker h3.o{color:#ffd700;}*/
+/*.marker h4.o{}*/
+
 .element {position:absolute;}
+
+
+
+
+/*======================================================*/
+/*snowfall插件*/
+/*======================================================*/
+.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+@keyframes sakura{
+	0% {transform:rotate3d(0, 0, 0, 0deg);}
+	25%{transform:rotate3d(1, 1, 0, 60deg);}
+	50%{transform:rotate3d(1, 1, 0, 0deg);}
+	75%{transform:rotate3d(1, 0, 0, 60deg);}
+	100% {transform:rotate3d(1, 0, 0, 0deg);}
+}
+
+
+
+
+
 
 
 
@@ -317,6 +407,34 @@ body.pace-done #wrapper {height:194545px;}
   to {
     opacity: 1;
   }
+}
+
+
+.lao5 {
+
+  position: absolute;
+  text-align: center;
+
+  width: 80%;
+
+  height: auto;
+
+  left: 50%;
+  top:80vh;
+  /*top: 50%;*/
+  /*transform: translate(-50%,-50%);*/
+  transform: translateX(-50%);
+
+  /*top:13rem;*/
+  cursor: none;
+
+  font-size: 0.14rem;
+  color: #fff;
+  opacity: 0.5;
+
+  /*-webkit-transition: opacity 1s 2s;
+	transition: opacity 1s 2s;*/
+
 }
 
 
