@@ -355,11 +355,26 @@ $(document).ready(function(){
 	var height_20191230 = $("#info_20191230").height();
 	var top_20191231 = top_20191230 + height_20191230 + 50;
 	$("#info_20191231").css({"top":top_20191231 + "px"});
+	console.log(">>>>>top_20191231 = ",top_20191231);
+
+	var height_anchor_20191231_to_father = $("#anchor_20191231").position().top;//距离父节点距离
+	var height_anchor_20191231 = $("#anchor_20191231").height();
+	var top_anim_20191231 = top_20191231 + height_anchor_20191231_to_father + height_anchor_20191231 / 2;
+	$("#div-20191231-anim").css({"top":top_anim_20191231 + "px"});
+
 
 
 	var height_20191231 = $("#info_20191231").height();
 	var top_20200101 = top_20191231 + height_20191231 + 50;
 	$("#info_20200101").css({"top":top_20200101 + "px"});
+
+
+	var height_anchor_20200101_to_father = $("#anchor_20200101").position().top;//距离父节点距离
+	var height_anchor_20200101 = $("#anchor_20200101").height();
+	var top_anim_20200101_whistle = top_20200101 + height_anchor_20200101_to_father + height_anchor_20200101 / 2;
+	$("#div_whistle").css({"top":top_anim_20200101_whistle + "px"});
+
+
 
 	var height_20200101 = $("#info_20200101").height();
 	var top_20200102 = top_20200101 + height_20200101 + 50;
@@ -369,6 +384,14 @@ $(document).ready(function(){
 	var top_20200103 = top_20200102 + height_20200102 + 50;
 	$("#info_20200103").css({"top":top_20200103 + "px"});
 
+
+	var height_anchor_20200103_to_father = $("#anchor_20200103").position().top;//距离父节点距离
+	var height_anchor_20200103 = $("#anchor_20200103").height();
+	var top_anim_20200103 = top_20200103 + height_anchor_20200103_to_father + height_anchor_20200103 / 2;
+	$("#div-20200103-anim").css({"top":top_anim_20200103 + "px"});
+
+
+
 	var height_20200103 = $("#info_20200103").height();
 	var top_20200104 = top_20200103 + height_20200103 + 50;
 	$("#info_20200104").css({"top":top_20200104 + "px"});
@@ -376,6 +399,13 @@ $(document).ready(function(){
 	var height_20200104 = $("#info_20200104").height();
 	var top_20200105 = top_20200104 + height_20200104 + 50;
 	$("#info_20200105").css({"top":top_20200105 + "px"});
+
+
+	var height_anchor_20200105_to_father = $("#anchor_20200105").position().top;//距离父节点距离
+	var height_anchor_20200105 = $("#anchor_20200105").height();
+	var top_anim_20200105 = top_20200105 + height_anchor_20200105_to_father + height_anchor_20200105 / 2;
+	$("#div-20200105-anim").css({"top":top_anim_20200105 + "px"});
+
 
 	var height_20200105 = $("#info_20200105").height();
 	var top_20200106 = top_20200105 + height_20200105 + 50;
@@ -401,6 +431,13 @@ $(document).ready(function(){
 	var top_20200111 = top_20200110 + height_20200110 + 50;
 	$("#info_20200111").css({"top":top_20200111 + "px"});
 
+	//4 kill
+	var height_anchor_20200111_to_father = $("#anchor_20200111").position().top;//距离父节点距离
+	var height_anchor_20200111 = $("#anchor_20200111").height();
+	var top_anim_20200111 = top_20200111 + height_anchor_20200111_to_father + height_anchor_20200111 / 2;
+	$("#div-20200111-anim").css({"top":top_anim_20200111 + "px"});
+
+
 	var height_20200111 = $("#info_20200111").height();
 	var top_20200112 = top_20200111 + height_20200111 + 50;
 	$("#info_20200112").css({"top":top_20200112 + "px"});
@@ -425,6 +462,187 @@ $(document).ready(function(){
 	var top_20200117 = top_20200116 + height_20200116 + 50;
 	$("#info_20200117").css({"top":top_20200117 + "px"});
 
+	var height_20200117 = $("#info_20200117").height();
+	var top_20200118 = top_20200117 + height_20200117 + 50;
+	$("#info_20200118").css({"top":top_20200118 + "px"});
+
+	var height_20200118 = $("#info_20200118").height();
+	var top_20200119 = top_20200118 + height_20200118 + 50;
+	$("#info_20200119").css({"top":top_20200119 + "px"});
+
+	var height_20200119 = $("#info_20200119").height();
+	var top_20200120 = top_20200119 + height_20200119 + 50;
+	$("#info_20200120").css({"top":top_20200120 + "px"});
+
+	var height_20200120 = $("#info_20200120").height();
+	var top_20200121 = top_20200120 + height_20200120 + 50;
+	$("#info_20200121").css({"top":top_20200121 + "px"});
+
+	var height_20200121 = $("#info_20200121").height();
+	var top_20200122 = top_20200121 + height_20200121 + 50;
+	$("#info_20200122").css({"top":top_20200122 + "px"});
+
+	var height_20200122 = $("#info_20200122").height();
+	var top_20200123 = top_20200122 + height_20200122 + 50;
+	$("#info_20200123").css({"top":top_20200123 + "px"});
+
+	var height_20200123 = $("#info_20200123").height();
+	var top_20200124 = top_20200123 + height_20200123 + 50;
+	$("#info_20200124").css({"top":top_20200124 + "px"});
+
+	var height_20200124 = $("#info_20200124").height();
+	var top_20200125 = top_20200124 + height_20200124 + 50;
+	$("#info_20200125").css({"top":top_20200125 + "px"});
+
+	var height_20200125 = $("#info_20200125").height();
+	var top_20200126 = top_20200125 + height_20200125 + 50;
+	$("#info_20200126").css({"top":top_20200126 + "px"});
+
+	var height_20200126 = $("#info_20200126").height();
+	var top_20200127 = top_20200126 + height_20200126 + 50;
+	$("#info_20200127").css({"top":top_20200127 + "px"});
+
+	var height_20200127 = $("#info_20200127").height();
+	var top_20200128 = top_20200127 + height_20200127 + 50;
+	$("#info_20200128").css({"top":top_20200128 + "px"});
+
+	var height_20200128 = $("#info_20200128").height();
+	var top_20200129 = top_20200128 + height_20200128 + 50;
+	$("#info_20200129").css({"top":top_20200129 + "px"});
+
+	var height_20200129 = $("#info_20200129").height();
+	var top_20200130 = top_20200129 + height_20200129 + 50;
+	$("#info_20200130").css({"top":top_20200130 + "px"});
+
+	var height_20200130 = $("#info_20200130").height();
+	var top_20200131 = top_20200130 + height_20200130 + 50;
+	$("#info_20200131").css({"top":top_20200131 + "px"});
+
+	var height_20200131 = $("#info_20200131").height();
+	var top_20200201 = top_20200131 + height_20200131 + 50;
+	$("#info_20200201").css({"top":top_20200201 + "px"});
+
+	var height_20200201 = $("#info_20200201").height();
+	var top_20200202 = top_20200201 + height_20200201 + 50;
+	$("#info_20200202").css({"top":top_20200202 + "px"});
+
+	var height_20200202 = $("#info_20200202").height();
+	var top_20200203 = top_20200202 + height_20200202 + 50;
+	$("#info_20200203").css({"top":top_20200203 + "px"});
+
+
+
+	var height_20200203 = $("#info_20200203").height();
+
+	//方舱医院
+	//var height_anchor_20200203_to_father = $("#anchor_20200203").position().top;//距离父节点距离
+	//var height_anchor_20200203 = $("#anchor_20200203").height();
+	//
+	//var height_20200203_anim = $("#div-20200203-anim").height();
+	// var top_anim_20200203 = top_20200203 + height_20200203 + (height_20200203_anim / 2)  + 20;
+	//var top_anim_20200203 = top_20200203 + height_20200203;
+	//$("#div-20200203-anim").css({"top":top_anim_20200203 + "px"});
+	//
+	
+	var top_square_cabin_hospital = top_20200203 + height_20200203 + 50;
+	$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
+
+	$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
+	
+
+
+	var top_20200204 = top_20200203 + height_20200203 + 50 + 1000;
+	$("#info_20200204").css({"top":top_20200204 + "px"});
+
+	var height_20200204 = $("#info_20200204").height();
+	var top_20200205 = top_20200204 + height_20200204 + 50;
+	$("#info_20200205").css({"top":top_20200205 + "px"});
+
+	var height_20200205 = $("#info_20200205").height();
+	var top_20200206 = top_20200205 + height_20200205 + 50;
+	$("#info_20200206").css({"top":top_20200206 + "px"});
+
+	var height_20200206 = $("#info_20200206").height();
+	var top_20200207 = top_20200206 + height_20200206 + 50;
+	$("#info_20200207").css({"top":top_20200207 + "px"});
+
+	var height_20200207 = $("#info_20200207").height();
+	var top_20200208 = top_20200207 + height_20200207 + 50;
+	$("#info_20200208").css({"top":top_20200208 + "px"});
+
+	var height_20200208 = $("#info_20200208").height();
+	var top_20200209 = top_20200208 + height_20200208 + 50;
+	$("#info_20200209").css({"top":top_20200209 + "px"});
+
+	var height_20200209 = $("#info_20200209").height();
+	var top_20200210 = top_20200209 + height_20200209 + 50;
+	$("#info_20200210").css({"top":top_20200210 + "px"});
+
+	var height_20200210 = $("#info_20200210").height();
+	var top_20200211 = top_20200210 + height_20200210 + 50;
+	$("#info_20200211").css({"top":top_20200211 + "px"});
+
+	var height_20200211 = $("#info_20200211").height();
+	var top_20200212 = top_20200211 + height_20200211 + 50;
+	$("#info_20200212").css({"top":top_20200212 + "px"});
+
+	var height_20200212 = $("#info_20200212").height();
+	var top_20200213 = top_20200212 + height_20200212 + 50;
+	$("#info_20200213").css({"top":top_20200213 + "px"});
+
+	var height_20200213 = $("#info_20200213").height();
+	var top_20200214 = top_20200213 + height_20200213 + 50;
+	$("#info_20200214").css({"top":top_20200214 + "px"});
+
+	var height_20200214 = $("#info_20200214").height();
+	var top_20200215 = top_20200214 + height_20200214 + 50;
+	$("#info_20200215").css({"top":top_20200215 + "px"});
+
+	var height_20200215 = $("#info_20200215").height();
+	var top_20200216 = top_20200215 + height_20200215 + 50;
+	$("#info_20200216").css({"top":top_20200216 + "px"});
+
+	var height_20200216 = $("#info_20200216").height();
+	var top_20200217 = top_20200216 + height_20200216 + 50;
+	$("#info_20200217").css({"top":top_20200217 + "px"});
+
+	var height_20200217 = $("#info_20200217").height();
+	var top_20200218 = top_20200217 + height_20200217 + 50;
+	$("#info_20200218").css({"top":top_20200218 + "px"});
+
+	var height_20200218 = $("#info_20200218").height();
+	var top_20200219 = top_20200218 + height_20200218 + 50;
+	$("#info_20200219").css({"top":top_20200219 + "px"});
+
+	var height_20200219 = $("#info_20200219").height();
+	var top_20200220 = top_20200219 + height_20200219 + 50;
+	$("#info_20200220").css({"top":top_20200220 + "px"});
+
+	var height_20200220 = $("#info_20200220").height();
+	var top_20200221 = top_20200220 + height_20200220 + 50;
+	$("#info_20200221").css({"top":top_20200221 + "px"});
+
+	var height_20200221 = $("#info_20200221").height();
+	var top_20200222 = top_20200221 + height_20200221 + 50;
+	$("#info_20200222").css({"top":top_20200222 + "px"});
+
+	var height_20200222 = $("#info_20200222").height();
+	var top_20200223 = top_20200222 + height_20200222 + 50;
+	$("#info_20200223").css({"top":top_20200223 + "px"});
+
+	var height_20200223 = $("#info_20200223").height();
+	var top_20200224 = top_20200223 + height_20200223 + 50;
+	$("#info_20200224").css({"top":top_20200224 + "px"});
+
+	var height_20200224 = $("#info_20200224").height();
+	var top_end_words = top_20200224 + height_20200224 + 100;
+	$("#info_end_words").css({"top":top_end_words + "px"});
+	$("#div-end-words-anim").css({"top":top_end_words + "px"});
+
+	var height_end_words = $("#div-end-words-anim").height();
+	var top_question = top_end_words + height_end_words + 50;
+	$("#info_question").css({"top":top_question + "px"});
+	$("#div-end-question-anim").css({"top":top_question + "px"});
 
 
     /*=========================================================*/
@@ -447,9 +665,9 @@ $(document).ready(function(){
 
 
 	var repeat = setInterval(function() {
-	  if(Math.random() > 0.85) fClearAllHighlights(eQuote);
+	  if(Math.random() > 0.95) fClearAllHighlights(eQuote);
 	  fHighlightRandomWord(eWords);
-	}, 275);
+	}, 200);
 
 	function fHighlightRandomWord (e) {
 	  var iRandom = Math.floor(Math.random() * e.length);
@@ -599,14 +817,13 @@ $(document).ready(function(){
 
 	// build scene
 	var lao5_scene20191231 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20191231",
-		duration:"60%"
+		triggerElement: "#anchor_20191231",
+		duration:height_anchor_20191231
 	})
 	// trigger a velocity opaticy animation
 	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
-	//.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
-		console.log("enter trigger_20191231");
+		console.log("enter anchor_20191231");
 		// trigger animation by changing inline style.
 		//day_20191230.style.backgroundColor = "#fff";
 		ele_box_20191231.removeClass('out');
@@ -615,7 +832,7 @@ $(document).ready(function(){
 	.on("leave", function () {
 		// reset style
 		//day_20191230.style.backgroundColor = "";
-		console.log("leave trigger_20191231");
+		console.log("leave anchor_20191231");
 
 		ele_box_20191231.addClass('out');
 
@@ -637,8 +854,8 @@ $(document).ready(function(){
 
 	// build scene
 	var lao5_scene20200101 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20200101",
-		duration:"30%"
+		triggerElement: "#anchor_20200101",
+		duration:height_anchor_20200101
 	})
 	// trigger a velocity opaticy animation
 	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
@@ -673,14 +890,14 @@ $(document).ready(function(){
 
 	// build scene
 	var lao5_scene20200103 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20200103",
-		duration:"40%"
+		triggerElement: "#anchor_20200103",
+		duration:height_anchor_20200103
 	})
 	// trigger a velocity opaticy animation
 	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
 	//.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
-		console.log("enter trigger_20200103");
+		console.log("enter anchor_20200103");
 		// trigger animation by changing inline style.
 		//day_20191230.style.backgroundColor = "#fff";
 		ele_box_20200103.removeClass('out');
@@ -689,7 +906,7 @@ $(document).ready(function(){
 	.on("leave", function () {
 		// reset style
 		//day_20191230.style.backgroundColor = "";
-		console.log("leave trigger_20200103");
+		console.log("leave anchor_20200103");
 
 		ele_box_20200103.addClass('out');
 
@@ -712,14 +929,14 @@ $(document).ready(function(){
 
 	// build scene
 	var lao5_scene20200105 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20200105",
-		duration:"40%"
+		triggerElement: "#anchor_20200105",
+		duration:height_anchor_20200105
 	})
 	// trigger a velocity opaticy animation
 	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
 	//.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
-		console.log("enter trigger_20200105");
+		console.log("enter anchor_20200105");
 		// trigger animation by changing inline style.
 		//day_20191230.style.backgroundColor = "#fff";
 		ele_box_20200105.removeClass('out');
@@ -728,7 +945,7 @@ $(document).ready(function(){
 	.on("leave", function () {
 		// reset style
 		//day_20191230.style.backgroundColor = "";
-		console.log("leave trigger_20200105");
+		console.log("leave anchor_20200105");
 
 		ele_box_20200105.addClass('out');
 
@@ -751,14 +968,14 @@ $(document).ready(function(){
 
 	// build scene
 	var lao5_scene20200111 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20200111",
-		duration:"40%"
+		triggerElement: "#anchor_20200111",
+		duration:height_anchor_20200111
 	})
 	// trigger a velocity opaticy animation
 	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
 	//.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
-		console.log("enter trigger_20200111");
+		console.log("enter anchor_20200111");
 		// trigger animation by changing inline style.
 		//day_20191230.style.backgroundColor = "#fff";
 		ele_box_20200111.removeClass('out');
@@ -767,7 +984,7 @@ $(document).ready(function(){
 	.on("leave", function () {
 		// reset style
 		//day_20191230.style.backgroundColor = "";
-		console.log("leave trigger_20200111");
+		console.log("leave anchor_20200111");
 
 		ele_box_20200111.addClass('out');
 
@@ -780,6 +997,26 @@ $(document).ready(function(){
 	.addTo(controller);
 
 
+	/*=========================================================*/
+	//SCENE 方舱医院
+	/*=========================================================*/
+	
+
+	var tween = TweenMax.to("#js-animation", 1.0, {
+		backgroundPosition: "0 100%", 
+		ease: SteppedEase.config(31)
+	});
+
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: "#info_square_cabin",duration: 800})
+
+		// .triggerHook("onCenter")
+		// .setPin("#js-pinned")
+		.setPin("#box-square-cabin-anim")
+		// .setPin("#anchor_20200203")
+		.setTween(tween)
+		.addIndicators()
+		.addTo(controller);
 
 	///////////////////////////////////////////////////////////////
 	//SCENE Nature

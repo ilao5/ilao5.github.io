@@ -152,7 +152,7 @@
   text-align: center;
   
   left: 3.5rem;
-  top: 50%;
+  /*top: 50%;*/
   transform: translateY(-50%);
 
   /*top:49rem;*/
@@ -195,7 +195,7 @@
   text-align: center;
   
   left: 3.5rem;
-  top: 50%;
+  /*top: 50%;*/
   transform: translateY(-50%);
 
   /*top:102rem;*/
@@ -239,10 +239,10 @@
   text-align: center;
   
   left: 3.5rem;
-  /*top: 50%;
-  transform: translateY(-50%);*/
+  /*top: 50%;*/
+  transform: translateY(-50%);
 
-  top:114.7rem;
+  /*top:114.7rem;*/
 
 }
 
@@ -329,10 +329,10 @@
   text-align: center;
   
   left: 3.5rem;
-  /*top: 50%;
-  transform: translateY(-50%);*/
+  /*top: 50%;*/
+  transform: translateY(-50%);
 
-  top:146rem;
+  /*top:146rem;*/
 
 }
 
@@ -353,10 +353,10 @@
   text-align: center;
   
   left: 3.5rem;
-  /*top: 50%;
-  transform: translateY(-50%);*/
+  /*top: 50%;*/
+  transform: translateY(-50%);
 
-  top:163.5rem;
+  /*top:163.5rem;*/
 
 }
 
@@ -389,10 +389,10 @@
   text-align: center;
   
   left: 3.5rem;
-  /*top: 50%;
-  transform: translateY(-50%);*/
+  /*top: 50%;*/
+  transform: translateY(-50%);
 
-  top:217rem;
+  /*top:217rem;*/
 
 }
 
@@ -419,110 +419,178 @@
 /*#day_20200117 .offset {top:392rem;}*/
 
 
-#day_20200118 .offset {top:405rem;}
+/*#day_20200118 .offset {top:405rem;}*/
 
 
-#day_20200119 .offset {top:420rem;}
+/*#day_20200119 .offset {top:420rem;}*/
 
 
-#day_20200120 .offset {top:435rem;}
+/*#day_20200120 .offset {top:435rem;}*/
 
-#day_20200121 .offset {top:454rem;}
+/*#day_20200121 .offset {top:454rem;}*/
 
 
-#day_20200122 .offset {top:465rem;}
+/*#day_20200122 .offset {top:465rem;}*/
 
 
-#day_20200123 .offset {top:480rem;}
+/*#day_20200123 .offset {top:480rem;}*/
 
 
-#day_20200124 .offset {top:495rem;}
+/*#day_20200124 .offset {top:495rem;}*/
 
 
-#day_20200125 .offset {top:520rem;}
+/*#day_20200125 .offset {top:520rem;}*/
 
 
 
-#day_20200126 .offset {top:535rem;}
+/*#day_20200126 .offset {top:535rem;}*/
 
 
 
-#day_20200127 .offset {top:550rem;}
+/*#day_20200127 .offset {top:550rem;}*/
 
 
 
-#day_20200128 .offset {top:560rem;}
+/*#day_20200128 .offset {top:560rem;}*/
 
 
-#day_20200129 .offset {top:573rem;}
+/*#day_20200129 .offset {top:573rem;}*/
 
 
-#day_20200130 .offset {top:590rem;}
+/*#day_20200130 .offset {top:590rem;}*/
 
-#day_20200131 .offset {top:605rem;}
+/*#day_20200131 .offset {top:605rem;}*/
 
-#day_20200201 .offset {top:640rem;}
+/*#day_20200201 .offset {top:640rem;}*/
 
 
-#day_20200202 .offset {top:655rem;}
+/*#day_20200202 .offset {top:655rem;}*/
 
 
-#day_20200203 .offset {top:670rem;}
+/*#day_20200203 .offset {top:670rem;}*/
 
+#div-20200203-anim {
 
-#day_20200204 .offset {top:690rem;}
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 
-#day_20200205 .offset {top:705rem;}
+  
+  
+  /*left: 3.5rem;*/
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
 
+  /*top:217rem;*/
+}
 
-#day_20200206 .offset {top:725rem;}
+#div-square-cabin-anim{
+  width: 100%;
+  text-align: center;
+}
 
-#day_20200207 .offset {top:735rem;}
+.cnc {
+  margin: auto;
+  width: 2.88rem;
+  height: 2.88rem;
+  background:  url('../img/cnc-sprite-demo.png') no-repeat 0 0%;
+  background-size: 100%;
+}
 
 
-#day_20200208 .offset {top:750rem;}
+/*#day_20200204 .offset {top:690rem;}*/
 
+/*#day_20200205 .offset {top:705rem;}*/
 
-#day_20200209 .offset {top:760rem;}
 
+/*#day_20200206 .offset {top:725rem;}*/
 
-#day_20200210 .offset {top:775rem;}
+/*#day_20200207 .offset {top:735rem;}*/
 
 
+/*#day_20200208 .offset {top:750rem;}*/
 
-#day_20200211 .offset {top:800rem;}
 
+/*#day_20200209 .offset {top:760rem;}*/
 
-#day_20200212 .offset {top:825rem;}
 
+/*#day_20200210 .offset {top:775rem;}*/
 
-#day_20200213 .offset {top:835rem;}
 
 
-#day_20200214 .offset {top:865rem;}
+/*#day_20200211 .offset {top:800rem;}*/
 
-#day_20200215 .offset {top:885rem;}
 
+/*#day_20200212 .offset {top:825rem;}*/
 
-#day_20200216 .offset {top:900rem;}
 
+/*#day_20200213 .offset {top:835rem;}*/
 
-#day_20200217 .offset {top:910rem;}
 
-#day_20200218 .offset {top:930rem;}
+/*#day_20200214 .offset {top:865rem;}*/
 
+/*#day_20200215 .offset {top:885rem;}*/
 
-#day_20200219 .offset {top:950rem;}
 
-#day_20200220 .offset {top:970rem;}
+/*#day_20200216 .offset {top:900rem;}*/
 
-#day_20200221 .offset {top:980rem;}
 
-#day_20200222 .offset {top:1005rem;}
+/*#day_20200217 .offset {top:910rem;}*/
 
-#day_20200223 .offset {top:1015rem;}
+/*#day_20200218 .offset {top:930rem;}*/
 
-#day_20200224 .offset {top:1025rem;}
+
+/*#day_20200219 .offset {top:950rem;}*/
+
+/*#day_20200220 .offset {top:970rem;}*/
+
+/*#day_20200221 .offset {top:980rem;}*/
+
+/*#day_20200222 .offset {top:1005rem;}*/
+
+/*#day_20200223 .offset {top:1015rem;}*/
+
+/*#day_20200224 .offset {top:1025rem;}*/
+
+
+#div-end-words-anim {
+  /*left:50%;
+  margin-left:-488px;*/
+  /*right: 5%;
+  margin-right: 30px;*/
+  /*width:400px;
+  height: 200px;
+  top:600px;*/
+  /*background: #eee;*/
+  /*color: #fff;*/
+
+
+  text-align: center;
+  /*background-color: #fff;*/
+  /*border-radius: 20px;*/
+  width: 66%;
+  /*height: 350px;*/
+  height: auto;
+
+  left: 50%;
+  /*top: 50%;*/
+  /*transform: translate(-50%,-50%);*/
+  transform: translateX(-50%);
+
+  /*top:13rem;*/
+  cursor: none;
+
+  /*-webkit-transition: opacity 1s 2s;
+  transition: opacity 1s 2s;*/
+
+}
+
+
+#div-end-question-anim {
+  width: 100%;
+  min-height: 100vh;
+}
 
 
 
