@@ -169,21 +169,21 @@
 
 /*#day_20191220 .offset {top:53rem;}*/
 /*#day_20191221 .offset {top:61rem;}*/
-#day_20191222 .offset {top:63rem;}
-#day_20191223 .offset {top:65rem;}
-#day_20191224 .offset {top:67rem;}
+/*#day_20191222 .offset {top:63rem;}*/
+/*#day_20191223 .offset {top:65rem;}*/
+/*#day_20191224 .offset {top:67rem;}*/
 
-#day_20191225 .offset {top:69rem;}
-
-
-#day_20191226 .offset {top:72.5rem;}
+/*#day_20191225 .offset {top:69rem;}*/
 
 
-#day_20191227 .offset {top:75.5rem;}
+/*#day_20191226 .offset {top:72.5rem;}*/
 
-#day_20191228 .offset {top:81rem;}
 
-#day_20191229 .offset {top:83.5rem;}
+/*#day_20191227 .offset {top:75.5rem;}*/
+
+/*#day_20191228 .offset {top:81rem;}*/
+
+/*#day_20191229 .offset {top:83.5rem;}*/
 
 /*//////////////////////////////////////////////////////////////*/
 /*============day_20191230===========*/
@@ -195,10 +195,10 @@
   text-align: center;
   
   left: 3.5rem;
-  /*top: 50%;*/
-  /*transform: translateY(-50%);*/
+  top: 50%;
+  transform: translateY(-50%);
 
-  top:102rem;
+  /*top:102rem;*/
 
 }
 
@@ -233,7 +233,7 @@
 
 /*//////////////////////////////////////////////////////////////*/
 /*============day_20191231===========*/
-#day_20191231 .offset {top:112rem;}
+/*#day_20191231 .offset {top:112rem;}*/
 
 #div-20191231-anim {
   text-align: center;
@@ -277,7 +277,7 @@
 
 /*//////////////////////////////////////////////////////////////*/
 /*============20200101===========*/
-#day_20200101 .offset {top:122rem;}
+/*#day_20200101 .offset {top:122rem;}*/
 
 #div_whistle {
   /*opacity:0;*/
@@ -321,9 +321,9 @@
 
 /*//////////////////////////////////////////////////////////////*/
 /*============20200102===========*/
-#day_20200102 .offset {top:129rem;}
+/*#day_20200102 .offset {top:129rem;}*/
 
-#day_20200103 .offset {top:137rem;}
+/*#day_20200103 .offset {top:137rem;}*/
 
 #div-20200103-anim {
   text-align: center;
@@ -344,10 +344,10 @@
 }
 
 
-#day_20200104 .offset {top:152rem;}
+/*#day_20200104 .offset {top:152rem;}*/
 
 
-#day_20200105 .offset {top:160rem;}
+/*#day_20200105 .offset {top:160rem;}*/
 
 #div-20200105-anim {
   text-align: center;
@@ -368,12 +368,12 @@
 }
 
 
-#day_20200106 .offset {top:171.5rem;}
+/*#day_20200106 .offset {top:171.5rem;}*/
 
-#day_20200107 .offset {top:183rem;}
+/*#day_20200107 .offset {top:183rem;}*/
 
 
-#day_20200108 .offset {top:189.5rem;}
+/*#day_20200108 .offset {top:189.5rem;}*/
 
 #day_20200109 .offset {top:196rem;}
     
@@ -404,19 +404,19 @@
 }
 
 
-#day_20200112 .offset {top:229rem;}
+/*#day_20200112 .offset {top:229rem;}*/
 
-#day_20200113 .offset {top:241.5rem;}
+/*#day_20200113 .offset {top:241.5rem;}*/
 
-#day_20200114 .offset {top:245rem;}
-
-
-#day_20200115 .offset {top:249rem;}
-
-#day_20200116 .offset {top:378rem;}
+/*#day_20200114 .offset {top:245rem;}*/
 
 
-#day_20200117 .offset {top:392rem;}
+/*#day_20200115 .offset {top:249rem;}*/
+
+/*#day_20200116 .offset {top:378rem;}*/
+
+
+/*#day_20200117 .offset {top:392rem;}*/
 
 
 #day_20200118 .offset {top:405rem;}
