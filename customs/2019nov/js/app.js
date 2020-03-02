@@ -235,43 +235,75 @@ $(document).ready(function(){
 	
 	var px_index;
 
-	var basic_top = fontsize * 19;
-	console.log(">>>>>>basic_top = ",basic_top);
+	var basic_top = (fontsize * 19);
+	console.log("1>>>>>>basic_top = ",basic_top);
 
 
 
 	var height_20191208 = $("#info_20191208").height();
-	console.log(">>>>>>height_20191208 = ",height_20191208);
+	console.log("2>>>>>>height_20191208 = ",height_20191208);
 
 	//var top_20191210 = (parseInt(number_basic_top) + height_20191208 + 10)+"px";
-	var top_20191210 = (basic_top + height_20191208 + 50)+"px";
-	console.log(">>>>>>height_20191210 = ",top_20191210);
-	$("#info_20191210").css({"top":top_20191210});
+	var top_20191210 = basic_top + height_20191208 + 50;
+	//var top_20191210 = ()+"px";
+	console.log(">>>>>>top_20191210 = ",top_20191210);
+	$("#info_20191210").css({"top":top_20191210+"px"});
 
-	var info_20191210_top = $("#info_20191210").css("top");
-	console.log(">>>>>>info_20191210_top = ",info_20191210_top);//8888.88px
+	//var info_20191210_top = $("#info_20191210").css("top");
+	//console.log(">>>>>>info_20191210_top = ",info_20191210_top);//8888.88px
 
-	px_index = info_20191210_top.indexOf("p");
-	var number_20191210_top = info_20191210_top.slice(0,px_index);
-	console.log(">>>>>>number_20191210_top = ",number_20191210_top);
+	//px_index = info_20191210_top.indexOf("p");
+	//var number_20191210_top = info_20191210_top.slice(0,px_index);
+	//console.log(">>>>>>number_20191210_top = ",number_20191210_top);
 
 	var height_20191210 = $("#info_20191210").height();
-	console.log(">>>>>>height_20191210 = ",height_20191210);
-	var top_20191212 = (Number(number_20191210_top) + height_20191210 + 50)+"px";
-	$("#info_20191212").css({"top":top_20191212});
+	console.log("3>>>>>>height_20191210 = ",height_20191210);
 
-	var info_20191212_top = $("#info_20191212").css("top");
-	//console.log(">>>>>>info_20191212_top = ",info_20191212_top);//8888.88px
+	var top_20191212 = top_20191210 + height_20191210 + 50;
+	console.log("4>>>>>>top_20191212 = ",top_20191212);
 
+	$("#info_20191212").css({"top":top_20191212 + "px"});
 
-
-
-
+	//var info_20191212_top = $("#info_20191212").css("top");
+	//console.log("5>>>>>>info_20191212_top = ",info_20191212_top);//8888.88px
 
 
+	var height_20191212 = $("#info_20191212").height();
+	var top_20191213 = top_20191212 + height_20191212 + 50;
+	$("#info_20191213").css({"top":top_20191213 + "px"});
 
 
+	var height_20191213 = $("#info_20191213").height();
+	var top_20191215 = top_20191213 + height_20191213 + 50;
+	$("#info_20191215").css({"top":top_20191215 + "px"});
 
+	var height_20191215 = $("#info_20191215").height();
+	var top_20191216 = top_20191215 + height_20191215 + 50;
+	$("#info_20191216").css({"top":top_20191216 + "px"});
+
+	var height_20191216 = $("#info_20191216").height();
+	var top_20191217 = top_20191216 + height_20191216 + 50;
+	$("#info_20191217").css({"top":top_20191217 + "px"});
+
+	var height_20191217 = $("#info_20191217").height();
+	var top_20191218 = top_20191217 + height_20191217 + 50;
+	$("#info_20191218").css({"top":top_20191218 + "px"});
+
+	var height_20191218 = $("#info_20191218").height();
+	var top_20191219 = top_20191218 + height_20191218 + 50;
+	$("#info_20191219").css({"top":top_20191219 + "px"});
+
+
+	var height_20191219 = $("#info_20191219").height();
+	var top_anim_20191219 = top_20191219 + height_20191219 / 2;
+	$("#div-20191219-anim").css({"top":top_anim_20191219 + "px"});
+
+	var top_20191220 = top_20191219 + height_20191219 + 50;
+	$("#info_20191220").css({"top":top_20191220 + "px"});
+
+	var height_20191220 = $("#info_20191220").height();
+	var top_20191221 = top_20191220 + height_20191220 + 50;
+	$("#info_20191221").css({"top":top_20191221 + "px"});
 
 
 

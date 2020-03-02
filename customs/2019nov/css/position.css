@@ -135,18 +135,18 @@
 
 /*//////////////////////////////////////////////////////////////*/
 /*============201912 13-29===========*/
-#day_20191213 .offset {top:27rem;}
+/*#day_20191213 .offset {top:27rem;}*/
 
-#day_20191215 .offset {top:33rem;}
-#day_20191216 .offset {top:35rem;}
-
-
-#day_20191217 .offset {top:41rem;}
-
-#day_20191218 .offset {top:45rem;}
+/*#day_20191215 .offset {top:33rem;}*/
+/*#day_20191216 .offset {top:35rem;}*/
 
 
-#day_20191219 .offset {top:47rem;}
+/*#day_20191217 .offset {top:41rem;}*/
+
+/*#day_20191218 .offset {top:45rem;}*/
+
+
+/*#day_20191219 .offset {top:47rem;}*/
 
 #div-20191219-anim {
   text-align: center;
@@ -155,7 +155,7 @@
   top: 50%;
   transform: translateY(-50%);
 
-  top:49rem;
+  /*top:49rem;*/
 
 }
 
@@ -167,8 +167,8 @@
 }
 
 
-#day_20191220 .offset {top:53rem;}
-#day_20191221 .offset {top:61rem;}
+/*#day_20191220 .offset {top:53rem;}*/
+/*#day_20191221 .offset {top:61rem;}*/
 #day_20191222 .offset {top:63rem;}
 #day_20191223 .offset {top:65rem;}
 #day_20191224 .offset {top:67rem;}

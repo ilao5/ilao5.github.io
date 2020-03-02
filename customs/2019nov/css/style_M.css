@@ -254,12 +254,12 @@ body.pace-done #wrapper {height:194545px;}
 	
 
 	color:var(--color-white);
-	font-size:var(--size-18);
+	font-size:var(--size-20);
 	position:relative;
 	width:3rem;
 	
-	letter-spacing: 0.05rem;
-	line-height:0.3rem;
+	letter-spacing: 0.08rem;
+	line-height:0.4rem;
 	/*opacity: .6;*/
 
 	text-align: justify;
