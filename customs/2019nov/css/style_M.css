@@ -24,8 +24,8 @@ html {
 }
 
 body {
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 	background:var(--color-bg);
 	overflow-x: hidden;
 
@@ -120,8 +120,24 @@ a.underline1:hover {background: #ef8b80;}
 }
 
 
+.saying {
+	letter-spacing: 0.08rem;
+}
 
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(25, 147, 147, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(25, 147, 147, 0.2);
+}
 
 
 #wrapper {
@@ -141,7 +157,7 @@ body.pace-running #space-race-logo {opacity:1;top:200px;}
 body.pace-done #space-race-logo {opacity:1;top:100px;position:absolute;}
 body.pace-running #wrapper {height:600px;}
 /*body.pace-done #wrapper {height:94545px;}*/
-body.pace-done #wrapper {height:194545px;}
+body.pace-done #wrapper {height:60000px;}
 
 
 .marker h3,p.notice,.base-info {
@@ -180,7 +196,11 @@ body.pace-done #wrapper {height:194545px;}
 	transition:all 1.5s ease-in-out;
 }
 
-#space-race {opacity:0;transition:all 1.5s ease-in-out;}
+#space-race {
+	position: relative;
+	opacity:0;
+	transition:all 1.5s ease-in-out;
+}
 
 .section {
 	background-repeat:no-repeat;
@@ -340,14 +360,14 @@ body.pace-done #wrapper {height:194545px;}
 /*======================================================*/
 /*snowfall插件*/
 /*======================================================*/
-.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+/*.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
 @keyframes sakura{
 	0% {transform:rotate3d(0, 0, 0, 0deg);}
 	25%{transform:rotate3d(1, 1, 0, 60deg);}
 	50%{transform:rotate3d(1, 1, 0, 0deg);}
 	75%{transform:rotate3d(1, 0, 0, 60deg);}
 	100% {transform:rotate3d(1, 0, 0, 0deg);}
-}
+}*/
 
 
 
@@ -436,6 +456,20 @@ body.pace-done #wrapper {height:194545px;}
 	transition: opacity 1s 2s;*/
 
 }
+
+#snow-mask{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	/*background: #ffd700;*/
+	/*opacity: 0.6;*/
+	overflow: hidden;
+	z-index: 999999999;
+}
+
+
 
 
 

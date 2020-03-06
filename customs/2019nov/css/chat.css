@@ -38,6 +38,7 @@ body {
   background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.6)), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.6))), -webkit-gradient(linear, right bottom, left top, from(#a0d3e4), to(#97d1e7));
   background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.6), transparent 60%, rgba(0, 0, 0, 0.6)), linear-gradient(to top left, #a0d3e4, #97d1e7);
 }*/
+
 .ui {
   margin: 10px auto;
   width: 745px;

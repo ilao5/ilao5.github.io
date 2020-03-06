@@ -522,12 +522,31 @@ $(document).ready(function(){
 	var top_20200201 = top_20200131 + height_20200131 + 50;
 	$("#info_20200201").css({"top":top_20200201 + "px"});
 
+
+	var height_box_car_a0260w = $("#box-car-a0260w").height();
+
 	var height_20200201 = $("#info_20200201").height();
-	var top_20200202 = top_20200201 + height_20200201 + 50;
+	var top_car_a0260w = top_20200201 + height_20200201 + 50;
+	$("#info_car_a0260w").css({"top":top_car_a0260w + "px"});
+	$("#div-car-a0260w-anim").css({"top":top_car_a0260w + "px"});
+
+
+
+	var height_car_a0260w = $("#div-car-a0260w-anim").height();
+	var top_20200202 = top_car_a0260w + height_car_a0260w + 50;
 	$("#info_20200202").css({"top":top_20200202 + "px"});
 
+
+
 	var height_20200202 = $("#info_20200202").height();
-	var top_20200203 = top_20200202 + height_20200202 + 50;
+	var top_lie_words = top_20200202 + height_20200202 + 50;
+	$("#info_lie_words").css({"top":top_lie_words + "px"});
+	$("#div-lie-words-anim").css({"top":top_lie_words + "px"});
+
+
+
+	var height_lie_words_anim = $("#div-lie-words-anim").height();
+	var top_20200203 = top_lie_words + height_lie_words_anim + 50;
 	$("#info_20200203").css({"top":top_20200203 + "px"});
 
 
@@ -546,12 +565,12 @@ $(document).ready(function(){
 	
 	var top_square_cabin_hospital = top_20200203 + height_20200203 + 50;
 	$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
-
 	$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
-	
 
 
-	var top_20200204 = top_20200203 + height_20200203 + 50 + 1000;
+	var height_info_square_cabin = $("#info_square_cabin").height();
+	var height_square_cabin_anim = $("#div-square-cabin-anim").height();
+	var top_20200204 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
 	$("#info_20200204").css({"top":top_20200204 + "px"});
 
 	var height_20200204 = $("#info_20200204").height();
@@ -559,12 +578,30 @@ $(document).ready(function(){
 	$("#info_20200205").css({"top":top_20200205 + "px"});
 
 	var height_20200205 = $("#info_20200205").height();
-	var top_20200206 = top_20200205 + height_20200205 + 50;
+	var top_motion_words = top_20200205 + height_20200205 + 50;
+	$("#info_motion_words").css({"top":top_motion_words + "px"});
+	$("#div-motion-words-anim").css({"top":top_motion_words + "px"});
+
+
+	var height_motion_words_anim = $("#div-motion-words-anim").height();
+	var top_20200206 = top_motion_words + height_motion_words_anim + 50;
 	$("#info_20200206").css({"top":top_20200206 + "px"});
 
+	//李文亮
 	var height_20200206 = $("#info_20200206").height();
-	var top_20200207 = top_20200206 + height_20200206 + 50;
+	var top_hero_liwenliang = top_20200206 + height_20200206 + 50;
+	$("#info_liwenliang").css({"top":top_hero_liwenliang + "px"});
+	$("#div-hero-liwenliang-anim").css({"top":top_hero_liwenliang + "px"});
+	
+
+
+	var height_hero_liwenliang = $("#div-hero-liwenliang-anim").height();
+	// var top_20200207 = top_20200206 + height_20200206 + 50;
+	var top_20200207 = top_hero_liwenliang + height_hero_liwenliang + 50;
 	$("#info_20200207").css({"top":top_20200207 + "px"});
+
+	
+	
 
 	var height_20200207 = $("#info_20200207").height();
 	var top_20200208 = top_20200207 + height_20200207 + 50;
@@ -642,7 +679,18 @@ $(document).ready(function(){
 	var height_end_words = $("#div-end-words-anim").height();
 	var top_question = top_end_words + height_end_words + 50;
 	$("#info_question").css({"top":top_question + "px"});
-	$("#div-end-question-anim").css({"top":top_question + "px"});
+	$("#div-end-question-anim").css({"top":top_question + "px","height":clientHeight+"px","min-height":clientHeight+"px"});
+
+
+	var height_end_question_anim = $("#div-end-question-anim").height();
+	var top_wechat = top_question + height_end_question_anim + 50;
+	$("#info_wechat").css({"top":top_wechat + "px"});
+	$("#div-wechat-anim").css({"top":top_wechat + "px"});
+
+	var height_wechat_anim = $("#div-wechat-anim").height();
+	var top_got_light = top_wechat + height_wechat_anim + 50;
+	$("#info_got_light").css({"top":top_got_light + "px"});
+	$("#div-got-light-anim").css({"top":top_got_light + "px"});
 
 
     /*=========================================================*/
@@ -998,6 +1046,55 @@ $(document).ready(function(){
 
 
 	/*=========================================================*/
+	//SCENE 鄂A0260W
+	/*=========================================================*/
+
+	var tweenAnimIn = new TimelineMax();
+    tweenAnimIn
+    	// .set('.car-plate', { autoAlpha: 0 })
+	    .to('.hat', 1, { y: -600, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
+	    .to('.glass', 1, { y: -200, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
+	    .to('.cigaratte', 1, { x: 400, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
+	    .to('.necklace', 1, { y: 400, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
+
+    var scrollOutAnim = new TimelineMax()
+        .add([
+        	// TweenMax.to('.car-plate', 1, { autoAlpha: 1 }),
+            TweenMax.from('.hat', 1, { y: -600, autoAlpha: 0 }),//mao zi
+            TweenMax.from('.glass', 1, { y: -200, autoAlpha: 0 }),//yan jing
+            TweenMax.from('.cigaratte', 1, { x: 400, autoAlpha: 0 }),//yan
+            TweenMax.from('.necklace', 1, { y: 400, autoAlpha: 0 }),//lian zi
+           
+
+        ]);
+
+    // buid scene
+    var scene_0260w = new ScrollMagic.Scene({
+        triggerElement: '#info_car_a0260w',
+        // triggerHook:'onleave'
+        // triggerHook: 0,
+        duration: height_box_car_a0260w
+        //duration:200
+    })
+    .on("enter", function () {
+
+		//$('.scrollmagic-pin-spacer').top:
+	})
+	.on("leave", function () {
+
+	})
+    .setTween(scrollOutAnim)
+    // .setPin('#box-car-a0260w')
+    .addIndicators()
+    .addTo(controller);
+
+    scene_0260w.offset(-100);
+
+
+
+
+
+	/*=========================================================*/
 	//SCENE 方舱医院
 	/*=========================================================*/
 	
@@ -1008,15 +1105,118 @@ $(document).ready(function(){
 	});
 
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#info_square_cabin",duration: 800})
+	var scene_square_cabin = new ScrollMagic.Scene({triggerElement: "#info_square_cabin",duration: 300})
 
+		// .triggerHook(0)
 		// .triggerHook("onCenter")
 		// .setPin("#js-pinned")
-		.setPin("#box-square-cabin-anim")
+		// .setPin("#box-square-cabin-anim")
 		// .setPin("#anchor_20200203")
 		.setTween(tween)
 		.addIndicators()
 		.addTo(controller);
+
+	scene_square_cabin.offset(-100);
+
+
+
+	/*=========================================================*/
+	//SCENE 雪
+	/*=========================================================*/
+	
+	var scene_snow = new ScrollMagic.Scene({triggerElement: "#info_20200215",duration:height_20200215})
+
+	.on("enter", function () {
+		console.log("enter info_20200215");
+		//$(document).snowfall({image:"_/img/assets/virusx128.png", flakeCount:10, minSpeed:0.1, minSize:40, maxSize:80,});
+		$("#snow-mask").snowfall({flakeCount : 100});
+	})
+	.on("leave", function () {
+
+		console.log("leave info_20200215");
+		$("#snow-mask").snowfall('clear');
+
+
+	})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+
+
+	/*=========================================================*/
+	//SCENE 星星之火
+	/*=========================================================*/
+	var images = [
+		"img/light/0100.jpg",
+		"img/light/0101.jpg",
+		"img/light/0102.jpg",
+		"img/light/0103.jpg",
+		"img/light/0104.jpg",
+		"img/light/0105.jpg",
+		"img/light/0106.jpg",
+		"img/light/0107.jpg",
+		"img/light/0108.jpg",
+		"img/light/0109.jpg",
+		"img/light/0110.jpg",
+		"img/light/0111.jpg",
+		"img/light/0112.jpg",
+		"img/light/0113.jpg",
+		"img/light/0114.jpg",
+		"img/light/0115.jpg",
+		"img/light/0116.jpg",
+		"img/light/0117.jpg",
+		"img/light/0118.jpg",
+		"img/light/0119.jpg",
+		"img/light/0120.jpg",
+		"img/light/0121.jpg",
+		"img/light/0122.jpg",
+		"img/light/0123.jpg",
+		"img/light/0124.jpg",
+		"img/light/0125.jpg",
+		"img/light/0126.jpg",
+		"img/light/0127.jpg",
+		"img/light/0128.jpg",
+		"img/light/0129.jpg",
+		"img/light/0130.jpg",
+		"img/light/0131.jpg",
+		"img/light/0132.jpg",
+		"img/light/0133.jpg",
+		"img/light/0134.jpg",
+		"img/light/0135.jpg",
+		"img/light/0136.jpg",
+		"img/light/0137.jpg"
+	];
+
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj = {curImg: 0};
+
+	// create tween
+	var tween = TweenMax.to(obj, 0.5,
+		{
+			curImg: images.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index
+			// repeat: 3,									// repeat 3 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $("#img-torch").attr("src", images[obj.curImg]); // set the image source
+			}
+		}
+	);
+
+
+	// build scene
+	var scene_light = new ScrollMagic.Scene({
+		triggerElement: "#info_got_light",
+		 duration: 300
+	})
+	.setTween(tween)
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+
+
+
 
 	///////////////////////////////////////////////////////////////
 	//SCENE Nature
