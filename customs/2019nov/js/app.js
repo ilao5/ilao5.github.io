@@ -72,11 +72,20 @@ $(document).ready(function(){
 	// 	volume: 0.5, //
 	// });
 
+
+	var sound_jonsnow = new Howl({
+	  	src: [sound_path + 'jonsnow.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 1, //
+	});
+
 	var sound_chuishao = new Howl({
 	  	src: [sound_path + 'chuishao.mp3',],
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
+		loop: true, // 無限循環
 		volume: 0.5, //
 	});
 
@@ -120,19 +129,76 @@ $(document).ready(function(){
 		volume: 0.3, //
 	});
 
+	var sound_transformer = new Howl({
+	  	src: [sound_path + 'transformer.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.3, //
+	});
+
+	var sound_xindian = new Howl({
+	  	src: [sound_path + 'xindian.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: true, // 無限循環
+		volume: 0.3, //
+	});
+
+	var sound_thuglife = new Howl({
+	  	src: [sound_path + 'thuglife.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.3, //
+	});
+
+	var sound_depose = new Howl({
+	  	src: [sound_path + 'depose.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.2, //
+	});
+
+	var sound_snow = new Howl({
+	  	src: [sound_path + 'snow.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: true, // 無限循環
+		volume: 0.3, //
+	});
+
+	var sound_nottoday = new Howl({
+	  	src: [sound_path + 'nottoday.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.3, //
+	});
+
+	//Howler.ctx = new AudioContext();
+	//Howler.ctx.resume();
+	
+
 	stopAudio();
 
 
 	function stopAudio() 
 	{
-
+		sound_jonsnow.stop();
 		sound_chuishao.stop();
 		sound_1kill.stop();
 		sound_2kill.stop();
 		sound_3kill.stop();
 		sound_4kill.stop();
 		sound_5kill.stop();
-
+		sound_transformer.stop();
+		sound_xindian.stop();
+		sound_thuglife.stop();
+		sound_snow.stop();
+		sound_depose.stop();
+		sound_nottoday.stop();
 	};
 
 	
@@ -162,6 +228,7 @@ $(document).ready(function(){
 
     	clientWidth = docEl.clientWidth;
 		clientHeight = docEl.clientHeight;
+		console.log(">>clientWidth = ",clientWidth);
 
 		if (/(Android)/i.test(navigator.userAgent))// 判断是否为Android手机
 		{     
@@ -546,9 +613,17 @@ $(document).ready(function(){
 
 
 	var height_lie_words_anim = $("#div-lie-words-anim").height();
-	var top_20200203 = top_lie_words + height_lie_words_anim + 50;
-	$("#info_20200203").css({"top":top_20200203 + "px"});
+	console.log("=====height_lie_words_anim = ",height_lie_words_anim);
 
+	var padding_lie_words_anim = $("#div-lie-words-anim").css("padding-top");
+	px_index = padding_lie_words_anim.indexOf("p");
+	var number_padding_lie_words_anim = padding_lie_words_anim.slice(0,px_index);
+
+	console.log("=====number_padding_lie_words_anim = ",number_padding_lie_words_anim);
+
+	var top_20200203 = top_lie_words + height_lie_words_anim + number_padding_lie_words_anim * 2;
+	$("#info_20200203").css({"top":top_20200203 + "px"});
+	
 
 
 	var height_20200203 = $("#info_20200203").height();
@@ -584,8 +659,13 @@ $(document).ready(function(){
 
 
 	var height_motion_words_anim = $("#div-motion-words-anim").height();
-	var top_20200206 = top_motion_words + height_motion_words_anim + 50;
+	var padding_motion_words_anim = $("#div-motion-words-anim").css("padding-top");
+	px_index = padding_motion_words_anim.indexOf("p");
+	var number_padding_motion_words_anim = padding_motion_words_anim.slice(0,px_index);
+
+	var top_20200206 = top_motion_words + height_motion_words_anim + number_padding_motion_words_anim * 2;
 	$("#info_20200206").css({"top":top_20200206 + "px"});
+
 
 	//李文亮
 	var height_20200206 = $("#info_20200206").height();
@@ -627,10 +707,18 @@ $(document).ready(function(){
 	var top_20200213 = top_20200212 + height_20200212 + 50;
 	$("#info_20200213").css({"top":top_20200213 + "px"});
 
+	//免职
+	var height_anchor_20200213_to_father = $("#anchor_20200213").position().top;//距离父节点距离
+	var height_anchor_20200213 = $("#anchor_20200213").height();
+	var top_anim_20200213 = top_20200213 + height_anchor_20200213_to_father + height_anchor_20200213 / 2;
+	$("#div-20200213-anim").css({"top":top_anim_20200213 + "px"});
+
+
 	var height_20200213 = $("#info_20200213").height();
 	var top_20200214 = top_20200213 + height_20200213 + 50;
 	$("#info_20200214").css({"top":top_20200214 + "px"});
 
+	
 	var height_20200214 = $("#info_20200214").height();
 	var top_20200215 = top_20200214 + height_20200214 + 50;
 	$("#info_20200215").css({"top":top_20200215 + "px"});
@@ -672,25 +760,117 @@ $(document).ready(function(){
 	$("#info_20200224").css({"top":top_20200224 + "px"});
 
 	var height_20200224 = $("#info_20200224").height();
-	var top_end_words = top_20200224 + height_20200224 + 100;
+	var top_to_be_continued = top_20200224 + height_20200224 + 50;
+	$("#info_to_be_continued").css({"top":top_to_be_continued + "px"});
+	$("#div-to-be-continued-anim").css({"top":top_to_be_continued + "px"});
+
+
+
+	var height_to_be_continued = $("#div-to-be-continued-anim").height();
+	var padding_to_be_continued_anim = $("#div-to-be-continued-anim").css("padding-top");
+	px_index = padding_to_be_continued_anim.indexOf("p");
+	var number_padding_to_be_continued_anim = padding_to_be_continued_anim.slice(0,px_index);
+	var top_end_words = top_to_be_continued + height_to_be_continued + number_padding_to_be_continued_anim * 2 + 50;
 	$("#info_end_words").css({"top":top_end_words + "px"});
 	$("#div-end-words-anim").css({"top":top_end_words + "px"});
 
+	
 	var height_end_words = $("#div-end-words-anim").height();
-	var top_question = top_end_words + height_end_words + 50;
+	var padding_end_words_anim = $("#div-end-words-anim").css("padding-top");
+	px_index = padding_end_words_anim.indexOf("p");
+	var number_padding_end_words_anim = padding_end_words_anim.slice(0,px_index);
+	var top_but_words = top_end_words + height_end_words + number_padding_end_words_anim * 2 + 50;
+	$("#info_but_words").css({"top":top_but_words + "px"});
+	$("#div-but-words-anim").css({"top":top_but_words + "px"});
+
+	var height_but_words_anim = $("#div-but-words-anim").height();
+	var top_zhihu_words = top_but_words + height_but_words_anim + 50;
+	$("#info_zhihu_words").css({"top":top_zhihu_words + "px"});
+	$("#div-zhihu-words-anim").css({"top":top_zhihu_words + "px"});
+
+	var height_zhihu_words_anim = $("#div-zhihu-words-anim").height();
+	var padding_zhihu_words_anim = $("#div-zhihu-words-anim").css("padding-top");
+	px_index = padding_zhihu_words_anim.indexOf("p");
+	var number_padding_zhihu_words_anim = padding_zhihu_words_anim.slice(0,px_index);
+	var top_thinking_words = top_zhihu_words + height_zhihu_words_anim + number_padding_zhihu_words_anim * 2 + 50;
+	$("#info_thinking_words").css({"top":top_thinking_words + "px"});
+	$("#div-thinking-words-anim").css({"top":top_thinking_words + "px"});
+
+
+	var height_thinking_words = $("#div-thinking-words-anim").height();
+	var top_question = top_thinking_words + height_thinking_words + 50;
+
+	var question_height = clientHeight * 0.8;
 	$("#info_question").css({"top":top_question + "px"});
-	$("#div-end-question-anim").css({"top":top_question + "px","height":clientHeight+"px","min-height":clientHeight+"px"});
+	$("#div-end-question-anim").css({"top":top_question + "px","height":question_height+"px","min-height":question_height+"px"});
 
 
+	//所以我们讨论
 	var height_end_question_anim = $("#div-end-question-anim").height();
-	var top_wechat = top_question + height_end_question_anim + 50;
+	var top_talking_words = top_question + height_end_question_anim + 50;
+	$("#info_talking_words").css({"top":top_talking_words + "px"});
+	$("#div-talking-words-anim").css({"top":top_talking_words + "px"});
+
+
+	//wechat
+	var height_talking_words_anim = $("#div-talking-words-anim").height();
+	var top_wechat = top_talking_words + height_talking_words_anim + 50;
 	$("#info_wechat").css({"top":top_wechat + "px"});
 	$("#div-wechat-anim").css({"top":top_wechat + "px"});
 
+
+
 	var height_wechat_anim = $("#div-wechat-anim").height();
+	console.log("????? top_wechat = ",top_wechat);
+	console.log("????? height_wechat_anim = ",height_wechat_anim);
 	var top_got_light = top_wechat + height_wechat_anim + 50;
 	$("#info_got_light").css({"top":top_got_light + "px"});
 	$("#div-got-light-anim").css({"top":top_got_light + "px"});
+
+	console.log("????? top_got_light = ",top_got_light);
+
+	var d = document.querySelector('#div-wechat-anim');
+	var offsetheight_wechat_anim = d.offsetHeight;
+	console.log("????? d.offsetHeight = ",offsetheight_wechat_anim);
+
+	var outerHeight_wechat_anim1 = $("#div-wechat-anim").outerHeight();
+	var outerHeight_wechat_anim2 = $("#div-wechat-anim").outerHeight(true);
+	console.log("????? outerHeight_wechat_anim1 = ",outerHeight_wechat_anim1);
+	console.log("????? outerHeight_wechat_anim2 = ",outerHeight_wechat_anim2);
+
+
+	var height_last_to_father = $("#last-word").position().top;
+	console.log("????? height_last_to_father = ",height_last_to_father);
+
+	var outerHeight_last_word0 = $("#last-word").height();
+	var outerHeight_last_word1 = $("#last-word").outerHeight();
+	var outerHeight_last_word2 = $("#last-word").outerHeight(true);
+	console.log("????? outerHeight_last_word0 = ",outerHeight_last_word0);
+	console.log("????? outerHeight_last_word1 = ",outerHeight_last_word1);
+	console.log("????? outerHeight_last_word2 = ",outerHeight_last_word2);
+
+
+	var total = 0;
+	$(".chat-thread li").each(function(){
+		total = total + $(this).outerHeight(true);
+    });
+	console.log("????? total = ",total);
+
+
+	var pic_Height = clientWidth * 480 / 720;
+	$("#img-torch").css({"width":clientWidth + "px"});
+	$("#img-torch").css({"height":pic_Height + "px"});
+
+
+	var height_got_light = $("#div-got-light-anim").height();
+	var top_friend_words = top_got_light + height_got_light + 50;
+	$("#info_friend_words").css({"top":top_friend_words + "px"});
+	$("#div-friend-words-anim").css({"top":top_friend_words + "px"});
+
+	// var height_got_light_anim = $("#div-got-light-anim").height();
+	// var top_got_light = top_got_light + height_got_light_anim + 50;
+	// $("#info_but_words").css({"top":top_but_words + "px"});
+	// $("#div-but-words-anim").css({"top":top_but_words + "px"});
 
 
     /*=========================================================*/
@@ -712,10 +892,13 @@ $(document).ready(function(){
 	var eWords = document.querySelectorAll("span");
 
 
-	var repeat = setInterval(function() {
-	  if(Math.random() > 0.95) fClearAllHighlights(eQuote);
-	  fHighlightRandomWord(eWords);
-	}, 200);
+	// var repeat = setInterval(function() {
+	//   if(Math.random() > 0.95) 
+	//   {
+	//   		fClearAllHighlights(eQuote);
+	//   }
+	//   fHighlightRandomWord(eWords);
+	// }, 200);
 
 	function fHighlightRandomWord (e) {
 	  var iRandom = Math.floor(Math.random() * e.length);
@@ -761,6 +944,76 @@ $(document).ready(function(){
 
 
 
+
+
+	var isFireFlyRun = false;
+	var fireflies = 25;
+	// var $container = $("#firefly-mask");
+	// var $container = $("#div-friend-words-anim");
+	var $container = $("#div-firefly");
+	
+	
+	var $containerWidth = $container.width();
+	var $containerHeight = $container.height();
+	//var master = new TimelineMax();
+
+	//startFirefly();
+
+	function startFirefly(){
+
+		if(isFireFlyRun)
+		{
+			return;
+		}
+
+		for (var i = 0; i < fireflies; i++) {
+		  var firefly = $('<div class="firefly"></div>');
+		  TweenLite.set(firefly, {
+		    x: Math.random() * $containerWidth,
+		    y: Math.random() * $containerHeight
+		  });
+		  $container.append(firefly);
+		  flyTheFirefly(firefly);
+		  isFireFlyRun = true;
+		}
+	}
+
+
+	function flyTheFirefly(elm) {
+	  var flyTl = new TimelineMax();
+	  var fadeTl = new TimelineMax({
+	    delay: Math.floor(Math.random() * 2) + 1,
+	    repeatDelay: Math.floor(Math.random() * 6) + 1,
+	    repeat: -1
+	  });
+
+	  fadeTl.to(
+	    [elm],
+	    0.25,
+	    { opacity: 0.25, yoyo: true, repeat: 1, repeatDelay: 0.2, yoyo: true },
+	    Math.floor(Math.random() * 6) + 1
+	  );
+	  
+	  flyTl
+	    .set(elm, {scale: Math.random() * 0.75 + 0.5})
+	    .to(elm, Math.random() * 100 + 100, {
+	    bezier: {
+	      values: [
+	        {
+	          x: Math.random() * $containerWidth,
+	          y: Math.random() * $containerHeight
+	        },
+	        {
+	          x: Math.random() * $containerWidth,
+	          y: Math.random() * $containerHeight
+	        }
+	      ]
+	    },
+	    onComplete: flyTheFirefly,
+	    onCompleteParams: [elm]
+	  });
+	}
+
     
 
 
@@ -801,7 +1054,7 @@ $(document).ready(function(){
 	/*=========================================================*/
 	var scroll_duration1 = (fontsize * (15-12)) - 30 + 'px';
 	
-	var ele_quote = $(".quote");
+	var ele_quote = $(".quote1");
 	ele_quote.addClass('out');
 	
 	var intro_scene = new ScrollMagic.Scene({
@@ -843,11 +1096,17 @@ $(document).ready(function(){
     //.on("leave", function(ev){$(ev.target.triggerElement()).addClass('out');})
     .on("enter", function () {
 		console.log("enter trigger_20191201");
+
 		ele_jon.removeClass('out');
+		sound_jonsnow.play();
 	})
 	.on("leave", function () {
 		console.log("leave trigger_20191201");
 		ele_jon.addClass('out');
+		if (sound_jonsnow.playing()) 
+		{
+			sound_jonsnow.stop();
+		}
 
 	})
 	.addIndicators() // add indicators (requires plugin)
@@ -1077,11 +1336,14 @@ $(document).ready(function(){
         //duration:200
     })
     .on("enter", function () {
-
-		//$('.scrollmagic-pin-spacer').top:
+    	sound_thuglife.play();
+		
 	})
 	.on("leave", function () {
-
+		if (sound_thuglife.playing()) 
+		{
+			sound_thuglife.stop();
+		}
 	})
     .setTween(scrollOutAnim)
     // .setPin('#box-car-a0260w')
@@ -1092,6 +1354,37 @@ $(document).ready(function(){
 
 
 
+    /*=========================================================*/
+	//SCENE 引言2 说谎
+	/*=========================================================*/
+	
+	var queto2_duration = top_20200203 - top_lie_words;
+	var ele_quote2 = $(".quote2");
+	ele_quote2.addClass('fade');
+	ele_quote2.addClass('out');
+	
+	var scene_lie_words = new ScrollMagic.Scene({
+		triggerElement: "#info_lie_words",
+		// triggerHook: 0.65,
+		// duration: height_lie_words_anim
+		duration:queto2_duration
+	})
+	//.on("enter", function(ev){$(ev.target.triggerElement()).removeClass('out');})
+    //.on("leave", function(ev){$(ev.target.triggerElement()).addClass('out');})
+    .on("enter", function () {
+		console.log("enter info_lie_words");
+		ele_quote2.removeClass('out');
+	})
+	.on("leave", function () {
+		console.log("leave info_lie_words");
+		ele_quote2.addClass('out');
+
+	})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+
+
 
 
 	/*=========================================================*/
@@ -1099,24 +1392,120 @@ $(document).ready(function(){
 	/*=========================================================*/
 	
 
-	var tween = TweenMax.to("#js-animation", 1.0, {
+	var tween_square_cabin = TweenMax.to("#square-cabin-animation", 1.0, {
 		backgroundPosition: "0 100%", 
 		ease: SteppedEase.config(31)
 	});
 
 	// build scene
-	var scene_square_cabin = new ScrollMagic.Scene({triggerElement: "#info_square_cabin",duration: 300})
+	var square_cabin_duration = top_20200204 - top_square_cabin_hospital + 100;
+	var scene_square_cabin = new ScrollMagic.Scene({
+		triggerElement: "#info_square_cabin",
+		duration: square_cabin_duration
+	})
+	.on("enter", function () {
+		console.log("enter info_square_cabin");
+		sound_transformer.play();
+	})
+	.on("leave", function () {
+		console.log("leave info_square_cabin");
+		if (sound_transformer.playing()) 
+		{
+			sound_transformer.stop();
+		}
 
-		// .triggerHook(0)
-		// .triggerHook("onCenter")
-		// .setPin("#js-pinned")
-		// .setPin("#box-square-cabin-anim")
-		// .setPin("#anchor_20200203")
-		.setTween(tween)
-		.addIndicators()
-		.addTo(controller);
+	})
+
+	// .triggerHook(0)
+	// .triggerHook("onCenter")
+	// .setPin("#js-pinned")
+	// .setPin("#box-square-cabin-anim")
+	// .setPin("#anchor_20200203")
+	.setTween(tween_square_cabin)
+	.addIndicators()
+	.addTo(controller);
 
 	scene_square_cabin.offset(-100);
+
+
+	/*=========================================================*/
+	//SCENE 引言3 说谎
+	/*=========================================================*/
+	
+	var queto3_duration = top_20200206 - top_motion_words;
+	var ele_quote3 = $(".quote3");
+	ele_quote3.addClass('fade');
+	ele_quote3.addClass('out');
+	
+	var scene_lie_words = new ScrollMagic.Scene({
+		triggerElement: "#info_motion_words",
+		duration:queto3_duration
+	})
+    .on("enter", function () {
+		ele_quote3.removeClass('out');
+	})
+	.on("leave", function () {
+		ele_quote3.addClass('out');
+
+	})
+	.addIndicators()
+	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE lwl
+	/*=========================================================*/
+	
+	var lwl_duration = top_20200207 - top_hero_liwenliang;
+
+	
+	var scene_lwl = new ScrollMagic.Scene({
+		triggerElement: "#info_liwenliang",
+		duration:lwl_duration
+	})
+    .on("enter", function () {
+
+		sound_xindian.play();
+
+	})
+	.on("leave", function () {
+
+		if (sound_xindian.playing()) 
+		{
+			sound_xindian.stop();
+		}
+
+	})
+	.addIndicators()
+	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE depose
+	/*=========================================================*/
+	var ele_img_20200213 = $(".img-20200213");
+
+	var scene_depose = new ScrollMagic.Scene({
+		triggerElement: "#anchor_20200213",
+		duration:height_anchor_20200213
+	})
+    .on("enter", function () {
+
+    	ele_img_20200213.addClass('gray');
+		sound_depose.play();
+
+	})
+	.on("leave", function () {
+
+		ele_img_20200213.removeClass('gray');
+		if (sound_depose.playing()) 
+		{
+			sound_depose.stop();
+		}
+
+	})
+	.addIndicators()
+	.addTo(controller);
 
 
 
@@ -1130,16 +1519,107 @@ $(document).ready(function(){
 		console.log("enter info_20200215");
 		//$(document).snowfall({image:"_/img/assets/virusx128.png", flakeCount:10, minSpeed:0.1, minSize:40, maxSize:80,});
 		$("#snow-mask").snowfall({flakeCount : 100});
+
+		sound_snow.play();
 	})
 	.on("leave", function () {
 
 		console.log("leave info_20200215");
 		$("#snow-mask").snowfall('clear');
 
+		if (sound_snow.playing()) 
+		{
+			sound_snow.stop();
+		}
+
 
 	})
 	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE 引言4 结束语 希望
+	/*=========================================================*/
+	
+	var quote_end_words_duration = top_but_words - top_end_words;
+	var quote_end_words = $(".quote-end-words");
+	quote_end_words.addClass('fade');
+	quote_end_words.addClass('out');
+	
+	var scene_lie_words = new ScrollMagic.Scene({
+		triggerElement: "#info_end_words",
+		duration:quote_end_words_duration
+	})
+    .on("enter", function () {
+		quote_end_words.removeClass('out');
+	})
+	.on("leave", function () {
+		quote_end_words.addClass('out');
+
+	})
+	.addIndicators()
+	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE 引言5 知乎
+	/*=========================================================*/
+	
+	var quote_zhihu_duration = top_thinking_words - top_zhihu_words;
+	var quote_zhihu_words = $(".quote-zhihu-words");
+	quote_zhihu_words.addClass('fade');
+	quote_zhihu_words.addClass('out');
+	
+	var scene_zhihu_words = new ScrollMagic.Scene({
+		triggerElement: "#info_zhihu_words",
+		duration:quote_zhihu_duration
+	})
+    .on("enter", function () {
+		quote_zhihu_words.removeClass('out');
+	})
+	.on("leave", function () {
+		quote_zhihu_words.addClass('out');
+
+	})
+	.addIndicators()
+	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE 问题
+	/*=========================================================*/
+	var repeat;
+	var question_duration = top_talking_words - top_question;
+	
+	var scene_question = new ScrollMagic.Scene({
+		triggerElement: "#info_question",
+		// triggerHook: 'onLeave',
+		duration:question_duration
+	})
+    .on("enter", function () {
+
+    	fHighlightRandomWord(eWords);
+
+    	repeat = setInterval(function() {
+		  	if(Math.random() > 0.95) 
+		  	{
+		  		fClearAllHighlights(eQuote);
+		  	}
+		  	fHighlightRandomWord(eWords);
+		}, 200);
+		
+	})
+	.on("leave", function () {
+		
+		fHighlightRandomWord(eWords);
+		clearInterval(repeat);
+	})
+	.addIndicators()
+	.addTo(controller);
+
+
+	
 
 
 
@@ -1204,17 +1684,30 @@ $(document).ready(function(){
 		}
 	);
 
-
+	var got_light_duration = pic_Height + 100;
 	// build scene
-	var scene_light = new ScrollMagic.Scene({
+	var scene_got_light = new ScrollMagic.Scene({
 		triggerElement: "#info_got_light",
-		 duration: 300
+		 duration: got_light_duration
+	})
+	.on("enter", function () {
+
+    	sound_nottoday.play();
+    	startFirefly();
+		
+	})
+	.on("leave", function () {
+		
+		if (sound_nottoday.playing()) 
+		{
+			sound_nottoday.stop();
+		}
 	})
 	.setTween(tween)
 	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
-
+	scene_got_light.offset(-50);
 
 
 

@@ -27,9 +27,15 @@ body {
 	margin:0;
 	padding:0;
 	background:var(--color-bg);
+	/*background:#000;*/
 	overflow-x: hidden;
 
+
 	font-family: '微软雅黑', serif;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 
@@ -124,6 +130,17 @@ a.underline1:hover {background: #ef8b80;}
 	letter-spacing: 0.08rem;
 }
 
+.gray { 
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+	
+    filter: gray;
+}
+
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -157,8 +174,9 @@ body.pace-running #space-race-logo {opacity:1;top:200px;}
 body.pace-done #space-race-logo {opacity:1;top:100px;position:absolute;}
 body.pace-running #wrapper {height:600px;}
 /*body.pace-done #wrapper {height:94545px;}*/
-body.pace-done #wrapper {height:60000px;}
+body.pace-done #wrapper {height:120000px;}
 
+#zone-loader {height:0px;display: none;}
 
 .marker h3,p.notice,.base-info {
 
@@ -469,6 +487,44 @@ body.pace-done #wrapper {height:60000px;}
 	z-index: 999999999;
 }
 
+#firefly-mask{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	/*background: #ffd700;*/
+	/*opacity: 0.6;*/
+	overflow: hidden;
+	z-index: 999999998;
+}
+
+.firefly {
+  width:4px;
+  height:4px;
+  position:absolute;
+  background-color: #ecc45e;
+  box-shadow:0px 0px 17px 2px wheat;
+  border-radius: 50%;
+}
+
+#virus-mask {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+
+	top: 0;
+	left: 0;
+	/*background: #ffd700;*/
+	/*opacity: 0.6;*/
+	overflow: hidden;
+
+	display: flex;
+	  justify-content: center;
+	  align-items: center;
+
+	z-index: 999999998;
+}
 
 
 
