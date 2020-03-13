@@ -30,16 +30,21 @@ body {
   list-style: none;
   /*overflow-y: scroll;
   overflow-x: hidden;*/
+  width: 90%;
   height: auto;
 
-  /*box-sizing: border-box;*/
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
 }
 
 .chat-thread li {
   position: relative;
   clear: both;
   display: inline-block;
-  padding: 16px 40px 16px 20px;
+  padding: 16px 20px 16px 20px;
   /*padding: 10px 20px 10px 20px;*/
   margin: 0 0 20px 0;
   /*font: 16px/20px 'Noto Sans', sans-serif;*/
@@ -49,8 +54,13 @@ body {
   line-height:0.30rem;
   letter-spacing: 0.08rem;
 
-  /*box-sizing: border-box;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+
+
 
 /* Chat - Avatar */
 .chat-thread li:before {
@@ -78,9 +88,9 @@ body {
 
 /*.chat-thread li:nth-child(odd) {*/
   .chat-thread li.right{
-  animation: show-chat-odd 0.15s 1 ease-in;
+  /*animation: show-chat-odd 0.15s 1 ease-in;
   -moz-animation: show-chat-odd 0.15s 1 ease-in;
-  -webkit-animation: show-chat-odd 0.15s 1 ease-in;
+  -webkit-animation: show-chat-odd 0.15s 1 ease-in;*/
   float: right;
   margin-right: 80px;
   color: #0AD5C1;
@@ -101,9 +111,9 @@ body {
 
 /*.chat-thread li:nth-child(even) {*/
 .chat-thread li.left {
-  animation: show-chat-even 0.15s 1 ease-in;
+  /*animation: show-chat-even 0.15s 1 ease-in;
   -moz-animation: show-chat-even 0.15s 1 ease-in;
-  -webkit-animation: show-chat-even 0.15s 1 ease-in;
+  -webkit-animation: show-chat-even 0.15s 1 ease-in;*/
   float: left;
   margin-left: 80px;
   color: #0EC879;
@@ -156,6 +166,122 @@ body {
 .chat-thread li.tong8:before {
   background-image: url("../img/8t.png");
 }
+.chat-thread li.tong9:before {
+  background-image: url("../img/9t.png");
+  border:solid 2px rgba(25, 147, 147, 0.8);
+}
+
+
+
+
+.chat-thread li.tong1{
+  background-color: rgba(255, 0, 255, 0.2);
+  color:#888;
+}
+.chat-thread li.tong1:after{
+  border-top: 15px solid rgba(255, 0, 255, 0.2);
+}
+
+.chat-thread li.tong2{
+  background-color: rgba(130, 130, 130, 0.3);
+  color:#bdc0ba;
+}
+.chat-thread li.tong2:after{
+  border-top: 15px solid rgba(130, 130, 130, 0.3);
+}
+
+
+.chat-thread li.tong3{
+  background-color: rgba(255, 69, 0, 0.3);
+  color:#f05e1c;
+}
+.chat-thread li.tong3:after{
+  border-top: 15px solid rgba(255, 69, 0, 0.3);
+}
+
+.chat-thread li.tong4{
+  background-color: rgba(102, 255, 0, 0.3);
+  /*color:#7FFF00;*/
+  color:#86c166;
+}
+.chat-thread li.tong4:after{
+  border-top: 15px solid rgba(102, 255, 0, 0.3);
+}
+
+.chat-thread li.tong5{
+  background-color: rgba(0, 255, 255, 0.3);
+  /*color:#bec23f;*/
+  color:#E0FFFF;
+}
+.chat-thread li.tong5:after{
+  border-top: 15px solid rgba(0, 255, 255, 0.3);
+}
+
+
+.chat-thread li.tong6{
+  background-color: rgba(221, 210, 59, 0.3);
+  color:#bec23f;
+}
+.chat-thread li.tong6:after{
+  border-top: 15px solid rgba(221, 210, 59, 0.3);
+}
+
+.chat-thread li.tong7{
+  background-color: rgba(0, 98, 132, 0.3);
+  /*border:solid 2px rgba(0, 98, 132, 0.3);*/
+  color:#7db9de;
+}
+.chat-thread li.tong7:after{
+  /*border:solid 2px rgba(0, 98, 132, 0.3);*/
+  border-top: 15px solid rgba(0, 98, 132, 0.3);
+
+}
+
+.chat-thread li.tong8{
+  background-color: rgba(254, 67, 101, 0.4);
+  color:#f596aa;
+}
+/*.chat-thread li.tong8:before{
+  background-color: rgba(254, 67, 101, 0.8);
+}*/
+.chat-thread li.tong8:after{
+  border-top: 15px solid rgba(254, 67, 101, 0.4);
+}
+
+
+.chat-thread li.tong9{
+  background-color: rgba(79, 79, 79, 0.8);
+  color:#CFCFCF;
+}
+.chat-thread li.tong9:after{
+  border-top: 15px solid rgba(79, 79, 79, 0.8);
+}
+
+.chat-thread li.luxun{
+  background-color: rgba(255, 255, 252, 0.8);
+  color:#656565;
+}
+.chat-thread li.luxun:after{
+  border-top: 15px solid rgba(255, 255, 252, 0.8);
+}
+
+.chat-thread li.dumu{
+  background-color: rgba(255, 255, 252, 0.8);
+  color:#656565;
+}
+.chat-thread li.dumu:after{
+  border-top: 15px solid rgba(255, 255, 252, 0.8);
+}
+
+.chat-thread li.zgl{
+  background-color: rgba(255, 255, 252, 0.8);
+  color:#656565;
+}
+.chat-thread li.zgl:after{
+  border-top: 15px solid rgba(255, 255, 252, 0.8);
+}
+
+
 
 
 .chat-window {
@@ -178,30 +304,32 @@ body {
 /* Small screens */
 @media all and (max-width: 767px) {
   .chat-thread {
-    width: 100%;
+    /*width: 100%;*/
     /*height: 260px;*/
-    height: auto;
+    /*height: auto;*/
   }
 
-  .chat-window {
+  /*.chat-window {
     left: 5%;
     width: 90%;
-  }
+  }*/
 }
 /* Medium and large screens */
 @media all and (min-width: 768px) {
   .chat-thread {
     /*width: 50%;*/
-    width: 90%;
+    /*width: 90%;*/
     /*height: 320px;*/
-    height: auto;
+    /*height: auto;*/
   }
 
-  .chat-window {
+  /*.chat-window {
     left: 25%;
     width: 50%;
-  }
+  }*/
 }
+
+
 @keyframes show-chat-even {
   0% {
     margin-left: -480px;

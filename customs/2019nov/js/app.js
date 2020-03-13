@@ -13,10 +13,8 @@
 
 $(document).ready(function(){
 
-
+	$('del').lettering('words');
 	
-
-
 
 
 	/*=========================================================*/
@@ -129,6 +127,22 @@ $(document).ready(function(){
 		volume: 0.3, //
 	});
 
+	var sound_lightning = new Howl({
+	  	src: [sound_path + 'lightning.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 1, //
+	});
+
+	var sound_rain = new Howl({
+	  	src: [sound_path + 'rain.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: true, // 無限循環
+		volume: 1, //
+	});
+
 	var sound_transformer = new Howl({
 	  	src: [sound_path + 'transformer.mp3',],
 	  	preload: true, //预加载
@@ -174,8 +188,47 @@ $(document).ready(function(){
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
-		volume: 0.3, //
+		volume: 1, //
 	});
+
+	// var sound_lastreunion = new Howl({
+	//   	src: ['https://m701.music.126.net/20200310153122/5034a472e0d978674a21e761fe763593/jdyyaac/025d/0e52/0e58/570c8d0d26984879dfdb9276e1536159.m4a'],
+	//   	preload: false, //预加载
+	//  	autoplay: false, // 自動播放
+	// 	loop: false, // 無限循環
+	// 	volume: 1, //
+	// });
+	//sound_lastreunion.play();
+
+	var sound_zgl = new Howl({
+	  	src: [sound_path + 'zgl.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.9, //
+	});
+
+	var sound_aoligei = new Howl({
+	  	src: [sound_path + 'aoligei.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.9, //
+	});
+
+	var sound_bullet = new Howl({
+	  	src: [sound_path + 'bullet.mp3',],
+	  	preload: true, //预加载
+	 	autoplay: false, // 自動播放
+		loop: false, // 無限循環
+		volume: 0.9, //
+	});
+
+
+	
+
+
+	//https://m801.music.126.net/20200310152723/a52ab2f8ee00e5e93f6b82ddb0aace5a/jdyyaac/510f/5353/040c/fe03d89ab4d982f503993ffe50ce570d.m4a
 
 	//Howler.ctx = new AudioContext();
 	//Howler.ctx.resume();
@@ -193,12 +246,17 @@ $(document).ready(function(){
 		sound_3kill.stop();
 		sound_4kill.stop();
 		sound_5kill.stop();
+		sound_lightning.stop();
+		sound_rain.stop();
 		sound_transformer.stop();
 		sound_xindian.stop();
 		sound_thuglife.stop();
 		sound_snow.stop();
 		sound_depose.stop();
 		sound_nottoday.stop();
+		sound_zgl.stop();
+		sound_aoligei.stop();
+		sound_bullet.stop();
 	};
 
 	
@@ -562,8 +620,21 @@ $(document).ready(function(){
 	$("#info_20200125").css({"top":top_20200125 + "px"});
 
 	var height_20200125 = $("#info_20200125").height();
-	var top_20200126 = top_20200125 + height_20200125 + 50;
+	//var top_20200126 = top_20200125 + height_20200125 + 50;
+	//$("#info_20200126").css({"top":top_20200126 + "px"});
+
+	var top_square_cabin_hospital = top_20200125 + height_20200125 + 50;
+	$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
+	$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
+
+
+	var height_info_square_cabin = $("#info_square_cabin").height();
+	var height_square_cabin_anim = $("#div-square-cabin-anim").height();
+	//
+	var top_20200126 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
 	$("#info_20200126").css({"top":top_20200126 + "px"});
+
+
 
 	var height_20200126 = $("#info_20200126").height();
 	var top_20200127 = top_20200126 + height_20200126 + 50;
@@ -638,14 +709,17 @@ $(document).ready(function(){
 	//$("#div-20200203-anim").css({"top":top_anim_20200203 + "px"});
 	//
 	
-	var top_square_cabin_hospital = top_20200203 + height_20200203 + 50;
-	$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
-	$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
+	//var top_square_cabin_hospital = top_20200203 + height_20200203 + 50;
+	//$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
+	//$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
 
 
-	var height_info_square_cabin = $("#info_square_cabin").height();
-	var height_square_cabin_anim = $("#div-square-cabin-anim").height();
-	var top_20200204 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
+	//var height_info_square_cabin = $("#info_square_cabin").height();
+	//var height_square_cabin_anim = $("#div-square-cabin-anim").height();
+	//
+	//var top_20200204 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
+	//$("#info_20200204").css({"top":top_20200204 + "px"});
+	var top_20200204 = top_20200203 + height_20200203 + 50;
 	$("#info_20200204").css({"top":top_20200204 + "px"});
 
 	var height_20200204 = $("#info_20200204").height();
@@ -803,7 +877,7 @@ $(document).ready(function(){
 	var question_height = clientHeight * 0.8;
 	$("#info_question").css({"top":top_question + "px"});
 	$("#div-end-question-anim").css({"top":top_question + "px","height":question_height+"px","min-height":question_height+"px"});
-
+	$("#neat").css({"height":question_height+"px"});
 
 	//所以我们讨论
 	var height_end_question_anim = $("#div-end-question-anim").height();
@@ -823,7 +897,7 @@ $(document).ready(function(){
 	var height_wechat_anim = $("#div-wechat-anim").height();
 	console.log("????? top_wechat = ",top_wechat);
 	console.log("????? height_wechat_anim = ",height_wechat_anim);
-	var top_got_light = top_wechat + height_wechat_anim + 50;
+	var top_got_light = top_wechat + height_wechat_anim + 150;
 	$("#info_got_light").css({"top":top_got_light + "px"});
 	$("#div-got-light-anim").css({"top":top_got_light + "px"});
 
@@ -838,6 +912,11 @@ $(document).ready(function(){
 	console.log("????? outerHeight_wechat_anim1 = ",outerHeight_wechat_anim1);
 	console.log("????? outerHeight_wechat_anim2 = ",outerHeight_wechat_anim2);
 
+
+
+
+	var aa = getComputedStyle(document.getElementById('div-wechat-anim'),null).getPropertyValue('height');
+	console.log("?????aa d.style.height= ",aa);
 
 	var height_last_to_father = $("#last-word").position().top;
 	console.log("????? height_last_to_father = ",height_last_to_father);
@@ -867,6 +946,13 @@ $(document).ready(function(){
 	$("#info_friend_words").css({"top":top_friend_words + "px"});
 	$("#div-friend-words-anim").css({"top":top_friend_words + "px"});
 
+	var height_friend_words_anim = $("#div-friend-words-anim").height();
+	var top_end_flag = top_friend_words + height_friend_words_anim + 50;
+	$("#info_end_flag").css({"top":top_end_flag + "px"});
+
+	$(".section-one").css({"height":top_end_flag + "px"});
+	
+
 	// var height_got_light_anim = $("#div-got-light-anim").height();
 	// var top_got_light = top_got_light + height_got_light_anim + 50;
 	// $("#info_but_words").css({"top":top_but_words + "px"});
@@ -889,16 +975,10 @@ $(document).ready(function(){
 	  eQuote.innerHTML += "<span>" + aQuote[word] + "</span>";
 	}
 	// ...and save them for later
-	var eWords = document.querySelectorAll("span");
+	//var eWords = document.querySelectorAll("span");
+	var eWords = eQuote.querySelectorAll("span");
 
-
-	// var repeat = setInterval(function() {
-	//   if(Math.random() > 0.95) 
-	//   {
-	//   		fClearAllHighlights(eQuote);
-	//   }
-	//   fHighlightRandomWord(eWords);
-	// }, 200);
+	
 
 	function fHighlightRandomWord (e) {
 	  var iRandom = Math.floor(Math.random() * e.length);
@@ -913,6 +993,25 @@ $(document).ready(function(){
 	  Array.prototype.map.call(aHighlights, function(){
 	    arguments[0].classList.remove("qhighlight");
 	  });
+	}
+
+	var question_repeat;
+
+	function startQuestion(){
+
+		console.log("======== startQuestion ========");
+		console.log("======== startQuestion ========");
+		console.log("======== startQuestion ========");
+
+	  	question_repeat = setInterval(function() {
+		  	if(Math.random() > 0.85) fClearAllHighlights(eQuote);
+		  	fHighlightRandomWord(eWords);
+		}, 300);
+	}
+
+	function stopQuestion(){
+		fClearAllHighlights(eQuote);
+		clearInterval(question_repeat);
 	}
 
 
@@ -942,12 +1041,221 @@ $(document).ready(function(){
 	});*/
 
 
+	/*=========================================================*/
+	// rain
+	/*=========================================================*/
+	var container_rain = document.getElementById('rain-mask');
+
+	function randomRange( minNum, maxNum) {
+	  return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+	}
+
+	function rain(fall){
+
+		console.log("rain fall number = ",fall);
+
+		for (var i = 0; i < fall; i++){
+
+			var drop = document.createElement("div");
+			var splash = document.createElement("div");
+
+			var randomLeft = randomRange(0, 1600);
+			    
+			drop.classList.add("drop");
+			drop.style.left = randomLeft + "px";
+			drop.style.top = randomRange(-1000, 1400) + "px";
+
+			if (i % 2 === 0){
+			  splash.classList.add("splash");
+			  splash.style.bottom = Math.floor(Math.random() * 100) + "px";
+			  splash.style.left = randomLeft + "px";
+			  splash.style.animation = "splashing " + randomRange(.2, .7) + "s linear infinite";
+			  container_rain.appendChild(splash);
+			} 
+
+
+			 container_rain.appendChild(drop);
+
+		}
+	 }
+
+	 function startRain(){
+	 // 	var rainy = document.getElementsByClassName('drop');
+		// var splashes = document.getElementsByClassName("splash");
+		// while(rainy[0]) {
+		//     rainy[0].parentNode.removeChild(rainy[0]);
+		// }
+		//   while(splashes[0]) {
+		//   splashes[0].parentNode.removeChild(splashes[0]);
+		// }	
+	 	rain(100);
+	 }
+
+	 function clearRain(){
+	 	var rainy = document.getElementsByClassName('drop');
+		var splashes = document.getElementsByClassName("splash");
+		while(rainy[0]) {
+		    rainy[0].parentNode.removeChild(rainy[0]);
+		}
+		  while(splashes[0]) {
+		  splashes[0].parentNode.removeChild(splashes[0]);
+		}	
+	 }
+
+	//startRain();
+
+
+	var innerFlash = 'rgb(255,0,255)';
+	var outerFlash = 'rgb(255,55,255)';
+
+    var d = document,x = [],y = [],xy = [],c = 0;
+    function sortNumber(a,b) { return a - b;}
+    function prcnt(a,b) {return parseInt(a * b / 100, 10);}
+    var h, w, x = [],y = [],xy = [], initX = 0;
+
+
+    var con = document.createElement('div');
+    con.setAttribute('style', 'display:block;'
+	    +'position:fixed;'
+	    +'height:100%;width:100%;'
+	    +'margin:auto;'
+	    +'top:0;left:0;right:0;bottom:0;'
+	    +'background-color: transparent;'
+	    +'visibility:hidden;'
+	    +'overflow:hidden;');
+    // document.body.appendChild(con);
+    container_rain.appendChild(con);
+
+    var svgFilters = '<svg xmlns="http://www.w3.org/2000/svg">'
+	    +'<defs>'
+	    +'<filter id="scatter" width="2" height="2" y="-.5" x="-.5" color-interpolation-filters="sRGB">'
+	    +'<feGaussianBlur stdDeviation="0.6" result="result1"/>'
+	    +'<feBlend in2="result1" result="fbSourceGraphic" mode="multiply"/>'
+	    +'<feTurbulence baseFrequency=".015" type="fractalNoise" numOctaves="6" result="result3"/>'
+	    +'<feDisplacementMap in="fbSourceGraphic" xChannelSelector="R" yChannelSelector="G" scale="60" result="result2" in2="result3"/>'
+	    +'<feMorphology radius="0" operator="dilate" result="result4"/>'
+	    +'<feBlend mode="screen" in2="result2"/>'
+	    +'</filter>'
+	    +'<filter id="glow" color-interpolation-filters="sRGB">'
+	    +'<feFlood flood-opacity="1" flood-color="'+innerFlash+'" result="flood"/>'
+	    +'<feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>'
+	    +'<feGaussianBlur in="composite1" stdDeviation="10" result="blur"/>'
+	    +'<feOffset dx="0" dy="0" result="offset"/>'
+	    +'<feComposite in="SourceGraphic" in2="offset" result="composite2"/>'
+	    +'</filter>'
+	    +'</defs>'
+	    +'</svg>';
+    //document.body.innerHTML += svgFilters;
+    container_rain.innerHTML += svgFilters;
+
+    function gen() {
+        h = window.innerHeight;
+        w = window.innerWidth;
+        var xMax = prcnt(16,w); 
+        var yMin = prcnt(7,h);
+        var yMax = prcnt(25,h);
+        x = [];
+        y = [];
+        xy = [];
+        var step = 0;
+        var a = w/2;
+        var b = w/1.5;
+        var e = b/2;
+        initX = a + Math.random() * b-e|0;
+        for (var i = 0; i < 50; i++) {
+            var g = 20 + Math.random() * yMax|0;
+            step += g;
+            y[i] = step|0;
+            if (step > h){break}
+        }
+        y.push(0);
+        y.sort(sortNumber);
+        x[0] = initX;
+        for (var i = 0; i < y.length; i++) {
+            if ((y[i+1] - y[i] < yMin)) {
+                x[i+1] = x[i] + Math.floor(Math.random() * 10-5);
+            }
+            else {
+                x[i+1] = x[i] + Math.floor(Math.random() * xMax - (xMax/2));
+            }
+            xy[i] = x[i]+','+y[i]+' ';
+        }
+        return xy;
+    }
+
+    function run() {
+        var t = Math.round(1 + Math.random() * 7)|0;
+        var lightningSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="visibility:visible;-webkit-filter: drop-shadow( 0 0 20px '+outerFlash+' );">'
+	        +'<g id="mainBolt" filter="url(#scatter)">'
+	        +'<path d="M '+gen()+'" fill="none" stroke="#fff" stroke-width="'+t+'" filter="url(#glow)"/>'
+	        +'</g>'
+	        +'</svg>';
+        con.innerHTML = lightningSvg;
+        //document.body.appendChild(con);
+        container_rain.appendChild(con);
+    }
+
+    function flash() {
+       //document.body.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at '+initX+'px top, #ffaaff 0%, #ee88ff 16%, #000 100%)';
+       container_rain.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at '+initX+'px top, #ffaaff 0%, #ee88ff 16%, #000 100%)';
+       
+       var r = 30 + Math.random() * 70|0;
+       c++;
+       setTimeout(function(){flkr();}, r);
+    }
+
+    function flkr() {
+        //document.body.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at '+initX+'px top, #000 0%, #000 100%)';
+
+        container_rain.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at '+initX+'px top, #000 0%, #000 100%)';
+        
+        var r = 16 + Math.random() * 30|0;
+        if (c > 6) {
+            clear();
+        }  
+        else {
+           setTimeout(function(){flash();}, r); 
+        }
+    }
+
+    function clear() {
+        con.innerHTML = '';
+        //document.body.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at center top, #000 0%, #000 100%)';
+    	//container_rain.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at center top, #000 0%, #000 100%)';
+    	container_rain.style.backgroundImage = '';
+
+    	document.documentElement.addEventListener('click',startLightning);
+    
+    }
+
+    function startLightning(){
+    	c=0;
+    	flash();
+    	run();
+
+    	sound_lightning.play();
+
+    	document.documentElement.addEventListener('click',startLightning);
+    }
+
+    //document.documentElement.addEventListener('click', function() {
+		//startLightning
+    	// if(sound_lightning.playing()){
+    	// 	sound_lightning.stop();
+    	// 	sound_lightning.play();
+    	// }
+
+    //});
+    //container_rain.addEventListener('click', function() {c=0;flash();run();});
 
 
 
 
+	/*=========================================================*/
+	// firefly
+	/*=========================================================*/
 	var isFireFlyRun = false;
-	var fireflies = 25;
+	var fireflies = 100;
 	// var $container = $("#firefly-mask");
 	// var $container = $("#div-friend-words-anim");
 	var $container = $("#div-firefly");
@@ -970,7 +1278,8 @@ $(document).ready(function(){
 		  var firefly = $('<div class="firefly"></div>');
 		  TweenLite.set(firefly, {
 		    x: Math.random() * $containerWidth,
-		    y: Math.random() * $containerHeight
+		    y: Math.random() * $containerHeight,
+		    opacity:0.25
 		  });
 		  $container.append(firefly);
 		  flyTheFirefly(firefly);
@@ -989,9 +1298,9 @@ $(document).ready(function(){
 
 	  fadeTl.to(
 	    [elm],
-	    0.25,
-	    { opacity: 0.25, yoyo: true, repeat: 1, repeatDelay: 0.2, yoyo: true },
-	    Math.floor(Math.random() * 6) + 1
+	    5,
+	    { opacity: 1, yoyo: true, repeat: 1, repeatDelay: 5 },
+	    Math.floor(Math.random() * 30) + 1
 	  );
 	  
 	  flyTl
@@ -1014,6 +1323,7 @@ $(document).ready(function(){
 	  });
 	}
 
+	
     
 
 
@@ -1305,6 +1615,52 @@ $(document).ready(function(){
 
 
 	/*=========================================================*/
+	//SCENE 雨
+	/*=========================================================*/
+	
+	var scene_rain = new ScrollMagic.Scene({
+		triggerElement: "#info_20200124",
+		duration:height_20200124
+	})
+
+	.on("enter", function () {
+		// console.log("enter info_20200124");
+		//$("#snow-mask").snowfall({flakeCount : 100});
+		sound_rain.play();
+
+		startRain();
+
+		document.documentElement.addEventListener('click', startLightning);
+
+
+	})
+	.on("leave", function () {
+
+		//console.log("leave info_20200215");
+		//$("#snow-mask").snowfall('clear');
+		//
+		//document.documentElement.addEventListener('click'
+
+		clearRain();
+
+		document.documentElement.removeEventListener('click', startLightning);
+
+		if (sound_rain.playing()) 
+		{
+			sound_rain.stop();
+		}
+
+
+	})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+
+
+
+
+
+	/*=========================================================*/
 	//SCENE 鄂A0260W
 	/*=========================================================*/
 
@@ -1332,7 +1688,7 @@ $(document).ready(function(){
         triggerElement: '#info_car_a0260w',
         // triggerHook:'onleave'
         // triggerHook: 0,
-        duration: height_box_car_a0260w
+        duration: height_box_car_a0260w+300
         //duration:200
     })
     .on("enter", function () {
@@ -1350,7 +1706,7 @@ $(document).ready(function(){
     .addIndicators()
     .addTo(controller);
 
-    scene_0260w.offset(-100);
+    scene_0260w.offset(-150);
 
 
 
@@ -1398,10 +1754,10 @@ $(document).ready(function(){
 	});
 
 	// build scene
-	var square_cabin_duration = top_20200204 - top_square_cabin_hospital + 100;
+	//var square_cabin_duration = top_20200204 - top_square_cabin_hospital + 100;
 	var scene_square_cabin = new ScrollMagic.Scene({
 		triggerElement: "#info_square_cabin",
-		duration: square_cabin_duration
+		duration: height_square_cabin_anim+200
 	})
 	.on("enter", function () {
 		console.log("enter info_square_cabin");
@@ -1497,7 +1853,7 @@ $(document).ready(function(){
 	})
 	.on("leave", function () {
 
-		ele_img_20200213.removeClass('gray');
+		//ele_img_20200213.removeClass('gray');
 		if (sound_depose.playing()) 
 		{
 			sound_depose.stop();
@@ -1589,34 +1945,39 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE 问题
 	/*=========================================================*/
-	var repeat;
+	
 	var question_duration = top_talking_words - top_question;
 	
 	var scene_question = new ScrollMagic.Scene({
 		triggerElement: "#info_question",
 		// triggerHook: 'onLeave',
-		duration:question_duration
+		duration:question_duration * 2 / 3
 	})
     .on("enter", function () {
 
-    	fHighlightRandomWord(eWords);
+  //   	fHighlightRandomWord(eWords);
 
-    	repeat = setInterval(function() {
-		  	if(Math.random() > 0.95) 
-		  	{
-		  		fClearAllHighlights(eQuote);
-		  	}
-		  	fHighlightRandomWord(eWords);
-		}, 200);
+  //   	question_repeat = setInterval(function() {
+		//   	if(Math.random() > 0.85) 
+		//   	{
+		//   		fClearAllHighlights(eQuote);
+		//   	}
+		//   	fHighlightRandomWord(eWords);
+		// }, 275);
+		// 
+		startQuestion();
 		
 	})
 	.on("leave", function () {
 		
-		fHighlightRandomWord(eWords);
-		clearInterval(repeat);
+		//fHighlightRandomWord(eWords);
+		//clearInterval(question_repeat);
+		stopQuestion();
 	})
 	.addIndicators()
 	.addTo(controller);
+
+	scene_question.offset(question_duration / 3);
 
 
 	
@@ -1688,12 +2049,12 @@ $(document).ready(function(){
 	// build scene
 	var scene_got_light = new ScrollMagic.Scene({
 		triggerElement: "#info_got_light",
-		 duration: got_light_duration
+		duration: got_light_duration
 	})
 	.on("enter", function () {
 
     	sound_nottoday.play();
-    	startFirefly();
+    	
 		
 	})
 	.on("leave", function () {
@@ -1708,6 +2069,131 @@ $(document).ready(function(){
 	.addTo(controller);
 
 	scene_got_light.offset(-50);
+
+
+
+	/*=========================================================*/
+	//SCENE 改颜色
+	/*=========================================================*/
+	var scene_bg_color = new ScrollMagic.Scene({
+		triggerElement: "#info_to_be_continued",
+		triggerHook: 'onLeave',
+		//duration:question_duration
+	})
+	.setClassToggle("#lao5body", "body-dark")
+	.addIndicators()
+	.addTo(controller);
+
+
+	/*=========================================================*/
+	//SCENE firefly
+	/*=========================================================*/
+	var firefly_duration = height_friend_words_anim;
+	// build scene
+	var scene_firefly = new ScrollMagic.Scene({
+		triggerElement: "#info_friend_words",
+		duration: firefly_duration * 2 / 3
+	})
+	.on("enter", function () {
+
+		startFirefly();
+
+    	//sound_zgl.play();
+		
+	})
+	.on("leave", function () {
+		
+		// if (sound_zgl.playing()) 
+		// {
+		// 	sound_zgl.stop();
+		// }
+	})
+
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+	scene_firefly.offset(firefly_duration / 3);
+
+
+	/*=========================================================*/
+	//SCENE zgl
+	/*=========================================================*/
+	//var zgl_duration = pic_Height + 100;
+	// build scene
+	var scene_zgl = new ScrollMagic.Scene({
+		triggerElement: "#trigger-zgl",
+		duration: 300
+	})
+	.on("enter", function () {
+
+    	sound_zgl.play();
+		
+	})
+	.on("leave", function () {
+		
+		if (sound_zgl.playing()) 
+		{
+			sound_zgl.stop();
+		}
+	})
+
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	//scene_zgl.offset(-50);
+
+
+	/*=========================================================*/
+	//SCENE aoligei
+	/*=========================================================*/
+	//var zgl_duration = pic_Height + 100;
+	// build scene
+	var scene_aoligei = new ScrollMagic.Scene({
+		triggerElement: "#trigger-aoligei",
+		duration: 200
+	})
+	.on("enter", function () {
+
+    	sound_aoligei.play();
+		
+	})
+	.on("leave", function () {
+		
+		if (sound_aoligei.playing()) 
+		{
+			sound_aoligei.stop();
+		}
+	})
+
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	//scene_aoligei.offset(-50);
+
+	/*=========================================================*/
+	//SCENE bullet
+	/*=========================================================*/
+	//var zgl_duration = pic_Height + 100;
+	// build scene
+	var scene_bullet = new ScrollMagic.Scene({
+		triggerElement: "#trigger-bullet",
+		duration: 300
+	})
+	.on("enter", function () {
+
+    	sound_bullet.play();
+		
+	})
+	.on("leave", function () {
+		
+		if (sound_bullet.playing()) 
+		{
+			sound_bullet.stop();
+		}
+	})
+
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
 
 
 

@@ -815,9 +815,49 @@
   overflow: hidden;
 }
 
-
-
-
+.doudong{
+    animation: uk-text-shadow-glitch .65s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
+    }
+@keyframes uk-text-shadow-glitch {
+    0% {
+        text-shadow: none
+    }
+    25% {
+        text-shadow: -2px -2px 0 #ff0048,2px 2px 0 #3234ff
+    }
+    50% {
+        text-shadow: 2px -2px 0 #ff0048,-2px 2px 0 #3234ff
+    }
+    75% {
+        text-shadow: -2px 2px 0 #ff0048,2px -2px 0 #3234ff
+    }
+    100% {
+        text-shadow: 2px 2px 0 #ff0048,-2px -2px 0 #3234ff
+    }
+}
+@keyframes uk-flicker {
+    0% {
+        opacity: 0
+    }
+    10% {
+        opacity: .6;
+        transform: scale(.8)
+    }
+    20% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+    50% {
+        opacity: .2;
+        transform: scale(1.1)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
 
 
 #div-but-words-anim  {
@@ -896,7 +936,11 @@
   font-weight: 900;
   color:#fff;
   opacity: 0.8;
+
 }
+
+
+
 
 #div-talking-words-anim {
 
@@ -938,12 +982,120 @@
   transform: translateX(-50%);
 
   width: 90%;
-  /*height: auto;*/
+  height: auto;
+  /*height: 100%;*/
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
 }
-@media all and (min-width: 320px) and (max-width: 640px)  {
+
+/* ----------- iPhone 5 and 5S ----------- */
+/*@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #div-wechat-anim {
+        height: 10400px;
+      }
+}*/
+
+
+/* ----------- iPhone 6 ----------- */
+/*@media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      #div-wechat-anim {
+        height: 11000px;
+      }
+}*/
+
+/* ----------- iPhone 6+ ----------- */
+/*@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #div-wechat-anim {
+      height: 11300px;
+    }
+
+}*/
+
+/* ----------- iPhone X (X,XS) ----------- */
+/*@media only screen 
+  and (min-device-width: 375px)
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #div-wechat-anim {
+      height: 10950;
+    }
+
+}*/
+
+
+/* ----------- Huawei nova ----------- */
+/*@media only screen 
+  and (min-device-width: 360px)
+  and (max-device-width: 770px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #div-wechat-anim {
+      height: 11600;
+    }
+
+}*/
+
+
+/* ----------- Huawei p20 ----------- */
+/*@media only screen 
+  and (min-device-width: 360px)
+  and (max-device-width: 748px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #div-wechat-anim {
+      height: 11600;
+    }
+
+}*/
+
+
+
+
+
+/*@media all and (min-width: 320px) and (max-width: 360px)  {
   #div-wechat-anim {
-    height: 11500px;
+    height: 10700px;
+  }
+
+}
+@media all and (min-width: 361px) and (max-width: 400px)  {
+  #div-wechat-anim {
+    height: 10900px;
+  }
+
+}*/
+/*@media all and (min-width: 401px) and (max-width: 420px)  {
+  #div-wechat-anim {
+    height: 11100px;
+  }
+
+}*/
+
+/*@media all and (min-width: 421px) and (max-width: 480px)  {
+  #div-wechat-anim {
+    height: 11600px;
+  }
+
+}*/
+/*@media all and (min-width: 377px) and (max-width: 414px)  {
+  #div-wechat-anim {
+    height: 11200px;
   }
 
 }
@@ -964,7 +1116,7 @@
     height: 9700px;
   }
 
-}
+}*/
 
 
 #div-got-light-anim{
