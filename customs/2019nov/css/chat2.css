@@ -22,6 +22,8 @@ body {
   background-color: rgba(25, 147, 147, 0.2);
 }*/
 
+ 
+
 .chat-thread {
   /*margin: 24px auto 0 auto;*/
   /*padding: 0 20px 0 0;*/
@@ -34,9 +36,9 @@ body {
   height: auto;
 
 
-  -webkit-box-sizing: border-box;
+  /*-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 
 }
 
@@ -54,9 +56,9 @@ body {
   line-height:0.30rem;
   letter-spacing: 0.08rem;
 
-  -webkit-box-sizing: border-box;
+  /*-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 }
 
 

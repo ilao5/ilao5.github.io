@@ -69,6 +69,10 @@ $(document).ready(function(){
 	// 	loop: false, // 無限循環
 	// 	volume: 0.5, //
 	// });
+	// 
+	
+	Howler.autoUnlock = false;
+	//Howler.mute(true);
 
 
 	var sound_jonsnow = new Howl({
@@ -77,14 +81,30 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 1, //
+		mute:false,
+		// onplayerror: function() {
+  //   	sound_jonsnow.once('unlock', function() {
+		//       sound_jonsnow.stop();
+		//    });
+		// }
 	});
+
+
+	if(sound_jonsnow.playing()){
+		console.log('sound_jonsnow.playing');
+	}
+	else
+	{
+		console.log('!!!!sound_jonsnow.playing');
+	}
 
 	var sound_chuishao = new Howl({
 	  	src: [sound_path + 'chuishao.mp3',],
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
 		loop: true, // 無限循環
-		volume: 0.5, //
+		volume: 1, //
+		mute:false
 	});
 
 	var sound_1kill = new Howl({
@@ -92,7 +112,8 @@ $(document).ready(function(){
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
-		volume: 0.3, //
+		volume: 1, //
+		mute:false
 	});
 
 	var sound_2kill = new Howl({
@@ -100,7 +121,8 @@ $(document).ready(function(){
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
-		volume: 0.3, //
+		volume: 1, //
+		mute:false
 	});
 
 	var sound_3kill = new Howl({
@@ -109,6 +131,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
 	var sound_4kill = new Howl({
@@ -117,15 +140,17 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
-	var sound_5kill = new Howl({
+	/*var sound_5kill = new Howl({
 	  	src: [sound_path + '5kill.mp3',],
 	  	preload: true, //预加载
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.3, //
-	});
+		mute:false
+	});*/
 
 	var sound_lightning = new Howl({
 	  	src: [sound_path + 'lightning.mp3',],
@@ -133,6 +158,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 1, //
+		mute:false
 	});
 
 	var sound_rain = new Howl({
@@ -141,6 +167,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: true, // 無限循環
 		volume: 1, //
+		mute:false
 	});
 
 	var sound_transformer = new Howl({
@@ -149,6 +176,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
 	var sound_xindian = new Howl({
@@ -157,6 +185,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: true, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
 	var sound_thuglife = new Howl({
@@ -165,6 +194,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
 	var sound_depose = new Howl({
@@ -173,6 +203,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.2, //
+		mute:false
 	});
 
 	var sound_snow = new Howl({
@@ -181,6 +212,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: true, // 無限循環
 		volume: 0.3, //
+		mute:false
 	});
 
 	var sound_nottoday = new Howl({
@@ -189,6 +221,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 1, //
+		mute:false
 	});
 
 	// var sound_lastreunion = new Howl({
@@ -206,6 +239,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.9, //
+		mute:false
 	});
 
 	var sound_aoligei = new Howl({
@@ -214,6 +248,7 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.9, //
+		mute:false
 	});
 
 	var sound_bullet = new Howl({
@@ -222,10 +257,24 @@ $(document).ready(function(){
 	 	autoplay: false, // 自動播放
 		loop: false, // 無限循環
 		volume: 0.9, //
+		mute:false
 	});
 
 
-	
+	$(window).bind('beforeunload', function(){ 
+	    console.log(">>>>>>>>>>>>刷新");
+	    // if (window.is_confirm !== false) {
+     //        return "您可能有数据没有保存";
+     //    }
+     	sound_jonsnow.unload();
+     	sound_4kill.unload();
+     	Howler.unload();
+	});
+
+	//window.onbeforeunload = function(event){    
+	    //return '您可能有数据没有保存'; 
+	    //console.log(">>>>>>>>>>>>刷新");
+	//};
 
 
 	//https://m801.music.126.net/20200310152723/a52ab2f8ee00e5e93f6b82ddb0aace5a/jdyyaac/510f/5353/040c/fe03d89ab4d982f503993ffe50ce570d.m4a
@@ -233,8 +282,8 @@ $(document).ready(function(){
 	//Howler.ctx = new AudioContext();
 	//Howler.ctx.resume();
 	
-
-	stopAudio();
+	
+	//stopAudio();
 
 
 	function stopAudio() 
@@ -245,7 +294,7 @@ $(document).ready(function(){
 		sound_2kill.stop();
 		sound_3kill.stop();
 		sound_4kill.stop();
-		sound_5kill.stop();
+		//sound_5kill.stop();
 		sound_lightning.stop();
 		sound_rain.stop();
 		sound_transformer.stop();
@@ -834,10 +883,75 @@ $(document).ready(function(){
 	$("#info_20200224").css({"top":top_20200224 + "px"});
 
 	var height_20200224 = $("#info_20200224").height();
-	var top_to_be_continued = top_20200224 + height_20200224 + 50;
+	var top_20200226 = top_20200224 + height_20200224 + 50;
+	$("#info_20200226").css({"top":top_20200226 + "px"});
+
+	var height_20200226 = $("#info_20200226").height();
+	var top_20200227 = top_20200226 + height_20200226 + 50;
+	$("#info_20200227").css({"top":top_20200227 + "px"});
+
+	var height_20200227 = $("#info_20200227").height();
+	var top_20200229 = top_20200227 + height_20200227 + 50;
+	$("#info_20200229").css({"top":top_20200229 + "px"});
+
+	var height_20200229 = $("#info_20200229").height();
+	var top_20200302 = top_20200229 + height_20200229 + 50;
+	$("#info_20200302").css({"top":top_20200302 + "px"});
+
+	var height_20200302 = $("#info_20200302").height();
+	var top_20200303 = top_20200302 + height_20200302 + 50;
+	$("#info_20200303").css({"top":top_20200303 + "px"});
+
+	var height_20200303 = $("#info_20200303").height();
+	var top_20200304 = top_20200303 + height_20200303 + 50;
+	$("#info_20200304").css({"top":top_20200304 + "px"});
+
+	var height_20200304 = $("#info_20200304").height();
+	var top_20200305 = top_20200304 + height_20200304 + 50;
+	$("#info_20200305").css({"top":top_20200305 + "px"});
+
+	var height_20200305 = $("#info_20200305").height();
+	var top_20200306 = top_20200305 + height_20200305 + 50;
+	$("#info_20200306").css({"top":top_20200306 + "px"});
+
+	var height_20200306 = $("#info_20200306").height();
+	var top_20200307 = top_20200306 + height_20200306 + 50;
+	$("#info_20200307").css({"top":top_20200307 + "px"});
+
+	var height_20200307 = $("#info_20200307").height();
+	var top_20200308 = top_20200307 + height_20200307 + 50;
+	$("#info_20200308").css({"top":top_20200308 + "px"});
+
+	var height_20200308 = $("#info_20200308").height();
+	var top_20200309 = top_20200308 + height_20200308 + 50;
+	$("#info_20200309").css({"top":top_20200309 + "px"});
+
+	var height_20200309 = $("#info_20200309").height();
+	var top_20200310 = top_20200309 + height_20200309 + 50;
+	$("#info_20200310").css({"top":top_20200310 + "px"});
+
+	var height_20200310 = $("#info_20200310").height();
+	var top_20200311 = top_20200310 + height_20200310 + 50;
+	$("#info_20200311").css({"top":top_20200311 + "px"});
+
+	var height_20200311 = $("#info_20200311").height();
+	var top_20200312 = top_20200311 + height_20200311 + 50;
+	$("#info_20200312").css({"top":top_20200312 + "px"});
+
+
+	var height_20200312 = $("#info_20200312").height();
+	//var top_news_links = top_20200312 + height_20200312 + 50;
+	//$("#info_news_links").css({"top":top_news_links + "px"});
+
+
+	// var height_news_links = $("#info_news_links").height();
+	// var top_to_be_continued = top_news_links + height_news_links + 50;
+	// $("#info_to_be_continued").css({"top":top_to_be_continued + "px"});
+	// $("#div-to-be-continued-anim").css({"top":top_to_be_continued + "px"});
+
+	var top_to_be_continued = top_20200312 + height_20200312 + 50;
 	$("#info_to_be_continued").css({"top":top_to_be_continued + "px"});
 	$("#div-to-be-continued-anim").css({"top":top_to_be_continued + "px"});
-
 
 
 	var height_to_be_continued = $("#div-to-be-continued-anim").height();
@@ -936,9 +1050,21 @@ $(document).ready(function(){
 	console.log("????? total = ",total);
 
 
-	var pic_Height = clientWidth * 480 / 720;
-	$("#img-torch").css({"width":clientWidth + "px"});
-	$("#img-torch").css({"height":pic_Height + "px"});
+	var pic_Height=0;
+	if(clientWidth>720)
+	{
+
+		$("#img-torch").css({"width":(720*0.8)+"px"});
+		$("#img-torch").css({"height":(480*0.8)+"px"});
+	}
+	else
+	{
+
+	 	pic_Height = clientWidth * 480 / 720;
+	 	$("#img-torch").css({"width":clientWidth + "px"});
+		$("#img-torch").css({"height":pic_Height + "px"});
+	}
+	
 
 
 	var height_got_light = $("#div-got-light-anim").height();
@@ -1224,7 +1350,7 @@ $(document).ready(function(){
     	//container_rain.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at center top, #000 0%, #000 100%)';
     	container_rain.style.backgroundImage = '';
 
-    	document.documentElement.addEventListener('click',startLightning);
+    	//document.documentElement.removeEventListener('click',startLightning);
     
     }
 
@@ -1235,7 +1361,7 @@ $(document).ready(function(){
 
     	sound_lightning.play();
 
-    	document.documentElement.addEventListener('click',startLightning);
+    	//document.documentElement.addEventListener('click',startLightning);
     }
 
     //document.documentElement.addEventListener('click', function() {
@@ -1255,7 +1381,7 @@ $(document).ready(function(){
 	// firefly
 	/*=========================================================*/
 	var isFireFlyRun = false;
-	var fireflies = 100;
+	var fireflies = 80;
 	// var $container = $("#firefly-mask");
 	// var $container = $("#div-friend-words-anim");
 	var $container = $("#div-firefly");
@@ -1408,6 +1534,9 @@ $(document).ready(function(){
 		console.log("enter trigger_20191201");
 
 		ele_jon.removeClass('out');
+		Howler.mute(false);
+		//sound_jonsnow.load();
+		sound_jonsnow.mute(false);
 		sound_jonsnow.play();
 	})
 	.on("leave", function () {
@@ -1415,7 +1544,11 @@ $(document).ready(function(){
 		ele_jon.addClass('out');
 		if (sound_jonsnow.playing()) 
 		{
+			sound_jonsnow.mute(true);
+			Howler.mute(true);
 			sound_jonsnow.stop();
+			
+			
 		}
 
 	})
@@ -1853,7 +1986,7 @@ $(document).ready(function(){
 	})
 	.on("leave", function () {
 
-		//ele_img_20200213.removeClass('gray');
+		ele_img_20200213.removeClass('gray');
 		if (sound_depose.playing()) 
 		{
 			sound_depose.stop();
