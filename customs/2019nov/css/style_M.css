@@ -119,7 +119,8 @@ h1,h2,h3,h4,h5,h6,p,blockquote,img {
   	font-weight: 500; 
 
 
-  	background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);
+  	/*background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);*/
+  	background-image: linear-gradient(to right, #F6BB42, #FC6E51 , #ED5565);
 	border-radius: 6px;
 	padding: 3px 6px;
 
