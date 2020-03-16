@@ -25,6 +25,11 @@
 	--size-28:0.28rem; 
 	--size-30:0.30rem; 
 
+	 --highlight-vstart: 0.4em;
+  --highlight-vend: 0.9em;
+  --highlight-color: yellow;
+  --highlight-range: 100%;
+
 }
 
 /*$dark: #252C32;
@@ -104,9 +109,20 @@ h1,h2,h3,h4,h5,h6,p,blockquote,img {
 
 
 .highlight {
-	background: var(--color-hightlight); 
-  	color: var(--color-black);
+	/*background: var(--color-hightlight); */
+	/*E91E63*/
+	/*background:#ee4035;
+	
+  	color: var(--color-white1);*/
+  	/*color: #B6FF00;*/
+  	
   	font-weight: 500; 
+
+
+  	background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);
+	border-radius: 6px;
+	padding: 3px 6px;
+
 }
 
 
