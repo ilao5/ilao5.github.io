@@ -15,8 +15,6 @@ $(document).ready(function(){
 
 	$('del').lettering('words');
 	
-
-
 	/*=========================================================*/
 	// 音乐音效
 	/*=========================================================*/
@@ -26,264 +24,154 @@ $(document).ready(function(){
 	// Howler.ctx = new AudioContext();
 	// Howler.ctx.resume();
 
-	/*var sound = new Howl({
-	  	src: [
-	  		sound_path + 'mengyan.mp3',
-	  		sound_path + 'chuishao.mp3'
-	  		
-	  	],
-	  	//src: ['_/sound/chuishao.mp3'],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.5, // 音量ntById( "state" ).innerText = "結束";
-		onload: function() {
-			// 載入後執行
-			//document.getElementById( "state" ).innerText = "載入完成";
-		},
-		onplay: function() {
-			// 播放後執行
-			//document.getElementById( "state" ).innerText = "播放中";
-		},
-		onpause: function() {
-			// 暫停後執行
-			//document.getElementById( "state" ).innerText = "暫停";
-		},
-		onstop: function() {
-			// 停止後執行
-			//document.getElementById( "state" ).innerText = "停止";
-		},
-		onend: function() {
-			// 結束後執行
-			//document.getElementById( "state" ).innerText = "結束";
-		}
-
-	});*/
-
-
-	//声音
-	// var sound_mengyan = new Howl({
-	//   	src: [sound_path + 'mengyan.mp3',],
-	//   	preload: true, //预加载
-	//  	autoplay: false, // 自動播放
-	// 	loop: false, // 無限循環
-	// 	volume: 0.5, //
-	// });
-	// 
-	
-	Howler.autoUnlock = false;
-	//Howler.mute(true);
-
 
 	var sound_jonsnow = new Howl({
 	  	src: [sound_path + 'jonsnow.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 1, //
-		mute:false,
-		// onplayerror: function() {
-  //   	sound_jonsnow.once('unlock', function() {
-		//       sound_jonsnow.stop();
-		//    });
-		// }
+	  	preload: true,
+	 	autoplay: false,
+		loop: false, 
+		volume: 1,
 	});
-
-
-	if(sound_jonsnow.playing()){
-		console.log('sound_jonsnow.playing');
-	}
-	else
-	{
-		console.log('!!!!sound_jonsnow.playing');
-	}
 
 	var sound_chuishao = new Howl({
 	  	src: [sound_path + 'chuishao.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: true, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: true, 
+		volume: 1, 
 	});
 
 	var sound_1kill = new Howl({
 	  	src: [sound_path + '1kill.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true,
+	 	autoplay: false,
+		loop: false, 
+		volume: 0.5,
 	});
 
 	var sound_2kill = new Howl({
 	  	src: [sound_path + '2kill.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true,
+	 	autoplay: false,
+		loop: false,
+		volume: 0.5,
 	});
 
 	var sound_3kill = new Howl({
 	  	src: [sound_path + '3kill.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 0.5,
 	});
 
 	var sound_4kill = new Howl({
 	  	src: [sound_path + '4kill.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 0.5,
 	});
 
-	/*var sound_5kill = new Howl({
-	  	src: [sound_path + '5kill.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.3, //
-		mute:false
-	});*/
+	// var sound_5kill = new Howl({
+	//   	src: [sound_path + '5kill.mp3',],
+	//   	preload: true, 
+	//  	autoplay: false, 
+	// 	loop: false, 
+	// 	volume: 0.3,
+	// });
 
 	var sound_lightning = new Howl({
 	  	src: [sound_path + 'lightning.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_rain = new Howl({
 	  	src: [sound_path + 'rain.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: true, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: true, 
+		volume: 1,
 	});
 
 	var sound_transformer = new Howl({
 	  	src: [sound_path + 'transformer.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_xindian = new Howl({
 	  	src: [sound_path + 'xindian.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: true, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: true, 
+		volume: 0.1,
 	});
 
 	var sound_thuglife = new Howl({
 	  	src: [sound_path + 'thuglife.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_depose = new Howl({
 	  	src: [sound_path + 'depose.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.2, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_snow = new Howl({
 	  	src: [sound_path + 'snow.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: true, // 無限循環
-		volume: 0.3, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: true, 
+		volume: 1,
 	});
 
 	var sound_nottoday = new Howl({
 	  	src: [sound_path + 'nottoday.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 1, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
-	// var sound_lastreunion = new Howl({
-	//   	src: ['https://m701.music.126.net/20200310153122/5034a472e0d978674a21e761fe763593/jdyyaac/025d/0e52/0e58/570c8d0d26984879dfdb9276e1536159.m4a'],
-	//   	preload: false, //预加载
-	//  	autoplay: false, // 自動播放
-	// 	loop: false, // 無限循環
-	// 	volume: 1, //
-	// });
-	//sound_lastreunion.play();
 
 	var sound_zgl = new Howl({
 	  	src: [sound_path + 'zgl.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.9, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_aoligei = new Howl({
 	  	src: [sound_path + 'aoligei.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.9, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
 
 	var sound_bullet = new Howl({
 	  	src: [sound_path + 'bullet.mp3',],
-	  	preload: true, //预加载
-	 	autoplay: false, // 自動播放
-		loop: false, // 無限循環
-		volume: 0.9, //
-		mute:false
+	  	preload: true, 
+	 	autoplay: false, 
+		loop: false, 
+		volume: 1,
 	});
-
-
-	$(window).bind('beforeunload', function(){ 
-	    console.log(">>>>>>>>>>>>刷新");
-	    // if (window.is_confirm !== false) {
-     //        return "您可能有数据没有保存";
-     //    }
-     	sound_jonsnow.unload();
-     	sound_4kill.unload();
-     	Howler.unload();
-	});
-
-	//window.onbeforeunload = function(event){    
-	    //return '您可能有数据没有保存'; 
-	    //console.log(">>>>>>>>>>>>刷新");
-	//};
-
-
-	//https://m801.music.126.net/20200310152723/a52ab2f8ee00e5e93f6b82ddb0aace5a/jdyyaac/510f/5353/040c/fe03d89ab4d982f503993ffe50ce570d.m4a
-
-	//Howler.ctx = new AudioContext();
-	//Howler.ctx.resume();
 	
-	
-	//stopAudio();
+
+	stopAudio();
 
 
 	function stopAudio() 
@@ -309,11 +197,6 @@ $(document).ready(function(){
 	};
 
 	
-
-
-
-
-
 	/*=========================================================*/
 	// Rem自适应
 	/*=========================================================*/
@@ -370,6 +253,12 @@ $(document).ready(function(){
 
     window.addEventListener(resizeEvt, recalc, false);
     //document.addEventListener(resizeEvt, recalc, false);
+    
+
+    window.onbeforeunload = function(){
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
 
 
     /*=========================================================*/
@@ -377,75 +266,39 @@ $(document).ready(function(){
 	/*=========================================================*/
     recalc();
 
-
-    var height_intro = $("#div-intro").height();
-	console.log(">>>>>>height_intro = ",height_intro);
-
-	var div = document.getElementById('div-intro');
-    console.log(div.offsetHeight); // 224
-    console.log(div.clientHeight); // 220
-
-    var bbb = fontsize * div.offsetHeight;
-    console.log("bbb = ",bbb);
-
-
-    var height_20191210 = $("#info_20191210").height();
-	console.log(">>>>>>height_20191210 = ",height_20191210);
-
-
-	// var basic_top = $("#info_20191208").css("top");
-	// console.log(">>>>>>basic_top = ",basic_top);
-
-	// var a_index =  basic_top.indexOf("p");
-	// console.log(">>>>>>a_index = ",a_index);
-
-	// var number_basic_top = basic_top.slice(0,a_index);
-	// console.log(">>>>>>number_basic_top = ",number_basic_top);
-
-
-	// var basic_top = $("#info_20191208").offset().top;
-	// console.log(">>>>>>basic_top = ",basic_top);
-	// 
 	
 	var px_index;
 
-	var basic_top = (fontsize * 19);
-	console.log("1>>>>>>basic_top = ",basic_top);
+	var height_citybg = $("#citybg").height();
+	var top_intro = height_citybg;
 
+	var top_intro_anim = top_intro + height_citybg * 0.5 - 80;
+	$("#info_intro").css({"top":top_intro + "px"});
+	$("#div-intro-anim").css({"top":top_intro_anim + "px"});
 
+	var height_intro_anim = $("#div-intro-anim").height();
+	var top_20191201 = top_intro + height_intro_anim;
+	$("#info_20191201").css({"top":top_20191201+"px"});
+
+	var height_20191201 = $("#info_20191201").height();
+	var height_20191201_anim = $("#div-20191201-anim").height();
+	var top_20191201_anim = top_20191201 + height_20191201_anim * 0.5;
+	$("#div-20191201-anim").css({"top":top_20191201_anim+"px"});
+
+	var top_20191208 = top_20191201 + height_20191201 + height_20191201_anim + 50;
+	$("#info_20191208").css({"top":top_20191208+"px"});
 
 	var height_20191208 = $("#info_20191208").height();
-	console.log("2>>>>>>height_20191208 = ",height_20191208);
-
-	//var top_20191210 = (parseInt(number_basic_top) + height_20191208 + 10)+"px";
-	var top_20191210 = basic_top + height_20191208 + 50;
-	//var top_20191210 = ()+"px";
-	console.log(">>>>>>top_20191210 = ",top_20191210);
+	var top_20191210 = top_20191208 + height_20191208 + 50;
 	$("#info_20191210").css({"top":top_20191210+"px"});
 
-	//var info_20191210_top = $("#info_20191210").css("top");
-	//console.log(">>>>>>info_20191210_top = ",info_20191210_top);//8888.88px
-
-	//px_index = info_20191210_top.indexOf("p");
-	//var number_20191210_top = info_20191210_top.slice(0,px_index);
-	//console.log(">>>>>>number_20191210_top = ",number_20191210_top);
-
 	var height_20191210 = $("#info_20191210").height();
-	console.log("3>>>>>>height_20191210 = ",height_20191210);
-
 	var top_20191212 = top_20191210 + height_20191210 + 50;
-	console.log("4>>>>>>top_20191212 = ",top_20191212);
-
 	$("#info_20191212").css({"top":top_20191212 + "px"});
-
-	//var info_20191212_top = $("#info_20191212").css("top");
-	//console.log("5>>>>>>info_20191212_top = ",info_20191212_top);//8888.88px
-
 
 	var height_20191212 = $("#info_20191212").height();
 	var top_20191213 = top_20191212 + height_20191212 + 50;
 	$("#info_20191213").css({"top":top_20191213 + "px"});
-
 
 	var height_20191213 = $("#info_20191213").height();
 	var top_20191215 = top_20191213 + height_20191213 + 50;
@@ -466,7 +319,6 @@ $(document).ready(function(){
 	var height_20191218 = $("#info_20191218").height();
 	var top_20191219 = top_20191218 + height_20191218 + 50;
 	$("#info_20191219").css({"top":top_20191219 + "px"});
-
 
 	var height_20191219 = $("#info_20191219").height();
 	var top_anim_20191219 = top_20191219 + height_20191219 / 2;
@@ -492,11 +344,7 @@ $(document).ready(function(){
 	$("#info_20191224").css({"top":top_20191224 + "px"});
 
 	var height_20191224 = $("#info_20191224").height();
-	var top_20191225 = top_20191224 + height_20191224 + 50;
-	$("#info_20191225").css({"top":top_20191225 + "px"});
-
-	var height_20191225 = $("#info_20191225").height();
-	var top_20191226 = top_20191225 + height_20191225 + 50;
+	var top_20191226 = top_20191224 + height_20191224 + 50;
 	$("#info_20191226").css({"top":top_20191226 + "px"});
 
 	var height_20191226 = $("#info_20191226").height();
@@ -514,13 +362,9 @@ $(document).ready(function(){
 	var height_20191229 = $("#info_20191229").height();
 	var top_20191230 = top_20191229 + height_20191229 + 50;
 	$("#info_20191230").css({"top":top_20191230 + "px"});
-	console.log(">>>>>top_20191230 = ",top_20191230);
 
-	
 
 	var height_anchor_20191230_to_father = $("#anchor_20191230").position().top;//距离父节点距离
-	//console.log(">>>>>height_anchor_20191230_to_father = ",height_anchor_20191230_to_father);
-
 	var height_anchor_20191230 = $("#anchor_20191230").height();
 	var top_anim_20191230 = top_20191230 + height_anchor_20191230_to_father + height_anchor_20191230 / 2;
 	$("#div-20191230-anim1").css({"top":top_anim_20191230 + "px"});
@@ -529,13 +373,11 @@ $(document).ready(function(){
 	var height_20191230 = $("#info_20191230").height();
 	var top_20191231 = top_20191230 + height_20191230 + 50;
 	$("#info_20191231").css({"top":top_20191231 + "px"});
-	console.log(">>>>>top_20191231 = ",top_20191231);
 
 	var height_anchor_20191231_to_father = $("#anchor_20191231").position().top;//距离父节点距离
 	var height_anchor_20191231 = $("#anchor_20191231").height();
 	var top_anim_20191231 = top_20191231 + height_anchor_20191231_to_father + height_anchor_20191231 / 2;
 	$("#div-20191231-anim").css({"top":top_anim_20191231 + "px"});
-
 
 
 	var height_20191231 = $("#info_20191231").height();
@@ -547,7 +389,6 @@ $(document).ready(function(){
 	var height_anchor_20200101 = $("#anchor_20200101").height();
 	var top_anim_20200101_whistle = top_20200101 + height_anchor_20200101_to_father + height_anchor_20200101 / 2;
 	$("#div_whistle").css({"top":top_anim_20200101_whistle + "px"});
-
 
 
 	var height_20200101 = $("#info_20200101").height();
@@ -563,7 +404,6 @@ $(document).ready(function(){
 	var height_anchor_20200103 = $("#anchor_20200103").height();
 	var top_anim_20200103 = top_20200103 + height_anchor_20200103_to_father + height_anchor_20200103 / 2;
 	$("#div-20200103-anim").css({"top":top_anim_20200103 + "px"});
-
 
 
 	var height_20200103 = $("#info_20200103").height();
@@ -669,21 +509,14 @@ $(document).ready(function(){
 	$("#info_20200125").css({"top":top_20200125 + "px"});
 
 	var height_20200125 = $("#info_20200125").height();
-	//var top_20200126 = top_20200125 + height_20200125 + 50;
-	//$("#info_20200126").css({"top":top_20200126 + "px"});
-
 	var top_square_cabin_hospital = top_20200125 + height_20200125 + 50;
 	$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
 	$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
 
-
 	var height_info_square_cabin = $("#info_square_cabin").height();
 	var height_square_cabin_anim = $("#div-square-cabin-anim").height();
-	//
 	var top_20200126 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
 	$("#info_20200126").css({"top":top_20200126 + "px"});
-
-
 
 	var height_20200126 = $("#info_20200126").height();
 	var top_20200127 = top_20200126 + height_20200126 + 50;
@@ -711,63 +544,29 @@ $(document).ready(function(){
 
 
 	var height_box_car_a0260w = $("#box-car-a0260w").height();
-
 	var height_20200201 = $("#info_20200201").height();
 	var top_car_a0260w = top_20200201 + height_20200201 + 50;
 	$("#info_car_a0260w").css({"top":top_car_a0260w + "px"});
 	$("#div-car-a0260w-anim").css({"top":top_car_a0260w + "px"});
 
-
-
 	var height_car_a0260w = $("#div-car-a0260w-anim").height();
 	var top_20200202 = top_car_a0260w + height_car_a0260w + 50;
 	$("#info_20200202").css({"top":top_20200202 + "px"});
-
-
 
 	var height_20200202 = $("#info_20200202").height();
 	var top_lie_words = top_20200202 + height_20200202 + 50;
 	$("#info_lie_words").css({"top":top_lie_words + "px"});
 	$("#div-lie-words-anim").css({"top":top_lie_words + "px"});
 
-
-
 	var height_lie_words_anim = $("#div-lie-words-anim").height();
-	console.log("=====height_lie_words_anim = ",height_lie_words_anim);
-
 	var padding_lie_words_anim = $("#div-lie-words-anim").css("padding-top");
 	px_index = padding_lie_words_anim.indexOf("p");
 	var number_padding_lie_words_anim = padding_lie_words_anim.slice(0,px_index);
 
-	console.log("=====number_padding_lie_words_anim = ",number_padding_lie_words_anim);
-
 	var top_20200203 = top_lie_words + height_lie_words_anim + number_padding_lie_words_anim * 2;
 	$("#info_20200203").css({"top":top_20200203 + "px"});
 	
-
-
 	var height_20200203 = $("#info_20200203").height();
-
-	//方舱医院
-	//var height_anchor_20200203_to_father = $("#anchor_20200203").position().top;//距离父节点距离
-	//var height_anchor_20200203 = $("#anchor_20200203").height();
-	//
-	//var height_20200203_anim = $("#div-20200203-anim").height();
-	// var top_anim_20200203 = top_20200203 + height_20200203 + (height_20200203_anim / 2)  + 20;
-	//var top_anim_20200203 = top_20200203 + height_20200203;
-	//$("#div-20200203-anim").css({"top":top_anim_20200203 + "px"});
-	//
-	
-	//var top_square_cabin_hospital = top_20200203 + height_20200203 + 50;
-	//$("#info_square_cabin").css({"top":top_square_cabin_hospital + "px"});
-	//$("#div-square-cabin-anim").css({"top":top_square_cabin_hospital + "px"});
-
-
-	//var height_info_square_cabin = $("#info_square_cabin").height();
-	//var height_square_cabin_anim = $("#div-square-cabin-anim").height();
-	//
-	//var top_20200204 = top_square_cabin_hospital + height_info_square_cabin + height_square_cabin_anim + 50;
-	//$("#info_20200204").css({"top":top_20200204 + "px"});
 	var top_20200204 = top_20200203 + height_20200203 + 50;
 	$("#info_20200204").css({"top":top_20200204 + "px"});
 
@@ -780,7 +579,6 @@ $(document).ready(function(){
 	$("#info_motion_words").css({"top":top_motion_words + "px"});
 	$("#div-motion-words-anim").css({"top":top_motion_words + "px"});
 
-
 	var height_motion_words_anim = $("#div-motion-words-anim").height();
 	var padding_motion_words_anim = $("#div-motion-words-anim").css("padding-top");
 	px_index = padding_motion_words_anim.indexOf("p");
@@ -789,23 +587,17 @@ $(document).ready(function(){
 	var top_20200206 = top_motion_words + height_motion_words_anim + number_padding_motion_words_anim * 2;
 	$("#info_20200206").css({"top":top_20200206 + "px"});
 
-
 	//李文亮
 	var height_20200206 = $("#info_20200206").height();
 	var top_hero_liwenliang = top_20200206 + height_20200206 + 50;
 	$("#info_liwenliang").css({"top":top_hero_liwenliang + "px"});
 	$("#div-hero-liwenliang-anim").css({"top":top_hero_liwenliang + "px"});
 	
-
-
 	var height_hero_liwenliang = $("#div-hero-liwenliang-anim").height();
-	// var top_20200207 = top_20200206 + height_20200206 + 50;
 	var top_20200207 = top_hero_liwenliang + height_hero_liwenliang + 50;
 	$("#info_20200207").css({"top":top_20200207 + "px"});
 
 	
-	
-
 	var height_20200207 = $("#info_20200207").height();
 	var top_20200208 = top_20200207 + height_20200207 + 50;
 	$("#info_20200208").css({"top":top_20200208 + "px"});
@@ -940,18 +732,10 @@ $(document).ready(function(){
 
 
 	var height_20200312 = $("#info_20200312").height();
-	//var top_news_links = top_20200312 + height_20200312 + 50;
-	//$("#info_news_links").css({"top":top_news_links + "px"});
-
-
-	// var height_news_links = $("#info_news_links").height();
-	// var top_to_be_continued = top_news_links + height_news_links + 50;
-	// $("#info_to_be_continued").css({"top":top_to_be_continued + "px"});
-	// $("#div-to-be-continued-anim").css({"top":top_to_be_continued + "px"});
-
 	var top_to_be_continued = top_20200312 + height_20200312 + 50;
 	$("#info_to_be_continued").css({"top":top_to_be_continued + "px"});
 	$("#div-to-be-continued-anim").css({"top":top_to_be_continued + "px"});
+
 
 
 	var height_to_be_continued = $("#div-to-be-continued-anim").height();
@@ -1015,45 +799,38 @@ $(document).ready(function(){
 	$("#info_got_light").css({"top":top_got_light + "px"});
 	$("#div-got-light-anim").css({"top":top_got_light + "px"});
 
-	console.log("????? top_got_light = ",top_got_light);
+	// var d = document.querySelector('#div-wechat-anim');
+	// var offsetheight_wechat_anim = d.offsetHeight;
+	// console.log("????? d.offsetHeight = ",offsetheight_wechat_anim);
 
-	var d = document.querySelector('#div-wechat-anim');
-	var offsetheight_wechat_anim = d.offsetHeight;
-	console.log("????? d.offsetHeight = ",offsetheight_wechat_anim);
+	// var outerHeight_wechat_anim1 = $("#div-wechat-anim").outerHeight();
+	// var outerHeight_wechat_anim2 = $("#div-wechat-anim").outerHeight(true);
+	// console.log("????? outerHeight_wechat_anim1 = ",outerHeight_wechat_anim1);
+	// console.log("????? outerHeight_wechat_anim2 = ",outerHeight_wechat_anim2);
 
-	var outerHeight_wechat_anim1 = $("#div-wechat-anim").outerHeight();
-	var outerHeight_wechat_anim2 = $("#div-wechat-anim").outerHeight(true);
-	console.log("????? outerHeight_wechat_anim1 = ",outerHeight_wechat_anim1);
-	console.log("????? outerHeight_wechat_anim2 = ",outerHeight_wechat_anim2);
+	// var aa = getComputedStyle(document.getElementById('div-wechat-anim'),null).getPropertyValue('height');
+	// console.log("?????aa d.style.height= ",aa);
 
+	// var height_last_to_father = $("#last-word").position().top;
+	// console.log("????? height_last_to_father = ",height_last_to_father);
 
+	// var outerHeight_last_word0 = $("#last-word").height();
+	// var outerHeight_last_word1 = $("#last-word").outerHeight();
+	// var outerHeight_last_word2 = $("#last-word").outerHeight(true);
+	// console.log("????? outerHeight_last_word0 = ",outerHeight_last_word0);
+	// console.log("????? outerHeight_last_word1 = ",outerHeight_last_word1);
+	// console.log("????? outerHeight_last_word2 = ",outerHeight_last_word2);
 
-
-	var aa = getComputedStyle(document.getElementById('div-wechat-anim'),null).getPropertyValue('height');
-	console.log("?????aa d.style.height= ",aa);
-
-	var height_last_to_father = $("#last-word").position().top;
-	console.log("????? height_last_to_father = ",height_last_to_father);
-
-	var outerHeight_last_word0 = $("#last-word").height();
-	var outerHeight_last_word1 = $("#last-word").outerHeight();
-	var outerHeight_last_word2 = $("#last-word").outerHeight(true);
-	console.log("????? outerHeight_last_word0 = ",outerHeight_last_word0);
-	console.log("????? outerHeight_last_word1 = ",outerHeight_last_word1);
-	console.log("????? outerHeight_last_word2 = ",outerHeight_last_word2);
-
-
-	var total = 0;
-	$(".chat-thread li").each(function(){
-		total = total + $(this).outerHeight(true);
-    });
-	console.log("????? total = ",total);
-
+	// var total = 0;
+	// $(".chat-thread li").each(function(){
+	// 	total = total + $(this).outerHeight(true);
+ //    });
+	// console.log("????? total = ",total);
 
 	var pic_Height=0;
 	if(clientWidth>720)
 	{
-
+		pic_Height = 480*0.8;
 		$("#img-torch").css({"width":(720*0.8)+"px"});
 		$("#img-torch").css({"height":(480*0.8)+"px"});
 	}
@@ -1064,7 +841,6 @@ $(document).ready(function(){
 	 	$("#img-torch").css({"width":clientWidth + "px"});
 		$("#img-torch").css({"height":pic_Height + "px"});
 	}
-	
 
 
 	var height_got_light = $("#div-got-light-anim").height();
@@ -1076,32 +852,26 @@ $(document).ready(function(){
 	var top_end_flag = top_friend_words + height_friend_words_anim + 50;
 	$("#info_end_flag").css({"top":top_end_flag + "px"});
 
-	$(".section-one").css({"height":top_end_flag + "px"});
+	$(".section-timeline").css({"height":top_end_flag + "px"});
 	
 
-	// var height_got_light_anim = $("#div-got-light-anim").height();
-	// var top_got_light = top_got_light + height_got_light_anim + 50;
-	// $("#info_but_words").css({"top":top_but_words + "px"});
-	// $("#div-but-words-anim").css({"top":top_but_words + "px"});
 
 
     /*=========================================================*/
-	//Random Highlight Words
+	//随机弹出高亮文字
 	/*=========================================================*/
     var eQuote = document.querySelector("#neat");
 
 	var regex = /\ /;
-	// save the original paragraph as array of words
-	// regex = /[,.?!;:]/; /* Uncomment for sentences */
+
 	var aQuote = eQuote.innerHTML.split(regex);
 
-	// wrap each word with a span
+
 	eQuote.innerHTML = "";
 	for(var word in aQuote){
 	  eQuote.innerHTML += "<span>" + aQuote[word] + "</span>";
 	}
-	// ...and save them for later
-	//var eWords = document.querySelectorAll("span");
+
 	var eWords = eQuote.querySelectorAll("span");
 
 	
@@ -1113,9 +883,9 @@ $(document).ready(function(){
 
 	function fClearAllHighlights (e) {
 	  var nlHighlights = e.querySelectorAll(".qhighlight");
-	  // convert the nodeList into an array
+
 	  var aHighlights = Array.prototype.slice.call(nlHighlights);
-	  // remove .highlight from the spans which have it
+
 	  Array.prototype.map.call(aHighlights, function(){
 	    arguments[0].classList.remove("qhighlight");
 	  });
@@ -1144,27 +914,13 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//niceScroll
 	/*=========================================================*/
-	var lol = {
-	    cursorcolor: "#cdd2d6",
-	    cursorwidth: "4px",
-	    cursorborder: "none"
-  	};
-	$(".messages").niceScroll(lol);
+	// var lol = {
+	//     cursorcolor: "#cdd2d6",
+	//     cursorwidth: "4px",
+	//     cursorborder: "none"
+ //  	};
+	// $(".messages").niceScroll(lol);
 
-
-	/*=========================================================*/
-	//inview
-	/*=========================================================*/
-    /*$('.img-20191212').css('opacity',0);
-    $('.img-20191212').on('inview', function(event, isInView) {
-	    if (isInView) {
-	      $(this).addClass('fadeIn');
-	      $(this).css('opacity',1);
-	    } else {
-	      $(this).removeClass('fadeIn');
-	      $(this).css('opacity',0);
-	    }
-	});*/
 
 
 	/*=========================================================*/
@@ -1205,15 +961,7 @@ $(document).ready(function(){
 		}
 	 }
 
-	 function startRain(){
-	 // 	var rainy = document.getElementsByClassName('drop');
-		// var splashes = document.getElementsByClassName("splash");
-		// while(rainy[0]) {
-		//     rainy[0].parentNode.removeChild(rainy[0]);
-		// }
-		//   while(splashes[0]) {
-		//   splashes[0].parentNode.removeChild(splashes[0]);
-		// }	
+	 function startRain(){	
 	 	rain(100);
 	 }
 
@@ -1249,7 +997,6 @@ $(document).ready(function(){
 	    +'background-color: transparent;'
 	    +'visibility:hidden;'
 	    +'overflow:hidden;');
-    // document.body.appendChild(con);
     container_rain.appendChild(con);
 
     var svgFilters = '<svg xmlns="http://www.w3.org/2000/svg">'
@@ -1271,7 +1018,6 @@ $(document).ready(function(){
 	    +'</filter>'
 	    +'</defs>'
 	    +'</svg>';
-    //document.body.innerHTML += svgFilters;
     container_rain.innerHTML += svgFilters;
 
     function gen() {
@@ -1317,7 +1063,6 @@ $(document).ready(function(){
 	        +'</g>'
 	        +'</svg>';
         con.innerHTML = lightningSvg;
-        //document.body.appendChild(con);
         container_rain.appendChild(con);
     }
 
@@ -1350,7 +1095,7 @@ $(document).ready(function(){
     	//container_rain.style.backgroundImage = 'radial-gradient(ellipse farthest-corner at center top, #000 0%, #000 100%)';
     	container_rain.style.backgroundImage = '';
 
-    	//document.documentElement.removeEventListener('click',startLightning);
+    	document.documentElement.addEventListener('click',startLightning);
     
     }
 
@@ -1361,19 +1106,8 @@ $(document).ready(function(){
 
     	sound_lightning.play();
 
-    	//document.documentElement.addEventListener('click',startLightning);
+    	document.documentElement.addEventListener('click',startLightning);
     }
-
-    //document.documentElement.addEventListener('click', function() {
-		//startLightning
-    	// if(sound_lightning.playing()){
-    	// 	sound_lightning.stop();
-    	// 	sound_lightning.play();
-    	// }
-
-    //});
-    //container_rain.addEventListener('click', function() {c=0;flash();run();});
-
 
 
 
@@ -1381,9 +1115,7 @@ $(document).ready(function(){
 	// firefly
 	/*=========================================================*/
 	var isFireFlyRun = false;
-	var fireflies = 80;
-	// var $container = $("#firefly-mask");
-	// var $container = $("#div-friend-words-anim");
+	var fireflies = 100;
 	var $container = $("#div-firefly");
 	
 	
@@ -1460,46 +1192,32 @@ $(document).ready(function(){
 	var controller = new ScrollMagic.Controller();
 
 
-	//SCENE
-	
-	/*var lao5_scene_virus = new ScrollMagic.Scene({triggerElement: "#line_virus",duration:400})
+	/*=========================================================*/
+	//SCENE 改颜色1
+	/*=========================================================*/
+	var scene_bg_color_1 = new ScrollMagic.Scene({
+		triggerElement: "#mouse-scroll",
+		triggerHook: 'onLeave',
 
-	.on("enter", function () {
-		console.log("enter line_virus");
-		$("#div-virus").snowfall({image:"_/img/assets/virusx128.png", flakeCount:10, minSpeed:0.1, minSize:40, maxSize:80,});
-		sound_mengyan.play();
 	})
-	.on("leave", function () {
-
-		console.log("leave line_virus");
-		$("#div-virus").snowfall('clear');
-
-		if (sound_mengyan.playing()) 
-		{
-			sound_mengyan.stop();
-		}
-	})
-	.addIndicators() // add indicators (requires plugin)
-	.addTo(controller);*/
-	
-	
+	.setClassToggle("#lao5body", "body-gray")
+	.addIndicators()
+	.addTo(controller);	
 
 
 	/*=========================================================*/
 	//SCENE 引言
 	/*=========================================================*/
-	var scroll_duration1 = (fontsize * (15-12)) - 30 + 'px';
+	var intro_duration = height_intro_anim * 0.7;
 	
 	var ele_quote = $(".quote1");
 	ele_quote.addClass('out');
 	
 	var intro_scene = new ScrollMagic.Scene({
-		triggerElement: "#trigger_intro",
+		triggerElement: "#info_intro",
 		// triggerHook: 0.65,
-		duration: scroll_duration1
+		duration: intro_duration
 	})
-	//.on("enter", function(ev){$(ev.target.triggerElement()).removeClass('out');})
-    //.on("leave", function(ev){$(ev.target.triggerElement()).addClass('out');})
     .on("enter", function () {
 		console.log("enter trigger_intro");
 		ele_quote.removeClass('out');
@@ -1509,34 +1227,30 @@ $(document).ready(function(){
 		ele_quote.addClass('out');
 
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators() 
 	.addTo(controller);
-
+	intro_scene.offset(intro_duration * 0.3);
 
 	/*=========================================================*/
 	//SCENE 首例 jon snow
 	/*=========================================================*/
 
-	var scroll_duration2 = (fontsize * (19-15)) - 30 + 'px';
+	var jonsnow_duration = height_20191201 + height_20191201_anim;
+
 
 	var ele_jon = $("#jonsnow-box");
 	ele_jon.addClass('out');
 
 	var scene_20191201 = new ScrollMagic.Scene({
-		triggerElement: "#trigger_20191201",
-		// triggerHook: 0.65,
-		// duration:300
-		duration: scroll_duration2
+		triggerElement: "#info_20191201",
+
+		duration: jonsnow_duration
 	})
-	//.on("enter", function(ev){$(ev.target.triggerElement()).removeClass('out');})
-    //.on("leave", function(ev){$(ev.target.triggerElement()).addClass('out');})
+
     .on("enter", function () {
 		console.log("enter trigger_20191201");
 
 		ele_jon.removeClass('out');
-		Howler.mute(false);
-		//sound_jonsnow.load();
-		sound_jonsnow.mute(false);
 		sound_jonsnow.play();
 	})
 	.on("leave", function () {
@@ -1544,15 +1258,11 @@ $(document).ready(function(){
 		ele_jon.addClass('out');
 		if (sound_jonsnow.playing()) 
 		{
-			sound_jonsnow.mute(true);
-			Howler.mute(true);
 			sound_jonsnow.stop();
-			
-			
 		}
 
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 
 
@@ -1560,7 +1270,7 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE 打脸1 1st blood
 	/*=========================================================*/
-	//var day_20191230 = document.getElementById("line_20191230");
+
 
 	var ele_box_20191231 = $("#box-20191231-anim");
 	ele_box_20191231.addClass('out');
@@ -1570,18 +1280,15 @@ $(document).ready(function(){
 		triggerElement: "#anchor_20191231",
 		duration:height_anchor_20191231
 	})
-	// trigger a velocity opaticy animation
-	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
+
 	.on("enter", function () {
 		console.log("enter anchor_20191231");
-		// trigger animation by changing inline style.
-		//day_20191230.style.backgroundColor = "#fff";
+
 		ele_box_20191231.removeClass('out');
 		sound_1kill.play();
 	})
 	.on("leave", function () {
-		// reset style
-		//day_20191230.style.backgroundColor = "";
+
 		console.log("leave anchor_20191231");
 
 		ele_box_20191231.addClass('out');
@@ -1591,7 +1298,7 @@ $(document).ready(function(){
 			sound_1kill.stop();
 		}
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 	
 
@@ -1600,27 +1307,22 @@ $(document).ready(function(){
 	//SCENE 吹哨人 
 	/*=========================================================*/
 
-	//var day_20191230 = document.getElementById("line_20191230");
-
 	// build scene
 	var lao5_scene20200101 = new ScrollMagic.Scene({
 		triggerElement: "#anchor_20200101",
 		duration:height_anchor_20200101
 	})
-	// trigger a velocity opaticy animation
-	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
+
 	.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
 		console.log("enter trigger_wishtle");
-		// trigger animation by changing inline style.
-		//day_20191230.style.backgroundColor = "#fff";
+
 		sound_chuishao.play();
 	})
 	.on("leave", function () {
-		// reset style
-		//day_20191230.style.backgroundColor = "";
+
 		console.log("leave trigger_wishtle");
-		//sound.stop();
+
 		if (sound_chuishao.playing()) 
 		{
 			sound_chuishao.stop();
@@ -1633,7 +1335,7 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE 打脸2 double kill
 	/*=========================================================*/
-	//var day_20191230 = document.getElementById("line_20191230");
+
 
 	var ele_box_20200103 = $("#box-20200103-anim");
 	ele_box_20200103.addClass('out');
@@ -1643,19 +1345,15 @@ $(document).ready(function(){
 		triggerElement: "#anchor_20200103",
 		duration:height_anchor_20200103
 	})
-	// trigger a velocity opaticy animation
-	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
-	//.setClassToggle("#thewhistle","whistleActive")
+
 	.on("enter", function () {
 		console.log("enter anchor_20200103");
-		// trigger animation by changing inline style.
-		//day_20191230.style.backgroundColor = "#fff";
+
 		ele_box_20200103.removeClass('out');
 		sound_2kill.play();
 	})
 	.on("leave", function () {
-		// reset style
-		//day_20191230.style.backgroundColor = "";
+
 		console.log("leave anchor_20200103");
 
 		ele_box_20200103.addClass('out');
@@ -1672,7 +1370,7 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE 打脸3 three kill
 	/*=========================================================*/
-	//var day_20191230 = document.getElementById("line_20191230");
+
 
 	var ele_box_20200105 = $("#box-20200105-anim");
 	ele_box_20200105.addClass('out');
@@ -1682,19 +1380,15 @@ $(document).ready(function(){
 		triggerElement: "#anchor_20200105",
 		duration:height_anchor_20200105
 	})
-	// trigger a velocity opaticy animation
-	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
-	//.setClassToggle("#thewhistle","whistleActive")
+
 	.on("enter", function () {
 		console.log("enter anchor_20200105");
-		// trigger animation by changing inline style.
-		//day_20191230.style.backgroundColor = "#fff";
+
 		ele_box_20200105.removeClass('out');
 		sound_3kill.play();
 	})
 	.on("leave", function () {
-		// reset style
-		//day_20191230.style.backgroundColor = "";
+
 		console.log("leave anchor_20200105");
 
 		ele_box_20200105.addClass('out');
@@ -1704,14 +1398,13 @@ $(document).ready(function(){
 			sound_3kill.stop();
 		}
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 
 
 	/*=========================================================*/
 	//SCENE 打脸4 4 kill
 	/*=========================================================*/
-	//var day_20191230 = document.getElementById("line_20191230");
 
 	var ele_box_20200111 = $("#box-20200111-anim");
 	ele_box_20200111.addClass('out');
@@ -1721,20 +1414,14 @@ $(document).ready(function(){
 		triggerElement: "#anchor_20200111",
 		duration:height_anchor_20200111
 	})
-	// trigger a velocity opaticy animation
-	//.setVelocity("#animate", {opacity: 0}, {duration: 400})
-	//.setClassToggle("#thewhistle","whistleActive")
+
 	.on("enter", function () {
 		console.log("enter anchor_20200111");
-		// trigger animation by changing inline style.
-		//day_20191230.style.backgroundColor = "#fff";
+
 		ele_box_20200111.removeClass('out');
 		sound_4kill.play();
 	})
 	.on("leave", function () {
-		// reset style
-		//day_20191230.style.backgroundColor = "";
-		console.log("leave anchor_20200111");
 
 		ele_box_20200111.addClass('out');
 
@@ -1757,8 +1444,6 @@ $(document).ready(function(){
 	})
 
 	.on("enter", function () {
-		// console.log("enter info_20200124");
-		//$("#snow-mask").snowfall({flakeCount : 100});
 		sound_rain.play();
 
 		startRain();
@@ -1768,11 +1453,6 @@ $(document).ready(function(){
 
 	})
 	.on("leave", function () {
-
-		//console.log("leave info_20200215");
-		//$("#snow-mask").snowfall('clear');
-		//
-		//document.documentElement.addEventListener('click'
 
 		clearRain();
 
@@ -1785,7 +1465,7 @@ $(document).ready(function(){
 
 
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 
 
@@ -1799,7 +1479,6 @@ $(document).ready(function(){
 
 	var tweenAnimIn = new TimelineMax();
     tweenAnimIn
-    	// .set('.car-plate', { autoAlpha: 0 })
 	    .to('.hat', 1, { y: -600, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
 	    .to('.glass', 1, { y: -200, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
 	    .to('.cigaratte', 1, { x: 400, autoAlpha: 0, ease: Power2.easeOut }, "-=1")
@@ -1807,7 +1486,6 @@ $(document).ready(function(){
 
     var scrollOutAnim = new TimelineMax()
         .add([
-        	// TweenMax.to('.car-plate', 1, { autoAlpha: 1 }),
             TweenMax.from('.hat', 1, { y: -600, autoAlpha: 0 }),//mao zi
             TweenMax.from('.glass', 1, { y: -200, autoAlpha: 0 }),//yan jing
             TweenMax.from('.cigaratte', 1, { x: 400, autoAlpha: 0 }),//yan
@@ -1816,13 +1494,10 @@ $(document).ready(function(){
 
         ]);
 
-    // buid scene
+
     var scene_0260w = new ScrollMagic.Scene({
         triggerElement: '#info_car_a0260w',
-        // triggerHook:'onleave'
-        // triggerHook: 0,
         duration: height_box_car_a0260w+300
-        //duration:200
     })
     .on("enter", function () {
     	sound_thuglife.play();
@@ -1835,7 +1510,6 @@ $(document).ready(function(){
 		}
 	})
     .setTween(scrollOutAnim)
-    // .setPin('#box-car-a0260w')
     .addIndicators()
     .addTo(controller);
 
@@ -1858,8 +1532,6 @@ $(document).ready(function(){
 		// duration: height_lie_words_anim
 		duration:queto2_duration
 	})
-	//.on("enter", function(ev){$(ev.target.triggerElement()).removeClass('out');})
-    //.on("leave", function(ev){$(ev.target.triggerElement()).addClass('out');})
     .on("enter", function () {
 		console.log("enter info_lie_words");
 		ele_quote2.removeClass('out');
@@ -1880,17 +1552,14 @@ $(document).ready(function(){
 	//SCENE 方舱医院
 	/*=========================================================*/
 	
-
 	var tween_square_cabin = TweenMax.to("#square-cabin-animation", 1.0, {
 		backgroundPosition: "0 100%", 
 		ease: SteppedEase.config(31)
 	});
 
-	// build scene
-	//var square_cabin_duration = top_20200204 - top_square_cabin_hospital + 100;
 	var scene_square_cabin = new ScrollMagic.Scene({
 		triggerElement: "#info_square_cabin",
-		duration: height_square_cabin_anim+200
+		duration: height_square_cabin_anim + 200
 	})
 	.on("enter", function () {
 		console.log("enter info_square_cabin");
@@ -1904,12 +1573,6 @@ $(document).ready(function(){
 		}
 
 	})
-
-	// .triggerHook(0)
-	// .triggerHook("onCenter")
-	// .setPin("#js-pinned")
-	// .setPin("#box-square-cabin-anim")
-	// .setPin("#anchor_20200203")
 	.setTween(tween_square_cabin)
 	.addIndicators()
 	.addTo(controller);
@@ -2006,7 +1669,6 @@ $(document).ready(function(){
 
 	.on("enter", function () {
 		console.log("enter info_20200215");
-		//$(document).snowfall({image:"_/img/assets/virusx128.png", flakeCount:10, minSpeed:0.1, minSize:40, maxSize:80,});
 		$("#snow-mask").snowfall({flakeCount : 100});
 
 		sound_snow.play();
@@ -2023,7 +1685,7 @@ $(document).ready(function(){
 
 
 	})
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 
 
@@ -2087,35 +1749,17 @@ $(document).ready(function(){
 		duration:question_duration * 2 / 3
 	})
     .on("enter", function () {
-
-  //   	fHighlightRandomWord(eWords);
-
-  //   	question_repeat = setInterval(function() {
-		//   	if(Math.random() > 0.85) 
-		//   	{
-		//   		fClearAllHighlights(eQuote);
-		//   	}
-		//   	fHighlightRandomWord(eWords);
-		// }, 275);
-		// 
 		startQuestion();
 		
 	})
 	.on("leave", function () {
-		
-		//fHighlightRandomWord(eWords);
-		//clearInterval(question_repeat);
+	
 		stopQuestion();
 	})
 	.addIndicators()
 	.addTo(controller);
 
 	scene_question.offset(question_duration / 3);
-
-
-	
-
-
 
 	/*=========================================================*/
 	//SCENE 星星之火
@@ -2161,25 +1805,22 @@ $(document).ready(function(){
 		"img/light/0137.jpg"
 	];
 
-	// TweenMax can tween any property of any object. We use this object to cycle through the array
 	var obj = {curImg: 0};
 
-	// create tween
 	var tween = TweenMax.to(obj, 0.5,
 		{
-			curImg: images.length - 1,	// animate propery curImg to number of images
-			roundProps: "curImg",				// only integers so it can be used as an array index
-			// repeat: 3,									// repeat 3 times
-			immediateRender: true,			// load first image automatically
-			ease: Linear.easeNone,			// show every image the same ammount of time
+			curImg: images.length - 1,
+			roundProps: "curImg",
+			immediateRender: true,			
+			ease: Linear.easeNone,			
 			onUpdate: function () {
-			  $("#img-torch").attr("src", images[obj.curImg]); // set the image source
+			  $("#img-torch").attr("src", images[obj.curImg]);
 			}
 		}
 	);
 
 	var got_light_duration = pic_Height + 100;
-	// build scene
+
 	var scene_got_light = new ScrollMagic.Scene({
 		triggerElement: "#info_got_light",
 		duration: got_light_duration
@@ -2198,7 +1839,7 @@ $(document).ready(function(){
 		}
 	})
 	.setTween(tween)
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 
 	scene_got_light.offset(-50);
@@ -2206,14 +1847,14 @@ $(document).ready(function(){
 
 
 	/*=========================================================*/
-	//SCENE 改颜色
+	//SCENE 结尾 改颜色
 	/*=========================================================*/
 	var scene_bg_color = new ScrollMagic.Scene({
 		triggerElement: "#info_to_be_continued",
 		triggerHook: 'onLeave',
 		//duration:question_duration
 	})
-	.setClassToggle("#lao5body", "body-dark")
+	.setClassToggle("#space-timeline", "body-black")
 	.addIndicators()
 	.addTo(controller);
 
@@ -2222,7 +1863,7 @@ $(document).ready(function(){
 	//SCENE firefly
 	/*=========================================================*/
 	var firefly_duration = height_friend_words_anim;
-	// build scene
+
 	var scene_firefly = new ScrollMagic.Scene({
 		triggerElement: "#info_friend_words",
 		duration: firefly_duration * 2 / 3
@@ -2230,19 +1871,12 @@ $(document).ready(function(){
 	.on("enter", function () {
 
 		startFirefly();
-
-    	//sound_zgl.play();
 		
 	})
 	.on("leave", function () {
-		
-		// if (sound_zgl.playing()) 
-		// {
-		// 	sound_zgl.stop();
-		// }
 	})
 
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
 	scene_firefly.offset(firefly_duration / 3);
 
@@ -2250,8 +1884,6 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE zgl
 	/*=========================================================*/
-	//var zgl_duration = pic_Height + 100;
-	// build scene
 	var scene_zgl = new ScrollMagic.Scene({
 		triggerElement: "#trigger-zgl",
 		duration: 300
@@ -2278,8 +1910,6 @@ $(document).ready(function(){
 	/*=========================================================*/
 	//SCENE aoligei
 	/*=========================================================*/
-	//var zgl_duration = pic_Height + 100;
-	// build scene
 	var scene_aoligei = new ScrollMagic.Scene({
 		triggerElement: "#trigger-aoligei",
 		duration: 200
@@ -2297,16 +1927,13 @@ $(document).ready(function(){
 		}
 	})
 
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
-
 	//scene_aoligei.offset(-50);
 
 	/*=========================================================*/
 	//SCENE bullet
 	/*=========================================================*/
-	//var zgl_duration = pic_Height + 100;
-	// build scene
 	var scene_bullet = new ScrollMagic.Scene({
 		triggerElement: "#trigger-bullet",
 		duration: 300
@@ -2324,72 +1951,7 @@ $(document).ready(function(){
 		}
 	})
 
-	.addIndicators() // add indicators (requires plugin)
+	.addIndicators()
 	.addTo(controller);
-
-
-
-
-	///////////////////////////////////////////////////////////////
-	//SCENE Nature
-/*	
-
-	var tmax_opts = {
-	  delay: 0.5,
-	  repeat: -1,
-	  repeatDelay: 0.5,
-	  yoyo: true
-	};
-
-	var tmax_tl           = new TimelineMax(tmax_opts),
-	    polyland_shapes   = $('#svg_nature.landscape polygon'),
-	    polyland_stagger  = 0.00475,
-	    polyland_duration = 1.5;
-
-	CSSPlugin.useSVGTransformAttr = true; // Thanks Jack Doyle@GreenSock for the tip!
-
-	var polyland_staggerFrom = {
-	  scale: 0,
-	  opacity: 0,
-	  transformOrigin: 'center center',
-	  ease: Elastic.easeInOut
-	  // force3D: true
-	};
-
-	var polyland_staggerTo = {
-	  opacity: 1,
-	  scale: 1,
-	  ease: Elastic.easeInOut
-	  // force3D: true
-	};
-
-	tmax_tl.staggerFromTo(polyland_shapes, polyland_duration, polyland_staggerFrom, polyland_staggerTo, polyland_stagger, 0);
-
-	// tmax_tl.to({frame:0}, 1, {
-	//     frame: animation.totalFrames-1,
-	//     onUpdate:function(){
-	//       animation.goToAndStop((Math.round(this.progress() * 300)), true)
-	//     },
-	//     ease: Linear.easeNone
-	// });
-
-	var ele_div_nature = $("#div_nature");
-	// ele_div_nature.addClass('out');
-
-	// build scene
-	var lao5_scene_nature = new ScrollMagic.Scene({
-		triggerElement: "#div_nature",
-		triggerHook: 'onEnter', 
-		// triggerOffset: 400, 
-		//duration:"50%"
-		duration:400
-		// tweenChanges: true
-	})
-	// .setPin("#svg_nature")
-	.setTween(tmax_tl)
-	.addIndicators() // add indicators (requires plugin)
-	.addTo(controller);
-	
-*/
 
 });

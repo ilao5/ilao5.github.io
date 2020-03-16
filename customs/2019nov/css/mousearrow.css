@@ -6,15 +6,16 @@
   margin: auto;
   left: 50%;
   /*top: 50px;*/
-  top:calc(100%-100px);
-  margin-top:50px;
+  /*top:calc(100%-100px);*/
+  top: 90vh;
+  /*margin-top:50px;*/
   opacity: 0.6;
   -webkit-transform: translateX(-50%);
   z-index: 9999;
 }
 #mouse-scroll span{
   display: block;
-  width: 5px; 
+  width: 6px; 
   height: 5px;
   -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -22,7 +23,7 @@
        transform: rotate(45deg);
   border-right: 2px solid #fff; 
   border-bottom: 2px solid #fff;
-  margin: 0 0 3px 5px;
+  margin: 0 0 3px 4px;
 }
 #mouse-scroll .mouse {
   height: 21px;
