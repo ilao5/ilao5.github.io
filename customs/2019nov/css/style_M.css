@@ -111,9 +111,9 @@ h1,h2,h3,h4,h5,h6,p,blockquote,img {
 .highlight {
 	/*background: var(--color-hightlight); */
 	/*E91E63*/
-	/*background:#ee4035;
+	background:#ee4035;
 	
-  	color: var(--color-white1);*/
+  	color: var(--color-white1);
   	/*color: #B6FF00;*/
   	
   	font-weight: 500; 
