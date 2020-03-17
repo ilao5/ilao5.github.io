@@ -305,6 +305,14 @@
     };
 
     Bar.prototype.done = function() {
+
+      // if ( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {    
+      //   if (this.progress >= 99) {
+      //     this.progress = 100;
+      //   }
+      //   return this.progress >= 100;
+      // }
+
       return this.progress >= 100;
     };
 

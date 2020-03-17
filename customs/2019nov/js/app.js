@@ -13,188 +13,197 @@
 
 $(document).ready(function(){
 
+	//active_scroll(false);
+
 	$('del').lettering('words');
-	
-	/*=========================================================*/
-	// 音乐音效
-	/*=========================================================*/
 
-	var sound_path = 'sound/';
-
-	// Howler.ctx = new AudioContext();
-	// Howler.ctx.resume();
+	var loop_props = new createjs.PlayPropsConfig().set({loop: -1});
 
 
-	var sound_jonsnow = new Howl({
-	  	src: [sound_path + 'jonsnow.mp3',],
-	  	preload: true,
-	 	autoplay: false,
-		loop: false, 
-		volume: 1,
-	});
+	var manifest = [
 
-	var sound_chuishao = new Howl({
-	  	src: [sound_path + 'chuishao.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: true, 
-		volume: 1, 
-	});
+		{src: "img/jonsnow.png", id: "jonsnow"},
+		{src: "img/cnc-sprite.png", id: "cnc_sprite"},
+		{src: "img/chepai.png", id: "chepai"},
+		{src: "img/lianzix300.png", id: "lianzi"},
+		{src: "img/yanx200.png", id:"yan"},
+		{src: "img/yjx300.png", id:"yj"},
+		{src: "img/maozix300.png", id:"maozi"},
+		{src: "img/depose.jpg", id:"pic_depose"},
 
-	var sound_1kill = new Howl({
-	  	src: [sound_path + '1kill.mp3',],
-	  	preload: true,
-	 	autoplay: false,
-		loop: false, 
-		volume: 0.5,
-	});
+		{src: "img/dalian1.jpg", id:"dalian1"},
+		{src: "img/dalian2.jpg", id:"dalian2"},
+		{src: "img/dalian3.jpg", id:"dalian3"},
+		{src: "img/dalian4.jpg", id:"dalian4"},
 
-	var sound_2kill = new Howl({
-	  	src: [sound_path + '2kill.mp3',],
-	  	preload: true,
-	 	autoplay: false,
-		loop: false,
-		volume: 0.5,
-	});
+		{src: "img/1t.png", id:"1t"},
+		{src: "img/2t.png", id:"2t"},
+		{src: "img/3t.png", id:"3t"},
+		{src: "img/4t.png", id:"4t"},
+		{src: "img/5t.png", id:"5t"},
+		{src: "img/6t.png", id:"6t"},
+		{src: "img/7t.png", id:"7t"},
+		{src: "img/8t.png", id:"8t"},
+		{src: "img/9t.png", id:"9t"},
+		
+		{src: "img/lx.jpg", id:"lx"},
+		{src: "img/zgl.jpg", id:"zgl"},
+		{src: "img/dumu.jpg", id:"dumu"},
 
-	var sound_3kill = new Howl({
-	  	src: [sound_path + '3kill.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 0.5,
-	});
-
-	var sound_4kill = new Howl({
-	  	src: [sound_path + '4kill.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 0.5,
-	});
-
-	// var sound_5kill = new Howl({
-	//   	src: [sound_path + '5kill.mp3',],
-	//   	preload: true, 
-	//  	autoplay: false, 
-	// 	loop: false, 
-	// 	volume: 0.3,
-	// });
-
-	var sound_lightning = new Howl({
-	  	src: [sound_path + 'lightning.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_rain = new Howl({
-	  	src: [sound_path + 'rain.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: true, 
-		volume: 1,
-	});
-
-	var sound_transformer = new Howl({
-	  	src: [sound_path + 'transformer.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_xindian = new Howl({
-	  	src: [sound_path + 'xindian.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: true, 
-		volume: 0.1,
-	});
-
-	var sound_thuglife = new Howl({
-	  	src: [sound_path + 'thuglife.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_depose = new Howl({
-	  	src: [sound_path + 'depose.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_snow = new Howl({
-	  	src: [sound_path + 'snow.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: true, 
-		volume: 1,
-	});
-
-	var sound_nottoday = new Howl({
-	  	src: [sound_path + 'nottoday.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
+		{src: "img/light/0100.jpg", id: "light_0100"},
+		{src: "img/light/0101.jpg", id: "light_0101"},
+		{src: "img/light/0102.jpg", id: "light_0102"},
+		{src: "img/light/0103.jpg", id: "light_0103"},
+		{src: "img/light/0104.jpg", id: "light_0104"},
+		{src: "img/light/0105.jpg", id: "light_0105"},
+		{src: "img/light/0106.jpg", id: "light_0106"},
+		{src: "img/light/0107.jpg", id: "light_0107"},
+		{src: "img/light/0108.jpg", id: "light_0108"},
+		{src: "img/light/0109.jpg", id: "light_0109"},
+		{src: "img/light/0110.jpg", id: "light_0110"},
+		{src: "img/light/0111.jpg", id: "light_0111"},
+		{src: "img/light/0112.jpg", id: "light_0112"},
+		{src: "img/light/0113.jpg", id: "light_0113"},
+		{src: "img/light/0114.jpg", id: "light_0114"},
+		{src: "img/light/0115.jpg", id: "light_0115"},
+		{src: "img/light/0116.jpg", id: "light_0116"},
+		{src: "img/light/0117.jpg", id: "light_0117"},
+		{src: "img/light/0118.jpg", id: "light_0118"},
+		{src: "img/light/0119.jpg", id: "light_0119"},
+		{src: "img/light/0120.jpg", id: "light_0120"},
+		{src: "img/light/0121.jpg", id: "light_0121"},
+		{src: "img/light/0122.jpg", id: "light_0122"},
+		{src: "img/light/0123.jpg", id: "light_0123"},
+		{src: "img/light/0124.jpg", id: "light_0124"},
+		{src: "img/light/0125.jpg", id: "light_0125"},
+		{src: "img/light/0126.jpg", id: "light_0126"},
+		{src: "img/light/0127.jpg", id: "light_0127"},
+		{src: "img/light/0128.jpg", id: "light_0128"},
+		{src: "img/light/0129.jpg", id: "light_0129"},
+		{src: "img/light/0130.jpg", id: "light_0130"},
+		{src: "img/light/0131.jpg", id: "light_0131"},
+		{src: "img/light/0132.jpg", id: "light_0132"},
+		{src: "img/light/0133.jpg", id: "light_0133"},
+		{src: "img/light/0134.jpg", id: "light_0134"},
+		{src: "img/light/0135.jpg", id: "light_0135"},
+		{src: "img/light/0136.jpg", id: "light_0136"},
+		{src: "img/light/0137.jpg", id: "light_0137"},
 
 
-	var sound_zgl = new Howl({
-	  	src: [sound_path + 'zgl.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_aoligei = new Howl({
-	  	src: [sound_path + 'aoligei.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-
-	var sound_bullet = new Howl({
-	  	src: [sound_path + 'bullet.mp3',],
-	  	preload: true, 
-	 	autoplay: false, 
-		loop: false, 
-		volume: 1,
-	});
-	
-
-	stopAudio();
+		{src: "sound/jonsnow.mp3", id: "jonsnow"},
+		{src: "sound/chuishao.mp3", id: "chuishao"},
+		{src: "sound/1kill.mp3", id: "1kill"},
+		{src: "sound/2kill.mp3", id: "2kill"},
+		{src: "sound/3kill.mp3", id: "3kill"},
+		{src: "sound/4kill.mp3", id: "4kill"},
+		{src: "sound/lightning.mp3", id: "lightning"},
+		{src: "sound/rain.mp3", id: "rain"},
+		{src: "sound/transformer.mp3", id: "transformer"},
+		{src: "sound/xindian.mp3", id: "xindian"},
+		{src: "sound/thuglife.mp3", id: "thuglife"},
+		{src: "sound/depose.mp3", id: "depose"},
+		{src: "sound/snow.mp3", id: "snow"},
+		{src: "sound/nottoday.mp3", id: "nottoday"},
+		{src: "sound/zgl.mp3", id: "zgl"},
+		{src: "sound/aoligei.mp3", id: "aoligei"},
+		{src: "sound/bullet.mp3", id: "bullet"}
 
 
-	function stopAudio() 
-	{
-		sound_jonsnow.stop();
-		sound_chuishao.stop();
-		sound_1kill.stop();
-		sound_2kill.stop();
-		sound_3kill.stop();
-		sound_4kill.stop();
-		//sound_5kill.stop();
-		sound_lightning.stop();
-		sound_rain.stop();
-		sound_transformer.stop();
-		sound_xindian.stop();
-		sound_thuglife.stop();
-		sound_snow.stop();
-		sound_depose.stop();
-		sound_nottoday.stop();
-		sound_zgl.stop();
-		sound_aoligei.stop();
-		sound_bullet.stop();
-	};
+	];
+
+	var preload;
+	var bar = document.querySelector('.progress-bar');
+    var counter = document.querySelector('.count');
+
+	function startPreload() {
+        preload = new createjs.LoadQueue(true);
+        //注意加载音频文件需要调用如下代码行
+        preload.installPlugin(createjs.Sound);
+        preload.on("fileload", handleFileLoad);
+        preload.on("progress", handleFileProgress);
+        preload.on("complete", loadComplete);
+        preload.on("error", loadError);
+        preload.loadManifest(manifest);
+
+    }
+
+     //处理单个文件加载
+    function handleFileLoad(event) {
+        console.log("文件类型: " + event.item.type);
+        // if (event.item.id == "logo") {
+        //     console.log("logo图片已成功加载");
+        // }
+    }
+
+    //处理加载错误：大家可以修改成错误的文件地址，可在控制台看到此方法调用
+    function loadError(evt) {
+        console.log("加载出错！", evt.text);
+    }
+
+    //已加载完毕进度
+    function handleFileProgress(event) {
+        //progressText.text = "已加载 " + (preload.progress * 100 | 0) + " %";
+        //stage.update();
+        var loaded_progress = (preload.progress * 100 | 0);
+        console.log("已加载:",loaded_progress);
+        bar.style.width = loaded_progress + '%';
+    	counter.innerHTML = Math.round(loaded_progress) + '%';
+    }
+
+     //全度资源加载完毕
+    function loadComplete(event) {
+        console.log("已加载完毕全部资源");
+        // bar.className += " done";
+
+        appStart();
+    }
+
+
+    function active_scroll(b) {
+    	window.onmousewheel = document.onmousewheel = function() {return b};
+    }
+
+
+    function playSound(id,haveProps){
+    	haveProps = haveProps || 0;
+
+    	if(haveProps)
+    	{
+    		createjs.Sound.play(id,loop_props);
+    	}
+    	else
+    	{
+    		createjs.Sound.play(id);
+    	}
+    	
+    }
+
+    function stopSound(){
+    	createjs.Sound.stop();
+    }
+
+
+
+    var sound_jonsnow;
+    var $loader_mask = $("#loader-mask");
+    var $timeline_space = $("#space-timeline");
+    var $topic_logo = $("#topic-logo");
+
+	function appStart(){
+
+		$loader_mask.css({"display":'none'});
+		$timeline_space.css({"opacity":1});
+		$topic_logo.css({"position":'absolute'});
+
+		var tsss = preload.getResult('light_0137');
+		console.log('>>>tsss = ',tsss);
+		console.log('>>>tsss = ',tsss.src);
+
+	}
+    
+	startPreload();
+
+
 
 	
 	/*=========================================================*/
@@ -211,10 +220,7 @@ $(document).ready(function(){
     resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
     console.log("resizeEvt : ",resizeEvt);
     
-    recalc = function () 
-    {
-    	stopAudio();
-
+    function recalc() {
 
     	clientWidth = docEl.clientWidth;
 		clientHeight = docEl.clientHeight;
@@ -261,12 +267,13 @@ $(document).ready(function(){
     }
 
 
-    /*=========================================================*/
-	// 窗口缩放自适应
-	/*=========================================================*/
+    
     recalc();
 
 	
+	/*=========================================================*/
+	// 计算位置
+	/*=========================================================*/
 	var px_index;
 
 	var height_citybg = $("#citybg").height();
@@ -911,16 +918,6 @@ $(document).ready(function(){
 	}
 
 
-	/*=========================================================*/
-	//niceScroll
-	/*=========================================================*/
-	// var lol = {
-	//     cursorcolor: "#cdd2d6",
-	//     cursorwidth: "4px",
-	//     cursorborder: "none"
- //  	};
-	// $(".messages").niceScroll(lol);
-
 
 
 	/*=========================================================*/
@@ -1104,7 +1101,9 @@ $(document).ready(function(){
     	flash();
     	run();
 
-    	sound_lightning.play();
+    	// sound_lightning.play();
+    	//stopSound();
+    	playSound('lightning');
 
     	document.documentElement.addEventListener('click',startLightning);
     }
@@ -1251,15 +1250,17 @@ $(document).ready(function(){
 		console.log("enter trigger_20191201");
 
 		ele_jon.removeClass('out');
-		sound_jonsnow.play();
+		//sound_jonsnow.play();
+		playSound('jonsnow');
 	})
 	.on("leave", function () {
 		console.log("leave trigger_20191201");
 		ele_jon.addClass('out');
-		if (sound_jonsnow.playing()) 
-		{
-			sound_jonsnow.stop();
-		}
+		// if (sound_jonsnow.playing()) 
+		// {
+		// 	sound_jonsnow.stop();
+		// }
+		stopSound();
 
 	})
 	.addIndicators()
@@ -1285,7 +1286,8 @@ $(document).ready(function(){
 		console.log("enter anchor_20191231");
 
 		ele_box_20191231.removeClass('out');
-		sound_1kill.play();
+		//sound_1kill.play();
+		playSound('1kill');
 	})
 	.on("leave", function () {
 
@@ -1293,10 +1295,11 @@ $(document).ready(function(){
 
 		ele_box_20191231.addClass('out');
 
-		if (sound_1kill.playing()) 
-		{
-			sound_1kill.stop();
-		}
+		stopSound();
+		// if (sound_1kill.playing()) 
+		// {
+		// 	sound_1kill.stop();
+		// }
 	})
 	.addIndicators()
 	.addTo(controller);
@@ -1316,17 +1319,17 @@ $(document).ready(function(){
 	.setClassToggle("#thewhistle","whistleActive")
 	.on("enter", function () {
 		console.log("enter trigger_wishtle");
-
-		sound_chuishao.play();
+		playSound('chuishao',true);
+		//sound_chuishao.play();
 	})
 	.on("leave", function () {
 
 		console.log("leave trigger_wishtle");
-
-		if (sound_chuishao.playing()) 
-		{
-			sound_chuishao.stop();
-		}
+		stopSound();
+		// if (sound_chuishao.playing()) 
+		// {
+		// 	sound_chuishao.stop();
+		// }
 	})
 	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
@@ -1350,18 +1353,19 @@ $(document).ready(function(){
 		console.log("enter anchor_20200103");
 
 		ele_box_20200103.removeClass('out');
-		sound_2kill.play();
+		//sound_2kill.play();
+		playSound('2kill');
 	})
 	.on("leave", function () {
 
 		console.log("leave anchor_20200103");
 
 		ele_box_20200103.addClass('out');
-
-		if (sound_2kill.playing()) 
-		{
-			sound_2kill.stop();
-		}
+		stopSound();
+		// if (sound_2kill.playing()) 
+		// {
+		// 	sound_2kill.stop();
+		// }
 	})
 	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
@@ -1385,18 +1389,19 @@ $(document).ready(function(){
 		console.log("enter anchor_20200105");
 
 		ele_box_20200105.removeClass('out');
-		sound_3kill.play();
+		//sound_3kill.play();
+		playSound('3kill');
 	})
 	.on("leave", function () {
 
 		console.log("leave anchor_20200105");
 
 		ele_box_20200105.addClass('out');
-
-		if (sound_3kill.playing()) 
-		{
-			sound_3kill.stop();
-		}
+		stopSound();
+		// if (sound_3kill.playing()) 
+		// {
+		// 	sound_3kill.stop();
+		// }
 	})
 	.addIndicators()
 	.addTo(controller);
@@ -1419,16 +1424,17 @@ $(document).ready(function(){
 		console.log("enter anchor_20200111");
 
 		ele_box_20200111.removeClass('out');
-		sound_4kill.play();
+		playSound('4kill');
+		//sound_4kill.play();
 	})
 	.on("leave", function () {
 
 		ele_box_20200111.addClass('out');
-
-		if (sound_4kill.playing()) 
-		{
-			sound_4kill.stop();
-		}
+		stopSound();
+		// if (sound_4kill.playing()) 
+		// {
+		// 	sound_4kill.stop();
+		// }
 	})
 	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
@@ -1444,8 +1450,8 @@ $(document).ready(function(){
 	})
 
 	.on("enter", function () {
-		sound_rain.play();
-
+		//sound_rain.play();
+		playSound('rain',true);
 		startRain();
 
 		document.documentElement.addEventListener('click', startLightning);
@@ -1455,13 +1461,13 @@ $(document).ready(function(){
 	.on("leave", function () {
 
 		clearRain();
-
+		stopSound();
 		document.documentElement.removeEventListener('click', startLightning);
 
-		if (sound_rain.playing()) 
-		{
-			sound_rain.stop();
-		}
+		// if (sound_rain.playing()) 
+		// {
+		// 	sound_rain.stop();
+		// }
 
 
 	})
@@ -1500,14 +1506,15 @@ $(document).ready(function(){
         duration: height_box_car_a0260w+300
     })
     .on("enter", function () {
-    	sound_thuglife.play();
-		
+    	//sound_thuglife.play();
+		playSound('thuglife');
 	})
 	.on("leave", function () {
-		if (sound_thuglife.playing()) 
-		{
-			sound_thuglife.stop();
-		}
+		// if (sound_thuglife.playing()) 
+		// {
+		// 	sound_thuglife.stop();
+		// }
+		stopSound();
 	})
     .setTween(scrollOutAnim)
     .addIndicators()
@@ -1563,15 +1570,16 @@ $(document).ready(function(){
 	})
 	.on("enter", function () {
 		console.log("enter info_square_cabin");
-		sound_transformer.play();
+		//sound_transformer.play();
+		playSound('transformer');
 	})
 	.on("leave", function () {
 		console.log("leave info_square_cabin");
-		if (sound_transformer.playing()) 
-		{
-			sound_transformer.stop();
-		}
-
+		// if (sound_transformer.playing()) 
+		// {
+		// 	sound_transformer.stop();
+		// }
+		stopSound();
 	})
 	.setTween(tween_square_cabin)
 	.addIndicators()
@@ -1617,16 +1625,17 @@ $(document).ready(function(){
 	})
     .on("enter", function () {
 
-		sound_xindian.play();
+		//sound_xindian.play();
+		playSound('xindian',true);
 
 	})
 	.on("leave", function () {
 
-		if (sound_xindian.playing()) 
-		{
-			sound_xindian.stop();
-		}
-
+		// if (sound_xindian.playing()) 
+		// {
+		// 	sound_xindian.stop();
+		// }
+		stopSound();
 	})
 	.addIndicators()
 	.addTo(controller);
@@ -1644,17 +1653,17 @@ $(document).ready(function(){
     .on("enter", function () {
 
     	ele_img_20200213.addClass('gray');
-		sound_depose.play();
-
+		//sound_depose.play();
+		playSound('depose');
 	})
 	.on("leave", function () {
 
 		ele_img_20200213.removeClass('gray');
-		if (sound_depose.playing()) 
-		{
-			sound_depose.stop();
-		}
-
+		// if (sound_depose.playing()) 
+		// {
+		// 	sound_depose.stop();
+		// }
+		stopSound();
 	})
 	.addIndicators()
 	.addTo(controller);
@@ -1671,18 +1680,19 @@ $(document).ready(function(){
 		console.log("enter info_20200215");
 		$("#snow-mask").snowfall({flakeCount : 100});
 
-		sound_snow.play();
+		//sound_snow.play();
+		playSound('snow',true);
 	})
 	.on("leave", function () {
 
 		console.log("leave info_20200215");
 		$("#snow-mask").snowfall('clear');
 
-		if (sound_snow.playing()) 
-		{
-			sound_snow.stop();
-		}
-
+		// if (sound_snow.playing()) 
+		// {
+		// 	sound_snow.stop();
+		// }
+		stopSound();
 
 	})
 	.addIndicators()
@@ -1803,6 +1813,7 @@ $(document).ready(function(){
 		"img/light/0135.jpg",
 		"img/light/0136.jpg",
 		"img/light/0137.jpg"
+		// preload.getResult('light_0137').src
 	];
 
 	var obj = {curImg: 0};
@@ -1827,16 +1838,17 @@ $(document).ready(function(){
 	})
 	.on("enter", function () {
 
-    	sound_nottoday.play();
+    	//sound_nottoday.play();
     	
-		
+		playSound('nottoday');
 	})
 	.on("leave", function () {
 		
-		if (sound_nottoday.playing()) 
-		{
-			sound_nottoday.stop();
-		}
+		// if (sound_nottoday.playing()) 
+		// {
+		// 	sound_nottoday.stop();
+		// }
+		stopSound();
 	})
 	.setTween(tween)
 	.addIndicators()
@@ -1890,15 +1902,16 @@ $(document).ready(function(){
 	})
 	.on("enter", function () {
 
-    	sound_zgl.play();
-		
+    	//sound_zgl.play();
+		playSound('zgl');
 	})
 	.on("leave", function () {
 		
-		if (sound_zgl.playing()) 
-		{
-			sound_zgl.stop();
-		}
+		// if (sound_zgl.playing()) 
+		// {
+		// 	sound_zgl.stop();
+		// }
+		stopSound();
 	})
 
 	.addIndicators() // add indicators (requires plugin)
@@ -1916,15 +1929,16 @@ $(document).ready(function(){
 	})
 	.on("enter", function () {
 
-    	sound_aoligei.play();
-		
+    	//sound_aoligei.play();
+		playSound('aoligei');
 	})
 	.on("leave", function () {
 		
-		if (sound_aoligei.playing()) 
-		{
-			sound_aoligei.stop();
-		}
+		// if (sound_aoligei.playing()) 
+		// {
+		// 	sound_aoligei.stop();
+		// }
+		stopSound();
 	})
 
 	.addIndicators()
@@ -1940,15 +1954,16 @@ $(document).ready(function(){
 	})
 	.on("enter", function () {
 
-    	sound_bullet.play();
-		
+    	// sound_bullet.play();
+		playSound('bullet');
 	})
 	.on("leave", function () {
 		
-		if (sound_bullet.playing()) 
-		{
-			sound_bullet.stop();
-		}
+		// if (sound_bullet.playing()) 
+		// {
+		// 	sound_bullet.stop();
+		// }
+		stopSound();
 	})
 
 	.addIndicators()
