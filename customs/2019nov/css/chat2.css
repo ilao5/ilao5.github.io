@@ -133,49 +133,62 @@ body {
 
 
 .chat-thread li.luxun:before{
-  background-image: url("../img/lx.jpg");
+  /*background-image: url("../img/lx.jpg");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8US2WQ.jpg");
+  
 }
 .chat-thread li.zgl:before{
-  background-image: url("../img/zgl.jpg");
+  /*background-image: url("../img/zgl.jpg");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USHFU.jpg");
 }
 .chat-thread li.dumu:before{
-  background-image: url("../img/dumu.jpg");
+  /*background-image: url("../img/dumu.jpg");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USazd.jpg");
 }
 
 .chat-thread li.tong1:before {
-  background-image: url("../img/1t.png");
+  /*background-image: url("../img/1t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8US92j.png");
   border:solid 2px rgba(255, 0, 255, 0.5);
 }
 .chat-thread li.tong2:before {
-  background-image: url("../img/2t.png");
+  /*background-image: url("../img/2t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USpGQ.png");
   border:solid 2px rgba(130, 130, 130, 0.5);
 }
 .chat-thread li.tong3:before {
-  background-image: url("../img/3t.png");
+  /*background-image: url("../img/3t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USSPg.png");
   border:solid 2px rgba(255, 69, 0, 0.5);
 }
 .chat-thread li.tong4:before {
-  background-image: url("../img/4t.png");
+  /*background-image: url("../img/4t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8NzxIS.png");
   border:solid 2px rgba(102, 255, 0, 0.5);
 }
 .chat-thread li.tong5:before {
-  background-image: url("../img/5t.png");
+  /*background-image: url("../img/5t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8Nzva8.png");
   border:solid 2px rgba(0, 255, 255, 0.5);
 }
 .chat-thread li.tong6:before {
-  background-image: url("../img/6t.png");
+  /*background-image: url("../img/6t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USiMn.png");
   border:solid 2px rgba(221, 210, 59, 0.5);
 }
 .chat-thread li.tong7:before {
-  background-image: url("../img/7t.png");
+  /*background-image: url("../img/7t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USFrq.png");
   border:solid 2px rgba(0, 98, 132, 0.5);
 }
 .chat-thread li.tong8:before {
-  background-image: url("../img/8t.png");
+  /*background-image: url("../img/8t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USkq0.png");
   border:solid 2px rgba(254, 67, 101, 0.5);
 }
 .chat-thread li.tong9:before {
-  background-image: url("../img/9t.png");
+  /*background-image: url("../img/9t.png");*/
+  background-image: url("https://s1.ax1x.com/2020/03/17/8USEZV.png");
   border:solid 2px rgba(79, 79, 79, 0.8);
 }
 
