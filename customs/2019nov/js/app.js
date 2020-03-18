@@ -51,43 +51,43 @@ $(document).ready(function(){
 		// {src: "img/dumu.jpg", id:"dumu"},
 
 		// {src: "img/light/0100.jpg", id: "light_0100"},
-		{src: "img/light/0101.jpg", id: "light_0101"},
-		{src: "img/light/0102.jpg", id: "light_0102"},
-		{src: "img/light/0103.jpg", id: "light_0103"},
-		{src: "img/light/0104.jpg", id: "light_0104"},
-		{src: "img/light/0105.jpg", id: "light_0105"},
-		{src: "img/light/0106.jpg", id: "light_0106"},
-		{src: "img/light/0107.jpg", id: "light_0107"},
-		{src: "img/light/0108.jpg", id: "light_0108"},
-		{src: "img/light/0109.jpg", id: "light_0109"},
-		{src: "img/light/0110.jpg", id: "light_0110"},
-		{src: "img/light/0111.jpg", id: "light_0111"},
-		{src: "img/light/0112.jpg", id: "light_0112"},
-		{src: "img/light/0113.jpg", id: "light_0113"},
-		{src: "img/light/0114.jpg", id: "light_0114"},
-		{src: "img/light/0115.jpg", id: "light_0115"},
-		{src: "img/light/0116.jpg", id: "light_0116"},
-		{src: "img/light/0117.jpg", id: "light_0117"},
-		{src: "img/light/0118.jpg", id: "light_0118"},
-		{src: "img/light/0119.jpg", id: "light_0119"},
-		{src: "img/light/0120.jpg", id: "light_0120"},
-		{src: "img/light/0121.jpg", id: "light_0121"},
-		{src: "img/light/0122.jpg", id: "light_0122"},
-		{src: "img/light/0123.jpg", id: "light_0123"},
-		{src: "img/light/0124.jpg", id: "light_0124"},
-		{src: "img/light/0125.jpg", id: "light_0125"},
-		{src: "img/light/0126.jpg", id: "light_0126"},
-		{src: "img/light/0127.jpg", id: "light_0127"},
-		{src: "img/light/0128.jpg", id: "light_0128"},
-		{src: "img/light/0129.jpg", id: "light_0129"},
-		{src: "img/light/0130.jpg", id: "light_0130"},
-		{src: "img/light/0131.jpg", id: "light_0131"},
-		{src: "img/light/0132.jpg", id: "light_0132"},
-		{src: "img/light/0133.jpg", id: "light_0133"},
-		{src: "img/light/0134.jpg", id: "light_0134"},
-		{src: "img/light/0135.jpg", id: "light_0135"},
-		{src: "img/light/0136.jpg", id: "light_0136"},
-		{src: "img/light/0137.jpg", id: "light_0137"},
+		// {src: "img/light/0101.jpg", id: "light_0101"},
+		// {src: "img/light/0102.jpg", id: "light_0102"},
+		// {src: "img/light/0103.jpg", id: "light_0103"},
+		// {src: "img/light/0104.jpg", id: "light_0104"},
+		// {src: "img/light/0105.jpg", id: "light_0105"},
+		// {src: "img/light/0106.jpg", id: "light_0106"},
+		// {src: "img/light/0107.jpg", id: "light_0107"},
+		// {src: "img/light/0108.jpg", id: "light_0108"},
+		// {src: "img/light/0109.jpg", id: "light_0109"},
+		// {src: "img/light/0110.jpg", id: "light_0110"},
+		// {src: "img/light/0111.jpg", id: "light_0111"},
+		// {src: "img/light/0112.jpg", id: "light_0112"},
+		// {src: "img/light/0113.jpg", id: "light_0113"},
+		// {src: "img/light/0114.jpg", id: "light_0114"},
+		// {src: "img/light/0115.jpg", id: "light_0115"},
+		// {src: "img/light/0116.jpg", id: "light_0116"},
+		// {src: "img/light/0117.jpg", id: "light_0117"},
+		// {src: "img/light/0118.jpg", id: "light_0118"},
+		// {src: "img/light/0119.jpg", id: "light_0119"},
+		// {src: "img/light/0120.jpg", id: "light_0120"},
+		// {src: "img/light/0121.jpg", id: "light_0121"},
+		// {src: "img/light/0122.jpg", id: "light_0122"},
+		// {src: "img/light/0123.jpg", id: "light_0123"},
+		// {src: "img/light/0124.jpg", id: "light_0124"},
+		// {src: "img/light/0125.jpg", id: "light_0125"},
+		// {src: "img/light/0126.jpg", id: "light_0126"},
+		// {src: "img/light/0127.jpg", id: "light_0127"},
+		// {src: "img/light/0128.jpg", id: "light_0128"},
+		// {src: "img/light/0129.jpg", id: "light_0129"},
+		// {src: "img/light/0130.jpg", id: "light_0130"},
+		// {src: "img/light/0131.jpg", id: "light_0131"},
+		// {src: "img/light/0132.jpg", id: "light_0132"},
+		// {src: "img/light/0133.jpg", id: "light_0133"},
+		// {src: "img/light/0134.jpg", id: "light_0134"},
+		// {src: "img/light/0135.jpg", id: "light_0135"},
+		// {src: "img/light/0136.jpg", id: "light_0136"},
+		// {src: "img/light/0137.jpg", id: "light_0137"},
 
 		// {src: "img/light/0100.jpg", id: "light_0100"},
 		// {src: "https://s1.ax1x.com/2020/03/17/8U9Sjs.jpg", id: "light_0101"},
@@ -211,6 +211,7 @@ $(document).ready(function(){
     var $timeline_space = $("#space-timeline");
     var $topic_logo = $("#topic-logo");
 
+    var $flyTxt = document.getElementsByClassName('fly-text')[0];
 
 
 	function startPreload() {
@@ -608,7 +609,13 @@ $(document).ready(function(){
 		$("#info_20200131").css({"top":top_20200131 + "px"});
 
 		var height_20200131 = $("#info_20200131").height();
-		var top_20200201 = top_20200131 + height_20200131 + 50;
+		var top_red_cross = top_20200131 + height_20200131 + 50;
+		$("#info_red_cross").css({"top":top_red_cross + "px"});
+		$("#red-cross-anim").css({"top":top_red_cross + "px"});
+
+
+		var height_red_cross_anim = $("#red-cross-anim").height();
+		var top_20200201 = top_red_cross + height_red_cross_anim + 50;
 		$("#info_20200201").css({"top":top_20200201 + "px"});
 
 
@@ -877,42 +884,14 @@ $(document).ready(function(){
 
 
 		var height_wechat_anim = $("#div-wechat-anim").height();
-		console.log("????? top_wechat = ",top_wechat);
-		console.log("????? height_wechat_anim = ",height_wechat_anim);
-		var top_got_light = top_wechat + height_wechat_anim + 150;
-		$("#info_got_light").css({"top":top_got_light + "px"});
-		$("#div-got-light-anim").css({"top":top_got_light + "px"});
-
-		// var d = document.querySelector('#div-wechat-anim');
-		// var offsetheight_wechat_anim = d.offsetHeight;
-		// console.log("????? d.offsetHeight = ",offsetheight_wechat_anim);
-
-		// var outerHeight_wechat_anim1 = $("#div-wechat-anim").outerHeight();
-		// var outerHeight_wechat_anim2 = $("#div-wechat-anim").outerHeight(true);
-		// console.log("????? outerHeight_wechat_anim1 = ",outerHeight_wechat_anim1);
-		// console.log("????? outerHeight_wechat_anim2 = ",outerHeight_wechat_anim2);
-
-		// var aa = getComputedStyle(document.getElementById('div-wechat-anim'),null).getPropertyValue('height');
-		// console.log("?????aa d.style.height= ",aa);
-
-		// var height_last_to_father = $("#last-word").position().top;
-		// console.log("????? height_last_to_father = ",height_last_to_father);
-
-		// var outerHeight_last_word0 = $("#last-word").height();
-		// var outerHeight_last_word1 = $("#last-word").outerHeight();
-		// var outerHeight_last_word2 = $("#last-word").outerHeight(true);
-		// console.log("????? outerHeight_last_word0 = ",outerHeight_last_word0);
-		// console.log("????? outerHeight_last_word1 = ",outerHeight_last_word1);
-		// console.log("????? outerHeight_last_word2 = ",outerHeight_last_word2);
-
-		// var total = 0;
-		// $(".chat-thread li").each(function(){
-		// 	total = total + $(this).outerHeight(true);
-	 //    });
-		// console.log("????? total = ",total);
+		// console.log("????? top_wechat = ",top_wechat);
+		// console.log("????? height_wechat_anim = ",height_wechat_anim);
+		// var top_got_light = top_wechat + height_wechat_anim + 150;
+		// $("#info_got_light").css({"top":top_got_light + "px"});
+		// $("#div-got-light-anim").css({"top":top_got_light + "px"});
 
 		// var pic_Height=0;
-		if(clientWidth>720)
+		/*if(clientWidth>720)
 		{
 			pic_Width = 720 * 0.8;
 			pic_Height = 480 * 0.8;
@@ -926,11 +905,12 @@ $(document).ready(function(){
 		 	pic_Height = clientWidth * 480 / 720;
 		 	$("#div-got-light-anim img").css({"width":clientWidth + "px"});
 			$("#div-got-light-anim img").css({"height":pic_Height + "px"});
-		}
+		}*/
 
 
-		var height_got_light = $("#div-got-light-anim").height();
-		var top_friend_words = top_got_light + height_got_light + 50;
+		// var height_got_light = $("#div-got-light-anim").height();
+		// var top_friend_words = top_got_light + height_got_light + 50;
+		top_friend_words = top_wechat + height_wechat_anim + 150;
 		$("#info_friend_words").css({"top":top_friend_words + "px"});
 		$("#div-friend-words-anim").css({"top":top_friend_words + "px"});
 
@@ -1141,13 +1121,17 @@ $(document).ready(function(){
 		})
 		.on("enter", function () {
 			playSound('rain',true);
+			$('#rain-mask').fadeIn(1000);
 			startRain();
 			document.documentElement.addEventListener('click', startLightning);
 		})
 		.on("leave", function () {
-			clearRain();
-			stopSound();
 			document.documentElement.removeEventListener('click', startLightning);
+			stopSound();
+			$('#rain-mask').fadeOut(1500,function(){
+				clearRain();
+			});
+			
 		})
 		.addIndicators()
 		.addTo(controller);
@@ -1317,11 +1301,15 @@ $(document).ready(function(){
 			duration:scene_snow_duration
 		})
 		.on("enter", function () {
+			$("#snow-mask").fadeIn(1000);
 			$("#snow-mask").snowfall({flakeCount : 80});
 			playSound('snow',true);
 		})
 		.on("leave", function () {
-			$("#snow-mask").snowfall('clear');
+			$("#snow-mask").fadeOut(1500,function(){
+				$("#snow-mask").snowfall('clear');
+			});
+			
 			stopSound();
 		})
 		.addIndicators()
@@ -1398,7 +1386,7 @@ $(document).ready(function(){
 		/*=========================================================*/
 		//SCENE 星星之火
 		/*=========================================================*/
-		var images = [
+		/*var images = [
 			// "img/light/0100.jpg",
 			// "img/light/0101.jpg",
 			// "img/light/0102.jpg",
@@ -1514,7 +1502,7 @@ $(document).ready(function(){
 		.addIndicators()
 		.addTo(controller);
 
-		scene_got_light.offset(-50);
+		scene_got_light.offset(-50);*/
 
 
 
@@ -1540,9 +1528,20 @@ $(document).ready(function(){
 			duration: firefly_duration
 		})
 		.on("enter", function () {
+			// $('#firefly-mask').css({'opacity':1});
+			$('#firefly-mask').fadeIn(1000);
 			startFirefly();
+			toggleFlyText();
+			
 		})
 		.on("leave", function () {
+			// $('#firefly-mask').css({'opacity':0});
+			$('#firefly-mask').fadeOut(1500,function(){
+			    toggleFlyText();
+				removeFirefly();
+			});
+			
+			// $('.fly-text label').css({'opacity':0});
 		})
 		.addIndicators()
 		.addTo(controller);
@@ -1896,12 +1895,19 @@ $(document).ready(function(){
 
 
 
+
+
+    
+
+
+
 	/*=========================================================*/
 	// firefly
 	/*=========================================================*/
 	var isFireFlyRun = false;
 	var fireflies = 100;
-	var $container = $("#div-firefly");
+	// var $container = $("#div-firefly");
+	var $container = $("#firefly-mask");
 	
 	
 	var $containerWidth = $container.width();
@@ -1909,20 +1915,40 @@ $(document).ready(function(){
 	//var master = new TimelineMax();
 
 	//startFirefly();
+	//
+	// $("body").click(function(){
+ //    	var ul = document.getElementsByClassName('fly-text')[0];
+ //    	console.log(">>>>FLY TEXT ul : ",ul);
+ //  		ul.classList.toggle('fly-text-hidden');
+	// });
+
+    var flyTl;
+    var fadeTl;
+    
+    function toggleFlyText(){ 
+  		$flyTxt.classList.toggle('fly-text-hidden');
+    }
+
+    function removeFirefly(){
+    	flyTl.clear();
+    	fadeTl.clear();
+
+    	$container.empty();
+    }
 
 	function startFirefly(){
 
-		if(isFireFlyRun)
-		{
-			return;
-		}
+		// if(isFireFlyRun)
+		// {
+		// 	return;
+		// }
 
 		for (var i = 0; i < fireflies; i++) {
 		  var firefly = $('<div class="firefly"></div>');
 		  TweenLite.set(firefly, {
 		    x: Math.random() * $containerWidth,
-		    y: Math.random() * $containerHeight,
-		    opacity:0.25
+		    y: Math.random() * $containerHeight
+		    // opacity:0.25
 		  });
 		  $container.append(firefly);
 		  flyTheFirefly(firefly);
@@ -1932,8 +1958,8 @@ $(document).ready(function(){
 
 
 	function flyTheFirefly(elm) {
-	  var flyTl = new TimelineMax();
-	  var fadeTl = new TimelineMax({
+	  flyTl = new TimelineMax();
+	  fadeTl = new TimelineMax({
 	    delay: Math.floor(Math.random() * 2) + 1,
 	    repeatDelay: Math.floor(Math.random() * 6) + 1,
 	    repeat: -1
@@ -1941,9 +1967,9 @@ $(document).ready(function(){
 
 	  fadeTl.to(
 	    [elm],
-	    5,
-	    { opacity: 1, yoyo: true, repeat: 1, repeatDelay: 5 },
-	    Math.floor(Math.random() * 30) + 1
+	    0.25,
+	    { opacity: 0.25, yoyo: true, repeat: 1, repeatDelay: 0.2 },
+	    Math.floor(Math.random() * 6) + 1
 	  );
 	  
 	  flyTl
