@@ -1,6 +1,4 @@
-/*:root {
-	--white:#f1f1f1
-}*/
+
 #div-hero-liwenliang-anim {
 	margin: 0;
 	/*font-family: Montserrat;*/
@@ -16,101 +14,53 @@
 #div-hero-liwenliang-anim div > span {
 	opacity: 0.15;
 }
-#I {
-	opacity: 1;
-	animation: flickerI 2s linear  reverse infinite;
-}
-#I::after {
-	content: '';
-	/*width: 300%;*/
-	width: 1.8rem;
-	-webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
-	-moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
-	box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
-}
-#L, #G {
-	animation: flickerLG 2s linear reverse infinite;
-	position: relative;
-}
+
+
 #L::after, 
 #L::before  {
 	content:' ';
-	/*width: 100px;
-	height: 100px;*/
 	width:1rem;
 	height: 1rem;
 	background: #FFF;/*#f1f1f1;*/
 	position: absolute;
-	top: -50%;
-	left: 100%;
-	border-radius: 100%;
+	top: 0;
+	left: -25%;
+	/*border-radius: 100%;*/
+	border: 3px solid #f00;
 	opacity: 0.05;
 	filter: blur(10px);
 }
 #L::after {
-	/*width: 200px;
-	height: 200px;*/
-	width: 2rem;
-	height: 2rem;
-	top: -100%;
-	left: -5%;
+	width: 1.5rem;
+	height: 1.5rem;
+	top: -50%;
+	left: -50%;
 	opacity: 0.1;
+	border: 3px solid #0f0;
+	border-radius: 50%;
 	filter: blur(10px);
-}
-#H {
-	animation: flickerH 2s linear reverse infinite
+
+	-webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	-moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
 }
 
-#T {
-	animation: flickerH 2s linear reverse infinite
+#LL {
+	animation: flickerLL 2s linear reverse infinite
 }
 
-@keyframes flickerI {
-	0% {
-		opacity: 0.4;
-	}
-	5% {
-		opacity: 0.5;
-	}
-	10% {
-		opacity: 0.6;
-	}
-	15% {
-		opacity: 0.85;
-	}
-	25% {
-		opacity: 0.5;
-	}
-	30% {
-		opacity: 1;
-	}
-	35% {
-		opacity: 0.1;
-	}
-	40% {
-		opacity: 0.25;
-	}
-	45% {
-		opacity: 0.5;
-	}
-	60% {
-		opacity: 1;
-	}
-	70% {
-		opacity: 0.85;
-	}
-	80% {
-		opacity: 0.4;
-	}
-	90% {
-		opacity: 0.5;
-	}
-	100% {
-		opacity: 1;
-	}
+#W {
+	animation: flickerW 2s linear reverse infinite
 }
 
-@keyframes flickerLG {
+#L {
+	animation: flickerL 2s linear reverse infinite;
+	position: relative;
+}
+
+
+
+@keyframes flickerL {
 	0% {
 		opacity: 0.19;
 	}
@@ -127,7 +77,7 @@
 		opacity: 0.2;
 	}
 	30% {
-		opacity: 0.4;
+		opacity: 0.8;
 	}
 	35% {
 		opacity: 0.1;
@@ -139,23 +89,23 @@
 		opacity: 0.2;
 	}
 	60% {
-		opacity: 0.4;
+		opacity: 0.8;
 	}
 	70% {
 		opacity: 0.35;
 	}
 	80% {
-		opacity: 0.4;
+		opacity: 0.8;
 	}
 	90% {
 		opacity: 0.2;
 	}
 	100% {
-		opacity: 0.4;
+		opacity: 0.8;
 	}
 }
 
-@keyframes flickerH {
+@keyframes flickerLL {
 	0% {
 		opacity: 0.15;
 	}
@@ -200,7 +150,7 @@
 	}
 }
 
-@keyframes flickerT {
+@keyframes flickerW {
 	0% {
 		opacity: 0.01;
 	}
@@ -229,13 +179,13 @@
 		opacity: 0.1;
 	}
 	60% {
-		opacity: 0.;
+		opacity: 0.3;
 	}
 	70% {
 		opacity: 0.1;
 	}
 	80% {
-		opacity: 0.;
+		opacity: 0.2;
 	}
 	90% {
 		opacity: 0.0;

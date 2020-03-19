@@ -402,8 +402,8 @@
   top: 55%;
   transform: translateY(-55%);
 
-  left: 60%;
-  transform: translateX(-60%);
+  left: 50%;
+  transform: translateX(0);
   z-index: 999997;
 }
 
@@ -894,10 +894,10 @@
   transform: translate(-50%,-50%);*/
   transform: translateX(-50%);
 
-  background-image:url('../img/orion_1998.gif');
+  /*background-image:url('../img/orion_1998.gif');
   background-position: 0 0;
   background-repeat: repeat; 
-  animation: glaxyMove 60s infinite linear;
+  animation: glaxyMove 60s infinite linear;*/
 
   
 }

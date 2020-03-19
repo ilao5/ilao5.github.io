@@ -135,14 +135,16 @@ $(document).ready(function(){
 		{src: "sound/2kill.mp3", id: "2kill"},
 		{src: "sound/3kill.mp3", id: "3kill"},
 		{src: "sound/4kill.mp3", id: "4kill"},
+		{src: "sound/zltz.mp3", id: "zltz"},
 		{src: "sound/lightning.mp3", id: "lightning"},
 		{src: "sound/rain.mp3", id: "rain"},
 		{src: "sound/transformer.mp3", id: "transformer"},
 		{src: "sound/xindian.mp3", id: "xindian"},
+		{src: "sound/bi.mp3", id: "bi"},
 		{src: "sound/thuglife.mp3", id: "thuglife"},
 		{src: "sound/depose.mp3", id: "depose"},
 		{src: "sound/snow.mp3", id: "snow"},
-		{src: "sound/nottoday.mp3", id: "nottoday"},
+		{src: "sound/kenan.mp3", id: "kenan"},
 		{src: "sound/zgl.mp3", id: "zgl"},
 		{src: "sound/aoligei.mp3", id: "aoligei"},
 		{src: "sound/bullet.mp3", id: "bullet"}
@@ -178,6 +180,7 @@ $(document).ready(function(){
 		height_anchor_20200105,
 		height_anchor_20200111,
 		height_20200124,
+		height_red_cross_anim,
 		height_box_car_a0260w,
 		top_20200203,
 		top_lie_words,
@@ -614,7 +617,7 @@ $(document).ready(function(){
 		$("#red-cross-anim").css({"top":top_red_cross + "px"});
 
 
-		var height_red_cross_anim = $("#red-cross-anim").height();
+		height_red_cross_anim = $("#red-cross-anim").height();
 		var top_20200201 = top_red_cross + height_red_cross_anim + 50;
 		$("#info_20200201").css({"top":top_20200201 + "px"});
 
@@ -1111,6 +1114,26 @@ $(document).ready(function(){
 
 
 		/*=========================================================*/
+		//SCENE zltz
+		/*=========================================================*/
+		var scene_zltz_duration = 200;
+
+		var scene_zltz = new ScrollMagic.Scene({
+			triggerElement: "#zltz",
+			duration:scene_zltz_duration
+		})
+		.on("enter", function () {
+			playSound('zltz');
+		})
+		.on("leave", function () {
+			stopSound();
+		})
+		.addIndicators()
+		.addTo(controller);
+		// scene_zltz.offset(-300);
+
+
+		/*=========================================================*/
 		//SCENE 雨
 		/*=========================================================*/
 		var scene_rain_duration = height_20200124;
@@ -1136,6 +1159,25 @@ $(document).ready(function(){
 		.addIndicators()
 		.addTo(controller);
 
+
+		
+		/*=========================================================*/
+		//SCENE 红十字
+		/*=========================================================*/
+		var scene_red_cross_duration = height_red_cross_anim;
+
+		var scene_red_cross = new ScrollMagic.Scene({
+			triggerElement: "#info_red_cross",
+			duration:scene_red_cross_duration
+		})
+		.on("enter", function () {
+			playSound('bi');
+		})
+		.on("leave", function () {
+			stopSound();
+		})
+		.addIndicators()
+		.addTo(controller);
 
 		/*=========================================================*/
 		//SCENE 鄂A0260W
@@ -1365,22 +1407,24 @@ $(document).ready(function(){
 		/*=========================================================*/
 		//SCENE 问题
 		/*=========================================================*/
-		var question_duration = (top_talking_words - top_question) * 0.7;
+		var question_duration = (top_talking_words - top_question) * 0.9;
 		
 		var scene_question = new ScrollMagic.Scene({
 			triggerElement: "#info_question",
 			duration:question_duration
 		})
 	    .on("enter", function () {
+	    	playSound('kenan');
 			startQuestion();
 		})
 		.on("leave", function () {
 			stopQuestion();
+			stopSound();
 		})
 		.addIndicators()
 		.addTo(controller);
 
-		scene_question.offset(question_duration * 0.3);
+		scene_question.offset(question_duration * 0.1);
 
 
 		/*=========================================================*/
@@ -1529,7 +1573,7 @@ $(document).ready(function(){
 		})
 		.on("enter", function () {
 			// $('#firefly-mask').css({'opacity':1});
-			$('#firefly-mask').fadeIn(1000);
+			$('#firefly-mask').fadeIn(2000);
 			startFirefly();
 			toggleFlyText();
 			
@@ -1905,7 +1949,7 @@ $(document).ready(function(){
 	// firefly
 	/*=========================================================*/
 	var isFireFlyRun = false;
-	var fireflies = 100;
+	var fireflies = 50;
 	// var $container = $("#div-firefly");
 	var $container = $("#firefly-mask");
 	
