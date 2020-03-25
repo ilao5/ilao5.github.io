@@ -4,8 +4,11 @@
   -moz-box-sizing: border-box;
 }
 * {margin:0;padding:0;border: 0 none;position: relative;}
-html, body {
+html{
   font-size: 62.5%;
+}
+html, body {
+  
   background: #fff;
   padding-top: 1rem;
   /*font-family: muli;*/
@@ -25,8 +28,8 @@ a:active {color:#888;} /* 正在被点击的链接 */
 p {
   background: inherit;
   width: 80%;
-  /*max-width: 40rem;
-  min-width: 300px;*/
+  /* max-width: 40rem;
+  min-width: 300px; */
   margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.5rem;

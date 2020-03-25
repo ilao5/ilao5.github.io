@@ -1,5 +1,9 @@
+html{
+  font-size: 62.5%;
+}
+
 body {
-  font-size: 62.5%
+  
   padding: 2rem;
   line-height: 2rem;
 }
@@ -39,7 +43,7 @@ p {
   margin-bottom: 2rem;
   line-height: 2rem;
   letter-spacing: 0.2rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-family: 'Long Cang', cursive;
   color: #888;
 }
@@ -73,3 +77,16 @@ p.blue{
 .garter {
   box-shadow: 0 1px 0 #ffaaaa, inset 0 1px 0 #ffaaaa;
 }
+
+/*@media only screen and (max-width: 500px) {
+    p {
+        font-size: :1rem;
+    }
+
+}
+@media only screen and (min-width: 501px) {
+    p {
+        font-size: :1.5rem;
+    }
+
+}*/
