@@ -1,0 +1,75 @@
+/*@import url(https://fonts.googleapis.com/css?family=Muli:300italic);*/
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+* {margin:0;padding:0;border: 0 none;position: relative;}
+html, body {
+  background: #fff;
+  padding-top: 1rem;
+  /*font-family: muli;*/
+  /*font-family: 'Long Cang', cursive;*/
+  font-weight: 300;
+  /*font-style: italic;*/
+}
+
+a {
+  text-decoration: none;
+}
+a:link {color:#888;}   /* 未被访问的链接 */
+a:visited {color:#888;}  /* 已被访问的链接 */
+a:hover {color:#d2357d;}  /* 鼠标指针移动到链接上 */
+a:active {color:#888;} /* 正在被点击的链接 */
+
+p {
+  background: inherit;
+  width: 70%;
+  max-width: 40rem;
+  min-width: 300px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #888;
+  padding-right: 4rem;
+  margin-bottom: .5rem;
+}
+p:before {
+  content: '';
+  position: absolute;
+  bottom: .4rem;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  border-bottom: 2px dotted #ddd;
+}
+.descripcion {
+  background: inherit;
+  display: inline;
+  z-index: 1;
+  padding-right: .2rem;
+}
+.precio {
+  background: inherit;
+  position: absolute;
+  min-width: 4rem;
+  bottom: 0;
+  right: 0;
+  padding-left: .2rem;
+  text-align: right;
+  z-index: 2;
+}
+.precio:after {
+  /*content: '€';*/
+}
+h1 a {
+  display: block;
+  text-decoration: none;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: .5s;
+}
+h1 a:hover {
+  color:  rgba(0,0,0,.3);
+  letter-spacing: 2px;
+}
