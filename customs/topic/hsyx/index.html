@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>守护健康闯关游戏</title>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/index.js"></script>
+
+<link rel="stylesheet" href="static/css/index.css">
+
+<style>
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+/*  @font-face
+    {
+       font-family:btn;
+       src: url('static/font/btn.ttf');
+    }
+    @font-face
+    {
+       font-family:textintro;
+       src: url('static/font/textintro.ttf');
+    }*/
+    #start{ background:url('static/wenda/1.jpg'); background-size:100% 100%}
+    #intro{ background:url('static/wenda/2.jpg'); background-size:100% 100%;}
+    #dati{ background:url('static/wenda/3.jpg'); background-size:100% 100%}
+    #nop{ background:url('static/wenda/finish.jpg'); background-size:100% 100%}
+    /*#ad{ background:url('static/wenda/ad.jpg'); background-size:100% 100%}*/
+    .btn{ background:url('static/wenda/btn_bg.png'); background-size:100% 100%}
+    .start , .startintro{ width:6.66rem; height:2rem; position:absolute; bottom:1rem; left:4.67rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;}
+    
+
+    .next, .partnext, .btnintro{ width:6.66rem; height:2rem; position:absolute; bottom:1rem; left:4.67rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;z-index: 9999;}
+
+
+    .btnagain{ width:6.66rem; height:2rem; position:absolute; bottom:30%; left:4.67rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;z-index: 9999;}
+
+    /*.partnext, .btnintro{ width:6.66rem; height:2rem; position:absolute; bottom:1rem; left:4.67rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;z-index: 9999;}*/
+
+    .zt1{ font-family:btn;}
+    
+    /*.dati_top{background:url('static/wenda/3_top.png'); background-size:100% 100%; width:8rem; height:3rem; position:absolute; top:0; left:2.82rem;}*/
+    .timu_box{ width:13.6rem; height:auto; position:absolute; top:4rem; left:1.1rem; border:0.1rem solid #000; border-radius:0.8rem; padding:0.8rem 0.3rem 0.8rem 0.8rem; box-sizing:border-box; background:url('static/wenda/3_timu.png');}
+    .q{ width:1.4rem; height:1.4rem; border-radius:50%; border:0.1rem solid #000; background-color:#f94a4a;-webkit-box-pack: center;justify-content: center;-webkit-box-align: center;align-items: center; color:#FFFFFF;display: -webkit-box; position:absolute; top:3.6rem; left:0.7rem;  font-size:1rem; box-sizing:border-box;}
+    
+    .text1{ font-family:textintro; font-size:0.8rem; line-height:1rem; color:#FFFFFF; text-shadow: -2px 2px 0.2rem #000,2px -2px 0.2rem #000,2px 2px 0.2rem #000,-2px -2px 0.2rem #000;}
+    #xx{ width:13.84rem; height:1.8rem; position:absolute; left:1.03rem; padding-left:1rem; box-sizing:border-box; font-size:0.6rem; text-align:left; line-height:1.8rem}
+    .xx{  background:url('static/wenda/x.png'); background-size:100% 100%; color:#000000;}
+    .xxon{  background:url('static/wenda/xon.png'); background-size:100% 100%; color:#fff;}
+    .a{ top:38%}
+    .b{ top:47%}
+    .c{ top:56%}
+    .d{ top:65%}
+    .e{ top:74%}
+    #baoming, #zhengque ,#cuowu{ background:url('static/wenda/bg.png');}
+     /*{ background:url('static/wenda/bg.png');}
+    #{ background:url('static/wenda/bg.png');}*/
+    .bigbox{ width:11rem; height:10rem; background-color:#feb800; position:absolute; top:3rem; left:2rem; opacity:1; border:1px solid #000000; padding:0.5rem;}
+    .bigbox .sbox{ width:100%; height:100%; background-color:#ffdd68; border:1px solid #000}
+    .bigbox .sbox span{height:2rem; margin-left:1rem; text-align:left; font-family:textintro; font-size:0.8rem; line-height:2rem; margin-top:1rem;    display: -webkit-box;}
+    .bigbox .sbox input{ border:none; background:none; outline:none; height:2rem; width:5rem; margin-left:3rem; border-bottom:1px solid #000; text-align:center; font-size:1rem;}
+    .bigbox .tijiao{width:6.66rem; height:2rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box; margin-left:2.17rem; margin-top:2rem; }
+    #jieguo{    background: url(static/wenda/3_timu.png);  width:100%; height:30rem; overflow-y:scroll}
+
+    #part1{    background: url(static/wenda/part1.jpg);  background-size:100% 100%; overflow-y:hidden; z-index: 1000;}
+    #part2{    background: url(static/wenda/part2.jpg);  background-size:100% 100%; overflow-y:hidden;z-index: 2000;}
+    #part3{    background: url(static/wenda/part3.jpg);  background-size:100% 100%; overflow-y:hidden;z-index: 3000;}
+    #part4{    background: url(static/wenda/part4.jpg);  background-size:100% 100%; overflow-y:hidden;
+        z-index: 4000;}
+
+   .toppic{ width:5.6rem; height:7.6rem; position:absolute; top:0.5rem; left:5.2rem;}
+   .introbox{ width:13.8rem; height:7rem; position:absolute; top:8.5rem; left:1.1rem; border:0.1rem solid #000000; border-radius:0.4rem; box-sizing:border-box; padding:1rem;}
+   .y1{ width:0.4rem; height:0.4rem; border:0.1rem solid #000000; border-radius:50%; background-color:#ffe754; position:absolute; top:0.3rem; left:0.3rem;}
+   .y2{ width:0.4rem; height:0.4rem; border:0.1rem solid #000000; border-radius:50%; background-color:#ffe754; position:absolute; top:0.3rem; right:0.3rem;}
+   .y3{ width:0.4rem; height:0.4rem; border:0.1rem solid #000000; border-radius:50%; background-color:#ffe754; position:absolute; bottom:0.3rem; right:0.3rem;}
+   .y4{ width:0.4rem; height:0.4rem; border:0.1rem solid #000000; border-radius:50%; background-color:#ffe754; position:absolute; bottom:0.3rem; left:0.3rem;}
+   .introbox span{ font-family:introtext; font-size:0.55rem; line-height:1rem;}
+   /*.cav{ width:100%; height:10rem; position:absolute; top:15.5rem; left:0;  background:url('static/wenda/cav_bg.png'); background-size:100% 100%;}*/
+   #cas{ width:100%; height:10rem; position:absolute; top:15.5rem; left:0;}
+   .goagain{width:6.66rem; height:2rem; position:absolute; top:72%; left:29%;}
+
+    .score{font-size:60px;color:gold;text-align: center;width:9rem; height:2rem;  position: absolute; top: 30%; left:50%;transform: translate(-50%,-30%);}
+
+   .ewm{ width:16rem; height:2.6rem; position:absolute; top:25.5rem; left:0}
+   .fxtu{width:6.66rem; height:2rem; position:absolute; margin-bottom:2rem; top:30rem; left:1rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;}
+   .zhibo{width:6.66rem; height:2rem; position:absolute; margin-bottom:2rem; top:30rem; right:1rem; font-size:0.9rem; line-height:1.7rem; text-align:center; padding: 0 1.6rem 0.3rem 0.3rem; box-sizing:border-box;}
+   /*#jj{ width:100%; height:30rem; background:url('static/wenda/3_timu.png');margin-bottom: 4rem;}*/
+    .yiwei{    transform: scale(0.8,0.8); }
+    </style>
+</head>
+<body>
+
+
+<section id="loading" style="position: fixed;width: 100%;height: 100%;top: 0px;left: 0px; background-color:#FFFFFF;-webkit-box-pack: center;justify-content: center;-webkit-box-align: center;align-items: center;z-index: 999999;    display: -webkit-box;"><img style="width:4rem; height:4rem; border-radius:5%;" src="static/images/loading.gif">
+</section>
+
+<section id="start">
+    <div class="btn start zt1">开始</div>
+</section>
+
+<section id="intro" hidden>
+    <div class="btn startintro zt1">开始测试</div>
+</section>
+
+<div class="btn zt1 btnintro" hidden>继续</div>
+
+<section id="dati" hidden>
+    <div class="dati_top"></div>
+        <div class="timu_box text1">
+            1.小明要和妈妈去医院看病。出门前，妈妈让小明戴上口罩，小明说：周围没人得病，可以不戴口罩吗？
+        </div>
+        <div class="q">Q</div>
+        <ul id="xuanxiang">
+            <div id="xx" class="xx a">A.可以</div>
+            <div id="xx" class="xx b">B.不可以</div>
+            <div id="xx" class="xx c" hidden>C.备用</div>
+            <!-- <div id="xx" class="xx d" hidden>D.备用</div>
+            <div id="xx" class="xx e" hidden>E.备用</div> -->
+        </ul>
+    <!-- <div class="btn zt1 next" hidden>下一题</div> -->
+</section>
+
+
+
+
+<section id="cuowu" hidden>
+    <div class="bigbox">
+        <div class="sbox">
+            <span>你的答案</span>
+            <!-- <input name="name" type="text"> -->
+            <div id="btnWrong" class="btn zt1 tijiao">错误</div>
+        </div>
+    </div>
+</section>
+
+<section id="part1" hidden>
+</section>
+
+<section id="part2" hidden>
+</section>
+
+<section id="part3" hidden>
+</section>
+
+<section id="part4" hidden>
+</section>
+
+<div class="btn zt1 partnext" hidden>开始闯关</div>
+
+
+
+<section id="nop" hidden>
+    <div class="score">恭喜您答对12题</div>
+    <!-- <div class="goagain"></div> -->
+</section>
+
+<audio id="soundBg" src="static/audio/bg.mp3" preload loop="true"></audio>
+
+<audio id="soundCorrect" src="static/audio/correct.mp3" preload></audio>
+<audio id="soundWrong" src="static/audio/wrong.mp3" preload></audio>
+<audio id="soundFinish" src="static/audio/finish.mp3" preload></audio>
+<audio id="soundBtn" src="static/audio/btn.mp3" preload></audio>
+
+<div class="btn zt1 btnagain" hidden>再玩一遍</div>
+
+
+<style>
+       .adbox{ width:3.5rem; height:1rem; position:absolute; top:0.5rem; right:0.5rem; }
+       .adbox .bg{ width:100%; height:100%;  border-radius:0.4rem; border:2px solid #fff; background-color:#000000; opacity:0.5; position:absolute; box-sizing:border-box }
+       .adbox span{ width:100%; height:100%; position:absolute;font-size:0.6rem; line-height:1rem; color:#FFFFFF; text-align:center}
+       .guanbi{ width:1rem; height:1rem; position:absolute; top:0.4rem; right:0.5rem; border:2px solid #FFFFFF; background-color:#000000; color:#FFFFFF; font-size:0.6rem; line-height:1rem; text-align:center; border-radius:50%;}
+   </style>
+
+<!-- <script src="static/js/html2canvas.min.js"></script> -->
+<script>
+    var currentPart = 1;
+    var currentQ = 0;
+    var correctNum = 0;
+    var answerData = ["B","C","A","B","C","A","C","C","A","C","C","C"];
+
+
+    var tdata=[
+        {
+            t:" 1.小明要和妈妈去医院看病。出门前，妈妈让小明戴上口罩，小明说：周围没人得病，可以不戴口罩吗？",
+            d:['A.可以','B.不可以']
+        },
+        {
+            t:" 2.戴口罩的错误做法是（ ）",
+            d:["A.戴口罩前应先洗手。","B.口罩一旦污染，立刻更换。","C.昨天用过的口罩翻过来继续用。"]
+        },
+
+        {
+            t:" 1.小明和妈妈坐电梯下楼，按电梯按钮时应（ ）",
+            d:["A.隔着纸巾或消毒湿巾按。","B. 直接用手指触碰按钮。"]
+        },
+        {
+            t:" 2.外出时，应尽量避免哪种出行方式？（ ）",
+            d:["A. 及时消毒的自家车辆","B. 公共交通工具","C. 步行"]
+        },
+        {
+            t:" 3.小明无意中用手接触了车门、扶手等公共设施，不能用手摸（ ）",
+            d:["A. 眼","B. 口","C. 以上都是"]
+        },
+
+        {
+            t:" 1.排队时应注意（ ）",
+            d:["A. 前后保持一米以上安全距离。","B. 和其他患者热情交谈。"]
+        },
+        {
+            t:" 2.在医院就诊时应注意什么，说法错误的是（ ）",
+            d:["A. 详细告知医生患病情况和就诊情况。","B. 告诉医生是否和疑似患者接触。","C. 就诊过程中可以不戴口罩。"]
+        },
+        {
+            t:" 3.诊断结果显示，小明得了水痘。医生说这种传染病传染性强，因此小明应（ ）",
+            d:["A. 注意饮食营养。","B. 与健康的弟弟保持距离。","C. 以上都对。"]
+        },
+
+        {
+            t:" 1.小明回到家里，应该（ ）",
+            d:["A. 脱下外出的衣服，换上家居服。","B. 处理完口罩和衣物，不洗手就吃东西。"]
+        },
+        {
+            t:" 2.小明用过的口罩如何处理？（ ）",
+            d:["A. 不要用手碰触口罩表面。","B. 消毒后密封丢弃。","C. 以上都是。"]
+        },
+        {
+            t:" 3.小明处理完这些后去洗手忘了标准洗手分几步了，你知道标准洗手法共（ ）步吗？",
+            d:["A. 3步","B. 5步","C. 7步"]
+        },
+        {
+            t:" 4.小明在突然想咳嗽、打喷嚏，该怎么办？（ ）",
+            d:["A. 对着空气咳。","B. 对着家人咳。","C. 用纸巾捂住口鼻。"]
+        }
+    ];
+  
+    
+    function checkAnswer(answer){
+
+        var currentA = answerData[currentQ];
+        if(currentA == answer)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
+
+
+    var i=0;
+    $('.start').click(function(){
+        soundBtn.play();
+
+        $("#intro").show();
+        // $('#part1').css('height','100%');
+        $('.btnintro').show();
+        // $('.partnext').show();
+        soundBg.volume = 0.5;
+        soundBg.play();
+
+    })
+
+
+
+    $('.btnintro').click(function(){
+
+        soundBtn.play();
+        $("#intro").hide();
+        $('.btnintro').hide();
+
+        $("#part1").show();
+        // $('#part1').css('height','100%');
+        // $('.partnext').text("开始闯关");
+        $('.partnext').show();
+    })
+
+
+    $('.partnext').click(function(){
+
+        soundBtn.play();
+        $('.partnext').hide();
+
+        if(currentPart == 1)
+        {
+            $("#part1").hide();
+
+            $("#dati").show();
+            $('.timu').html(tdata[0].t);
+            $('.a').html(tdata[0].d[0]);
+            $('.b').html(tdata[0].d[1]);
+
+        }
+        else if(currentPart == 2)
+        {
+            $("#part2").hide();
+
+            $("#dati").show();
+            gonext();
+
+        }
+        else if(currentPart == 3)
+        {
+            $("#part3").hide();
+
+            $("#dati").show();
+            gonext();
+        }
+        else if(currentPart == 4)
+        {
+            $("#part4").hide();
+
+            $("#dati").show();
+            gonext();
+        }
+  
+    })
+
+
+    //点击选项
+    $('#xuanxiang div').click(function(e){
+
+        soundBtn.play();
+        //console.log("第几题： ",currentQ);
+
+        var answerTxt = e.target.innerText;
+        var answer = answerTxt.slice(0,1);
+        var b = checkAnswer(answer);
+        if(b == false)
+        {
+            $('#cuowu').show();
+            soundWrong.play();
+        }
+        else
+        {
+            soundCorrect.play();
+            correctNum = correctNum + 1;
+            
+
+            if(currentQ >= answerData.length)
+            {
+                //转到结果
+                //console.log("转到结果");
+                
+            }
+            else{
+
+                checkPart();
+            }
+            
+        }
+    })
+
+
+    $('#btnWrong').click(function(){
+        soundBtn.play();
+        $('#cuowu').hide();
+        //gonext();
+        checkPart();
+    });
+
+    function checkPart(){
+
+        if(currentQ == 1)
+        {
+            $("#dati").hide();
+
+            $("#part2").show();
+            $('#part2').css('height','100%');
+            $('.partnext').show();
+
+            currentPart = 2;
+        }
+        else if(currentQ == 4)
+        {
+            $("#part3").show();
+            $('#part3').css('height','100%');
+            $('.partnext').show();
+
+            currentPart = 3;
+        }
+        else if(currentQ == 7)
+        {
+            $("#part4").show();
+            $('#part4').css('height','100%');
+            $('.partnext').show();
+
+            currentPart = 4;
+        }
+        else if(currentQ == 11)
+        {
+            //console.log("转到结果1");
+            soundFinish.play();
+            $('.score').html("恭喜<br>你答对了"+correctNum.toString()+"题!");  
+            $('#nop').show(); 
+            $('#jieguo').css('height','100%');
+            $('.btnagain').show();
+            
+
+        }
+        else
+        {
+            gonext();
+        }
+    }
+
+
+
+
+      
+      var d=[];
+      function gonext(){
+
+        currentQ = currentQ + 1;
+
+
+          // var bb = $('#xuanxiang').children('.xxon').length;
+          // if($('.e').hasClass('xxon')){
+          //    bb--;
+          // }
+          // d[currentQ]=bb;
+          //i++;
+          // $('#xuanxiang div').off('click');
+          $('.timu_box').html(tdata[currentQ].t);
+          $('.a').html(tdata[currentQ].d[0]).removeClass('xxon').addClass('xx');
+          $('.b').html(tdata[currentQ].d[1]).show().removeClass('xxon').addClass('xx');
+          $('.c').html(tdata[currentQ].d[2]).show().removeClass('xxon').addClass('xx');
+          $('.d').html(tdata[currentQ].d[3]).show().removeClass('xxon').addClass('xx');
+          $('.e').html(tdata[currentQ].d[4]).show().removeClass('xxon').addClass('xx');
+
+          var itemLength = tdata[currentQ].d.length;
+          if(itemLength<=2)
+          {
+            $('.a').show();
+            $('.b').show();
+            $('.c').hide();
+            $('.d').hide();
+            $('.e').hide();
+          }
+          else if(itemLength <= 3)
+          {
+            $('.a').show();
+            $('.b').show();
+            $('.c').show();
+            $('.d').hide();
+            $('.e').hide();
+          }
+          
+      }
+
+      
+      $('.btnagain').click(function(){
+            soundBtn.play();
+          window.location.reload();;
+      })
+      
+             
+  </script>
+
+</body>
+</html>
