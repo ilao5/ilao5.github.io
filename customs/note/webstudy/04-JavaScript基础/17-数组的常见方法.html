@@ -1,0 +1,3208 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>17-数组的常见方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="18-函数.html" />
+    
+    
+    <link rel="prev" href="16-数组简介.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1_HTML.html">
+            
+                <a href="../chapter1_HTML.html">
+            
+                    
+                    01-HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-HTML/01-认识Web和Web标准.html">
+            
+                <a href="../01-HTML/01-认识Web和Web标准.html">
+            
+                    
+                    01-认识Web和Web标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-HTML/03-初识HTML.html">
+            
+                <a href="../01-HTML/03-初识HTML.html">
+            
+                    
+                    03-初识HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-HTML/04-HTML标签：排版标签.html">
+            
+                <a href="../01-HTML/04-HTML标签：排版标签.html">
+            
+                    
+                    04-HTML标签：排版标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                <a href="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                    
+                    05-HTML标签：字体标签和超链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-HTML/06-HTML标签：图片标签.html">
+            
+                <a href="../01-HTML/06-HTML标签：图片标签.html">
+            
+                    
+                    06-HTML标签：图片标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-HTML/07-html标签图文详解（二）.html">
+            
+                <a href="../01-HTML/07-html标签图文详解（二）.html">
+            
+                    
+                    07-html标签图文详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-HTML/08-HTML5详解.html">
+            
+                <a href="../01-HTML/08-HTML5详解.html">
+            
+                    
+                    08-HTML5详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                <a href="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                    
+                    09-HTML5举例：简单的视频播放器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-HTML/10-HTML5详解（二）.html">
+            
+                <a href="../01-HTML/10-HTML5详解（二）.html">
+            
+                    
+                    10-HTML5详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-HTML/11-HTML5详解（三）.html">
+            
+                <a href="../01-HTML/11-HTML5详解（三）.html">
+            
+                    
+                    11-HTML5详解（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-HTML/12-HTML基础回顾.html">
+            
+                <a href="../01-HTML/12-HTML基础回顾.html">
+            
+                    
+                    12-HTML基础回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2_CSS基础.html">
+            
+                <a href="../chapter2_CSS基础.html">
+            
+                    
+                    02-CSS基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                <a href="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                    
+                    01-CSS属性：字体属性和文本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                <a href="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                    
+                    02-CSS属性：背景属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                <a href="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                    
+                    03-CSS样式表和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                <a href="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                    
+                    04-CSS选择器：伪类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                <a href="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                    
+                    05-CSS样式表的继承性和层叠性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                <a href="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                    
+                    06-CSS盒模型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-CSS基础/07-浮动.html">
+            
+                <a href="../02-CSS基础/07-浮动.html">
+            
+                    
+                    07-浮动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                <a href="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                    
+                    08-CSS属性：定位属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                <a href="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                    
+                    09-CSS案例讲解：博雅互动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                <a href="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                    
+                    10-CSS3选择器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                <a href="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                    
+                    11-CSS3属性详解（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                <a href="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                    
+                    12-CSS3属性详解：动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                <a href="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                    
+                    13-CSS3属性：Flex布局图文详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                <a href="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                    
+                    14-CSS3属性详解：Web字体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-CSS基础/15-Sass入门.html">
+            
+                <a href="../02-CSS基础/15-Sass入门.html">
+            
+                    
+                    15-Sass入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                <a href="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                    
+                    16-浏览器的兼容性问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                <a href="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                    
+                    CSS3的常见边框汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-CSS基础/others.html">
+            
+                <a href="../02-CSS基础/others.html">
+            
+                    
+                    others
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3_CSS进阶.html">
+            
+                <a href="../chapter3_CSS进阶.html">
+            
+                    
+                    03-CSS进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-CSS进阶/00-准备.html">
+            
+                <a href="../03-CSS进阶/00-准备.html">
+            
+                    
+                    00-准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                <a href="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                    
+                    01-CSS中的非布局样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-CSS进阶/02-CSS布局.html">
+            
+                <a href="../03-CSS进阶/02-CSS布局.html">
+            
+                    
+                    02-CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                <a href="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                    
+                    03-网页设计和开发中，关于字体的常识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                <a href="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                    
+                    04-如何让一个元素水平垂直居中？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-CSS进阶/CSS的一些小知识.html">
+            
+                <a href="../03-CSS进阶/CSS的一些小知识.html">
+            
+                    
+                    CSS的一些小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-CSS进阶/CSS开发积累.html">
+            
+                <a href="../03-CSS进阶/CSS开发积累.html">
+            
+                    
+                    CSS开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-CSS进阶/CSS面试题.html">
+            
+                <a href="../03-CSS进阶/CSS面试题.html">
+            
+                    
+                    CSS面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-CSS进阶/CSS文章推荐.html">
+            
+                <a href="../03-CSS进阶/CSS文章推荐.html">
+            
+                    
+                    CSS文章推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4_JavaScript基础.html">
+            
+                <a href="../chapter4_JavaScript基础.html">
+            
+                    
+                    04-JavaScript基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="00-编程语言.html">
+            
+                <a href="00-编程语言.html">
+            
+                    
+                    00-编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="01-JS简介.html">
+            
+                <a href="01-JS简介.html">
+            
+                    
+                    01-JS简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="02-变量.html">
+            
+                <a href="02-变量.html">
+            
+                    
+                    02-变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                <a href="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                    
+                    03-变量的数据类型：基本数据类型和引用数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="04-基本数据类型：String 和 Boolean.html">
+            
+                <a href="04-基本数据类型：String 和 Boolean.html">
+            
+                    
+                    04-基本数据类型：String 和 Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="05-基本数据类型：Number.html">
+            
+                <a href="05-基本数据类型：Number.html">
+            
+                    
+                    05-基本数据类型：Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="06-基本数据类型：Null 和 Undefined.html">
+            
+                <a href="06-基本数据类型：Null 和 Undefined.html">
+            
+                    
+                    06-基本数据类型：Null 和 Undefined
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="07-typeof和数据类型转换.html">
+            
+                <a href="07-typeof和数据类型转换.html">
+            
+                    
+                    07-typeof和数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="08-运算符.html">
+            
+                <a href="08-运算符.html">
+            
+                    
+                    08-运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="09-流程控制语句：选择结构（if和switch）.html">
+            
+                <a href="09-流程控制语句：选择结构（if和switch）.html">
+            
+                    
+                    09-流程控制语句：选择结构（if和switch）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="10-流程控制语句：循环结构（for和while）.html">
+            
+                <a href="10-流程控制语句：循环结构（for和while）.html">
+            
+                    
+                    10-流程控制语句：循环结构（for和while）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="11-对象简介.html">
+            
+                <a href="11-对象简介.html">
+            
+                    
+                    11-对象简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="12-基本包装类型.html">
+            
+                <a href="12-基本包装类型.html">
+            
+                    
+                    12-基本包装类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="13-内置对象 String：字符串的常见方法.html">
+            
+                <a href="13-内置对象 String：字符串的常见方法.html">
+            
+                    
+                    13-内置对象 String：字符串的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="14-内置对象：Number和Math.html">
+            
+                <a href="14-内置对象：Number和Math.html">
+            
+                    
+                    14-内置对象：Number和Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="15-内置对象：Date.html">
+            
+                <a href="15-内置对象：Date.html">
+            
+                    
+                    15-内置对象：Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="16-数组简介.html">
+            
+                <a href="16-数组简介.html">
+            
+                    
+                    16-数组简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.18" data-path="17-数组的常见方法.html">
+            
+                <a href="17-数组的常见方法.html">
+            
+                    
+                    17-数组的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="18-函数.html">
+            
+                <a href="18-函数.html">
+            
+                    
+                    18-函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="19-作用域和变量提升.html">
+            
+                <a href="19-作用域和变量提升.html">
+            
+                    
+                    19-作用域和变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="20-预编译.html">
+            
+                <a href="20-预编译.html">
+            
+                    
+                    20-预编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="21-执行期上下文.html">
+            
+                <a href="21-执行期上下文.html">
+            
+                    
+                    21-执行期上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="22-this.html">
+            
+                <a href="22-this.html">
+            
+                    
+                    22-this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="23-对象的创建&构造函数.html">
+            
+                <a href="23-对象的创建&构造函数.html">
+            
+                    
+                    23-对象的创建&构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="24-对象的基本操作.html">
+            
+                <a href="24-对象的基本操作.html">
+            
+                    
+                    24-对象的基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="25-对象的高级操作：Object.assign.html">
+            
+                <a href="25-对象的高级操作：Object.assign.html">
+            
+                    
+                    25-对象的高级操作：Object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="31-正则表达式.html">
+            
+                <a href="31-正则表达式.html">
+            
+                    
+                    31-正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="39-事件简介.html">
+            
+                <a href="39-事件简介.html">
+            
+                    
+                    39-事件简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.29" data-path="40-DOM简介和DOM操作.html">
+            
+                <a href="40-DOM简介和DOM操作.html">
+            
+                    
+                    40-DOM简介和DOM操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.30" data-path="41-通过style对象获取和设置行内样式.html">
+            
+                <a href="41-通过style对象获取和设置行内样式.html">
+            
+                    
+                    41-通过style对象获取和设置行内样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.31" data-path="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                <a href="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                    
+                    42-offset相关属性和匀速动画(含轮播图的实现)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.32" data-path="43-scroll相关属性和缓动动画.html">
+            
+                <a href="43-scroll相关属性和缓动动画.html">
+            
+                    
+                    43-scroll相关属性和缓动动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.33" data-path="44-client可视区相关属性.html">
+            
+                <a href="44-client可视区相关属性.html">
+            
+                    
+                    44-client可视区相关属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.34" data-path="45-事件的绑定和事件对象Event.html">
+            
+                <a href="45-事件的绑定和事件对象Event.html">
+            
+                    
+                    45-事件的绑定和事件对象Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.35" data-path="46-事件的传播和事件冒泡.html">
+            
+                <a href="46-事件的传播和事件冒泡.html">
+            
+                    
+                    46-事件的传播和事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.36" data-path="47-事件委托.html">
+            
+                <a href="47-事件委托.html">
+            
+                    
+                    47-事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.37" data-path="48-键盘事件.html">
+            
+                <a href="48-键盘事件.html">
+            
+                    
+                    48-键盘事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.38" data-path="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                <a href="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                    
+                    49-BOM简介和navigator.userAgent&History&Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.39" data-path="50-定时器.html">
+            
+                <a href="50-定时器.html">
+            
+                    
+                    50-定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.40" data-path="51-jQuery的介绍和选择器.html">
+            
+                <a href="51-jQuery的介绍和选择器.html">
+            
+                    
+                    51-jQuery的介绍和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.41" data-path="52-jQuery动画详解.html">
+            
+                <a href="52-jQuery动画详解.html">
+            
+                    
+                    52-jQuery动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.42" data-path="53-jQuery操作DOM.html">
+            
+                <a href="53-jQuery操作DOM.html">
+            
+                    
+                    53-jQuery操作DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.43" data-path="54-jQuery的事件机制和其他知识.html">
+            
+                <a href="54-jQuery的事件机制和其他知识.html">
+            
+                    
+                    54-jQuery的事件机制和其他知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.44" data-path="55-Zepto入门.html">
+            
+                <a href="55-Zepto入门.html">
+            
+                    
+                    55-Zepto入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.45" data-path="BOM的常见内置方法和内置对象.html">
+            
+                <a href="BOM的常见内置方法和内置对象.html">
+            
+                    
+                    BOM的常见内置方法和内置对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.46" data-path="闭包.html">
+            
+                <a href="闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.47" data-path="常见代码解读.html">
+            
+                <a href="常见代码解读.html">
+            
+                    
+                    常见代码解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.48" data-path="原型对象.html">
+            
+                <a href="原型对象.html">
+            
+                    
+                    原型对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.49" data-path="原型链.html">
+            
+                <a href="原型链.html">
+            
+                    
+                    原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5_JavaScript之ES6语法.html">
+            
+                <a href="../chapter5_JavaScript之ES6语法.html">
+            
+                    
+                    05-JavaScript之ES6语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                <a href="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                    
+                    01-ES5中的严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                    
+                    02-ES5中的一些扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                <a href="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                    
+                    03-ES6的介绍和环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                <a href="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                    
+                    04-ES6：变量let、const和块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                <a href="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                    
+                    05-ES6：变量的解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                    
+                    06-ES6：函数扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                    
+                    07-ES6：字符串、数组、对象的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                    
+                    08-ES6：Promise入门详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                    
+                    09-ES7：async函数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                <a href="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                    
+                    ES6：Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6_JavaScript进阶.html">
+            
+                <a href="../chapter6_JavaScript进阶.html">
+            
+                    
+                    06-JavaScript进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                <a href="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                    
+                    01-var、let、const的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                <a href="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                    
+                    call、apply、bind的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                <a href="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                    
+                    JavaScript开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-JavaScript进阶/this.html">
+            
+                <a href="../06-JavaScript进阶/this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-JavaScript进阶/创建对象和继承.html">
+            
+                <a href="../06-JavaScript进阶/创建对象和继承.html">
+            
+                    
+                    创建对象和继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                <a href="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                    
+                    浅拷贝和深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-JavaScript进阶/作用域和闭包.html">
+            
+                <a href="../06-JavaScript进阶/作用域和闭包.html">
+            
+                    
+                    作用域和闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter11_Vue基础.html">
+            
+                <a href="../chapter11_Vue基础.html">
+            
+                    
+                    11-Vue基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                <a href="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                    
+                    00-Vue的介绍和vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                <a href="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                    
+                    01-2v-on的事件修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../06-JavaScript进阶/01-03_Vue的系统指令(二">
+            
+                <span>
+            
+                    
+                    01-3Vue的系统指令(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                <a href="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                    
+                    01-4Vue的举例：列表功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                <a href="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                    
+                    01-6自定义按键修饰符&自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                <a href="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                    
+                    02-Vue实例的生命周期函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                <a href="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                    
+                    03-Vue中的Ajax请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../11-Vue基础/04-Vue动画.html">
+            
+                <a href="../11-Vue基础/04-Vue动画.html">
+            
+                    
+                    04-Vue动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                <a href="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                    
+                    05-Vue组件的定义和注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                <a href="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                    
+                    06-Vue组件之间的传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../11-Vue基础/07-Vue-router路由.html">
+            
+                <a href="../11-Vue基础/07-Vue-router路由.html">
+            
+                    
+                    07-Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                <a href="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                    
+                    Vue.js在开发中的常见写法积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../11-Vue基础/Vue-router路由.html">
+            
+                <a href="../11-Vue基础/Vue-router路由.html">
+            
+                    
+                    Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../11-Vue基础/Vue开发积累.html">
+            
+                <a href="../11-Vue基础/Vue开发积累.html">
+            
+                    
+                    Vue开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../11-Vue基础/Vue组件.html">
+            
+                <a href="../11-Vue基础/Vue组件.html">
+            
+                    
+                    Vue组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >17-数组的常见方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x6E05;&#x5355;">&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x6E05;&#x5355;</h2>
+<h3 id="&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;&#x76F8;&#x5173;">&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;&#x76F8;&#x5173;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Array.isArray()</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">toString()</td>
+<td style="text-align:left">&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Array.from(arrayLike)</td>
+<td style="text-align:left">&#x5C06;<strong>&#x4F2A;&#x6570;&#x7EC4;</strong>&#x8F6C;&#x5316;&#x4E3A;<strong>&#x771F;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Array.of(value1, value2, value3)</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#xFF1A;&#x5C06;<strong>&#x4E00;&#x7CFB;&#x5217;&#x503C;</strong>&#x8F6C;&#x6362;&#x6210;&#x6570;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x7528;<code>length</code>&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x662F;&#x65B9;&#x6CD5;&#x3002;&#x5173;&#x4E8E; <code>length</code>&#x5C5E;&#x6027;&#xFF0C;&#x8BE6;&#x89C1;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x3002;</p>
+<h3 id="&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;">&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">push()</td>
+<td style="text-align:left">&#x5411;&#x6570;&#x7EC4;&#x7684;<strong>&#x6700;&#x540E;&#x9762;</strong>&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">pop()</td>
+<td style="text-align:left">&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;<strong>&#x6700;&#x540E;&#x4E00;&#x4E2A;</strong>&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">unshift()</td>
+<td style="text-align:left">&#x5728;&#x6570;&#x7EC4;<strong>&#x6700;&#x524D;&#x9762;</strong>&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">shift()</td>
+<td style="text-align:left">&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">slice()</td>
+<td style="text-align:left">&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;<strong>&#x63D0;&#x53D6;</strong>&#x6307;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">splice()</td>
+<td style="text-align:left">&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;<strong>&#x5220;&#x9664;</strong>&#x6307;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x65B0;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">fill()</td>
+<td style="text-align:left">&#x586B;&#x5145;&#x6570;&#x7EC4;&#xFF1A;&#x7528;&#x56FA;&#x5B9A;&#x7684;&#x503C;&#x586B;&#x5145;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6570;&#x7EC4;&#x7684;&#x5408;&#x5E76;&#x548C;&#x62C6;&#x5206;">&#x6570;&#x7EC4;&#x7684;&#x5408;&#x5E76;&#x548C;&#x62C6;&#x5206;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">concat()</td>
+<td style="text-align:left">&#x5408;&#x5E76;&#x6570;&#x7EC4;&#xFF1A;&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">join()</td>
+<td style="text-align:left">&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</strong></td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">split()</td>
+<td style="text-align:left">&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x7EC4;&#x88C5;&#x4E3A;&#x6570;&#x7EC4;</td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6CE8;&#x610F;&#xFF0C;<code>split()</code>&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x6570;&#x7EC4;&#x6392;&#x5E8F;">&#x6570;&#x7EC4;&#x6392;&#x5E8F;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">reverse()</td>
+<td style="text-align:left">&#x53CD;&#x8F6C;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">sort()</td>
+<td style="text-align:left">&#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;,&#x9ED8;&#x8BA4;&#x6309;&#x7167;<strong>Unicode &#x7F16;&#x7801;</strong>&#xFF0C;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</td>
+<td style="text-align:left">&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x67E5;&#x627E;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;">&#x67E5;&#x627E;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">indexOf(value)</td>
+<td style="text-align:left">&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x7D22;&#x5F15;&#xFF0C;&#x68C0;&#x7D22;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndexOf(value)</td>
+<td style="text-align:left">&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x7D22;&#x5F15;&#xFF0C;&#x68C0;&#x7D22;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">find(function())</td>
+<td style="text-align:left">&#x627E;&#x51FA;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#x7684;&#x5143;&#x7D20;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">findIndex(function())</td>
+<td style="text-align:left">&#x627E;&#x51FA;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#x7684;&#x5143;&#x7D20;&#x7684; index</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">every()</td>
+<td style="text-align:left">&#x786E;&#x4FDD;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x904D;&#x5386;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x624D;&#x8FD4;&#x56DE; true</td>
+<td style="text-align:left">&#x5168;&#x771F;&#x624D;&#x4E3A;&#x771F;&#x3002;&#x8981;&#x6C42;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x8FD4;&#x56DE; true&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x624D;&#x8FD4;&#x56DE; true</td>
+</tr>
+<tr>
+<td style="text-align:left">some()</td>
+<td style="text-align:left">&#x6570;&#x7EC4;&#x4E2D;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x904D;&#x5386;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x5C31;&#x8FD4;&#x56DE; true</td>
+<td style="text-align:left">&#x4E00;&#x771F;&#x5373;&#x771F;&#x3002;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x9879;&#x8FD4;&#x56DE; true&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x8FD4;&#x56DE; true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x904D;&#x5386;&#x6570;&#x7EC4;">&#x904D;&#x5386;&#x6570;&#x7EC4;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">for &#x5FAA;&#x73AF;</td>
+<td style="text-align:left">&#x8FD9;&#x4E2A;&#x5927;&#x5BB6;&#x90FD;&#x61C2;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">forEach()</td>
+<td style="text-align:left">&#x548C; for &#x5FAA;&#x73AF;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x517C;&#x5BB9; IE8 &#x4EE5;&#x4E0A;</td>
+<td style="text-align:left">forEach() &#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; undefined</td>
+</tr>
+<tr>
+<td style="text-align:left">map()</td>
+<td style="text-align:left">&#x5BF9;&#x539F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FDB;&#x884C;&#x52A0;&#x5DE5;&#xFF0C;&#x5C06;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6570;&#x7EC4;</td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">filter()</td>
+<td style="text-align:left">&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#xFF1A;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F; true &#x7684;&#x9879;&#xFF0C;&#x5C06;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong></td>
+<td style="text-align:left">&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">reduce</td>
+<td style="text-align:left">&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x7D2F;&#x52A0;&#x5668;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7D2F;&#x8BA1;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="isarray&#xFF1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;">isArray()&#xFF1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x5E03;&#x5C14;&#x503C; = <span class="hljs-built_in">Array</span>.isArray(&#x88AB;&#x68C0;&#x6D4B;&#x7684;&#x6570;&#x7EC4;);
+</code></pre>
+<p>&#x4EE5;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7; <code>A instanceof B</code>&#x6765;&#x5224;&#x65AD; A &#x662F;&#x5426;&#x5C5E;&#x4E8E; B &#x7C7B;&#x578B;&#x3002;&#x4F46;&#x662F;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#xFF0C;&#x8FD9;&#x79CD; instanceof &#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x7528;&#x7684;&#x4E0D;&#x591A;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6709; isArray()&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="tostring&#xFF1A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;">toString()&#xFF1A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</h2>
+<pre><code class="lang-javascript">&#x5B57;&#x7B26;&#x4E32; = &#x6570;&#x7EC4;.toString();
+</code></pre>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x7528;<code>,</code>&#x5206;&#x5272;&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x5927;&#x591A;&#x6570;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>.toString()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h3 id="&#x77E5;&#x8BC6;&#x70B9;&#x8865;&#x5145;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6709;&#x54EA;&#x4E9B;&#x65B9;&#x5F0F;">&#x77E5;&#x8BC6;&#x70B9;&#x8865;&#x5145;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6709;&#x54EA;&#x4E9B;&#x65B9;&#x5F0F;</h3>
+<p>&#x65B9;&#x5F0F; 1&#xFF1A;</p>
+<pre><code class="lang-js">&#x5B57;&#x7B26;&#x4E32; = &#x6570;&#x7EC4;.toString();
+</code></pre>
+<p>&#x65B9;&#x5F0F; 2&#xFF1A;</p>
+<pre><code class="lang-js">&#x5B57;&#x7B26;&#x4E32; = <span class="hljs-built_in">String</span>(&#x6570;&#x7EC4;);
+</code></pre>
+<p>&#x65B9;&#x5F0F; 3&#xFF1A;</p>
+<pre><code class="lang-js">&#x5B57;&#x7B26;&#x4E32; = &#x6570;&#x7EC4;.join(<span class="hljs-string">&apos;,&apos;</span>); <span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x7528; &#x82F1;&#x6587;&#x9017;&#x53F7; &#x5206;&#x9694;</span>
+</code></pre>
+<h2 id="arrayfrom&#xFF1A;&#x5C06;&#x4F2A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x6570;&#x7EC4;">Array.from()&#xFF1A;&#x5C06;&#x4F2A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x6570;&#x7EC4;</h2>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">array = <span class="hljs-built_in">Array</span>.from(arrayLike);
+</code></pre>
+<p><strong>&#x4F5C;&#x7528;</strong>&#xFF1A;&#x5C06;<strong>&#x4F2A;&#x6570;&#x7EC4;</strong>&#x6216;&#x53EF;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;<strong>&#x771F;&#x6570;&#x7EC4;</strong>&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;qianguyihao&apos;</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from(name)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F;&#x6570;&#x7EC4;&#xFF1A;[&quot;q&quot;,&quot;i&quot;,&quot;a&quot;,&quot;n&quot;,&quot;g&quot;,&quot;u&quot;,&quot;y&quot;,&quot;i&quot;,&quot;h&quot;,&quot;a&quot;,&quot;o&quot;]</span>
+</code></pre>
+<h3 id="&#x4F2A;&#x6570;&#x7EC4;&#x4E0E;&#x771F;&#x6570;&#x7EC4;&#x7684;&#x533A;&#x522B;">&#x4F2A;&#x6570;&#x7EC4;&#x4E0E;&#x771F;&#x6570;&#x7EC4;&#x7684;&#x533A;&#x522B;</h3>
+<p><strong>&#x4F2A;&#x6570;&#x7EC4;</strong>&#xFF1A;&#x5305;&#x542B; length &#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x6216;&#x53EF;&#x8FED;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4F2A;&#x6570;&#x7EC4;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x6CA1;&#x6709; Array.prototype&#xFF0C;&#x800C;&#x771F;&#x6570;&#x7EC4;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x6709; Array.prototype&#x3002;&#x56E0;&#x6B64;&#x4F2A;&#x6570;&#x7EC4;&#x6CA1;&#x6709;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x822C;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982; pop()&#x3001;join() &#x7B49;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x4F2A;&#x6570;&#x7EC4;&#x4E3E;&#x4F8B;">&#x4F2A;&#x6570;&#x7EC4;&#x4E3E;&#x4F8B;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x6309;&#x94AE;1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x6309;&#x94AE;2<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x6309;&#x94AE;3<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">let</span> btnArray = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&apos;button&apos;</span>);
+        <span class="hljs-built_in">console</span>.log(btnArray);
+        <span class="hljs-built_in">console</span>.log(btnArray[<span class="hljs-number">0</span>]);
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x4E2D;&#xFF0C;&#x6709;&#x4E09;&#x4E2A; button &#x6807;&#x7B7E;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>getElementsByTagName</code>&#x83B7;&#x53D6;&#x5230;&#x7684;<code>btnArray</code>&#x5B9E;&#x9645;&#x4E0A;&#x662F;<strong>&#x4F2A;&#x6570;&#x7EC4;</strong>&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x5B9E;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180402_1116.png" alt=""></p>
+<p>&#x65E2;&#x7136;<code>btnArray</code>&#x662F;&#x4F2A;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x5C31;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x822C;&#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180402_1121.png" alt=""></p>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x91C7;&#x7528;<code>Array.from</code>&#x65B9;&#x6CD5;&#x5C06;<code>btnArray</code>&#x8FD9;&#x4E2A;&#x4F2A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x6570;&#x7EC4;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Array</span>.from(btnArray);
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x822C;&#x65B9;&#x6CD5;&#x4E86;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180402_1125.png" alt=""></p>
+<h2 id="arrayof&#xFF1A;&#x521B;&#x5EFA;&#x6570;&#x7EC4;">Array.of()&#xFF1A;&#x521B;&#x5EFA;&#x6570;&#x7EC4;</h2>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Array</span>.of(value1, value2, value3);
+</code></pre>
+<p><strong>&#x4F5C;&#x7528;</strong>&#xFF1A;&#x6839;&#x636E;&#x53C2;&#x6570;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = <span class="hljs-built_in">Array</span>.of(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;abc&apos;</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F;&#x6570;&#x7EC4;&#xFF1A;[1, &quot;abc&quot;, true]</span>
+</code></pre>
+<p>&#x8865;&#x5145;&#xFF1A;<code>new Array()</code>&#x548C; <code>Array.of()</code>&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;&#x5F53;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#xFF0C;&#x524D;&#x8005;&#x8868;&#x793A;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x540E;&#x8005;&#x8868;&#x793A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;">&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;</h2>
+<h3 id="push">push()</h3>
+<p><code>push()</code>&#xFF1A;&#x5411;&#x6570;&#x7EC4;&#x7684;<strong>&#x6700;&#x540E;&#x9762;</strong>&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6; = &#x6570;&#x7EC4;.push(&#x5143;&#x7D20;);
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x738B;&#x4E00;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E8C;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E09;&apos;</span>];
+
+<span class="hljs-keyword">var</span> result1 = arr.push(<span class="hljs-string">&apos;&#x738B;&#x56DB;&apos;</span>); <span class="hljs-comment">// &#x672B;&#x5C3E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> result2 = arr.push(<span class="hljs-string">&apos;&#x738B;&#x4E94;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x516D;&apos;</span>); <span class="hljs-comment">// &#x672B;&#x5C3E;&#x63D2;&#x5165;&#x591A;&#x4E2A;&#x5143;&#x7D20;</span>
+
+<span class="hljs-built_in">console</span>.log(result1); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;4</span>
+<span class="hljs-built_in">console</span>.log(result2); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;6</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[&quot;&#x738B;&#x4E00;&quot;,&quot;&#x738B;&#x4E8C;&quot;,&quot;&#x738B;&#x4E09;&quot;,&quot;&#x738B;&#x56DB;&quot;,&quot;&#x738B;&#x4E94;&quot;,&quot;&#x738B;&#x516D;&quot;]</span>
+</code></pre>
+<h3 id="pop">pop()</h3>
+<p><code>pop()</code>&#xFF1A;&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;<strong>&#x6700;&#x540E;&#x4E00;&#x4E2A;</strong>&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;</strong>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20; = &#x6570;&#x7EC4;.pop();
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x738B;&#x4E00;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E8C;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E09;&apos;</span>];
+
+<span class="hljs-keyword">var</span> result1 = arr.pop();
+
+<span class="hljs-built_in">console</span>.log(result1); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;&#x738B;&#x4E09;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[&quot;&#x738B;&#x4E00;&quot;,&quot;&#x738B;&#x4E8C;&quot;]</span>
+</code></pre>
+<h3 id="unshift">unshift()</h3>
+<p><code>unshift()</code>&#xFF1A;&#x5728;&#x6570;&#x7EC4;<strong>&#x6700;&#x524D;&#x9762;</strong>&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong>&#x3002;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x540E;&#xFF0C;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F1A;&#x4F9D;&#x6B21;&#x8C03;&#x6574;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6; = &#x6570;&#x7EC4;.unshift(&#x5143;&#x7D20;);
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x738B;&#x4E00;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E8C;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E09;&apos;</span>];
+
+<span class="hljs-keyword">var</span> result1 = arr.unshift(<span class="hljs-string">&apos;&#x738B;&#x56DB;&apos;</span>); <span class="hljs-comment">// &#x6700;&#x524D;&#x9762;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> result2 = arr.unshift(<span class="hljs-string">&apos;&#x738B;&#x4E94;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x516D;&apos;</span>); <span class="hljs-comment">// &#x6700;&#x524D;&#x9762;&#x63D2;&#x5165;&#x591A;&#x4E2A;&#x5143;&#x7D20;</span>
+
+<span class="hljs-built_in">console</span>.log(result1); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;4</span>
+<span class="hljs-built_in">console</span>.log(result2); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;6</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[&quot;&#x738B;&#x4E94;&quot;,&quot;&#x738B;&#x516D;&quot;,&quot;&#x738B;&#x56DB;&quot;,&quot;&#x738B;&#x4E00;&quot;,&quot;&#x738B;&#x4E8C;&quot;,&quot;&#x738B;&#x4E09;&quot;]</span>
+</code></pre>
+<h3 id="shift">shift()</h3>
+<p><code>shift()</code>&#xFF1A;&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;</strong>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20; = &#x6570;&#x7EC4;.shift();
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x738B;&#x4E00;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E8C;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E09;&apos;</span>];
+
+<span class="hljs-keyword">var</span> result1 = arr.shift();
+
+<span class="hljs-built_in">console</span>.log(result1); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;&#x738B;&#x4E00;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[&quot;&#x738B;&#x4E8C;&quot;,&quot;&#x738B;&#x4E09;&quot;]</span>
+</code></pre>
+<h3 id="slice">slice()</h3>
+<p><code>slice()</code>&#xFF1A;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;<strong>&#x63D0;&#x53D6;</strong>&#x6307;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong>&#xFF08;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x622A;&#x53D6;&#x5230;&#x7684;&#x5143;&#x7D20;&#x5C01;&#x88C5;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x65B0;&#x6570;&#x7EC4; = &#x539F;&#x6570;&#x7EC4;.slice(&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x7684;&#x7D22;&#x5F15;, &#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x7684;&#x7D22;&#x5F15;); <span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF1A;&#x5305;&#x542B;&#x5F00;&#x59CB;&#x7D22;&#x5F15;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x7ED3;&#x675F;&#x7D22;&#x5F15;</span>
+</code></pre>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+
+<span class="hljs-keyword">const</span> result1 = arr.slice(); <span class="hljs-comment">// &#x4E0D;&#x52A0;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5219;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x3002;&#x76F8;&#x5F53;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x6574;&#x4F53;&#x8D4B;&#x503C;</span>
+<span class="hljs-keyword">const</span> result2 = arr.slice(<span class="hljs-number">2</span>); <span class="hljs-comment">// &#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5F00;&#x59CB;&#x63D0;&#x53D6;&#xFF0C;&#x76F4;&#x5230;&#x672B;&#x5C3E;</span>
+<span class="hljs-keyword">const</span> result3 = arr.slice(<span class="hljs-number">-2</span>); <span class="hljs-comment">// &#x63D0;&#x53D6;&#x6700;&#x540E;&#x4E24;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">const</span> result4 = arr.slice(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// &#x63D0;&#x53D6;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5230;&#x7B2C;&#x56DB;&#x4E2A;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7B2C;&#x56DB;&#x4E2A;&#x5143;&#x7D20;&#xFF09;</span>
+<span class="hljs-keyword">const</span> result5 = arr.slice(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// &#x7A7A;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result1:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result2:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result2));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result3:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result3));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result4:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result4));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result5:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result5));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">arr: [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+result1: [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+result2: [<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+result3: [<span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+result4: [<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>];
+result5: [];
+</code></pre>
+<p><strong>&#x8865;&#x5145;</strong>&#xFF1A;</p>
+<p>&#x5F88;&#x591A;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4F1A;&#x7528; slice()&#x5C06;&#x4F2A;&#x6570;&#x7EC4;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A;&#x771F;&#x6570;&#x7EC4;&#x3002;&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x65B9;&#x5F0F;1</span>
+array = <span class="hljs-built_in">Array</span>.prototye.slice.call(arrayLike);
+
+<span class="hljs-comment">// &#x65B9;&#x5F0F;2</span>
+array = [].slice.call(arrayLike);
+</code></pre>
+<p>ES6 &#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#x8FD9;&#x79CD;&#x8E69;&#x811A;&#x7684;&#x8F6C;&#x5316;&#x65B9;&#x6CD5;&#xFF0C;&#x4E8E;&#x662F;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684; API&#xFF1A;&#xFF08;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5C06;&#x4F2A;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x6210;&#x771F;&#x6570;&#x7EC4;&#xFF09;</p>
+<pre><code class="lang-javascript">array = <span class="hljs-built_in">Array</span>.from(arrayLike);
+</code></pre>
+<p>&#x5173;&#x4E8E;&#x8FD9;&#x4E2A; API &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x8BB2;&#x4E86;&#xFF0C;&#x8BF7;&#x5F80;&#x524D;&#x7FFB;&#x3002;</p>
+<h3 id="splice">splice()</h3>
+<p><code>splice()</code>&#xFF1A;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;<strong>&#x5220;&#x9664;</strong>&#x6307;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x88AB;&#x5220;&#x9664;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x65B0;&#x6570;&#x7EC4;</strong>&#xFF08;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x4F1A;&#x5C06;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x4ECE;&#x539F;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#xFF1B;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x5C01;&#x88C5;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">
+&#x65B0;&#x6570;&#x7EC4; = &#x539F;&#x6570;&#x7EC4;.splice(&#x8D77;&#x59CB;&#x7D22;&#x5F15;index, &#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x4E2A;&#x6570;);
+
+&#x65B0;&#x6570;&#x7EC4; = &#x539F;&#x6570;&#x7EC4;.splice(&#x8D77;&#x59CB;&#x7D22;&#x5F15;index, &#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x4E2A;&#x6570;, &#x65B0;&#x7684;&#x5143;&#x7D20;<span class="hljs-number">1</span>, &#x65B0;&#x7684;&#x5143;&#x7D20;<span class="hljs-number">2.</span>..);
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x8BED;&#x6CD5;&#x4E2D;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53CA;&#x4E4B;&#x540E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#xFF1A;&#x5220;&#x9664;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#xFF0C;&#x5411;&#x539F;&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x63D2;&#x5165;&#x5230;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x7D22;&#x5F15;&#x7684;&#x524D;&#x9762;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#xFF1A;&#x5220;&#x9664;&#x4E86;&#x54EA;&#x4E9B;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x5728;&#x90A3;&#x4E9B;&#x5143;&#x7D20;&#x7684;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x8865;&#x5145;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B; 1&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+<span class="hljs-keyword">var</span> result1 = arr1.splice(<span class="hljs-number">1</span>); <span class="hljs-comment">//&#x4ECE;&#x7B2C;index&#x4E3A;1&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#xFF0C;&#x5220;&#x9664;&#x5143;&#x7D20;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr1&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result1&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result1));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>    arr1&#xFF1A;[&quot;a&quot;]
+    result1&#xFF1A;[&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;]
+</code></pre><p>&#x4E3E;&#x4F8B; 2&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr2 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+<span class="hljs-keyword">var</span> result2 = arr2.splice(<span class="hljs-number">-2</span>); <span class="hljs-comment">//&#x5220;&#x9664;&#x6700;&#x540E;&#x4E24;&#x4E2A;&#x5143;&#x7D20;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr2&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr2));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result2&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result2));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>    arr2&#xFF1A;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]
+    result2&#xFF1A;[&quot;e&quot;,&quot;f&quot;]
+</code></pre><p>&#x4E3E;&#x4F8B; 3&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr3 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+<span class="hljs-keyword">var</span> result3 = arr3.splice(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//&#x4ECE;&#x7B2C;index&#x4E3A;1&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5220;&#x9664;&#x5143;&#x7D20;,&#x4E00;&#x5171;&#x5220;&#x9664;&#x4E09;&#x4E2A;&#x5143;&#x7D20;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr3&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr3));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result3&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result3));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>    arr3&#xFF1A;[&quot;a&quot;,&quot;e&quot;,&quot;f&quot;]
+    result3&#xFF1A;[&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]
+</code></pre><p>&#x4E3E;&#x4F8B; 4&#xFF1A;&#xFF08;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;<strong>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;</strong>&#x7684;&#x7528;&#x6CD5;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr4 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+
+<span class="hljs-comment">//&#x4ECE;&#x7B2C;index&#x4E3A;1&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5220;&#x9664;&#x5143;&#x7D20;,&#x4E00;&#x5171;&#x5220;&#x9664;&#x4E09;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5E76;&#x4E14;&#x5728; index=1 &#x7684;&#x524D;&#x9762;&#x8FFD;&#x52A0;&#x4E24;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> result4 = arr4.splice(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, <span class="hljs-string">&apos;vae&apos;</span>);
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr4&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr4));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result4&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result4));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">arr4&#xFF1A;[<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;&#x5343;&#x53E4;&#x58F9;&#x53F7;&quot;</span>,<span class="hljs-string">&quot;vae&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;f&quot;</span>]
+result4&#xFF1A;[<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>]
+</code></pre>
+<h3 id="fill">fill()</h3>
+<p><code>fill()</code>&#xFF1A;&#x7528;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#x586B;&#x5145;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong>&#x3002;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7528;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#x586B;&#x5145;&#x6570;&#x7EC4;&#x3002;&#x6570;&#x7EC4;&#x91CC;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x88AB;&#x8FD9;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#x586B;&#x5145;</span>
+&#x65B0;&#x6570;&#x7EC4; = &#x6570;&#x7EC4;.fill(&#x56FA;&#x5B9A;&#x503C;);
+
+<span class="hljs-comment">// &#x4ECE; startIndex &#x5F00;&#x59CB;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#xFF0C;&#x7528;&#x56FA;&#x5B9A;&#x503C;&#x586B;&#x5145;</span>
+&#x65B0;&#x6570;&#x7EC4; = &#x6570;&#x7EC4;.fill(&#x56FA;&#x5B9A;&#x503C;, startIndex);
+
+<span class="hljs-comment">// &#x4ECE; startIndex &#x5230; endIndex &#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x5305;&#x5DE6;&#x4E0D;&#x5305;&#x53F3;&#xFF09;&#xFF0C;&#x7528;&#x56FA;&#x5B9A;&#x503C;&#x586B;&#x5145;</span>
+&#x65B0;&#x6570;&#x7EC4; = &#x6570;&#x7EC4;.fill(&#x56FA;&#x5B9A;&#x503C;, startIndex, endIndex);
+</code></pre>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;4&#x7684;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x7528; &apos;f&apos; &#x6765;&#x586B;&#x5145;&#x8FD9;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>(<span class="hljs-number">4</span>).fill(<span class="hljs-string">&apos;f&apos;</span>)); <span class="hljs-comment">// [&apos;f&apos;, &apos;f&apos;, &apos;f,&apos; &apos;f&apos;]</span>
+
+<span class="hljs-comment">// &#x5C06;&#x73B0;&#x6709;&#x6570;&#x7EC4;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x8FDB;&#x884C;&#x586B;&#x5145;</span>
+<span class="hljs-built_in">console</span>.log([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>].fill(<span class="hljs-string">&apos;f&apos;</span>)); <span class="hljs-comment">// [&apos;f&apos;, &apos;f&apos;, &apos;f,&apos; &apos;f&apos;]</span>
+
+<span class="hljs-comment">// &#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x586B;&#x5145;</span>
+<span class="hljs-built_in">console</span>.log([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>].fill(<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// [&quot;a&quot;, &quot;f&quot;, &quot;f&quot;, &quot;d&quot;]</span>
+</code></pre>
+<h2 id="&#x7D20;&#x7EC4;&#x7684;&#x5408;&#x5E76;&#x548C;&#x62C6;&#x5206;">&#x7D20;&#x7EC4;&#x7684;&#x5408;&#x5E76;&#x548C;&#x62C6;&#x5206;</h2>
+<h3 id="concat">concat()</h3>
+<p><code>concat()</code>&#xFF1A;&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x65B0;&#x7684;&#x6570;&#x7EC4;</strong>&#x3002;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;<code>concat()</code>&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x662F;<strong>&#x6570;&#x7EC4;&#x5408;&#x5E76;</strong>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">    &#x65B0;&#x6570;&#x7EC4; = &#x6570;&#x7EC4;<span class="hljs-number">1.</span>concat(&#x6570;&#x7EC4;<span class="hljs-number">2</span>, &#x6570;&#x7EC4;<span class="hljs-number">3</span> ...);
+</code></pre>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">const</span> arr2 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+<span class="hljs-keyword">const</span> arr3 = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, <span class="hljs-string">&apos;vae&apos;</span>];
+
+<span class="hljs-keyword">const</span> result1 = arr1.concat(arr2);
+
+<span class="hljs-keyword">const</span> result2 = arr2.concat(arr1, arr3);
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr1 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr2 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr2));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr3 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr3));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result1 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result2 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result2));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+arr2 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+arr3 = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, <span class="hljs-string">&apos;vae&apos;</span>];
+
+result1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+result2 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, <span class="hljs-string">&apos;vae&apos;</span>];
+</code></pre>
+<p>&#x4ECE;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x539F;&#x6570;&#x7EC4;&#x5E76;&#x6CA1;&#x6709;&#x88AB;&#x4FEE;&#x6539;&#x3002;</p>
+<p><strong>&#x6570;&#x7EC4;&#x5408;&#x5E76;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;</strong>&#xFF1A;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>...</code>&#x8FD9;&#x79CD;&#x5C55;&#x5F00;&#x8BED;&#x6CD5;&#xFF0C;&#x5C06;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;&#x4E3E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> result = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, ...arr1];
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(result)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,1,2,3]</span>
+</code></pre>
+<h3 id="join">join()</h3>
+<p><code>join()</code>&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</strong>&#xFF08;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>&#x8865;&#x5145;&#xFF1A;<code>join()</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;<strong>&#x5B57;&#x7B26;&#x4E32;</strong>&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x4F1A;&#x6210;&#x4E3A;&#x6570;&#x7EC4;&#x4E2D;&#x5143;&#x7D20;&#x7684;<strong>&#x8FDE;&#x63A5;&#x7B26;</strong>&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7B26;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; <code>,</code> &#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x7B26;&#xFF0C;&#x6B64;&#x65F6;&#x548C; <code>toString()&#x7684;&#x6548;&#x679C;&#x662F;&#x4E00;&#x81F4;&#x7684;</code>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32; = &#x539F;&#x6570;&#x7EC4;.join(&#x53C2;&#x6570;); <span class="hljs-comment">// &#x53C2;&#x6570;&#x9009;&#x586B;</span>
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+
+<span class="hljs-keyword">var</span> result1 = arr.join(); <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7B26;&#xFF0C;&#x6240;&#x4EE5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; , &#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x7B26;</span>
+
+<span class="hljs-keyword">var</span> result2 = arr.join(<span class="hljs-string">&apos;-&apos;</span>); <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x7B26;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> arr); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;object</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> result1); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;string</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result1 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result2 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result2));
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x4E09;&#x884C;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-bash">arr =[<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>]
+result1 =a,b,c
+result2 =a-b-c
+</code></pre>
+<h3 id="split">split()</h3>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF0C;<code>split()</code>&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x65B0;&#x7684;&#x6570;&#x7EC4; = str.split(&#x5206;&#x9694;&#x7B26;);
+</code></pre>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x62C6;&#x5206;&#x6210;&#x4E00;&#x4E2A;<strong>&#x6570;&#x7EC4;</strong>&#x3002;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;<code>split()</code>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x7528;&#x5F97;&#x975E;&#x5E38;&#x591A;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x4ECE;&#x63A5;&#x53E3;&#x62FF;&#x5230;&#x7684; json &#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x6536;&#x5230;&#x7C7B;&#x4F3C;&#x4E8E;<code>&quot;q, i, a, n&quot;</code>&#x8FD9;&#x6837;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x524D;&#x7AEF;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x62C6;&#x5206;&#x6210;<code>[&apos;q&apos;, &apos;i&apos;, &apos;a&apos;, &apos;n&apos;]</code>&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;<code>split()</code>&#x65B9;&#x6CD5;&#x5C31;&#x6D3E;&#x4E0A;&#x7528;&#x573A;&#x4E86;&#x3002;</p>
+<h2 id="reverse">reverse()</h2>
+<p><code>reverse()</code>&#xFF1A;&#x53CD;&#x8F6C;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;<strong>&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x6570;&#x7EC4;</strong>&#xFF08;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js">&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x6570;&#x7EC4; = &#x6570;&#x7EC4;.reverse();
+</code></pre>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>];
+
+<span class="hljs-keyword">var</span> result = arr.reverse(); <span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr &#x8FDB;&#x884C;&#x53CD;&#x8F6C;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>arr =[&quot;f&quot;,&quot;e&quot;,&quot;d&quot;,&quot;c&quot;,&quot;b&quot;,&quot;a&quot;]
+result =[&quot;f&quot;,&quot;e&quot;,&quot;d&quot;,&quot;c&quot;,&quot;b&quot;,&quot;a&quot;]
+</code></pre><p>&#x4ECE;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#x5DF2;&#x7ECF;&#x88AB;&#x6539;&#x53D8;&#x4E86;&#x3002;</p>
+<h2 id="sort&#x65B9;&#x6CD5;">sort()&#x65B9;&#x6CD5;</h2>
+<blockquote>
+<p>sort()&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x597D;&#x597D;&#x7406;&#x89E3;&#x3002;</p>
+</blockquote>
+<p><code>sort()</code>&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6765;&#x6392;&#x5E8F;&#xFF08;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<h3 id="sort&#x65B9;&#x6CD5;&#xFF1A;&#x65E0;&#x53C2;&#x65F6;">sort()&#x65B9;&#x6CD5;&#xFF1A;&#x65E0;&#x53C2;&#x65F6;</h3>
+<p>&#x5982;&#x679C;&#x5728;&#x4F7F;&#x7528; sort() &#x65B9;&#x6CD5;&#x65F6;&#x4E0D;&#x5E26;&#x53C2;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x6309;&#x7167;<strong>Unicode &#x7F16;&#x7801;</strong>&#xFF0C;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;&#xFF08;&#x5F53;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr1 = [<span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+
+<span class="hljs-keyword">let</span> result = arr1.sort(); <span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr1 &#x8FDB;&#x884C;&#x6392;&#x5E8F;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr1 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>    arr1 =[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;]
+    result =[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;]
+</code></pre><p>&#x4ECE;&#x4E0A;&#x65B9;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;sort &#x65B9;&#x6CD5;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x800C;&#x4E14;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x662F;&#x540C;&#x6837;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;&#xFF08;&#x5F53;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E3A;&#x6570;&#x5B57;&#x65F6;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr2 = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>];
+
+<span class="hljs-keyword">let</span> result = arr2.sort(); <span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr2 &#x8FDB;&#x884C;&#x6392;&#x5E8F;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr2 =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr2));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>arr2 =[1,11,2,3,4,5]
+result =[1,11,2,3,4,5]
+</code></pre><p>&#x4E0A;&#x65B9;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x4F7F;&#x7528; sort() &#x6392;&#x5E8F;&#x540E;&#xFF0C;&#x6570;&#x5B57;<code>11</code>&#x7ADF;&#x7136;&#x5728;&#x6570;&#x5B57;<code>2</code>&#x7684;&#x524D;&#x9762;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x5565;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x4E0A;&#x9762;&#x8BB2;&#x5230;&#x4E86;&#xFF0C;<code>sort()</code>&#x65B9;&#x6CD5;&#x662F;&#x6309;&#x7167;<strong>Unicode &#x7F16;&#x7801;</strong>&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x7684;&#x3002;</p>
+<p>&#x90A3;&#x5982;&#x679C;&#x6211;&#x60F3;&#x8BA9; arr2 &#x91CC;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5B8C;&#x5168;&#x6309;&#x7167;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x600E;&#x4E48;&#x64CD;&#x4F5C;&#x5462;&#xFF1F;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x770B;&#x3002;</p>
+<h3 id="sort&#x65B9;&#x6CD5;&#xFF1A;&#x5E26;&#x53C2;&#x65F6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;">sort()&#x65B9;&#x6CD5;&#xFF1A;&#x5E26;&#x53C2;&#x65F6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;</h3>
+<p>&#x5982;&#x679C;&#x5728; sort()&#x65B9;&#x6CD5;&#x4E2D;&#x5E26;&#x53C2;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;<strong>&#x81EA;&#x5B9A;&#x4E49;</strong>&#x6392;&#x5E8F;&#x89C4;&#x5219;&#x3002;&#x5177;&#x4F53;&#x505A;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; sort()&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x6765;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x89C4;&#x5219;&#x3002;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x4F1A;&#x5206;&#x522B;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4F5C;&#x4E3A;&#x5B9E;&#x53C2;&#x53BB;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x6839;&#x636E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6765;&#x51B3;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x6392;&#x5E8F;&#xFF1A;&#xFF08;&#x91CD;&#x8981;&#xFF09;</p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E; 0 &#x7684;&#x503C;&#xFF0C;&#x5219;&#x5143;&#x7D20;&#x4F1A;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;</p>
+</li>
+<li><p><strong>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E; 0 &#x7684;&#x503C;&#xFF0C;&#x5219;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;</strong></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7B49;&#x4E8E; 0 &#x7684;&#x503C;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x4E0D;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;</p>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x53EA;&#x662F;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x53EF;&#x80FD;&#x4E0D;&#x592A;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x80AF;&#x5B9A;&#x5C31;&#x80FD;&#x660E;&#x767D;&#x3002;</p>
+<h3 id="&#x4E3E;&#x4F8B;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x6309;&#x7167;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;">&#x4E3E;&#x4F8B;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x6309;&#x7167;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;</h3>
+<p><strong>&#x5199;&#x6CD5; 1</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>];
+
+<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;</span>
+<span class="hljs-keyword">var</span> result = arr.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">if</span> (a &gt; b) {
+        <span class="hljs-comment">// &#x5982;&#x679C; a &#x5927;&#x4E8E; b&#xFF0C;&#x5219;&#x4EA4;&#x6362; a &#x548C; b &#x7684;&#x4F4D;&#x7F6E;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a &lt; b) {
+        <span class="hljs-comment">// &#x5982;&#x679C; a &#x5C0F;&#x4E8E; b&#xFF0C;&#x5219;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// &#x5982;&#x679C; a &#x7B49;&#x4E8E; b&#xFF0C;&#x5219;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">11</span>];
+result = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">11</span>];
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x7684;&#x5199;&#x6CD5;&#x592A;&#x5570;&#x55E6;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4E3A;&#x5982;&#x4E0B;&#x5199;&#x6CD5;&#xFF1A;</p>
+<p><strong>&#x5199;&#x6CD5; 2</strong>&#xFF1A;&#xFF08;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>];
+
+<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;</span>
+<span class="hljs-keyword">let</span> result = arr.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a - b; <span class="hljs-comment">// &#x5347;&#x5E8F;&#x6392;&#x5217;</span>
+    <span class="hljs-comment">// return b - a; // &#x964D;&#x5E8F;&#x6392;&#x5217;</span>
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x8FD8;&#x53EF;&#x4EE5;&#x5199;&#x6210; ES6 &#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06; function &#x6539;&#x4E3A;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#x3002;</p>
+<p><strong>&#x5199;&#x6CD5; 3</strong>&#xFF1A;&#xFF08;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>];
+
+<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;</span>
+<span class="hljs-keyword">let</span> result = arr.sort((a, b) =&gt; {
+    <span class="hljs-keyword">return</span> a - b; <span class="hljs-comment">// &#x5347;&#x5E8F;&#x6392;&#x5217;</span>
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x53EA;&#x6709;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x53BB;&#x6389; return &#x8BED;&#x53E5;&#xFF0C;&#x7EE7;&#x7EED;&#x7B80;&#x5316;&#x4E3A;&#x5982;&#x4E0B;&#x5199;&#x6CD5;&#x3002;</p>
+<p><strong>&#x5199;&#x6CD5; 4</strong>&#xFF1A;&#xFF08;&#x63A8;&#x8350;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>];
+
+<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x89C4;&#x5219;&#xFF1A;&#x5347;&#x5E8F;&#x6392;&#x5217;</span>
+<span class="hljs-keyword">let</span> result = arr.sort((a, b) =&gt; a - b);
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result =&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(result));
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x5404;&#x79CD;&#x5199;&#x6CD5;&#x4E2D;&#xFF0C;&#x5199;&#x6CD5; 4 &#x662F;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x6218;&#x5F00;&#x53D1;&#x4E2D;&#x7528;&#x5F97;&#x6700;&#x591A;&#x7684;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x4EE3;&#x7801;&#x7684;&#x7B80;&#x6D01;&#x4F18;&#x96C5;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x51E1;&#x662F;&#x6D89;&#x53CA;&#x5230;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5C3D;&#x91CF;&#x91C7;&#x7528; ES6 &#x4E2D;&#x7684;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x6765;&#x5199;&#x3002;</p>
+<h3 id="sort-&#x65B9;&#x6CD5;&#x4E3E;&#x4F8B;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;">sort &#x65B9;&#x6CD5;&#x4E3E;&#x4F8B;&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;</h3>
+<p>&#x5C06;&#x6570;&#x7EC4;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5F88;&#x5E38;&#x89C1;&#x3002;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x603B;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x82B1;&#x6837;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x638C;&#x63E1;&#x3002;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+            <span class="hljs-keyword">let</span> dataList = [
+                {
+                    title: <span class="hljs-string">&apos;&#x54C1;&#x724C;&#x978B;&#x5B50;&#xFF0C;&#x9AD8;&#x54C1;&#x8D28;&#x4F4E;&#x4EF7;&#x5165;&#x624B;&apos;</span>,
+                    publishTime: <span class="hljs-number">200</span>,
+                },
+                {
+                    title: <span class="hljs-string">&apos;&#x4E0D;&#x662F;&#x5F88;&#x8D35;&#xFF0C;&#x4F46;&#x662F;&#x5F88;&#x6696;&apos;</span>,
+                    publishTime: <span class="hljs-number">100</span>,
+                },
+                {
+                    title: <span class="hljs-string">&apos;&#x65E0;&#x6CD5;&#x62D2;&#x7EDD;&#x7684;&#x7F8E;&#x98DF;&#xFF0C;&#x8DDF;&#x6211;&#x4E00;&#x8D77;&#x5403;&#x5403;&apos;</span>,
+                    publishTime: <span class="hljs-number">300</span>,
+                },
+            ];
+
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;qianguyihao &#x6392;&#x5E8F;&#x524D;&#x7684;&#x6570;&#x7EC4;&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(dataList));
+
+            <span class="hljs-comment">// &#x5C06;dataList &#x6570;&#x7EC4;&#xFF0C;&#x6309;&#x7167; publishTime &#x5B57;&#x6BB5;&#xFF0C;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#x3002;&#xFF08;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF09;</span>
+            dataList.sort((a, b) =&gt; <span class="hljs-built_in">parseInt</span>(a.publishTime) - <span class="hljs-built_in">parseInt</span>(b.publishTime));
+
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;qianguyihao &#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#xFF1A;&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(dataList));
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>qianguyihao &#x6392;&#x5E8F;&#x524D;&#x7684;&#x6570;&#x7EC4;&#xFF1A;[
+    {&quot;title&quot;:&quot;&#x54C1;&#x724C;&#x978B;&#x5B50;&#xFF0C;&#x9AD8;&#x54C1;&#x8D28;&#x4F4E;&#x4EF7;&#x5165;&#x624B;&quot;,&quot;publishTime&quot;:200},
+    {&quot;title&quot;:&quot;&#x4E0D;&#x662F;&#x5F88;&#x8D35;&#xFF0C;&#x4F46;&#x662F;&#x5F88;&#x6696;&quot;,&quot;publishTime&quot;:100},
+    {&quot;title&quot;:&quot;&#x65E0;&#x6CD5;&#x62D2;&#x7EDD;&#x7684;&#x7F8E;&#x98DF;&#xFF0C;&#x8DDF;&#x6211;&#x4E00;&#x8D77;&#x5403;&#x5403;&quot;,&quot;publishTime&quot;:300}
+]
+
+qianguyihao &#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#xFF1A;[
+    {&quot;title&quot;:&quot;&#x4E0D;&#x662F;&#x5F88;&#x8D35;&#xFF0C;&#x4F46;&#x662F;&#x5F88;&#x6696;&quot;,&quot;publishTime&quot;:100},
+    {&quot;title&quot;:&quot;&#x54C1;&#x724C;&#x978B;&#x5B50;&#xFF0C;&#x9AD8;&#x54C1;&#x8D28;&#x4F4E;&#x4EF7;&#x5165;&#x624B;&quot;,&quot;publishTime&quot;:200},
+    {&quot;title&quot;:&quot;&#x65E0;&#x6CD5;&#x62D2;&#x7EDD;&#x7684;&#x7F8E;&#x98DF;&#xFF0C;&#x8DDF;&#x6211;&#x4E00;&#x8D77;&#x5403;&#x5403;&quot;,&quot;publishTime&quot;:300}
+]
+</code></pre><p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6709;&#x4EBA;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#xFF1A; publishTime &#x5B57;&#x6BB5;&#x5DF2;&#x7ECF;&#x662F; int &#x7C7B;&#x578B;&#x4E86;&#xFF0C;&#x4E3A;&#x5565;&#x5728;&#x6392;&#x5E8F;&#x524D;&#x8FD8;&#x8981;&#x505A;&#x4E00;&#x6B21; parseInt() &#x8F6C;&#x6362;&#xFF1F;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;&#x7684;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x662F; int &#x7C7B;&#x578B;&#x3001;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x7EDF;&#x4E00;&#x5148;&#x505A;&#x4E00;&#x6B21; partInt() &#x6BD4;&#x8F83;&#x4FDD;&#x9669;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x826F;&#x597D;&#x7684;&#x5DE5;&#x4F5C;&#x4E60;&#x60EF;&#x3002;</p>
+<h2 id="indexof-&#x548C;-lastindexof&#xFF1A;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x7D22;&#x5F15;">indexOf() &#x548C; lastIndexOf()&#xFF1A;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x7D22;&#x5F15;</h2>
+<p><strong>&#x8BED;&#x6CD5; 1</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x7D22;&#x5F15;&#x503C; = &#x6570;&#x7EC4;.indexOf(&#x60F3;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5143;&#x7D20;);
+
+&#x7D22;&#x5F15;&#x503C; = &#x6570;&#x7EC4;.lastIndexOf(&#x60F3;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5143;&#x7D20;);
+</code></pre>
+<p>&#x5907;&#x6CE8;&#xFF1A;<code>indexOf()</code> &#x662F;&#x4ECE;&#x524D;&#x5411;&#x540E;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x540C;&#x7406;&#xFF0C;<code>lastIndexOf()</code>&#x662F;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x5BFB;&#x627E;&#x3002;</p>
+<p><strong>&#x89E3;&#x91CA;</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x68C0;&#x7D22;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#x542B;&#x6709;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;&#x5176;<strong>&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;</strong>&#x7684;&#x7D22;&#x5F15;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; -1&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><p><strong>&#x5982;&#x679C;&#x83B7;&#x53D6;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x4E3A; 0&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x7EC4;&#x662F;&#x4EE5;&#x67E5;&#x8BE2;&#x7684;&#x5143;&#x7D20;&#x4E3A;&#x5F00;&#x5934;&#x7684;</strong>&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x83B7;&#x53D6;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x4E3A;-1&#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;<code>indexOf()</code>&#x5728;&#x68C0;&#x7D22;&#x65F6;&#xFF0C;&#x662F;&#x4E25;&#x683C;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;<code>===</code>&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+
+<span class="hljs-built_in">console</span>.log(arr.indexOf(<span class="hljs-string">&apos;c&apos;</span>)); <span class="hljs-comment">//&#x4ECE;&#x524D;&#x5F80;&#x540E;&#xFF0C;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&quot;c&quot;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;</span>
+<span class="hljs-built_in">console</span>.log(arr.lastIndexOf(<span class="hljs-string">&apos;d&apos;</span>)); <span class="hljs-comment">//&#x4ECE;&#x540E;&#x5F80;&#x524D;&#xFF0C;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&quot;d&quot;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;</span>
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>2
+5
+</code></pre><p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> arr = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;4&apos;</span>, <span class="hljs-string">&apos;5&apos;</span>];
+<span class="hljs-built_in">console</span>.log(arr.indexOf(<span class="hljs-number">2</span>));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>-1
+</code></pre><p><strong>&#x8BED;&#x6CD5; 2</strong>&#xFF1A;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x67E5;&#x627E;&#x7684;<strong>&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</strong>&#x3002;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x7D22;&#x5F15;&#x503C; = &#x6570;&#x7EC4;.indexOf(&#x60F3;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5143;&#x7D20;, [&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;]);
+</code></pre>
+<p>&#x4E3E;&#x4F8B; 3&#xFF1A;&#xFF08;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-string">&apos;q&apos;</span>, <span class="hljs-string">&apos;i&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;n&apos;</span>, <span class="hljs-string">&apos;g&apos;</span>, <span class="hljs-string">&apos;u&apos;</span>, <span class="hljs-string">&apos;y&apos;</span>, <span class="hljs-string">&apos;i&apos;</span>, <span class="hljs-string">&apos;h&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>];
+result = str.indexOf(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// &#x4ECE;&#x7B2C;&#x4E09;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x67E5;&#x627E; &apos;a&apos;&#x8FD9;&#x4E2A;&#x5143;&#x7D20; &#x3010;&#x91CD;&#x8981;&#x3011;</span>
+
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;9</span>
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>indexOf()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x643A;&#x5E26;&#x4E86;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5177;&#x4F53;&#x89E3;&#x91CA;&#x8BF7;&#x770B;&#x6CE8;&#x91CA;&#x3002;</p>
+<h2 id="find">find()</h2>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">find((item, index, arr) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+});
+</code></pre>
+<p><strong>&#x4F5C;&#x7528;</strong>&#xFF1A;&#x627E;&#x51FA;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#x7684;&#x5143;&#x7D20;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x627E;&#x5230;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; undefined&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x4E00;&#x65E6;&#x627E;&#x5230;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x904D;&#x5386;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">let</span> result = arr.find((item, index) =&gt; {
+    <span class="hljs-keyword">return</span> item &gt; <span class="hljs-number">4</span>; <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;arr&#xFF0C;&#x4E00;&#x65E6;&#x53D1;&#x73B0;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5927;&#x4E8E;4&#xFF0C;&#x5C31;&#x628A;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x8FD4;&#x56DE;</span>
+});
+
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;5</span>
+</code></pre>
+<h2 id="findindex">findIndex()</h2>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">findIndex((item, index, arr) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+});
+</code></pre>
+<p><strong>&#x4F5C;&#x7528;</strong>&#xFF1A;&#x627E;&#x51FA;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x6EE1;&#x8DB3;&#x300C;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x8FD4;&#x56DE; true&#x300D;&#x7684;&#x5143;&#x7D20;&#x7684; index&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x7684; find &#x65B9;&#x6CD5;&#x6539;&#x6210; findIndex&#xFF0C;&#x6765;&#x770B;&#x770B;&#x6548;&#x679C;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">let</span> result = arr.findIndex((item, index) =&gt; {
+    <span class="hljs-keyword">return</span> item &gt; <span class="hljs-number">4</span>; <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;arr&#xFF0C;&#x4E00;&#x65E6;&#x53D1;&#x73B0;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5927;&#x4E8E;4&#xFF0C;&#x5C31;&#x628A;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x7684;index&#x8FD4;&#x56DE;</span>
+});
+
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;3</span>
+</code></pre>
+<h2 id="every">every()</h2>
+<p><code>every()</code>&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x8FD4;&#x56DE; true&#xFF0C;every &#x5C31;&#x8FD4;&#x56DE; true&#xFF1B;&#x5982;&#x679C;&#x6709;&#x4E00;&#x9879;&#x8FD4;&#x56DE; false&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x904D;&#x5386;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE; false&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;every()&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; boolean &#x503C;&#xFF0C;&#x53C2;&#x6570;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&apos;</span>, <span class="hljs-string">&apos;&#x5BBF;&#x654C;&apos;</span>, <span class="hljs-string">&apos;&#x5357;&#x5C71;&#x5FC6;&apos;</span>, <span class="hljs-string">&apos;&#x7D20;&#x989C;&apos;</span>];
+<span class="hljs-keyword">var</span> bool1 = arr1.every(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element, index, array</span>) </span>{
+    <span class="hljs-keyword">if</span> (element.length &gt; <span class="hljs-number">2</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+});
+<span class="hljs-built_in">console</span>.log(bool1); <span class="hljs-comment">//&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;false&#x3002;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x8D85;&#x8FC7;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;false</span>
+
+<span class="hljs-keyword">var</span> arr2 = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&apos;</span>, <span class="hljs-string">&apos;&#x5BBF;&#x654C;&apos;</span>, <span class="hljs-string">&apos;&#x5357;&#x5C71;&apos;</span>, <span class="hljs-string">&apos;&#x7D20;&#x989C;&apos;</span>];
+<span class="hljs-keyword">var</span> bool2 = arr2.every(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element, index, array</span>) </span>{
+    <span class="hljs-keyword">if</span> (element.length &gt; <span class="hljs-number">2</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+});
+<span class="hljs-built_in">console</span>.log(bool2); <span class="hljs-comment">//&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;true&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x90FD;&#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</span>
+</code></pre>
+<h2 id="some">some()</h2>
+<p><code>some()</code>&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD4;&#x56DE; true&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x904D;&#x5386;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;some()&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; boolean &#x503C;&#x3002;</p>
+<h3 id="every-&#x548C;-some-&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;">every() &#x548C; some() &#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
+<p>every() &#x548C; some() &#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x521D;&#x5B66;&#x8005;&#x5F88;&#x5BB9;&#x6613;&#x641E;&#x6DF7;&#x3002;&#x8981;&#x600E;&#x4E48;&#x533A;&#x5206;&#x5462;&#xFF1F;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BB0;&#xFF1A;</p>
+<ul>
+<li><p>every()&#xFF1A;&#x5168;&#x90E8;&#x771F;&#xFF0C;&#x624D;&#x4E3A;&#x771F;&#x3002;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x8BA9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x90A3;&#x5C31;&#x4F7F;&#x7528; every()&#x3002;</p>
+</li>
+<li><p>some()&#xFF1A;&#x4E00;&#x4E2A;&#x771F;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#xFF0C;&#x70B9;&#x5230;&#x4E3A;&#x6B62;&#x3002;&#x6570;&#x7EC4;&#x4E2D;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x505C;&#x6B62;&#x904D;&#x5386;&#x3002;&#x90A3;&#x5C31;&#x4F7F;&#x7528; some()&#x3002;</p>
+</li>
+</ul>
+<h2 id="valueof&#xFF1A;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x672C;&#x8EAB;">valueOf()&#xFF1A;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x672C;&#x8EAB;</h2>
+<pre><code class="lang-javascript">&#x6570;&#x7EC4;&#x672C;&#x8EAB; = &#x6570;&#x7EC4;.valueOf();
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x610F;&#x4E49;&#x4E0D;&#x5927;&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5199;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5C31;&#x5DF2;&#x7ECF;&#x662F;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x4E86;&#x3002;</p>
+<h2 id="&#x6982;&#x5FF5;&#xFF1A;&#x6570;&#x7EC4;&#x7684;&#x904D;&#x5386;">&#x6982;&#x5FF5;&#xFF1A;&#x6570;&#x7EC4;&#x7684;&#x904D;&#x5386;</h2>
+<p>&#x904D;&#x5386;&#x6570;&#x7EC4;&#x5373;&#xFF1A;&#x83B7;&#x53D6;&#x5E76;&#x64CD;&#x4F5C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5B9E;&#x6218;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x5F97;&#x975E;&#x5E38;&#x9891;&#x7E41;&#x3002;</p>
+<p>&#x904D;&#x5386;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x5305;&#x62EC;&#xFF1A;every()&#x3001;filter()&#x3001;forEach()&#x3001;map()&#x3001;some()</p>
+<p>PS&#xFF1A;&#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;<strong>&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x539F;&#x6570;&#x7EC4;</strong>&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code>&#x6570;&#x7EC4;/boolean/&#x65E0; = &#x6570;&#x7EC4;.every/filter/forEach/map/some(
+                        function(item, index, arr){
+                                        &#x7A0B;&#x5E8F;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#xFF1B;
+                        })
+</code></pre><p>&#x6709;&#x4E86;&#x8FD9;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x4E00;&#x4E9B; for &#x5FAA;&#x73AF;&#x4E86;&#x3002;&#x4E0B;&#x9762;&#x4F9D;&#x6B21;&#x6765;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="for-&#x5FAA;&#x73AF;&#x904D;&#x5386;">for &#x5FAA;&#x73AF;&#x904D;&#x5386;</h2>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-string">&apos;&#x751F;&#x547D;&#x58F9;&#x53F7;&apos;</span>, <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, <span class="hljs-string">&apos;&#x6C38;&#x4E0D;&#x6B62;&#x6B65;&apos;</span>];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+    <span class="hljs-built_in">console</span>.log(arr[i]); <span class="hljs-comment">// arr[i]&#x4EE3;&#x8868;&#x7684;&#x662F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;i</span>
+}
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>&#x751F;&#x547D;&#x58F9;&#x53F7;
+&#x8BB8;&#x5D69;
+&#x6C38;&#x4E0D;&#x6B62;&#x6B65;
+
+[&quot;&#x751F;&#x547D;&#x58F9;&#x53F7;&quot;,&quot;&#x8BB8;&#x5D69;&quot;,&quot;&#x6C38;&#x4E0D;&#x6B62;&#x6B65;&quot;]
+</code></pre><h2 id="foreach-&#x904D;&#x5386;">forEach() &#x904D;&#x5386;</h2>
+<blockquote>
+<p><code>forEach()</code> &#x8FD9;&#x79CD;&#x904D;&#x5386;&#x65B9;&#x6CD5;&#x53EA;&#x652F;&#x6301; IE8 &#x4EE5;&#x4E0A;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x3002;IE8 &#x53CA;&#x4EE5;&#x4E0B;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5747;&#x4E0D;&#x652F;&#x6301;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x9700;&#x8981;&#x517C;&#x5BB9; IE8&#xFF0C;&#x5219;&#x4E0D;&#x8981;&#x4F7F;&#x7528; forEach&#xFF0C;&#x6539;&#x4E3A;&#x4F7F;&#x7528; for &#x5FAA;&#x73AF;&#x6765;&#x904D;&#x5386;&#x5373;&#x53EF;&#x3002;</p>
+</blockquote>
+<p>forEach()&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x79CD;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x7531;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4F46;&#x662F;&#x4E0D;&#x7531;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x4E3A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x51E0;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x51E0;&#x6B21;&#x3002;</p>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x9012;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li><p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x904D;&#x5386;&#x7684;&#x5143;&#x7D20;</p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x904D;&#x5386;&#x7684;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;</p>
+</li>
+<li><p>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x6B63;&#x5728;&#x904D;&#x5386;&#x7684;&#x6570;&#x7EC4;</p>
+</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> myArr = [<span class="hljs-string">&apos;&#x738B;&#x4E00;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E8C;&apos;</span>, <span class="hljs-string">&apos;&#x738B;&#x4E09;&apos;</span>];
+
+myArr.forEach((item, index, arr) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;item:&apos;</span> + item);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;index:&apos;</span> + index);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr));
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;----------&apos;</span>);
+});
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">item:&#x738B;&#x4E00;
+index:<span class="hljs-number">0</span>
+arr:[<span class="hljs-string">&quot;&#x738B;&#x4E00;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E8C;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E09;&quot;</span>]
+----------
+item:&#x738B;&#x4E8C;
+index:<span class="hljs-number">1</span>
+arr:[<span class="hljs-string">&quot;&#x738B;&#x4E00;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E8C;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E09;&quot;</span>]
+----------
+item:&#x738B;&#x4E09;
+index:<span class="hljs-number">2</span>
+arr:[<span class="hljs-string">&quot;&#x738B;&#x4E00;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E8C;&quot;</span>,<span class="hljs-string">&quot;&#x738B;&#x4E09;&quot;</span>]
+----------
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;forEach() &#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#xFF1A;forEach() &#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; undefined&#x3002;&#x5982;&#x679C;&#x4F60;&#x5C1D;&#x8BD5; <code>tempArry = myArr.forEach()</code>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x63A5;&#x6536;&#xFF0C;&#x662F;&#x8FBE;&#x4E0D;&#x5230;&#x6548;&#x679C;&#x7684;&#x3002;</p>
+<h3 id="foreach-&#x80FD;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF1F;">forEach() &#x80FD;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF1F;</h3>
+<p>forEach() &#x80FD;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF1F;&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x4EBA;&#x4F1A;&#x641E;&#x9519;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p><strong>1&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#xFF1A;&#xFF08;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> numArr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+numArr.forEach((item) =&gt; {
+    item = item * <span class="hljs-number">2</span>;
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(numArr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[1, 2, 3]</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x53EF;&#x8981;&#x770B;&#x4ED4;&#x7EC6;&#x4E86;&#xFF0C;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F; <code>[1, 2, 3]</code>&#xFF0C;&#x4E0D;&#x662F; <code>[2, 4, 6]</code>&#x3002;</p>
+<p><strong>2&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#xFF1A;&#xFF08;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> objArr = [
+    { name: <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, age: <span class="hljs-number">20</span> },
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, age: <span class="hljs-number">30</span> },
+];
+
+objArr.forEach((item) =&gt; {
+    item = {
+        name: <span class="hljs-string">&apos;&#x9093;&#x7D2B;&#x68CB;&apos;</span>,
+        age: <span class="hljs-string">&apos;29&apos;</span>,
+    };
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(objArr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[{&quot;name&quot;:&quot;&#x5343;&#x53E4;&#x58F9;&#x53F7;&quot;,&quot;age&quot;:20},{&quot;name&quot;:&quot;&#x8BB8;&#x5D69;&quot;,&quot;age&quot;:30}]</span>
+</code></pre>
+<p><strong>3&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#xFF1A;&#xFF08;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> objArr = [
+    { name: <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, age: <span class="hljs-number">28</span> },
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, age: <span class="hljs-number">30</span> },
+];
+
+objArr.forEach((item) =&gt; {
+    item.name = <span class="hljs-string">&apos;&#x9093;&#x7D2B;&#x68CB;&apos;</span>;
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(objArr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[{&quot;name&quot;:&quot;&#x9093;&#x7D2B;&#x68CB;&quot;,&quot;age&quot;:28},{&quot;name&quot;:&quot;&#x9093;&#x7D2B;&#x68CB;&quot;,&quot;age&quot;:30}]</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x901A;&#x8FC7; forEach &#x4FEE;&#x6539;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528; forEach &#x91CC;&#x9762;&#x7684;&#x53C2;&#x6570; 2 &#x548C;&#x53C2;&#x6570; 3 &#x6765;&#x505A;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x6807;&#x51C6;&#x505A;&#x6CD5;&#x3002;</p>
+<p><strong>4&#x3001;forEach() &#x901A;&#x8FC7;&#x53C2;&#x6570; 2&#x3001;&#x53C2;&#x6570; 3 &#x4FEE;&#x6539;&#x539F;&#x6570;&#x7EC4;</strong>&#xFF1A;&#xFF08;&#x6807;&#x51C6;&#x505A;&#x6CD5;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// 1&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">let</span> numArr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+numArr.forEach((item, index, arr) =&gt; {
+    arr[index] = arr[index] * <span class="hljs-number">2</span>;
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(numArr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[2,4,6]</span>
+
+<span class="hljs-comment">// 2&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">let</span> objArr = [
+    { name: <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, age: <span class="hljs-number">28</span> },
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, age: <span class="hljs-number">34</span> },
+];
+
+objArr.forEach((item, index, arr) =&gt; {
+    arr[index] = {
+        name: <span class="hljs-string">&apos;&#x5C0F;&#x660E;&apos;</span>,
+        age: <span class="hljs-string">&apos;10&apos;</span>,
+    };
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(objArr)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[{&quot;name&quot;:&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;:&quot;10&quot;},{&quot;name&quot;:&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;:&quot;10&quot;}]</span>
+
+<span class="hljs-comment">// 3&#x3001;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">let</span> objArr2 = [
+    { name: <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, age: <span class="hljs-number">28</span> },
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, age: <span class="hljs-number">34</span> },
+];
+
+objArr2.forEach((item, index, arr) =&gt; {
+    arr[index].name = <span class="hljs-string">&apos;&#x5C0F;&#x660E;&apos;</span>;
+});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(objArr2)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[{&quot;name&quot;:&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;:28},{&quot;name&quot;:&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;:34}]</span>
+</code></pre>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</p>
+<ul>
+<li><p><a href="https://juejin.im/post/5d526a4ae51d4557dc774e7d" target="_blank">forEach &#x5230;&#x5E95;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x5417;&#xFF1F;</a></p>
+</li>
+<li><p><a href="https://lhajh.github.io/js/2018/05/26/Does-forEach-change-the-original-array-value.html" target="_blank">forEach &#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x503C;&#x5417;</a></p>
+</li>
+</ul>
+<h2 id="map&#x65B9;&#x6CD5;">map()&#x65B9;&#x6CD5;</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js">arr.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, index, arr</span>) </span>{
+    <span class="hljs-keyword">return</span> newItem;
+});
+</code></pre>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7EC4;&#x6210;&#x7684;&#x65B0;&#x6570;&#x7EC4;&#xFF08;&#x8FD4;&#x56DE;&#x7684;&#x662F;<strong>&#x52A0;&#x5DE5;&#x4E4B;&#x540E;</strong>&#x7684;&#x65B0;&#x6570;&#x7EC4;&#xFF09;&#x3002;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FDB;&#x884C;&#x52A0;&#x5DE5;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;&#xFF08;&#x62F7;&#x8D1D;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x6539;&#x53D8;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x503C;&#xFF09;</p>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x7684;&#x6570;&#x7EC4; arr1&#xFF0C;&#x6211;&#x8981;&#x6C42;&#x8BA9; arr1 &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#x90FD;&#x52A0; 10&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x5230; map &#x65B9;&#x6CD5;&#x3002;&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">var</span> arr2 = arr1.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, index</span>) </span>{
+    <span class="hljs-keyword">return</span> item + <span class="hljs-number">10</span>; <span class="hljs-comment">//&#x8BA9;arr1&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x52A0;10</span>
+});
+<span class="hljs-built_in">console</span>.log(arr2);
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180402_0938.png" alt=""></p>
+<p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;&#x3010;&#x91CD;&#x8981;&#x6848;&#x4F8B;&#xFF0C;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x3011;</p>
+<p>&#x5C06; A &#x6570;&#x7EC4;&#x4E2D;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x5B58;&#x50A8;&#x5230; B &#x6570;&#x7EC4;&#x4E2D;&#x3002;&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr1 = [
+    { name: <span class="hljs-string">&apos;&#x5343;&#x53E4;&#x58F9;&#x53F7;&apos;</span>, age: <span class="hljs-string">&apos;28&apos;</span> },
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, age: <span class="hljs-string">&apos;32&apos;</span> },
+];
+
+<span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr1 &#x4E2D;&#x7684; name &#x5C5E;&#x6027;&#xFF0C;&#x5B58;&#x50A8;&#x5230; &#x6570;&#x7EC4; arr2 &#x4E2D;</span>
+<span class="hljs-keyword">const</span> arr2 = arr1.map((item) =&gt; item.name);
+
+<span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr1 &#x4E2D;&#x7684; name&#x3001;age&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x6539;&#x4E00;&#x4E0B;&#x201C;&#x952E;&#x201D;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5B58;&#x50A8;&#x5230; arr3&#x4E2D;</span>
+<span class="hljs-keyword">const</span> arr3 = arr1.map((item) =&gt; ({
+    myName: item.name,
+    myAge: item.age,
+})); <span class="hljs-comment">// &#x5C06;&#x6570;&#x7EC4; arr1 &#x4E2D;&#x7684; name &#x5C5E;&#x6027;&#xFF0C;&#x5B58;&#x50A8;&#x5230; &#x6570;&#x7EC4; arr2 &#x4E2D;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr1:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr1));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr2:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr2));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;arr3:&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(arr3));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>arr1:[{&quot;name&quot;:&quot;&#x5343;&#x53E4;&#x58F9;&#x53F7;&quot;,&quot;age&quot;:&quot;28&quot;},{&quot;name&quot;:&quot;&#x8BB8;&#x5D69;&quot;,&quot;age&quot;:&quot;32&quot;}]
+
+arr2:[&quot;&#x5343;&#x53E4;&#x58F9;&#x53F7;&quot;,&quot;&#x8BB8;&#x5D69;&quot;]
+
+arr3:[{&quot;myName&quot;:&quot;&#x5343;&#x53E4;&#x58F9;&#x53F7;&quot;,&quot;myAge&quot;:&quot;28&quot;},{&quot;myName&quot;:&quot;&#x8BB8;&#x5D69;&quot;,&quot;myAge&quot;:&quot;32&quot;}]
+</code></pre><p>map &#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x3002;</p>
+<h2 id="filter">filter()</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js">arr.filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, index, arr</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+});
+</code></pre>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;<strong>&#x6BCF;&#x4E00;&#x9879;</strong>&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F; true &#x7684;&#x9879;&#xFF0C;&#x5C06;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF08;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF09;&#x3002;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;&#x627E;&#x51FA;&#x6570;&#x7EC4; arr1 &#x4E2D;&#x5927;&#x4E8E; 4 &#x7684;&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">let</span> arr2 = arr1.filter((item) =&gt; {
+    <span class="hljs-keyword">if</span> (item &gt; <span class="hljs-number">4</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// &#x5C06;arr1&#x4E2D;&#x5927;&#x4E8E;4&#x7684;&#x5143;&#x7D20;&#x8FD4;&#x56DE;&#xFF0C;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6570;&#x7EC4;</span>
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr1)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[1,3,6,2,5,6]</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr2)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[6,5,6]</span>
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x66F4;&#x7B80;&#x6D01;&#x7684;&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">let</span> arr2 = arr1.filter((item) =&gt; item &gt; <span class="hljs-number">4</span>); <span class="hljs-comment">// &#x5C06;arr1&#x4E2D;&#x5927;&#x4E8E;4&#x7684;&#x5143;&#x7D20;&#x8FD4;&#x56DE;&#xFF0C;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6570;&#x7EC4;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr1)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[1,3,6,2,5,6]</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr2)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;[6,5,6]</span>
+</code></pre>
+<p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;</p>
+<p>&#x83B7;&#x53D6;&#x6570;&#x7EC4; A &#x4E2D;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x653E;&#x5230;&#x6570;&#x7EC4; B &#x4E2D;&#x3002;&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr1 = [
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, type: <span class="hljs-string">&apos;&#x4E00;&#x7EBF;&apos;</span> },
+    { name: <span class="hljs-string">&apos;&#x5468;&#x6770;&#x4F26;&apos;</span>, type: <span class="hljs-string">&apos;&#x8FC7;&#x6C14;&apos;</span> },
+    { name: <span class="hljs-string">&apos;&#x9093;&#x7D2B;&#x68CB;&apos;</span>, type: <span class="hljs-string">&apos;&#x4E00;&#x7EBF;&apos;</span> },
+];
+
+<span class="hljs-keyword">const</span> arr2 = arr1.filter((item) =&gt; item.type == <span class="hljs-string">&apos;&#x4E00;&#x7EBF;&apos;</span>); <span class="hljs-comment">// &#x7B5B;&#x9009;&#x51FA;&#x4E00;&#x7EBF;&#x6B4C;&#x624B;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(arr2));
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript">[
+    { name: <span class="hljs-string">&apos;&#x8BB8;&#x5D69;&apos;</span>, type: <span class="hljs-string">&apos;&#x4E00;&#x7EBF;&apos;</span> },
+    { name: <span class="hljs-string">&apos;&#x9093;&#x7D2B;&#x68CB;&apos;</span>, type: <span class="hljs-string">&apos;&#x4E00;&#x7EBF;&apos;</span> },
+];
+</code></pre>
+<h2 id="reduce&#x65B9;&#x6CD5;">reduce()&#x65B9;&#x6CD5;</h2>
+<h3 id="reduce-&#x8BED;&#x6CD5;">reduce() &#x8BED;&#x6CD5;</h3>
+<blockquote>
+<p>reduce &#x7684;&#x53D1;&#x97F3;&#xFF1A;[r&#x26A;&apos;dju&#x2D0;s]&#x3002;&#x4E2D;&#x6587;&#x542B;&#x4E49;&#x662F;&#x51CF;&#x5C11;&#x3002;</p>
+</blockquote>
+<p>reduce() &#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x7D2F;&#x52A0;&#x5668;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x503C;&#xFF08;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF09;&#x5F00;&#x59CB;&#x7F29;&#x51CF;&#xFF0C;&#x6700;&#x7EC8;&#x8BA1;&#x7B97;&#x4E3A;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7D2F;&#x8BA1;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">previousValue, currentValue, currentIndex, arr</span>) </span>{}, initialValue);
+</code></pre>
+<p>&#x53C2;&#x6570;&#x89E3;&#x91CA;&#xFF1A;</p>
+<ul>
+<li><p>previousValue&#xFF1A;&#x5FC5;&#x586B;&#xFF0C;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#x7684;&#x8FD4;&#x56DE;&#x503C;</p>
+</li>
+<li><p>currentValue&#xFF1A;&#x5FC5;&#x586B;&#xFF0C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;</p>
+</li>
+<li><p>currentIndex&#xFF1A;&#x9009;&#x586B;&#xFF0C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x4E0B;&#x6807;</p>
+</li>
+<li><p>arr&#xFF1A;&#x9009;&#x586B;&#xFF0C;&#x8C03;&#x7528; reduce()&#x65B9;&#x6CD5;&#x7684;&#x6570;&#x7EC4;</p>
+</li>
+<li><p>initialValue&#xFF1A;&#x9009;&#x586B;&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF08;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#x4F20;&#x7ED9; previousValue &#x7684;&#x503C;&#xFF09;</p>
+</li>
+</ul>
+<p>&#x5728;&#x4EE5;&#x5F80;&#x7684;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x533F;&#x540D;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x91CC;&#x662F;&#x4F20;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;item&#x3001;index&#x3001;arr&#x3002;&#x4F46;&#x662F;&#x5728; reduce() &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x524D;&#x9762;&#x591A;&#x4F20;&#x4E86;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>previousValue</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x610F;&#x601D;&#x662F;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#xFF0C;previousValue &#x6CA1;&#x6709;&#x503C;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x53EF;&#x4EE5;&#x7528; initialValue &#x53C2;&#x6570;&#x4F20;&#x7ED9;&#x5B83;&#x3002;</p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x4EBA;&#x5728;&#x4E00;&#x5F00;&#x59CB;&#x63A5;&#x89E6; reduce() &#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5F88;&#x61F5;&#x903C;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x6709;&#x4E8B;&#x6CA1;&#x4E8B;&#x591A;&#x770B;&#x51E0;&#x904D;&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x638C;&#x63E1;&#x4E86;&#x3002;&#x5982;&#x679C;&#x80FD;&#x719F;&#x7EC3;&#x4F7F;&#x7528; reduce() &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5C06;&#x80FD;&#x66FF;&#x4EE3;&#x5F88;&#x591A;&#x5176;&#x4ED6;&#x7684;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x6210;&#x529F;&#x8D70;&#x4E0A;&#x8FDB;&#x9636;&#x4E4B;&#x8DEF;&#xFF0C;&#x9886;&#x5148;&#x4ED6;&#x4EBA;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7406;&#x89E3; reduce()&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x7B80;&#x5355;&#x4EE3;&#x7801;&#xFF0C;&#x8FC7;&#x6E21;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+arr1.reduce((prev, item) =&gt; {
+    <span class="hljs-built_in">console</span>.log(prev);
+    <span class="hljs-built_in">console</span>.log(item);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;------&apos;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">88</span>;
+}, <span class="hljs-number">0</span>);
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>0
+1
+------
+88
+2
+------
+88
+3
+------
+88
+4
+------
+88
+5
+------
+88
+6
+------
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x7531;&#x4E8E;<code>return</code>&#x7684;&#x662F;&#x56FA;&#x5B9A;&#x503C;&#xFF0C;&#x6240;&#x4EE5; prev &#x6253;&#x5370;&#x7684;&#x4E5F;&#x662F;&#x56FA;&#x5B9A;&#x503C;&#xFF08;&#x53EA;&#x6709;&#x521D;&#x59CB;&#x503C;&#x662F; 0&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x904D;&#x5386;&#x4E2D;&#xFF0C;&#x90FD;&#x662F;&#x6253;&#x5370; 88&#xFF09;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6765;&#x5347;&#x7EA7;&#x4E00;&#x4E0B;&#xFF0C;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;prev &#x7684;&#x503C;&#x5F80;&#x5F80;&#x662F;&#x52A8;&#x6001;&#x53D8;&#x5316;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#x5C31;&#x660E;&#x767D;&#x4E86;&#x3002;</p>
+<h3 id="reduce-&#x7684;&#x5E38;&#x89C1;&#x5E94;&#x7528;">reduce() &#x7684;&#x5E38;&#x89C1;&#x5E94;&#x7528;</h3>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#x3001;&#x6C42;&#x548C;&#xFF1A;</p>
+<p>&#x8BA1;&#x7B97;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x9879;&#x7684;&#x603B;&#x548C;&#x3002;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>];
+<span class="hljs-comment">// &#x6570;&#x7EC4;&#x6C42;&#x548C;</span>
+<span class="hljs-keyword">const</span> total = arr.reduce((prev, item) =&gt; {
+    <span class="hljs-keyword">return</span> prev + item;
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;total:&apos;</span> + total); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;18</span>
+</code></pre>
+<p><strong>&#x4E3E;&#x4F8B; 2</strong>&#x3001;&#x7EDF;&#x8BA1;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF1A;</p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#xFF1A;&#x7EDF;&#x4E00; value &#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x5728;&#x6570;&#x7EC4; arr &#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">repeatCount</span>(<span class="hljs-params">arr, value</span>) </span>{
+    <span class="hljs-keyword">if</span> (!arr || arr.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">return</span> arr.reduce((totalCount, item) =&gt; {
+        totalCount += item == value ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">return</span> totalCount;
+    }, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-keyword">let</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-built_in">console</span>.log(repeatCount(arr1, <span class="hljs-number">6</span>)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;3</span>
+</code></pre>
+<p><strong>&#x4E3E;&#x4F8B; 3</strong>&#x3001;&#x6C42;&#x5143;&#x7D20;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF1A;</p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>];
+<span class="hljs-comment">// &#x6570;&#x7EC4;&#x6C42;&#x6700;&#x5927;&#x503C;</span>
+<span class="hljs-keyword">const</span> maxValue = arr.reduce((prev, item) =&gt; {
+    <span class="hljs-keyword">return</span> prev &gt; item ? prev : item;
+});
+
+<span class="hljs-built_in">console</span>.log(maxValue); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;9</span>
+</code></pre>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</p>
+<ul>
+<li><a href="https://juejin.im/post/5d78aa3451882521397645ae" target="_blank">JS reduce &#x51FD;&#x6570;</a></li>
+</ul>
+<h2 id="&#x6570;&#x7EC4;&#x7EC3;&#x4E60;">&#x6570;&#x7EC4;&#x7EC3;&#x4E60;</h2>
+<h3 id="splice&#x7EC3;&#x4E60;&#xFF1A;&#x6570;&#x7EC4;&#x53BB;&#x91CD;">splice()&#x7EC3;&#x4E60;&#xFF1A;&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h3>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>];
+
+<span class="hljs-comment">//&#x53BB;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;</span>
+<span class="hljs-comment">//&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+    <span class="hljs-comment">//console.log(arr[i]);</span>
+    <span class="hljs-comment">/*&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x540E;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;*/</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = i + <span class="hljs-number">1</span>; j &lt; arr.length; j++) {
+        <span class="hljs-comment">//console.log(&quot;----&gt;&quot;+arr[j]);</span>
+        <span class="hljs-comment">//&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;</span>
+        <span class="hljs-keyword">if</span> (arr[i] == arr[j]) {
+            <span class="hljs-comment">//&#x5982;&#x679C;&#x76F8;&#x7B49;&#x5219;&#x8BC1;&#x660E;&#x51FA;&#x73B0;&#x4E86;&#x91CD;&#x590D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x5220;&#x9664;j&#x5BF9;&#x5E94;&#x7684;&#x5143;&#x7D20;</span>
+            arr.splice(j, <span class="hljs-number">1</span>);
+            <span class="hljs-comment">//&#x5F53;&#x5220;&#x9664;&#x4E86;&#x5F53;&#x524D;j&#x6240;&#x5728;&#x7684;&#x5143;&#x7D20;&#x4EE5;&#x540E;&#xFF0C;&#x540E;&#x8FB9;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x81EA;&#x52A8;&#x8865;&#x4F4D;</span>
+            <span class="hljs-comment">//&#x6B64;&#x65F6;&#x5C06;&#x4E0D;&#x4F1A;&#x5728;&#x6BD4;&#x8F83;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x518D;&#x6BD4;&#x8F83;&#x4E00;&#x6B21;j&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;</span>
+            <span class="hljs-comment">//&#x4F7F;j&#x81EA;&#x51CF;</span>
+            j--;
+        }
+    }
+}
+
+<span class="hljs-built_in">console</span>.log(arr);
+</code></pre>
+<h3 id="&#x6E05;&#x7A7A;&#x6570;&#x7EC4;">&#x6E05;&#x7A7A;&#x6570;&#x7EC4;</h3>
+<p>&#x6E05;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+array.splice(<span class="hljs-number">0</span>); <span class="hljs-comment">//&#x65B9;&#x5F0F;1&#xFF1A;&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x9879;&#x76EE;</span>
+array.length = <span class="hljs-number">0</span>; <span class="hljs-comment">//&#x65B9;&#x5F0F;2&#xFF1A;length&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#xFF0C;&#x5728;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x4E2D;length&#x662F;&#x53EA;&#x8BFB;</span>
+array = []; <span class="hljs-comment">//&#x65B9;&#x5F0F;3&#xFF1A;&#x63A8;&#x8350;</span>
+</code></pre>
+<h3 id="join-&#x7EC3;&#x4E60;">join() &#x7EC3;&#x4E60;</h3>
+<p><strong>&#x95EE;&#x9898;</strong>&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x8F93;&#x51FA;&#x4E3A;<code>|</code>&#x5206;&#x5272;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x201C;&#x5343;&#x53E4;|&#x5BBF;&#x654C;|&#x7D20;&#x989C;&#x201D;&#x3002;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x7B54;&#x6848;&#xFF1A;</p>
+<p>&#x65B9;&#x5F0F; 1&#xFF1A;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&apos;</span>, <span class="hljs-string">&apos;&#x5BBF;&#x654C;&apos;</span>, <span class="hljs-string">&apos;&#x7D20;&#x989C;&apos;</span>];
+<span class="hljs-keyword">var</span> str = arr[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">var</span> separator = <span class="hljs-string">&apos;|&apos;</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; arr.length; i++) {
+    str += separator + arr[i]; <span class="hljs-comment">//&#x4ECE;&#x7B2C;1&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x524D;&#x9762;&#x52A0;&#x4E0A;&#x7B26;&#x53F7;&quot;|&quot;</span>
+}
+
+<span class="hljs-built_in">console</span>.log(str);
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180126_1336.png" alt=""></p>
+<p>&#x4E0D;&#x63A8;&#x8350;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#xFF1A;&#x7531;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E0D;&#x53D8;&#x6027;&#xFF0C;str &#x62FC;&#x63A5;&#x8FC7;&#x591A;&#x7684;&#x8BDD;&#xFF0C;&#x5BB9;&#x6613;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#xFF08;&#x5F88;&#x591A;&#x4E2A; str &#x90FD;&#x5806;&#x653E;&#x5728;&#x6808;&#x91CC;&#xFF09;&#x3002;</p>
+<p>&#x65B9;&#x5F0F; 2&#xFF1A;&#xFF08;&#x63A8;&#x8350;&#x3002;&#x901A;&#x8FC7; array &#x6570;&#x7EC4;&#x81EA;&#x5E26;&#x7684; api &#x6765;&#x5B9E;&#x73B0;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;&#x5343;&#x53E4;&apos;</span>, <span class="hljs-string">&apos;&#x5BBF;&#x654C;&apos;</span>, <span class="hljs-string">&apos;&#x7D20;&#x989C;&apos;</span>];
+
+<span class="hljs-built_in">console</span>.log(arr.join(<span class="hljs-string">&apos;|&apos;</span>));
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180126_1339.png" alt=""></p>
+<h3 id="reverse-&#x7EC3;&#x4E60;">reverse() &#x7EC3;&#x4E60;</h3>
+<p>&#x9898;&#x76EE;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#xFF0C;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;&#x63D0;&#x793A;&#xFF1A;&#x7B2C; i &#x4E2A;&#x548C;&#x7B2C; length-i-1 &#x4E2A;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#x3002;</p>
+<p>&#x7B54;&#x6848;&#xFF1A;</p>
+<p>&#x65B9;&#x5F0F; 1&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">var</span> newArr = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = array.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        newArr[newArr.length] = array[i];
+    }
+    <span class="hljs-keyword">return</span> newArr;
+}
+</code></pre>
+<p>&#x65B9;&#x5F0F; 2&#xFF1A;&#xFF08;&#x7B97;&#x6CD5;&#x91CC;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x65B9;&#x5F0F;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; array.length / <span class="hljs-number">2</span>; i++) {
+        <span class="hljs-keyword">var</span> temp = array[i];
+        array[i] = array[array.length - <span class="hljs-number">1</span> - i];
+        array[array.length - <span class="hljs-number">1</span> - i] = temp;
+    }
+    <span class="hljs-keyword">return</span> array;
+}
+</code></pre>
+<p>&#x65B9;&#x5F0F; 3&#xFF1A;&#xFF08;&#x6570;&#x7EC4;&#x81EA;&#x5E26;&#x7684; reverse &#x65B9;&#x6CD5;&#xFF09;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;&#x6570;&#x7EC4;&#x81EA;&#x5E26;&#x7684; api&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; reverse()&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</h3>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x627E;&#x5230;&#x6570;&#x7EC4;[&quot;c&quot;,&quot;a&quot;,&quot;z&quot;,&quot;a&quot;,&quot;x&quot;,&quot;a&quot;]&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+<p>&#x5206;&#x6790;&#xFF1A;&#x8FD9;&#x9053;&#x9898;&#x5EFA;&#x8BAE;&#x7528; json &#x6570;&#x636E;&#x6765;&#x505A;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x60F3;&#x77E5;&#x9053; a &#x51FA;&#x73B0;&#x4E86;&#x51E0;&#x6B21;&#xFF0C;c &#x51FA;&#x73B0;&#x4E86;&#x51E0;&#x6B21;&#xFF0C;x &#x51FA;&#x73B0;&#x4E86;&#x51E0;&#x6B21;&#x3002;&#x6070;&#x597D;<code>k:v .. k:v</code>&#x8FD9;&#x79CD;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x5F62;&#x5F0F;&#x5C31;&#x6BD4;&#x6570;&#x7EC4;&#x65B9;&#x4FBF;&#x5F88;&#x591A;&#x4E86;&#x3002;</p>
+<p>&#x952E;&#x503C;&#x5BF9;&#x7684;&#x5F62;&#x5F0F;&#xFF1A;&#x7528; key &#x4EE3;&#x8868;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x7528; value &#x4EE3;&#x8868;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+<p>&#x7565;&#x96BE;&#xFF0C;&#x7B54;&#x6848;&#x6682;&#x7565;&#x3002;</p>
+<h3 id="&#x7EC3;&#x4E60;&#xFF1A;&#x6570;&#x7EC4;&#x53BB;&#x91CD;">&#x7EC3;&#x4E60;&#xFF1A;&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h3>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x53BB;&#x6389;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x5206;&#x6790;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#xFF0C;&#x53EA;&#x8981;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x8001;&#x6570;&#x7EC4;&#x7684;&#x503C;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x518D;&#x6DFB;&#x52A0;&#x4E86;&#x3002;</p>
+<p>&#x7B54;&#x6848;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//    &#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; &#x53BB;&#x6389;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x91CD;&#x590D;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-built_in">console</span>.log(arr);
+<span class="hljs-keyword">var</span> aaa = fn(arr);
+<span class="hljs-built_in">console</span>.log(aaa);
+<span class="hljs-comment">//&#x601D;&#x8DEF;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#xFF0C;&#x53EA;&#x8981;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x8001;&#x6570;&#x7EC4;&#x7684;&#x503C;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x518D;&#x6DFB;&#x52A0;&#x4E86;&#x3002;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">var</span> newArr = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; array.length; i++) {
+        <span class="hljs-comment">//&#x5F00;&#x95ED;&#x539F;&#x5219;</span>
+        <span class="hljs-keyword">var</span> bool = <span class="hljs-literal">true</span>;
+        <span class="hljs-comment">//&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x5224;&#x65AD;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x65E7;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#x3002;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; newArr.length; j++) {
+            <span class="hljs-keyword">if</span> (array[i] === newArr[j]) {
+                bool = <span class="hljs-literal">false</span>;
+            }
+        }
+        <span class="hljs-keyword">if</span> (bool) {
+            newArr[newArr.length] = array[i];
+        }
+    }
+    <span class="hljs-keyword">return</span> newArr;
+}
+</code></pre>
+<h2 id="&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;">&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;</h2>
+<p>&#x60F3;&#x5B66;&#x4E60;<font color="#0000ff"><strong>&#x4EE3;&#x7801;&#x4E4B;&#x5916;&#x7684;&#x6280;&#x80FD;</strong></font>&#xFF1F;&#x4E0D;&#x59A8;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#xFF1A;<strong>&#x5343;&#x53E4;&#x58F9;&#x53F7;</strong>&#x3002;</p>
+<p>&#x626B;&#x4E00;&#x626B;&#xFF0C;&#x4F60;&#x5C06;&#x53D1;&#x73B0;&#x53E6;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x800C;&#x8FD9;&#x5C06;&#x662F;&#x4E00;&#x573A;&#x7F8E;&#x4E3D;&#x7684;&#x610F;&#x5916;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20190101.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="16-数组简介.html" class="navigation navigation-prev " aria-label="Previous page: 16-数组简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="18-函数.html" class="navigation navigation-next " aria-label="Next page: 18-函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"17-数组的常见方法","level":"1.5.18","depth":2,"next":{"title":"18-函数","level":"1.5.19","depth":2,"path":"04-JavaScript基础/18-函数.md","ref":"04-JavaScript基础/18-函数.md","articles":[]},"previous":{"title":"16-数组简介","level":"1.5.17","depth":2,"path":"04-JavaScript基础/16-数组简介.md","ref":"04-JavaScript基础/16-数组简介.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-JavaScript基础/17-数组的常见方法.md","mtime":"2020-06-17T03:21:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T06:31:18.810Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

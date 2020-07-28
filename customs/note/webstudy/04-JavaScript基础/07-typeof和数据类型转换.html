@@ -1,0 +1,2345 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07-typeof和数据类型转换 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08-运算符.html" />
+    
+    
+    <link rel="prev" href="06-基本数据类型：Null 和 Undefined.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1_HTML.html">
+            
+                <a href="../chapter1_HTML.html">
+            
+                    
+                    01-HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-HTML/01-认识Web和Web标准.html">
+            
+                <a href="../01-HTML/01-认识Web和Web标准.html">
+            
+                    
+                    01-认识Web和Web标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-HTML/03-初识HTML.html">
+            
+                <a href="../01-HTML/03-初识HTML.html">
+            
+                    
+                    03-初识HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-HTML/04-HTML标签：排版标签.html">
+            
+                <a href="../01-HTML/04-HTML标签：排版标签.html">
+            
+                    
+                    04-HTML标签：排版标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                <a href="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                    
+                    05-HTML标签：字体标签和超链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-HTML/06-HTML标签：图片标签.html">
+            
+                <a href="../01-HTML/06-HTML标签：图片标签.html">
+            
+                    
+                    06-HTML标签：图片标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-HTML/07-html标签图文详解（二）.html">
+            
+                <a href="../01-HTML/07-html标签图文详解（二）.html">
+            
+                    
+                    07-html标签图文详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-HTML/08-HTML5详解.html">
+            
+                <a href="../01-HTML/08-HTML5详解.html">
+            
+                    
+                    08-HTML5详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                <a href="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                    
+                    09-HTML5举例：简单的视频播放器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-HTML/10-HTML5详解（二）.html">
+            
+                <a href="../01-HTML/10-HTML5详解（二）.html">
+            
+                    
+                    10-HTML5详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-HTML/11-HTML5详解（三）.html">
+            
+                <a href="../01-HTML/11-HTML5详解（三）.html">
+            
+                    
+                    11-HTML5详解（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-HTML/12-HTML基础回顾.html">
+            
+                <a href="../01-HTML/12-HTML基础回顾.html">
+            
+                    
+                    12-HTML基础回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2_CSS基础.html">
+            
+                <a href="../chapter2_CSS基础.html">
+            
+                    
+                    02-CSS基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                <a href="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                    
+                    01-CSS属性：字体属性和文本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                <a href="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                    
+                    02-CSS属性：背景属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                <a href="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                    
+                    03-CSS样式表和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                <a href="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                    
+                    04-CSS选择器：伪类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                <a href="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                    
+                    05-CSS样式表的继承性和层叠性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                <a href="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                    
+                    06-CSS盒模型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-CSS基础/07-浮动.html">
+            
+                <a href="../02-CSS基础/07-浮动.html">
+            
+                    
+                    07-浮动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                <a href="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                    
+                    08-CSS属性：定位属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                <a href="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                    
+                    09-CSS案例讲解：博雅互动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                <a href="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                    
+                    10-CSS3选择器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                <a href="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                    
+                    11-CSS3属性详解（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                <a href="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                    
+                    12-CSS3属性详解：动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                <a href="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                    
+                    13-CSS3属性：Flex布局图文详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                <a href="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                    
+                    14-CSS3属性详解：Web字体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-CSS基础/15-Sass入门.html">
+            
+                <a href="../02-CSS基础/15-Sass入门.html">
+            
+                    
+                    15-Sass入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                <a href="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                    
+                    16-浏览器的兼容性问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                <a href="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                    
+                    CSS3的常见边框汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-CSS基础/others.html">
+            
+                <a href="../02-CSS基础/others.html">
+            
+                    
+                    others
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3_CSS进阶.html">
+            
+                <a href="../chapter3_CSS进阶.html">
+            
+                    
+                    03-CSS进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-CSS进阶/00-准备.html">
+            
+                <a href="../03-CSS进阶/00-准备.html">
+            
+                    
+                    00-准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                <a href="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                    
+                    01-CSS中的非布局样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-CSS进阶/02-CSS布局.html">
+            
+                <a href="../03-CSS进阶/02-CSS布局.html">
+            
+                    
+                    02-CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                <a href="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                    
+                    03-网页设计和开发中，关于字体的常识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                <a href="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                    
+                    04-如何让一个元素水平垂直居中？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-CSS进阶/CSS的一些小知识.html">
+            
+                <a href="../03-CSS进阶/CSS的一些小知识.html">
+            
+                    
+                    CSS的一些小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-CSS进阶/CSS开发积累.html">
+            
+                <a href="../03-CSS进阶/CSS开发积累.html">
+            
+                    
+                    CSS开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-CSS进阶/CSS面试题.html">
+            
+                <a href="../03-CSS进阶/CSS面试题.html">
+            
+                    
+                    CSS面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-CSS进阶/CSS文章推荐.html">
+            
+                <a href="../03-CSS进阶/CSS文章推荐.html">
+            
+                    
+                    CSS文章推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4_JavaScript基础.html">
+            
+                <a href="../chapter4_JavaScript基础.html">
+            
+                    
+                    04-JavaScript基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="00-编程语言.html">
+            
+                <a href="00-编程语言.html">
+            
+                    
+                    00-编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="01-JS简介.html">
+            
+                <a href="01-JS简介.html">
+            
+                    
+                    01-JS简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="02-变量.html">
+            
+                <a href="02-变量.html">
+            
+                    
+                    02-变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                <a href="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                    
+                    03-变量的数据类型：基本数据类型和引用数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="04-基本数据类型：String 和 Boolean.html">
+            
+                <a href="04-基本数据类型：String 和 Boolean.html">
+            
+                    
+                    04-基本数据类型：String 和 Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="05-基本数据类型：Number.html">
+            
+                <a href="05-基本数据类型：Number.html">
+            
+                    
+                    05-基本数据类型：Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="06-基本数据类型：Null 和 Undefined.html">
+            
+                <a href="06-基本数据类型：Null 和 Undefined.html">
+            
+                    
+                    06-基本数据类型：Null 和 Undefined
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8" data-path="07-typeof和数据类型转换.html">
+            
+                <a href="07-typeof和数据类型转换.html">
+            
+                    
+                    07-typeof和数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="08-运算符.html">
+            
+                <a href="08-运算符.html">
+            
+                    
+                    08-运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="09-流程控制语句：选择结构（if和switch）.html">
+            
+                <a href="09-流程控制语句：选择结构（if和switch）.html">
+            
+                    
+                    09-流程控制语句：选择结构（if和switch）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="10-流程控制语句：循环结构（for和while）.html">
+            
+                <a href="10-流程控制语句：循环结构（for和while）.html">
+            
+                    
+                    10-流程控制语句：循环结构（for和while）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="11-对象简介.html">
+            
+                <a href="11-对象简介.html">
+            
+                    
+                    11-对象简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="12-基本包装类型.html">
+            
+                <a href="12-基本包装类型.html">
+            
+                    
+                    12-基本包装类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="13-内置对象 String：字符串的常见方法.html">
+            
+                <a href="13-内置对象 String：字符串的常见方法.html">
+            
+                    
+                    13-内置对象 String：字符串的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="14-内置对象：Number和Math.html">
+            
+                <a href="14-内置对象：Number和Math.html">
+            
+                    
+                    14-内置对象：Number和Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="15-内置对象：Date.html">
+            
+                <a href="15-内置对象：Date.html">
+            
+                    
+                    15-内置对象：Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="16-数组简介.html">
+            
+                <a href="16-数组简介.html">
+            
+                    
+                    16-数组简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="17-数组的常见方法.html">
+            
+                <a href="17-数组的常见方法.html">
+            
+                    
+                    17-数组的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="18-函数.html">
+            
+                <a href="18-函数.html">
+            
+                    
+                    18-函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="19-作用域和变量提升.html">
+            
+                <a href="19-作用域和变量提升.html">
+            
+                    
+                    19-作用域和变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="20-预编译.html">
+            
+                <a href="20-预编译.html">
+            
+                    
+                    20-预编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="21-执行期上下文.html">
+            
+                <a href="21-执行期上下文.html">
+            
+                    
+                    21-执行期上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="22-this.html">
+            
+                <a href="22-this.html">
+            
+                    
+                    22-this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="23-对象的创建&构造函数.html">
+            
+                <a href="23-对象的创建&构造函数.html">
+            
+                    
+                    23-对象的创建&构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="24-对象的基本操作.html">
+            
+                <a href="24-对象的基本操作.html">
+            
+                    
+                    24-对象的基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="25-对象的高级操作：Object.assign.html">
+            
+                <a href="25-对象的高级操作：Object.assign.html">
+            
+                    
+                    25-对象的高级操作：Object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="31-正则表达式.html">
+            
+                <a href="31-正则表达式.html">
+            
+                    
+                    31-正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="39-事件简介.html">
+            
+                <a href="39-事件简介.html">
+            
+                    
+                    39-事件简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.29" data-path="40-DOM简介和DOM操作.html">
+            
+                <a href="40-DOM简介和DOM操作.html">
+            
+                    
+                    40-DOM简介和DOM操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.30" data-path="41-通过style对象获取和设置行内样式.html">
+            
+                <a href="41-通过style对象获取和设置行内样式.html">
+            
+                    
+                    41-通过style对象获取和设置行内样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.31" data-path="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                <a href="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                    
+                    42-offset相关属性和匀速动画(含轮播图的实现)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.32" data-path="43-scroll相关属性和缓动动画.html">
+            
+                <a href="43-scroll相关属性和缓动动画.html">
+            
+                    
+                    43-scroll相关属性和缓动动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.33" data-path="44-client可视区相关属性.html">
+            
+                <a href="44-client可视区相关属性.html">
+            
+                    
+                    44-client可视区相关属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.34" data-path="45-事件的绑定和事件对象Event.html">
+            
+                <a href="45-事件的绑定和事件对象Event.html">
+            
+                    
+                    45-事件的绑定和事件对象Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.35" data-path="46-事件的传播和事件冒泡.html">
+            
+                <a href="46-事件的传播和事件冒泡.html">
+            
+                    
+                    46-事件的传播和事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.36" data-path="47-事件委托.html">
+            
+                <a href="47-事件委托.html">
+            
+                    
+                    47-事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.37" data-path="48-键盘事件.html">
+            
+                <a href="48-键盘事件.html">
+            
+                    
+                    48-键盘事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.38" data-path="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                <a href="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                    
+                    49-BOM简介和navigator.userAgent&History&Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.39" data-path="50-定时器.html">
+            
+                <a href="50-定时器.html">
+            
+                    
+                    50-定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.40" data-path="51-jQuery的介绍和选择器.html">
+            
+                <a href="51-jQuery的介绍和选择器.html">
+            
+                    
+                    51-jQuery的介绍和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.41" data-path="52-jQuery动画详解.html">
+            
+                <a href="52-jQuery动画详解.html">
+            
+                    
+                    52-jQuery动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.42" data-path="53-jQuery操作DOM.html">
+            
+                <a href="53-jQuery操作DOM.html">
+            
+                    
+                    53-jQuery操作DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.43" data-path="54-jQuery的事件机制和其他知识.html">
+            
+                <a href="54-jQuery的事件机制和其他知识.html">
+            
+                    
+                    54-jQuery的事件机制和其他知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.44" data-path="55-Zepto入门.html">
+            
+                <a href="55-Zepto入门.html">
+            
+                    
+                    55-Zepto入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.45" data-path="BOM的常见内置方法和内置对象.html">
+            
+                <a href="BOM的常见内置方法和内置对象.html">
+            
+                    
+                    BOM的常见内置方法和内置对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.46" data-path="闭包.html">
+            
+                <a href="闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.47" data-path="常见代码解读.html">
+            
+                <a href="常见代码解读.html">
+            
+                    
+                    常见代码解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.48" data-path="原型对象.html">
+            
+                <a href="原型对象.html">
+            
+                    
+                    原型对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.49" data-path="原型链.html">
+            
+                <a href="原型链.html">
+            
+                    
+                    原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5_JavaScript之ES6语法.html">
+            
+                <a href="../chapter5_JavaScript之ES6语法.html">
+            
+                    
+                    05-JavaScript之ES6语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                <a href="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                    
+                    01-ES5中的严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                    
+                    02-ES5中的一些扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                <a href="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                    
+                    03-ES6的介绍和环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                <a href="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                    
+                    04-ES6：变量let、const和块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                <a href="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                    
+                    05-ES6：变量的解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                    
+                    06-ES6：函数扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                    
+                    07-ES6：字符串、数组、对象的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                    
+                    08-ES6：Promise入门详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                    
+                    09-ES7：async函数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                <a href="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                    
+                    ES6：Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6_JavaScript进阶.html">
+            
+                <a href="../chapter6_JavaScript进阶.html">
+            
+                    
+                    06-JavaScript进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                <a href="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                    
+                    01-var、let、const的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                <a href="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                    
+                    call、apply、bind的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                <a href="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                    
+                    JavaScript开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-JavaScript进阶/this.html">
+            
+                <a href="../06-JavaScript进阶/this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-JavaScript进阶/创建对象和继承.html">
+            
+                <a href="../06-JavaScript进阶/创建对象和继承.html">
+            
+                    
+                    创建对象和继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                <a href="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                    
+                    浅拷贝和深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-JavaScript进阶/作用域和闭包.html">
+            
+                <a href="../06-JavaScript进阶/作用域和闭包.html">
+            
+                    
+                    作用域和闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter11_Vue基础.html">
+            
+                <a href="../chapter11_Vue基础.html">
+            
+                    
+                    11-Vue基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                <a href="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                    
+                    00-Vue的介绍和vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                <a href="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                    
+                    01-2v-on的事件修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../06-JavaScript进阶/01-03_Vue的系统指令(二">
+            
+                <span>
+            
+                    
+                    01-3Vue的系统指令(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                <a href="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                    
+                    01-4Vue的举例：列表功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                <a href="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                    
+                    01-6自定义按键修饰符&自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                <a href="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                    
+                    02-Vue实例的生命周期函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                <a href="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                    
+                    03-Vue中的Ajax请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../11-Vue基础/04-Vue动画.html">
+            
+                <a href="../11-Vue基础/04-Vue动画.html">
+            
+                    
+                    04-Vue动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                <a href="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                    
+                    05-Vue组件的定义和注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                <a href="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                    
+                    06-Vue组件之间的传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../11-Vue基础/07-Vue-router路由.html">
+            
+                <a href="../11-Vue基础/07-Vue-router路由.html">
+            
+                    
+                    07-Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                <a href="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                    
+                    Vue.js在开发中的常见写法积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../11-Vue基础/Vue-router路由.html">
+            
+                <a href="../11-Vue基础/Vue-router路由.html">
+            
+                    
+                    Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../11-Vue基础/Vue开发积累.html">
+            
+                <a href="../11-Vue基础/Vue开发积累.html">
+            
+                    
+                    Vue开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../11-Vue基础/Vue组件.html">
+            
+                <a href="../11-Vue基础/Vue组件.html">
+            
+                    
+                    Vue组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >07-typeof和数据类型转换</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p><strong>&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</strong>&#xFF1A;&#x5C06;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x6709;&#x4E09;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1A;</p>
+<ul>
+<li><p>&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x578B;</p>
+</li>
+<li><p>&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;&#x578B;</p>
+</li>
+</ul>
+<p>&#x4F60;&#x4F1A;&#x4E13;&#x95E8;&#x628A;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x6210; null &#x6216;&#x8005; undefined &#x5417;&#xFF1F;&#x4E0D;&#x4F1A;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;</p>
+<h2 id="typeof-&#x8FD0;&#x7B97;&#x7B26;">typeof &#x8FD0;&#x7B97;&#x7B26;</h2>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x8BB2;&#x4E00;&#x4E0B; typeof&#xFF0C;&#x518D;&#x8BB2;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;</p>
+</blockquote>
+<p><code>typeof()</code>&#x8868;&#x793A;&#x201C;<strong>&#x83B7;&#x53D6;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#x201D;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5C0F;&#x5199;&#xFF0C;&#x8BED;&#x6CD5;&#x4E3A;&#xFF1A;&#xFF08;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#xFF09;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5199;&#x6CD5;1</span>
+<span class="hljs-keyword">typeof</span> &#x53D8;&#x91CF;;
+
+<span class="hljs-comment">// &#x5199;&#x6CD5;2</span>
+<span class="hljs-keyword">typeof</span>(&#x53D8;&#x91CF;);
+</code></pre>
+<p>typeof &#x8FD9;&#x4E2A;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x90A3;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong>&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">typeof &#x7684;&#x4EE3;&#x7801;&#x5199;&#x6CD5;</th>
+<th style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">typeof &#x6570;&#x5B57;</td>
+<td style="text-align:center">number</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof &#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:center">string</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof &#x5E03;&#x5C14;&#x578B;</td>
+<td style="text-align:center">boolean</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof &#x5BF9;&#x8C61;</td>
+<td style="text-align:center">object</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof &#x65B9;&#x6CD5;</td>
+<td style="text-align:center">function</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof null</td>
+<td style="text-align:center">object</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof undefined</td>
+<td style="text-align:center">undefined</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5907;&#x6CE8; 1&#xFF1A;&#x4E3A;&#x5565; <code>typeof null</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x662F; object &#x5462;&#xFF1F;&#x56E0;&#x4E3A; null &#x4EE3;&#x8868;&#x7684;&#x662F;<strong>&#x7A7A;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<p>&#x5907;&#x6CE8; 2&#xFF1A;<code>typeof NaN</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; number&#xFF0C;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x8BB2;&#x8FC7;&#xFF0C;NaN &#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3E;&#x4F8B;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> []); <span class="hljs-comment">// &#x7A7A;&#x6570;&#x7EC4;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;object</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> {}); <span class="hljs-comment">// &#x7A7A;&#x5BF9;&#x8C61;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;object</span>
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;&#x8FD9;&#x91CC;&#x7684;&#x7A7A;&#x6570;&#x7EC4;<code>[]</code>&#x3001;&#x7A7A;&#x5BF9;&#x8C61;<code>{}</code> &#xFF0C;&#x4E3A;&#x5565;&#x4ED6;&#x4EEC;&#x5728;&#x4F7F;&#x7528; typeof &#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x662F; <code>object</code>&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x7684; &#x8FD4;&#x56DE;&#x7ED3;&#x679C;<code>object</code>&#x6307;&#x7684;&#x662F;<strong>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#x3002;&#x7A7A;&#x6570;&#x7EC4;&#x3001;&#x7A7A;&#x5BF9;&#x8C61;&#x90FD;&#x662F;<strong>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B; Object</strong>&#x3002;</p>
+<p>typeof &#x65E0;&#x6CD5;&#x533A;&#x5206;&#x6570;&#x7EC4;&#xFF0C;&#x4F46; instanceof &#x53EF;&#x4EE5;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log([] <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;true</span>
+
+<span class="hljs-built_in">console</span>.log({} <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;false</span>
+</code></pre>
+<p>&#x5173;&#x4E8E; instanceof &#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x540E;&#x8BB2;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x7684;&#x5206;&#x7C7B;">&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x7684;&#x5206;&#x7C7B;</h2>
+<p>&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;&#x663E;&#x793A;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3001;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;</p>
+<h3 id="&#x663E;&#x793A;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x663E;&#x793A;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
+<ul>
+<li><p>toString()</p>
+</li>
+<li><p>String()</p>
+</li>
+<li><p>Number()</p>
+</li>
+<li><p>parseInt(string)</p>
+</li>
+<li><p>parseFloat(string)</p>
+</li>
+<li><p>Boolean()</p>
+</li>
+</ul>
+<h3 id="&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
+<ul>
+<li><p>isNaN ()</p>
+</li>
+<li><p>&#x81EA;&#x589E;/&#x81EA;&#x51CF;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>++</code>&#x3001;<code>&#x2014;-</code></p>
+</li>
+<li><p>&#x6B63;&#x53F7;/&#x8D1F;&#x53F7;&#xFF1A;<code>+a</code>&#x3001;<code>-a</code></p>
+</li>
+<li><p>&#x52A0;&#x53F7;&#xFF1A;<code>+</code></p>
+</li>
+<li><p>&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>-</code>&#x3001;<code>*</code>&#x3001;<code>/</code></p>
+</li>
+</ul>
+<h3 id="&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF08;&#x7279;&#x6B8A;&#xFF09;">&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF08;&#x7279;&#x6B8A;&#xFF09;</h3>
+<ul>
+<li><p>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>&amp;&amp;</code>&#x3001;<code>||</code>&#x3001;<code>&#xFF01;</code> &#x3002;&#x975E;&#x5E03;&#x5C14;&#x503C;&#x8FDB;&#x884C;<strong>&#x4E0E;&#x6216;</strong>&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x4F1A;&#x5148;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FD0;&#x7B97;&#xFF0C;&#x4F46;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x662F;<strong>&#x539F;&#x503C;</strong>&#x3002;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x770B;&#x4E0B;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x300A;&#x8FD0;&#x7B97;&#x7B26;&#x300B;&#x3002;</p>
+</li>
+<li><p>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>&lt;</code>&#x3001;<code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code>&#x7B49;&#x3002;&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x90FD;&#x662F;&#x5E03;&#x5C14;&#x503C;&#xFF1A;&#x8981;&#x4E48;&#x662F;true&#xFF0C;&#x8981;&#x4E48;&#x662F;false&#x3002;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x770B;&#x4E0B;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x300A;&#x8FD0;&#x7B97;&#x7B26;&#x300B;&#x3002;</p>
+</li>
+</ul>
+<p>&#x9488;&#x5BF9;&#x4E0A;&#x9762;&#x8FD9;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6765;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="&#x5176;&#x4ED6;&#x7684;&#x7B80;&#x5355;&#x7C7B;&#x578B;----string">&#x5176;&#x4ED6;&#x7684;&#x7B80;&#x5355;&#x7C7B;&#x578B; --&gt; String</h2>
+<h3 id="&#x65B9;&#x6CD5;&#x4E00;&#xFF08;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF09;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;">&#x65B9;&#x6CD5;&#x4E00;&#xFF08;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF09;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;</h3>
+<p>&#x683C;&#x5F0F;&#xFF1A;&#x53D8;&#x91CF;+&quot;&quot; &#x6216;&#x8005; &#x53D8;&#x91CF;+&quot;abc&quot;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">123</span>; <span class="hljs-comment">// Number &#x7C7B;&#x578B;</span>
+<span class="hljs-built_in">console</span>.log(a + <span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">// &#x8F6C;&#x6362;&#x6210; String &#x7C7B;&#x578B;</span>
+<span class="hljs-built_in">console</span>.log(a + <span class="hljs-string">&apos;haha&apos;</span>); <span class="hljs-comment">// &#x8F6C;&#x6362;&#x6210; String &#x7C7B;&#x578B;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6253;&#x5370;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x5185;&#x90E8;&#x662F;&#x8C03;&#x7528;&#x7684; String() &#x51FD;&#x6570;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;<code>c = c + &quot;&quot;</code> &#x7B49;&#x4EF7;&#x4E8E; <code>c = String(c)</code>&#x3002;</p>
+<h3 id="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x8C03;&#x7528;-tostring&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x8C03;&#x7528; toString()&#x65B9;&#x6CD5;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&#x53D8;&#x91CF;.toString()
+</code></pre>
+<p>&#x3010;&#x91CD;&#x8981;&#x3011;&#x8BE5;&#x65B9;&#x6CD5;<strong>&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x539F;&#x53D8;&#x91CF;</strong>&#xFF0C;&#x5B83;&#x4F1A;&#x5C06;&#x8F6C;&#x6362;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x3002;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5199;&#x6210;<code>a = a.toString()</code>&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x539F;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;null &#x548C; undefined &#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x6CA1;&#x6709; toString()&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4EEC;&#x4E0D;&#x80FD;&#x7528;&#x65B9;&#x6CD5;&#x4E8C;&#x3002;&#x5982;&#x679C;&#x8C03;&#x7528;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;Number &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x8C03;&#x7528; toString()&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x6B64;&#x65F6;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x6570;&#x5B57;&#x8F6C;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x5236;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x5219;&#x9ED8;&#x8BA4;&#x8F6C;&#x6362;&#x4E3A; 10 &#x8FDB;&#x5236;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">255</span>;
+
+<span class="hljs-comment">//&#x5BF9;&#x4E8E;Number&#x8C03;&#x7528;toString()&#x65F6;&#x53EF;&#x4EE5;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;</span>
+<span class="hljs-comment">//&#x6B64;&#x65F6;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x6570;&#x5B57;&#x8F6C;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x5236;,&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x5219;&#x9ED8;&#x8BA4;&#x8F6C;&#x6362;&#x4E3A;10&#x8FDB;&#x5236;</span>
+a = a.toString(<span class="hljs-number">2</span>); <span class="hljs-comment">// &#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;</span>
+
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// 11111111</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> a); <span class="hljs-comment">// string</span>
+</code></pre>
+<h3 id="&#x65B9;&#x6CD5;&#x4E09;&#xFF08;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#xFF09;&#xFF1A;&#x4F7F;&#x7528;-string&#x51FD;&#x6570;">&#x65B9;&#x6CD5;&#x4E09;&#xFF08;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#xFF09;&#xFF1A;&#x4F7F;&#x7528; String()&#x51FD;&#x6570;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">String</span>(&#x53D8;&#x91CF;)
+</code></pre>
+<p>&#x4F7F;&#x7528; String()&#x51FD;&#x6570;&#x505A;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x65F6;&#xFF1A;</p>
+<ul>
+<li><p>&#x5BF9;&#x4E8E; Number &#x548C; Boolean &#x800C;&#x8A00;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x8C03;&#x7528; toString()&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>&#x4F46;&#x662F;&#x5BF9;&#x4E8E; null &#x548C; undefined&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x8C03;&#x7528; toString()&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x4F1A;&#x5C06; null &#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x4E3A; &quot;null&quot;&#x3002;&#x5C06; undefined &#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x4E3A; &quot;undefined&quot;&#x3002;</p>
+</li>
+</ul>
+<h3 id="prompt&#xFF1A;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;">prompt()&#xFF1A;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;</h3>
+<p>&#x6211;&#x4EEC;&#x5728; JS &#x57FA;&#x7840;&#x7684;&#x7B2C; 01 &#x7BC7;&#x91CC;&#xFF0C;&#x5C31;&#x8BB2;&#x8FC7;&#xFF0C;<code>prompt()</code>&#x5C31;&#x662F;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5F39;&#x51FA;&#x80FD;&#x591F;&#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x3002;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF1A;&#x7528;&#x6237;&#x4E0D;&#x7BA1;&#x8F93;&#x5165;&#x4EC0;&#x4E48;&#xFF0C;&#x90FD;&#x5F53;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="&#x5176;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;----number-&#x3010;&#x91CD;&#x8981;&#x3011;">&#x5176;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B; --&gt; Number &#x3010;&#x91CD;&#x8981;&#x3011;</h2>
+<h3 id="&#x4F7F;&#x7528;-number-&#x51FD;&#x6570;">&#x4F7F;&#x7528; Number() &#x51FD;&#x6570;</h3>
+<p><strong>&#x60C5;&#x51B5;&#x4E00;&#xFF1A;&#x5B57;&#x7B26;&#x4E32; --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li><p>1.&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x662F;&#x7EAF;&#x6570;&#x5B57;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x3002;</p>
+</li>
+<li><p>2.&#x53EA;&#x8981;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x975E;&#x6570;&#x5B57;&#x7684;&#x5185;&#x5BB9;&#xFF08;<code>&#x5C0F;&#x6570;&#x70B9;</code>&#x6309;&#x6570;&#x5B57;&#x6765;&#x7B97;&#xFF09;&#xFF0C;&#x5219;&#x8F6C;&#x6362;&#x4E3A; NaN&#x3002;</p>
+</li>
+<li><p>3.&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x4E32;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x662F;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x8F6C;&#x6362;&#x4E3A; 0&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E8C;&#xFF1A;&#x5E03;&#x5C14; --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li><p>true &#x8F6C;&#x6210; 1</p>
+</li>
+<li><p>false &#x8F6C;&#x6210; 0</p>
+</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E09;&#xFF1A;null --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;0</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x56DB;&#xFF1A;undefined --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;NaN</li>
+</ul>
+<p>&#x8865;&#x5145;&#xFF1A;&#x600E;&#x4E48;&#x7406;&#x89E3;&#x8FD9;&#x91CC;&#x7684; <strong>NaN</strong> &#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7406;&#x89E3;&#xFF0C;&#x4F7F;&#x7528; Number() &#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;<strong>&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x5C31;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A; NaN</strong>&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;-parseint&#x51FD;&#x6570;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;---&#x6574;&#x6570;">&#x4F7F;&#x7528; parseInt()&#x51FD;&#x6570;&#xFF1A;&#x5B57;&#x7B26;&#x4E32; -&gt; &#x6574;&#x6570;</h3>
+<p><strong>parseInt()&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6709;&#x6548;&#x7684;&#x6574;&#x6570;&#x5185;&#x5BB9;&#x8F6C;&#x4E3A;&#x6570;&#x5B57;</strong>&#x3002;parse &#x8868;&#x793A;&#x201C;&#x8F6C;&#x6362;&#x201D;&#xFF0C;Int &#x8868;&#x793A;&#x201C;&#x6574;&#x6570;&#x201D;&#xFF08;&#x6CE8;&#x610F;<code>Int</code>&#x7684;&#x62FC;&#x5199;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;5&quot;</span>);
+</code></pre>
+<p>&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x6570;&#x5B57; 5&#x3002;</p>
+<p>parseInt()&#x7684;&#x8F6C;&#x6362;&#x60C5;&#x51B5;&#x5982;&#x4E0B;&#x3002;</p>
+<p><strong>&#x60C5;&#x51B5;&#x4E00;&#xFF1A;&#x5B57;&#x7B26;&#x4E32; --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li><p>1.<strong>&#x53EA;&#x4FDD;&#x7559;&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x5F00;&#x5934;&#x7684;&#x6570;&#x5B57;</strong>&#xFF0C;&#x540E;&#x9762;&#x7684;&#x4E2D;&#x6587;&#x81EA;&#x52A8;&#x6D88;&#x5931;&#x3002;</p>
+</li>
+<li><p>2.&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x662F;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF0C;&#x5219;&#x8F6C;&#x6362;&#x4E3A; NaN&#x3002;</p>
+</li>
+<li><p>3.&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x4E32;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x662F;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x6362;&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E8C;&#xFF1A;Boolean --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;NaN</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E09;&#xFF1A;Null --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;NaN</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x56DB;&#xFF1A;Undefined --&gt; &#x6570;&#x5B57;</strong></p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;NaN</li>
+</ul>
+<p>Number() &#x51FD;&#x6570;&#x548C; parseInt() &#x51FD;&#x6570;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<p>&#x5C31;&#x62FF;<code>Number(true)</code> &#x548C; <code>parseInt(true)/parseFloat(true)</code>&#x6765;&#x4E3E;&#x4F8B;&#xFF0C;&#x4E8C;&#x8005;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#xFF1A;</p>
+<ul>
+<li><p>Number(true) &#xFF1A;&#x5343;&#x65B9;&#x767E;&#x8BA1;&#x5730;&#x60F3;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x3002;</p>
+</li>
+<li><p>parseInt(true)/parseFloat(true) &#xFF1A;&#x5148;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x518D;&#x63D0;&#x53D6;&#x51FA;&#x6700;&#x524D;&#x9762;&#x7684;&#x6570;&#x5B57;&#x90E8;&#x5206;&#xFF1B;&#x6CA1;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x90A3;&#x5C31;&#x8FD4;&#x56DE; NaN&#x3002;</p>
+</li>
+</ul>
+<p><strong>parseInt()&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x6027;</strong>&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;<strong>&#x53EA;&#x4FDD;&#x7559;&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x5F00;&#x5934;&#x7684;&#x6570;&#x5B57;</strong>&#xFF0C;&#x540E;&#x9762;&#x7684;&#x4E2D;&#x6587;&#x81EA;&#x52A8;&#x6D88;&#x5931;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;2017&#x5728;&#x516C;&#x4F17;&#x53F7;&#x4E0A;&#x5199;&#x4E86;6&#x7BC7;&#x6587;&#x7AE0;&quot;</span>)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;2017</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;2017.01&#x5728;&#x516C;&#x4F17;&#x53F7;&#x4E0A;&#x5199;&#x4E86;6&#x7BC7;&#x6587;&#x7AE0;&quot;</span>)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4ECD;&#x662F;&#xFF1A;2017   &#xFF08;&#x8BF4;&#x660E;&#x53EA;&#x4F1A;&#x53D6;&#x6574;&#x6570;&#xFF09;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;aaa2017.01&#x5728;&#x516C;&#x4F17;&#x53F7;&#x4E0A;&#x5199;&#x4E86;6&#x7BC7;&#x6587;&#x7AE0;&quot;</span>)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN &#xFF08;&#x56E0;&#x4E3A;&#x4E0D;&#x662F;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF09;</span>
+</code></pre>
+<p>&#xFF08;2&#xFF09;&#x5982;&#x679C;&#x5BF9;<strong>&#x975E; String</strong>&#x4F7F;&#x7528; parseInt()&#x6216; parseFloat()&#xFF0C;&#x5B83;&#x4F1A;<strong>&#x5148;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A; String</strong> &#x7136;&#x540E;&#x518D;&#x64CD;&#x4F5C;&#x3002;&#x3010;&#x91CD;&#x8981;&#x3011;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">168.23</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(a)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;168  &#xFF08;&#x56E0;&#x4E3A;&#x662F;&#x5148;&#x5C06;c&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&quot;168.23&quot;&#xFF0C;&#x7136;&#x540E;&#x7136;&#x540E;&#x518D;&#x64CD;&#x4F5C;&#xFF09;</span>
+
+<span class="hljs-keyword">var</span> b = <span class="hljs-literal">true</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(b)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN &#xFF08;&#x56E0;&#x4E3A;&#x662F;&#x5148;&#x5C06;a&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&quot;true&quot;&#xFF0C;&#x7136;&#x540E;&#x7136;&#x540E;&#x518D;&#x64CD;&#x4F5C;&#xFF09;</span>
+
+<span class="hljs-keyword">var</span> c = <span class="hljs-literal">null</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(c)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN  &#xFF08;&#x56E0;&#x4E3A;&#x662F;&#x5148;&#x5C06;b&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&quot;null&quot;&#xFF0C;&#x7136;&#x540E;&#x7136;&#x540E;&#x518D;&#x64CD;&#x4F5C;&#xFF09;</span>
+
+<span class="hljs-keyword">var</span> d = <span class="hljs-literal">undefined</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(d)); <span class="hljs-comment">//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN  &#xFF08;&#x56E0;&#x4E3A;&#x662F;&#x5148;&#x5C06;b&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&quot;undefined&quot;&#xFF0C;&#x7136;&#x540E;&#x7136;&#x540E;&#x518D;&#x64CD;&#x4F5C;&#xFF09;</span>
+</code></pre>
+<p>&#xFF08;3&#xFF09;&#x81EA;&#x52A8;&#x5E26;&#x6709;&#x622A;&#x65AD;&#x5C0F;&#x6570;&#x7684;&#x529F;&#x80FD;&#xFF1A;<strong>&#x53D6;&#x6574;&#xFF0C;&#x4E0D;&#x56DB;&#x820D;&#x4E94;&#x5165;</strong>&#x3002;</p>
+<p>&#x4F8B; 1&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-built_in">parseInt</span>(<span class="hljs-number">5.8</span>) + <span class="hljs-built_in">parseInt</span>(<span class="hljs-number">4.7</span>);
+<span class="hljs-built_in">console</span>.log(a);
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>9
+</code></pre><p>&#x4F8B; 2&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-built_in">parseInt</span>(<span class="hljs-number">5.8</span> + <span class="hljs-number">4.7</span>);
+<span class="hljs-built_in">console</span>.log(a);
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-number">10</span>;
+</code></pre>
+<p>&#xFF08;4&#xFF09;&#x5E26;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x5728;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;110&apos;</span>;
+
+<span class="hljs-keyword">var</span> num = <span class="hljs-built_in">parseInt</span>(a, <span class="hljs-number">16</span>); <span class="hljs-comment">// &#x3010;&#x91CD;&#x8981;&#x3011;&#x5C06; a &#x5F53;&#x6210; &#x5341;&#x516D;&#x8FDB;&#x5236; &#x6765;&#x770B;&#x5F85;&#xFF0C;&#x8F6C;&#x6362;&#x6210; &#x5341;&#x8FDB;&#x5236; &#x7684; num</span>
+
+<span class="hljs-built_in">console</span>.log(num);
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>272
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x611F;&#x5230;&#x9707;&#x60CA;&#xFF0C;&#x8BF7;&#x4ED4;&#x7EC6;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x3002;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65E0;&#x8BBA; parseInt() &#x91CC;&#x9762;&#x7684;&#x8FDB;&#x5236;&#x53C2;&#x6570;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x8F6C;&#x6362;&#x7ED3;&#x679C;&#x662F;&#x5341;&#x8FDB;&#x5236;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x6765;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F;&#x591A;&#x5C11;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;5&apos;</span>;
+
+<span class="hljs-keyword">var</span> num = <span class="hljs-built_in">parseInt</span>(a, <span class="hljs-number">2</span>); <span class="hljs-comment">// &#x5C06; a &#x5F53;&#x6210; &#x4E8C;&#x8FDB;&#x5236; &#x6765;&#x770B;&#x5F85;&#xFF0C;&#x8F6C;&#x6362;&#x6210; &#x5341;&#x8FDB;&#x5236; &#x7684; num</span>
+
+<span class="hljs-built_in">console</span>.log(num); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN&#x3002;&#x56E0;&#x4E3A; &#x4E8C;&#x8FDB;&#x5236;&#x4E2D;&#x6CA1;&#x6709; 5 &#x8FD9;&#x4E2A;&#x6570;&#xFF0C;&#x8F6C;&#x6362;&#x5931;&#x8D25;&#x3002;</span>
+</code></pre>
+<h3 id="parsefloat&#x51FD;&#x6570;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;----&#x6D6E;&#x70B9;&#x6570;&#xFF08;&#x5C0F;&#x6570;&#xFF09;">parseFloat()&#x51FD;&#x6570;&#xFF1A;&#x5B57;&#x7B26;&#x4E32; --&gt; &#x6D6E;&#x70B9;&#x6570;&#xFF08;&#x5C0F;&#x6570;&#xFF09;</h3>
+<p>parseFloat()&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;<strong>&#x6D6E;&#x70B9;&#x6570;</strong>&#x3002;</p>
+<p>parseFloat()&#x548C; parseInt()&#x7684;&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;parseFloat()&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6709;&#x6548;&#x7684;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;123.456.789px&apos;</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(a)); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;123.456</span>
+</code></pre>
+<p>parseFloat() &#x7684;&#x51E0;&#x4E2A;&#x7279;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x7167; parseInt()&#x3002;</p>
+<h2 id="&#x8F6C;&#x6362;&#x4E3A;-boolean">&#x8F6C;&#x6362;&#x4E3A; Boolean</h2>
+<p>&#x5176;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x4E3A; Boolean&#x7C7B;&#x578B;&#x3002;&#x60C5;&#x51B5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p>&#x60C5;&#x51B5;&#x4E00;&#xFF1A;&#x6570;&#x5B57; --&gt; &#x5E03;&#x5C14;&#x3002;&#x9664;&#x4E86; 0 &#x548C; NaN&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x90FD;&#x662F; true&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;<code>Boolean(NaN)</code>&#x7684;&#x7ED3;&#x679C;&#x662F; false&#x3002;</p>
+</li>
+<li><p>&#x60C5;&#x51B5;&#x4E8C;&#xFF1A;&#x5B57;&#x7B26;&#x4E32; ---&gt; &#x5E03;&#x5C14;&#x3002;&#x9664;&#x4E86;&#x7A7A;&#x4E32;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x90FD;&#x662F; true&#x3002;&#x5168;&#x662F;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x6362;&#x7ED3;&#x679C;&#x4E5F;&#x662F; true&#x3002;&#x5B57;&#x7B26;&#x4E32;<code>&apos;0&apos;</code>&#x7684;&#x8F6C;&#x6362;&#x7ED3;&#x679C;&#x4E5F;&#x662F; true&#x3002;</p>
+</li>
+<li><p>&#x60C5;&#x51B5;&#x4E09;&#xFF1A;null &#x548C; undefined &#x90FD;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A; false&#x3002;</p>
+</li>
+<li><p>&#x60C5;&#x51B5;&#x56DB;&#xFF1A;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A; true&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x7A7A;&#x6570;&#x7EC4;<code>[]</code>&#x548C;&#x7A7A;&#x5BF9;&#x8C61;<code>{}</code>&#xFF0C;&#x8F6C;&#x6362;&#x7ED3;&#x679C;&#x4E5F;&#x662F; true&#xFF0C;&#x8FD9;&#x4E2A;&#x4E00;&#x70B9;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x4E0D;&#x77E5;&#x9053;&#x3002;</p>
+</li>
+</ul>
+<p>PS&#xFF1A;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x7684;&#x8FD9;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;<strong>&#x5F88;&#x91CD;&#x8981;</strong>&#xFF0C;&#x5F00;&#x53D1;&#x4E2D;&#x4F1A;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x3002;</p>
+<p><strong>1&#x3001;&#x9690;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x7C7B;&#x578B;</strong>&#xFF1A;</p>
+<p>&#x5F53;&#x975E; Boolean &#x7C7B;&#x578B;&#x7684;&#x6570;&#x503C;&#x548C; Boolean&#x7C7B;&#x578B;&#x7684;&#x6570;&#x503C;&#x505A;&#x6BD4;&#x8F83;&#x65F6;&#xFF0C;&#x4F1A;&#x5148;&#x628A;&#x524D;&#x8005;&#x8FDB;&#x884C;&#x9690;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; Boolean&#x7C7B;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x505A;&#x6BD4;&#x8F83;&#x3002;&#x4E3E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span> == <span class="hljs-literal">true</span>); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;true</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">0</span> == <span class="hljs-literal">true</span>); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;false</span>
+</code></pre>
+<p><strong>2&#x3001;&#x663E;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x7C7B;&#x578B;</strong>&#xFF1A;</p>
+<p>&#x65B9;&#x6CD5;1&#xFF1A;&#x4F7F;&#x7528; <code>!!</code>&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x7C7B;&#x578B;&#x3002;&#x6BD4;&#x5982; <code>!!3</code>&#x7684;&#x7ED3;&#x679C;&#x662F;true&#x3002;</p>
+<p>&#x65B9;&#x6CD5;2&#xFF1A;&#x4F7F;&#x7528; Boolean()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x77E5;&#x8BC6;&#x8865;&#x5145;&#xFF1A;&#x5176;&#x4ED6;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;">&#x77E5;&#x8BC6;&#x8865;&#x5145;&#xFF1A;&#x5176;&#x4ED6;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;</h2>
+<ul>
+<li><p>16 &#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x4EE5;<code>0x</code>&#x5F00;&#x5934;</p>
+</li>
+<li><p>8 &#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x4EE5;<code>0</code>&#x5F00;&#x5934;</p>
+</li>
+<li><p>2 &#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;&#xFF0C;<code>0b</code>&#x5F00;&#x5934;&#xFF08;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;&#xFF1A;chrome &#x548C;&#x706B;&#x72D0;&#x652F;&#x6301;&#xFF0C;IE &#x4E0D;&#x652F;&#x6301;&#xFF09;</p>
+</li>
+</ul>
+<p>&#x6BD4;&#x5982;<code>070</code>&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x8C03;&#x7528; parseInt()&#x8F6C;&#x6210;&#x6570;&#x5B57;&#x65F6;&#xFF0C;&#x6709;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5F53;&#x6210; 8 &#x8FDB;&#x5236;&#x89E3;&#x6790;&#xFF0C;&#x6709;&#x4E9B;&#x4F1A;&#x5F53;&#x6210; 10 &#x8FDB;&#x5236;&#x89E3;&#x6790;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6BD4;&#x8F83;&#x5EFA;&#x8BAE;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1A;&#x53EF;&#x4EE5;&#x5728; parseInt()&#x4E2D;&#x4F20;&#x9012;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6765;&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x6570;&#x5B57;&#x7684;&#x8FDB;&#x5236;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&quot;070&quot;</span>;
+
+a = <span class="hljs-built_in">parseInt</span>(a, <span class="hljs-number">8</span>); <span class="hljs-comment">//&#x5C06; 070 &#x5F53;&#x6210;&#x516B;&#x8FDB;&#x5236;&#x6765;&#x770B;&#x5F85;&#xFF0C;&#x8F6C;&#x6362;&#x7ED3;&#x679C;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#x3002;</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;56&#x3002;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x8981;&#x597D;&#x597D;&#x7406;&#x89E3;&#x3002;</span>
+</code></pre>
+<h2 id="&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
+<p>&#x91CD;&#x70B9;&#xFF1A;<strong>&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x90FD;&#x662F;&#x663E;&#x5F0F;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;</strong>&#x3002;&#x4E0B;&#x9762;&#x6765;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h3 id="isnan-&#x51FD;&#x6570;">isNaN() &#x51FD;&#x6570;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">isNaN</span>(&#x53C2;&#x6570;);
+</code></pre>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5426;&#x4E3A; NaN&#xFF08;&#x975E;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A; Boolean &#x7C7B;&#x578B;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF1A;<strong>&#x4EFB;&#x4F55;&#x4E0D;&#x80FD;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x90FD;&#x4F1A;&#x8BA9;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE; true</strong>&#x3002;</p>
+<p><strong>&#x6267;&#x884C;&#x8FC7;&#x7A0B;</strong>&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x5148;&#x8C03;&#x7528;<code>Number(&#x53C2;&#x6570;)</code>&#x51FD;&#x6570;&#xFF1B;</p>
+<p>&#xFF08;2&#xFF09;&#x7136;&#x540E;&#x5C06;<code>Number(&#x53C2;&#x6570;)</code>&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x548C;<code>NaN</code>&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&apos;123&apos;</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;false&#x3002;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&apos;abc&apos;</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;true&#x3002;&#x56E0;&#x4E3A; Number(&apos;abc&apos;) &#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F; NaN</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">null</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;false</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">undefined</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;true</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;true</span>
+</code></pre>
+<h3 id="&#x81EA;&#x589E;&#x81EA;&#x51CF;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x3001;&#x2014;-">&#x81EA;&#x589E;/&#x81EA;&#x51CF;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>++</code>&#x3001;<code>&#x2014;-</code></h3>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&quot;666&quot;</span>;
+a++;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A; number</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;667</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x5148;&#x8C03;&#x7528;<code>Number(&#x53C2;&#x6570;)</code>&#x51FD;&#x6570;&#xFF1B;</p>
+<p>&#xFF08;2&#xFF09;&#x7136;&#x540E;&#x5C06;<code>Number(&#x53C2;&#x6570;)</code>&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8FDB;&#x884C; &#x52A0; 1 &#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;abc&apos;</span>;
+a++;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;number</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;NaN&#x3002;&#x56E0;&#x4E3A; Number(&apos;abc&apos;)&#x7684;&#x7ED3;&#x679C;&#x4E3A; NaN&#xFF0C;&#x518D;&#x81EA;&#x589E;&#x540E;&#xFF0C;&#x7ED3;&#x679C;&#x4F9D;&#x7136;&#x662F; NaN</span>
+</code></pre>
+<h3 id="&#x6B63;&#x53F7;&#x8D1F;&#x53F7;&#xFF1A;a&#x3001;-a">&#x6B63;&#x53F7;/&#x8D1F;&#x53F7;&#xFF1A;<code>+a</code>&#x3001;<code>-a</code></h3>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x8BF4;&#x7684;&#x662F;&#x6B63;&#x53F7;/&#x8D1F;&#x53F7;&#xFF0C;&#x4E0D;&#x662F;&#x52A0;&#x53F7;/&#x51CF;&#x53F7;&#x3002;</p>
+</blockquote>
+<p>&#x4EFB;&#x4F55;&#x503C;&#x505A;<code>+a</code>&#x3001;<code>-a</code>&#x3001;<code>/a</code>&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A; Number &#x7C7B;&#x578B;&#x3002; &#x5185;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x662F; Number() &#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4F8B;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;666&apos;</span>;
+<span class="hljs-keyword">var</span> b = +a;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;string&#x3002;&#x8BF4;&#x660E; a &#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;666</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> b); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;number&#x3002;&#x8BF4;&#x660E; b &#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x3002;</span>
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;666</span>
+</code></pre>
+<h3 id="&#x52A0;&#x53F7;&#xFF1A;">&#x52A0;&#x53F7;&#xFF1A;<code>+</code></h3>
+<p><strong>&#x60C5;&#x51B5;&#x4E00;</strong>&#xFF1A;&#x5B57;&#x7B26;&#x4E32; + &#x6570;&#x5B57;</p>
+<ul>
+<li>&#x5F53;&#x52A0;&#x53F7;&#x7684;&#x4E24;&#x8FB9;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528; String() &#x51FD;&#x6570;&#x5C06;&#x6570;&#x5B57;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8BA1;&#x7B97;&#x3002;&#x5BFC;&#x81F4;&#x6700;&#x7EC8;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E8C;</strong>&#xFF1A;Boolean + &#x6570;&#x5B57;</p>
+<ul>
+<li>Boolean &#x578B;&#x548C;&#x6570;&#x5B57;&#x578B;&#x76F8;&#x52A0;&#x65F6;&#xFF0C; true &#x6309; 1 &#x6765;&#x7B97; &#xFF0C;false &#x6309; 0 &#x6765;&#x7B97;&#x3002;&#x8FD9;&#x91CC;&#x5176;&#x5B9E;&#x662F;&#x5148;&#x8C03; Number() &#x51FD;&#x6570;&#xFF0C;&#x5C06; Boolean &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; Number&#x7C7B;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x548C; &#x6570;&#x5B57;&#x76F8;&#x52A0;&#x3002;</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x4E09;</strong>&#xFF1A; null + &#x6570;&#x5B57;</p>
+<ul>
+<li>&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;0 + &#x6570;&#x5B57;</li>
+</ul>
+<p><strong>&#x60C5;&#x51B5;&#x56DB;</strong>&#xFF1A; undefined + &#x6570;&#x5B57;</p>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF1A;NaN</li>
+</ul>
+<h3 id="&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;-&#x3001;&#x3001;">&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<code>-</code>&#x3001;<code>*</code>&#x3001;<code>/</code></h3>
+<p>1&#x3001;&#x4EFB;&#x4F55;&#x975E; Number &#x7C7B;&#x578B;&#x7684;&#x503C;&#x505A;<code>-</code>&#x3001;<code>*</code>&#x3001;<code>/</code>&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x503C;&#x8F6C;&#x6362;&#x4E3A;Number&#x7136;&#x540E;&#x518D;&#x8FD0;&#x7B97;(&#x5185;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x662F; Number() &#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x662F;  Number &#x7C7B;&#x578B;&#x3002;&#xFF08;&#x6CE8;&#xFF1A;<code>&#x4EFB;&#x4F55;&#x503C; + &#x5B57;&#x7B26;&#x4E32;</code>&#x662F;&#x7279;&#x4F8B;&#xFF0C;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">    result1 = <span class="hljs-literal">true</span> + <span class="hljs-number">1</span>;  <span class="hljs-comment">// 2 = 1+ 1</span>
+
+    result2 = <span class="hljs-literal">true</span> + <span class="hljs-literal">false</span>; <span class="hljs-comment">// 1 = 1+ 0</span>
+
+    result3 = <span class="hljs-number">1</span> + <span class="hljs-literal">null</span>; <span class="hljs-comment">// 1 = 1+ 0</span>
+
+    result4 = <span class="hljs-number">100</span> - <span class="hljs-string">&apos;1&apos;</span> <span class="hljs-comment">// 99</span>
+</code></pre>
+<p>2&#x3001;&#x4EFB;&#x4F55;&#x7684;&#x503C;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x505A;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x90FD;&#x4F1A;&#x5148;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x505A;&#x62FC;&#x4E32;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">    result1 = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-string">&apos;3&apos;</span>  <span class="hljs-comment">// 33</span>
+
+    result2 = <span class="hljs-string">&apos;1&apos;</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span>; <span class="hljs-comment">// 123</span>
+</code></pre>
+<p>3&#x3001;&#x4EFB;&#x4F55;&#x503C;&#x548C;NaN&#x505A;&#x8FD0;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x90FD;&#x662F;NaN&#x3002;</p>
+<h2 id="&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;">&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;</h2>
+<p>&#x60F3;&#x5B66;&#x4E60;<strong>&#x4EE3;&#x7801;&#x4E4B;&#x5916;&#x7684;&#x6280;&#x80FD;</strong>&#xFF1F;&#x4E0D;&#x59A8;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#xFF1A;<strong>&#x5343;&#x53E4;&#x58F9;&#x53F7;</strong>&#xFF08;id&#xFF1A;<code>qianguyihao</code>&#xFF09;&#x3002;</p>
+<p>&#x626B;&#x4E00;&#x626B;&#xFF0C;&#x4F60;&#x5C06;&#x53D1;&#x73B0;&#x53E6;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x800C;&#x8FD9;&#x5C06;&#x662F;&#x4E00;&#x573A;&#x7F8E;&#x4E3D;&#x7684;&#x610F;&#x5916;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20200101.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-基本数据类型：Null 和 Undefined.html" class="navigation navigation-prev " aria-label="Previous page: 06-基本数据类型：Null 和 Undefined">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08-运算符.html" class="navigation navigation-next " aria-label="Next page: 08-运算符">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07-typeof和数据类型转换","level":"1.5.8","depth":2,"next":{"title":"08-运算符","level":"1.5.9","depth":2,"path":"04-JavaScript基础/08-运算符.md","ref":"04-JavaScript基础/08-运算符.md","articles":[]},"previous":{"title":"06-基本数据类型：Null 和 Undefined","level":"1.5.7","depth":2,"path":"04-JavaScript基础/06-基本数据类型：Null 和 Undefined.md","ref":"04-JavaScript基础/06-基本数据类型：Null 和 Undefined.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-JavaScript基础/07-typeof和数据类型转换.md","mtime":"2020-06-17T03:21:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T06:31:18.810Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

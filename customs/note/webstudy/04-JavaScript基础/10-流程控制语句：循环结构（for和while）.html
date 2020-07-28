@@ -1,0 +1,2292 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>10-流程控制语句：循环结构（for和while） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11-对象简介.html" />
+    
+    
+    <link rel="prev" href="09-流程控制语句：选择结构（if和switch）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1_HTML.html">
+            
+                <a href="../chapter1_HTML.html">
+            
+                    
+                    01-HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-HTML/01-认识Web和Web标准.html">
+            
+                <a href="../01-HTML/01-认识Web和Web标准.html">
+            
+                    
+                    01-认识Web和Web标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-HTML/02-浏览器的介绍.html">
+            
+                <a href="../01-HTML/02-浏览器的介绍.html">
+            
+                    
+                    02-浏览器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-HTML/03-初识HTML.html">
+            
+                <a href="../01-HTML/03-初识HTML.html">
+            
+                    
+                    03-初识HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-HTML/04-HTML标签：排版标签.html">
+            
+                <a href="../01-HTML/04-HTML标签：排版标签.html">
+            
+                    
+                    04-HTML标签：排版标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                <a href="../01-HTML/05-HTML标签：字体标签和超链接.html">
+            
+                    
+                    05-HTML标签：字体标签和超链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-HTML/06-HTML标签：图片标签.html">
+            
+                <a href="../01-HTML/06-HTML标签：图片标签.html">
+            
+                    
+                    06-HTML标签：图片标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-HTML/07-html标签图文详解（二）.html">
+            
+                <a href="../01-HTML/07-html标签图文详解（二）.html">
+            
+                    
+                    07-html标签图文详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-HTML/08-HTML5详解.html">
+            
+                <a href="../01-HTML/08-HTML5详解.html">
+            
+                    
+                    08-HTML5详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                <a href="../01-HTML/09-HTML5举例：简单的视频播放器.html">
+            
+                    
+                    09-HTML5举例：简单的视频播放器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-HTML/10-HTML5详解（二）.html">
+            
+                <a href="../01-HTML/10-HTML5详解（二）.html">
+            
+                    
+                    10-HTML5详解（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-HTML/11-HTML5详解（三）.html">
+            
+                <a href="../01-HTML/11-HTML5详解（三）.html">
+            
+                    
+                    11-HTML5详解（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-HTML/12-HTML基础回顾.html">
+            
+                <a href="../01-HTML/12-HTML基础回顾.html">
+            
+                    
+                    12-HTML基础回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2_CSS基础.html">
+            
+                <a href="../chapter2_CSS基础.html">
+            
+                    
+                    02-CSS基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                <a href="../02-CSS基础/01-CSS属性：字体属性和文本属性.html">
+            
+                    
+                    01-CSS属性：字体属性和文本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                <a href="../02-CSS基础/02-CSS属性：背景属性.html">
+            
+                    
+                    02-CSS属性：背景属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                <a href="../02-CSS基础/03-CSS样式表和选择器.html">
+            
+                    
+                    03-CSS样式表和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                <a href="../02-CSS基础/04-CSS选择器：伪类.html">
+            
+                    
+                    04-CSS选择器：伪类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                <a href="../02-CSS基础/05-CSS样式表的继承性和层叠性.html">
+            
+                    
+                    05-CSS样式表的继承性和层叠性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                <a href="../02-CSS基础/06-CSS盒模型详解.html">
+            
+                    
+                    06-CSS盒模型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-CSS基础/07-浮动.html">
+            
+                <a href="../02-CSS基础/07-浮动.html">
+            
+                    
+                    07-浮动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                <a href="../02-CSS基础/08-CSS属性：定位属性.html">
+            
+                    
+                    08-CSS属性：定位属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                <a href="../02-CSS基础/09-CSS案例讲解：博雅互动.html">
+            
+                    
+                    09-CSS案例讲解：博雅互动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                <a href="../02-CSS基础/10-CSS3选择器详解.html">
+            
+                    
+                    10-CSS3选择器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                <a href="../02-CSS基础/11-CSS3属性详解（一）.html">
+            
+                    
+                    11-CSS3属性详解（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                <a href="../02-CSS基础/12-CSS3属性详解：动画详解.html">
+            
+                    
+                    12-CSS3属性详解：动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                <a href="../02-CSS基础/13-CSS3属性：Flex布局图文详解.html">
+            
+                    
+                    13-CSS3属性：Flex布局图文详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                <a href="../02-CSS基础/14-CSS3属性详解：Web字体.html">
+            
+                    
+                    14-CSS3属性详解：Web字体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-CSS基础/15-Sass入门.html">
+            
+                <a href="../02-CSS基础/15-Sass入门.html">
+            
+                    
+                    15-Sass入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                <a href="../02-CSS基础/16-浏览器的兼容性问题.html">
+            
+                    
+                    16-浏览器的兼容性问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                <a href="../02-CSS基础/CSS3的常见边框汇总.html">
+            
+                    
+                    CSS3的常见边框汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-CSS基础/others.html">
+            
+                <a href="../02-CSS基础/others.html">
+            
+                    
+                    others
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3_CSS进阶.html">
+            
+                <a href="../chapter3_CSS进阶.html">
+            
+                    
+                    03-CSS进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-CSS进阶/00-准备.html">
+            
+                <a href="../03-CSS进阶/00-准备.html">
+            
+                    
+                    00-准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                <a href="../03-CSS进阶/01-CSS中的非布局样式.html">
+            
+                    
+                    01-CSS中的非布局样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-CSS进阶/02-CSS布局.html">
+            
+                <a href="../03-CSS进阶/02-CSS布局.html">
+            
+                    
+                    02-CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                <a href="../03-CSS进阶/03-网页设计和开发中，关于字体的常识.html">
+            
+                    
+                    03-网页设计和开发中，关于字体的常识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                <a href="../03-CSS进阶/04-如何让一个元素水平垂直居中？.html">
+            
+                    
+                    04-如何让一个元素水平垂直居中？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-CSS进阶/CSS的一些小知识.html">
+            
+                <a href="../03-CSS进阶/CSS的一些小知识.html">
+            
+                    
+                    CSS的一些小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-CSS进阶/CSS开发积累.html">
+            
+                <a href="../03-CSS进阶/CSS开发积累.html">
+            
+                    
+                    CSS开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-CSS进阶/CSS面试题.html">
+            
+                <a href="../03-CSS进阶/CSS面试题.html">
+            
+                    
+                    CSS面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-CSS进阶/CSS文章推荐.html">
+            
+                <a href="../03-CSS进阶/CSS文章推荐.html">
+            
+                    
+                    CSS文章推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4_JavaScript基础.html">
+            
+                <a href="../chapter4_JavaScript基础.html">
+            
+                    
+                    04-JavaScript基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="00-编程语言.html">
+            
+                <a href="00-编程语言.html">
+            
+                    
+                    00-编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="01-JS简介.html">
+            
+                <a href="01-JS简介.html">
+            
+                    
+                    01-JS简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="02-变量.html">
+            
+                <a href="02-变量.html">
+            
+                    
+                    02-变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                <a href="03-变量的数据类型：基本数据类型和引用数据类型.html">
+            
+                    
+                    03-变量的数据类型：基本数据类型和引用数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="04-基本数据类型：String 和 Boolean.html">
+            
+                <a href="04-基本数据类型：String 和 Boolean.html">
+            
+                    
+                    04-基本数据类型：String 和 Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="05-基本数据类型：Number.html">
+            
+                <a href="05-基本数据类型：Number.html">
+            
+                    
+                    05-基本数据类型：Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="06-基本数据类型：Null 和 Undefined.html">
+            
+                <a href="06-基本数据类型：Null 和 Undefined.html">
+            
+                    
+                    06-基本数据类型：Null 和 Undefined
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="07-typeof和数据类型转换.html">
+            
+                <a href="07-typeof和数据类型转换.html">
+            
+                    
+                    07-typeof和数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="08-运算符.html">
+            
+                <a href="08-运算符.html">
+            
+                    
+                    08-运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="09-流程控制语句：选择结构（if和switch）.html">
+            
+                <a href="09-流程控制语句：选择结构（if和switch）.html">
+            
+                    
+                    09-流程控制语句：选择结构（if和switch）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.11" data-path="10-流程控制语句：循环结构（for和while）.html">
+            
+                <a href="10-流程控制语句：循环结构（for和while）.html">
+            
+                    
+                    10-流程控制语句：循环结构（for和while）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="11-对象简介.html">
+            
+                <a href="11-对象简介.html">
+            
+                    
+                    11-对象简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="12-基本包装类型.html">
+            
+                <a href="12-基本包装类型.html">
+            
+                    
+                    12-基本包装类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="13-内置对象 String：字符串的常见方法.html">
+            
+                <a href="13-内置对象 String：字符串的常见方法.html">
+            
+                    
+                    13-内置对象 String：字符串的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="14-内置对象：Number和Math.html">
+            
+                <a href="14-内置对象：Number和Math.html">
+            
+                    
+                    14-内置对象：Number和Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="15-内置对象：Date.html">
+            
+                <a href="15-内置对象：Date.html">
+            
+                    
+                    15-内置对象：Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="16-数组简介.html">
+            
+                <a href="16-数组简介.html">
+            
+                    
+                    16-数组简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="17-数组的常见方法.html">
+            
+                <a href="17-数组的常见方法.html">
+            
+                    
+                    17-数组的常见方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="18-函数.html">
+            
+                <a href="18-函数.html">
+            
+                    
+                    18-函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="19-作用域和变量提升.html">
+            
+                <a href="19-作用域和变量提升.html">
+            
+                    
+                    19-作用域和变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="20-预编译.html">
+            
+                <a href="20-预编译.html">
+            
+                    
+                    20-预编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="21-执行期上下文.html">
+            
+                <a href="21-执行期上下文.html">
+            
+                    
+                    21-执行期上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="22-this.html">
+            
+                <a href="22-this.html">
+            
+                    
+                    22-this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="23-对象的创建&构造函数.html">
+            
+                <a href="23-对象的创建&构造函数.html">
+            
+                    
+                    23-对象的创建&构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="24-对象的基本操作.html">
+            
+                <a href="24-对象的基本操作.html">
+            
+                    
+                    24-对象的基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="25-对象的高级操作：Object.assign.html">
+            
+                <a href="25-对象的高级操作：Object.assign.html">
+            
+                    
+                    25-对象的高级操作：Object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="31-正则表达式.html">
+            
+                <a href="31-正则表达式.html">
+            
+                    
+                    31-正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="39-事件简介.html">
+            
+                <a href="39-事件简介.html">
+            
+                    
+                    39-事件简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.29" data-path="40-DOM简介和DOM操作.html">
+            
+                <a href="40-DOM简介和DOM操作.html">
+            
+                    
+                    40-DOM简介和DOM操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.30" data-path="41-通过style对象获取和设置行内样式.html">
+            
+                <a href="41-通过style对象获取和设置行内样式.html">
+            
+                    
+                    41-通过style对象获取和设置行内样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.31" data-path="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                <a href="42-offset相关属性和匀速动画含轮播图的实现.html">
+            
+                    
+                    42-offset相关属性和匀速动画(含轮播图的实现)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.32" data-path="43-scroll相关属性和缓动动画.html">
+            
+                <a href="43-scroll相关属性和缓动动画.html">
+            
+                    
+                    43-scroll相关属性和缓动动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.33" data-path="44-client可视区相关属性.html">
+            
+                <a href="44-client可视区相关属性.html">
+            
+                    
+                    44-client可视区相关属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.34" data-path="45-事件的绑定和事件对象Event.html">
+            
+                <a href="45-事件的绑定和事件对象Event.html">
+            
+                    
+                    45-事件的绑定和事件对象Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.35" data-path="46-事件的传播和事件冒泡.html">
+            
+                <a href="46-事件的传播和事件冒泡.html">
+            
+                    
+                    46-事件的传播和事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.36" data-path="47-事件委托.html">
+            
+                <a href="47-事件委托.html">
+            
+                    
+                    47-事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.37" data-path="48-键盘事件.html">
+            
+                <a href="48-键盘事件.html">
+            
+                    
+                    48-键盘事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.38" data-path="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                <a href="49-BOM简介和navigator.userAgent&History&Location.html">
+            
+                    
+                    49-BOM简介和navigator.userAgent&History&Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.39" data-path="50-定时器.html">
+            
+                <a href="50-定时器.html">
+            
+                    
+                    50-定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.40" data-path="51-jQuery的介绍和选择器.html">
+            
+                <a href="51-jQuery的介绍和选择器.html">
+            
+                    
+                    51-jQuery的介绍和选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.41" data-path="52-jQuery动画详解.html">
+            
+                <a href="52-jQuery动画详解.html">
+            
+                    
+                    52-jQuery动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.42" data-path="53-jQuery操作DOM.html">
+            
+                <a href="53-jQuery操作DOM.html">
+            
+                    
+                    53-jQuery操作DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.43" data-path="54-jQuery的事件机制和其他知识.html">
+            
+                <a href="54-jQuery的事件机制和其他知识.html">
+            
+                    
+                    54-jQuery的事件机制和其他知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.44" data-path="55-Zepto入门.html">
+            
+                <a href="55-Zepto入门.html">
+            
+                    
+                    55-Zepto入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.45" data-path="BOM的常见内置方法和内置对象.html">
+            
+                <a href="BOM的常见内置方法和内置对象.html">
+            
+                    
+                    BOM的常见内置方法和内置对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.46" data-path="闭包.html">
+            
+                <a href="闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.47" data-path="常见代码解读.html">
+            
+                <a href="常见代码解读.html">
+            
+                    
+                    常见代码解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.48" data-path="原型对象.html">
+            
+                <a href="原型对象.html">
+            
+                    
+                    原型对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.49" data-path="原型链.html">
+            
+                <a href="原型链.html">
+            
+                    
+                    原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5_JavaScript之ES6语法.html">
+            
+                <a href="../chapter5_JavaScript之ES6语法.html">
+            
+                    
+                    05-JavaScript之ES6语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                <a href="../05-JavaScript之ES6语法/01-ES5中的严格模式.html">
+            
+                    
+                    01-ES5中的严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/02-ES5中的一些扩展.html">
+            
+                    
+                    02-ES5中的一些扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                <a href="../05-JavaScript之ES6语法/03-ES6的介绍和环境配置.html">
+            
+                    
+                    03-ES6的介绍和环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                <a href="../05-JavaScript之ES6语法/04-ES6：变量let、const和块级作用域.html">
+            
+                    
+                    04-ES6：变量let、const和块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                <a href="../05-JavaScript之ES6语法/05-ES6：变量的解构赋值.html">
+            
+                    
+                    05-ES6：变量的解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/06-ES6：函数扩展.html">
+            
+                    
+                    06-ES6：函数扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                <a href="../05-JavaScript之ES6语法/07-ES6：字符串、数组、对象的扩展.html">
+            
+                    
+                    07-ES6：字符串、数组、对象的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/08-ES6：Promise入门详解.html">
+            
+                    
+                    08-ES6：Promise入门详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                <a href="../05-JavaScript之ES6语法/09-ES7：async函数详解.html">
+            
+                    
+                    09-ES7：async函数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                <a href="../05-JavaScript之ES6语法/ES6：Symbol.html">
+            
+                    
+                    ES6：Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6_JavaScript进阶.html">
+            
+                <a href="../chapter6_JavaScript进阶.html">
+            
+                    
+                    06-JavaScript进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                <a href="../06-JavaScript进阶/01-var、let、const的区别.html">
+            
+                    
+                    01-var、let、const的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                <a href="../06-JavaScript进阶/call、apply、bind的区别.html">
+            
+                    
+                    call、apply、bind的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                <a href="../06-JavaScript进阶/JavaScript开发积累.html">
+            
+                    
+                    JavaScript开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-JavaScript进阶/this.html">
+            
+                <a href="../06-JavaScript进阶/this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-JavaScript进阶/创建对象和继承.html">
+            
+                <a href="../06-JavaScript进阶/创建对象和继承.html">
+            
+                    
+                    创建对象和继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                <a href="../06-JavaScript进阶/浅拷贝和深拷贝.html">
+            
+                    
+                    浅拷贝和深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-JavaScript进阶/作用域和闭包.html">
+            
+                <a href="../06-JavaScript进阶/作用域和闭包.html">
+            
+                    
+                    作用域和闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter11_Vue基础.html">
+            
+                <a href="../chapter11_Vue基础.html">
+            
+                    
+                    11-Vue基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                <a href="../11-Vue基础/00-Vue的介绍和vue-cli.html">
+            
+                    
+                    00-Vue的介绍和vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                <a href="../11-Vue基础/01-02_v-on的事件修饰符.html">
+            
+                    
+                    01-2v-on的事件修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../06-JavaScript进阶/01-03_Vue的系统指令(二">
+            
+                <span>
+            
+                    
+                    01-3Vue的系统指令(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                <a href="../11-Vue基础/01-04_Vue的举例：列表功能.html">
+            
+                    
+                    01-4Vue的举例：列表功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                <a href="../11-Vue基础/01-06_自定义按键修饰符_自定义指令.html">
+            
+                    
+                    01-6自定义按键修饰符&自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                <a href="../11-Vue基础/02-Vue实例的生命周期函数.html">
+            
+                    
+                    02-Vue实例的生命周期函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                <a href="../11-Vue基础/03-Vue中的Ajax请求.html">
+            
+                    
+                    03-Vue中的Ajax请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../11-Vue基础/04-Vue动画.html">
+            
+                <a href="../11-Vue基础/04-Vue动画.html">
+            
+                    
+                    04-Vue动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                <a href="../11-Vue基础/05-Vue组件的定义和注册.html">
+            
+                    
+                    05-Vue组件的定义和注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                <a href="../11-Vue基础/06-Vue组件之间的传值.html">
+            
+                    
+                    06-Vue组件之间的传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../11-Vue基础/07-Vue-router路由.html">
+            
+                <a href="../11-Vue基础/07-Vue-router路由.html">
+            
+                    
+                    07-Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                <a href="../11-Vue基础/Vuejs在开发中的常见写法积累.html">
+            
+                    
+                    Vue.js在开发中的常见写法积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../11-Vue基础/Vue-router路由.html">
+            
+                <a href="../11-Vue基础/Vue-router路由.html">
+            
+                    
+                    Vue-router路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../11-Vue基础/Vue开发积累.html">
+            
+                <a href="../11-Vue基础/Vue开发积累.html">
+            
+                    
+                    Vue开发积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../11-Vue基础/Vue组件.html">
+            
+                <a href="../11-Vue基础/Vue组件.html">
+            
+                    
+                    Vue组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >10-流程控制语句：循环结构（for和while）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF1A;&#x901A;&#x8FC7;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x53CD;&#x590D;&#x7684;&#x6267;&#x884C;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x591A;&#x6B21;&#x3002;</p>
+<h2 id="for-&#x5FAA;&#x73AF;">for &#x5FAA;&#x73AF;</h2>
+<h3 id="for-&#x5FAA;&#x73AF;&#x7684;&#x8BED;&#x6CD5;">for &#x5FAA;&#x73AF;&#x7684;&#x8BED;&#x6CD5;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>for(&#x2460;&#x521D;&#x59CB;&#x5316;&#x8868;&#x8FBE;&#x5F0F;; &#x2461;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;; &#x2463;&#x66F4;&#x65B0;&#x8868;&#x8FBE;&#x5F0F;){
+    &#x2462;&#x8BED;&#x53E5;...
+}
+</code></pre><p>&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code>&#x2460;&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x53D8;&#x91CF;&#xFF08;&#x521D;&#x59CB;&#x5316;&#x8868;&#x8FBE;&#x5F0F;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF09;
+
+&#x2461;&#x6267;&#x884C;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#xFF1A;
+    &#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x2462;
+    &#x5982;&#x679C;&#x4E3A;false&#xFF0C;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;
+
+&#x2463;&#x6267;&#x884C;&#x66F4;&#x65B0;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x66F4;&#x65B0;&#x8868;&#x8FBE;&#x5F0F;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x7EE7;&#x7EED;&#x91CD;&#x590D;&#x2461;
+</code></pre><p>for &#x5FAA;&#x73AF;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">100</span>; i++) {
+    <span class="hljs-built_in">console</span>.log(i);
+}
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x7684;&#x89E3;&#x91CA;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20180117_2248_2.png" alt=""></p>
+<h3 id="for-&#x5FAA;&#x73AF;&#x4E3E;&#x4F8B;">for &#x5FAA;&#x73AF;&#x4E3E;&#x4F8B;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">13</span>; i = i + <span class="hljs-number">4</span>) {
+    <span class="hljs-built_in">console</span>.log(i);
+}
+</code></pre>
+<p>&#x4E0A;&#x65B9;&#x4EE3;&#x7801;&#x7684;&#x904D;&#x5386;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<pre><code>&#x7A0B;&#x5E8F;&#x4E00;&#x8FD0;&#x884C;&#xFF0C;&#x5C06;&#x6267;&#x884C;var i = 1;&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#xFF0C; &#x6240;&#x4EE5;i&#x7684;&#x503C;&#x662F;1&#x3002;
+&#x7136;&#x540E;&#x7A0B;&#x5E8F;&#x4F1A;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;i &lt; 13&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;1&lt;13&#x662F;&#x771F;&#xFF0C;&#x6240;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x4F53;&#xFF08;&#x5C31;&#x662F;&#x5927;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF09;&#x3002;
+&#x6267;&#x884C;&#x5B8C;&#x5FAA;&#x73AF;&#x4F53;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6267;&#x884C;i=i+4&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x6240;&#x4EE5;i&#x7684;&#x503C;&#xFF0C;&#x662F;5&#x3002;
+
+&#x7A0B;&#x5E8F;&#x4F1A;&#x4F1A;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;i &lt; 13&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;5&lt;13&#x662F;&#x771F;&#xFF0C;&#x6240;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x4F53;&#xFF08;&#x5C31;&#x662F;&#x5927;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF09;&#x3002;
+&#x6267;&#x884C;&#x5B8C;&#x5FAA;&#x73AF;&#x4F53;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6267;&#x884C;i=i+4&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x6240;&#x4EE5;i&#x7684;&#x503C;&#xFF0C;&#x662F;9&#x3002;
+
+&#x7A0B;&#x5E8F;&#x4F1A;&#x4F1A;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;i &lt; 13&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;9&lt;13&#x662F;&#x771F;&#xFF0C;&#x6240;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x4F53;&#xFF08;&#x5C31;&#x662F;&#x5927;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF09;&#x3002;
+&#x6267;&#x884C;&#x5B8C;&#x5FAA;&#x73AF;&#x4F53;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6267;&#x884C;i=i+4&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x6240;&#x4EE5;i&#x7684;&#x503C;&#xFF0C;&#x662F;13&#x3002;
+
+&#x7A0B;&#x5E8F;&#x4F1A;&#x4F1A;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;i &lt; 13&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;13&lt;13&#x662F;&#x5047;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#x4E86;&#xFF0C;&#x5C06;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#x3002;
+
+&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;1&#x3001;5&#x3001;9
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#x505A;&#x51E0;&#x4E2A;&#x9898;&#x76EE;&#x3002;</p>
+<p><strong>&#x9898;&#x76EE; 1</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">10</span>; i = i + <span class="hljs-number">3</span>) {
+    i = i + <span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(i);
+}
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;2&#x3001;6&#x3001;10</p>
+<p><strong>&#x9898;&#x76EE; 2</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">10</span>; i++) {}
+<span class="hljs-built_in">console</span>.log(i);
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;11</p>
+<p><strong>&#x9898;&#x76EE; 3</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">7</span>; i = i + <span class="hljs-number">3</span>) {}
+<span class="hljs-built_in">console</span>.log(i);
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;7</p>
+<p><strong>&#x9898;&#x76EE; 4</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i++) {
+    <span class="hljs-built_in">console</span>.log(i);
+}
+</code></pre>
+<p>&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</p>
+<h2 id="while-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;">while &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h2>
+<h3 id="while-&#x5FAA;&#x73AF;">while &#x5FAA;&#x73AF;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">while</span>(&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;){
+    &#x8BED;&#x53E5;...
+}
+</code></pre>
+<p>&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code>while&#x8BED;&#x53E5;&#x5728;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x5148;&#x5BF9;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6C42;&#x503C;&#x5224;&#x65AD;&#xFF1A;
+
+    &#x5982;&#x679C;&#x503C;&#x4E3A;true&#xFF0C;&#x5219;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#xFF1A;
+        &#x5FAA;&#x73AF;&#x4F53;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4EE5;&#x540E;&#xFF0C;&#x7EE7;&#x7EED;&#x5BF9;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x5224;&#x65AD;
+        &#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;
+
+    &#x5982;&#x679C;&#x503C;&#x4E3A;false&#xFF0C;&#x5219;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;
+</code></pre><p><strong>&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; break &#x6765;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;</strong>&#x3002;</p>
+<h3 id="dowhile-&#x5FAA;&#x73AF;">do...while &#x5FAA;&#x73AF;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">do</span>{
+    &#x8BED;&#x53E5;...
+}<span class="hljs-keyword">while</span>(&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;)
+</code></pre>
+<p>&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code>do...while&#x8BED;&#x53E5;&#x5728;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x5148;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#xFF1A;
+
+    &#x5FAA;&#x73AF;&#x4F53;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4EE5;&#x540E;&#xFF0C;&#x5728;&#x5BF9;while&#x540E;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF1A;
+        &#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x7EE7;&#x7EED;&#x5224;&#x65AD;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;
+        &#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E3A;false&#xFF0C;&#x5219;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;
+</code></pre><h3 id="while-&#x5FAA;&#x73AF;&#x548C;-dowhile-&#x5FAA;&#x73AF;&#x7684;&#x533A;&#x522B;">while &#x5FAA;&#x73AF;&#x548C; do...while &#x5FAA;&#x73AF;&#x7684;&#x533A;&#x522B;</h3>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x8BED;&#x53E5;&#x7684;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li>while &#x662F;&#x5148;&#x5224;&#x65AD;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x800C; do...while &#x662F;&#x5148;&#x6267;&#x884C;&#x540E;&#x5224;&#x65AD;&#x3002;</li>
+</ul>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;do...while &#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5FAA;&#x73AF;&#x4F53;&#x81F3;&#x5C11;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x800C; while &#x4E0D;&#x80FD;&#x3002;</p>
+<h3 id="while-&#x5FAA;&#x73AF;&#x4E3E;&#x4F8B;">while &#x5FAA;&#x73AF;&#x4E3E;&#x4F8B;</h3>
+<p><strong>&#x9898;&#x76EE;</strong>&#xFF1A;&#x5047;&#x5982;&#x6295;&#x8D44;&#x7684;&#x5E74;&#x5229;&#x7387;&#x4E3A; 5%&#xFF0C;&#x8BD5;&#x6C42;&#x4ECE; 1000 &#x5757;&#x589E;&#x957F;&#x5230; 5000 &#x5757;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x591A;&#x5C11;&#x5E74;&#xFF1F;</p>
+<p><strong>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</strong>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+            <span class="hljs-comment">/*
+             * &#x5047;&#x5982;&#x6295;&#x8D44;&#x7684;&#x5E74;&#x5229;&#x7387;&#x4E3A;5%&#xFF0C;&#x8BD5;&#x6C42;&#x4ECE;1000&#x5757;&#x589E;&#x957F;&#x5230;5000&#x5757;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x591A;&#x5C11;&#x5E74;
+             *
+             * 1000 1000*1.05
+             * 1050 1050*1.05
+             */</span>
+
+            <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x94B1;&#x6570;</span>
+            <span class="hljs-keyword">var</span> money = <span class="hljs-number">1000</span>;
+
+            <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;</span>
+            <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;
+
+            <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;while&#x5FAA;&#x73AF;&#x6765;&#x8BA1;&#x7B97;&#x6BCF;&#x5E74;&#x7684;&#x94B1;&#x6570;</span>
+            <span class="hljs-keyword">while</span> (money &lt; <span class="hljs-number">5000</span>) {
+                money *= <span class="hljs-number">1.05</span>;
+
+                <span class="hljs-comment">//&#x4F7F;count&#x81EA;&#x589E;</span>
+                count++;
+            }
+
+            <span class="hljs-built_in">console</span>.log(money);
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E00;&#x5171;&#x9700;&#x8981;&apos;</span> + count + <span class="hljs-string">&apos;&#x5E74;&apos;</span>);
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>5003.18854203379
+
+&#x4E00;&#x5171;&#x9700;&#x8981;33&#x5E74;
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x7B97;&#x4E00;&#x4E0B;&#xFF0C;&#x5047;&#x5982;&#x6295;&#x8D44;&#x7684;&#x5E74;&#x5229;&#x7387;&#x4E3A; 5%&#xFF0C;&#x4ECE; 1000 &#x5757;&#x589E;&#x957F;&#x5230; 1 &#x4E07;&#x5757;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x8D39; 48 &#x5E74;&#xFF1A;</p>
+<pre><code>10401.269646942128
+&#x4E00;&#x5171;&#x9700;&#x8981;48&#x5E74;
+</code></pre><h2 id="break-&#x548C;-continue">break &#x548C; continue</h2>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x77E5;&#x8BC6;&#x70B9;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;</p>
+</blockquote>
+<h3 id="break">break</h3>
+<ul>
+<li><p>break &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x9000;&#x51FA; switch &#x8BED;&#x53E5;&#x6216;&#x9000;&#x51FA;<strong>&#x6574;&#x4E2A;</strong>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF08;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x5305;&#x62EC; for &#x5FAA;&#x73AF;&#x3001;while &#x5FAA;&#x73AF;&#x3002;&#x4E0D;&#x5305;&#x62EC; if&#x3002;if &#x91CC;&#x4E0D;&#x80FD;&#x7528; break &#x548C; continue&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF09;&#x3002;</p>
+</li>
+<li><p>break &#x4F1A;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;&#x79BB;&#x5B83;<strong>&#x6700;&#x8FD1;</strong>&#x7684;&#x90A3;&#x4E2A;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x3002;</p>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x4E3A;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; label&#xFF0C;&#x6765;&#x6807;&#x8BC6;&#x5F53;&#x524D;&#x7684;&#x5FAA;&#x73AF;&#xFF08;&#x683C;&#x5F0F;&#xFF1A;label:&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF09;&#x3002;&#x4F7F;&#x7528; break &#x8BED;&#x53E5;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; break &#x540E;&#x8DDF;&#x7740;&#x4E00;&#x4E2A; label&#xFF0C;&#x8FD9;&#x6837; break &#x5C06;&#x4F1A;&#x7ED3;&#x675F;&#x6307;&#x5B9A;&#x7684;&#x5FAA;&#x73AF;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6700;&#x8FD1;&#x7684;&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x4E3E;&#x4F8B; 1</strong>&#xFF1A;&#x901A;&#x8FC7; break &#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;i&#x7684;&#x503C;:&apos;</span> + i);
+    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">2</span>) {
+        <span class="hljs-keyword">break</span>; <span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF0C;&#x867D;&#x7136;&#x5728; if &#x91CC; &#x4F7F;&#x7528;&#x4E86; break&#xFF0C;&#x4F46;&#x8FD9;&#x91CC;&#x7684; break &#x662F;&#x670D;&#x52A1;&#x4E8E;&#x5916;&#x9762;&#x7684; for &#x5FAA;&#x73AF;&#x3002;</span>
+    }
+}
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>i&#x7684;&#x503C;:0
+i&#x7684;&#x503C;:1
+i&#x7684;&#x503C;:2
+</code></pre><p><strong>&#x4E3E;&#x4F8B; 2</strong>&#xFF1A;label &#x7684;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-javascript">outer: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5916;&#x5C42;&#x5FAA;&#x73AF; i &#x7684;&#x503C;&#xFF1A;&apos;</span> + i);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">5</span>; j++) {
+        <span class="hljs-keyword">break</span> outer; <span class="hljs-comment">// &#x76F4;&#x63A5;&#x8DF3;&#x51FA;outer&#x6240;&#x5728;&#x7684;&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#xFF08;&#x8FD9;&#x4E2A;outer&#x662F;&#x6211;&#x81EA;&#x5B9A;&#x4E49;&#x7684;label&#xFF09;</span>
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5185;&#x5C42;&#x5FAA;&#x73AF; j &#x7684;&#x503C;:&apos;</span> + j);
+    }
+}
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>&#x5916;&#x5C42;&#x5FAA;&#x73AF; i &#x7684;&#x503C;&#xFF1A;0
+</code></pre><h3 id="continue">continue</h3>
+<ul>
+<li><p>continue &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8DF3;&#x8FC7;<strong>&#x5F53;&#x6B21;</strong>&#x5FAA;&#x73AF;&#xFF0C;&#x7EE7;&#x7EED;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x3002;</p>
+</li>
+<li><p>&#x540C;&#x6837;&#xFF0C;continue &#x9ED8;&#x8BA4;&#x53EA;&#x4F1A;&#x79BB;&#x4ED6;<strong>&#x6700;&#x8FD1;</strong>&#x7684;&#x5FAA;&#x73AF;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+</li>
+<li><p>&#x540C;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x5F53;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; label &#x6807;&#x7B7E;&#x3002;</p>
+</li>
+</ul>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+    <span class="hljs-keyword">if</span> (i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">continue</span>;
+    }
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;i&#x7684;&#x503C;:&apos;</span> + i);
+}
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>i&#x7684;&#x503C;:1
+
+i&#x7684;&#x503C;:3
+
+i&#x7684;&#x503C;:5
+
+i&#x7684;&#x503C;:7
+
+i&#x7684;&#x503C;:9
+</code></pre><h2 id="&#x5404;&#x79CD;&#x7EC3;&#x4E60;">&#x5404;&#x79CD;&#x7EC3;&#x4E60;</h2>
+<h3 id="&#x7EC3;&#x4E60;&#x4E00;&#xFF1A;&#x8D28;&#x6570;&#x76F8;&#x5173;">&#x7EC3;&#x4E60;&#x4E00;&#xFF1A;&#x8D28;&#x6570;&#x76F8;&#x5173;</h3>
+<p><strong>&#x9898;&#x76EE;</strong>&#xFF1A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5E76;&#x5224;&#x65AD;&#x8BE5;&#x6570;&#x662F;&#x5426;&#x662F;&#x8D28;&#x6570;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="actionscript">
+            <span class="hljs-comment">/*
+            &#x8D28;&#x6570;&#xFF1A;&#x53EA;&#x80FD;&#x88AB;1&#x548C;&#x5B83;&#x81EA;&#x8EAB;&#x6574;&#x9664;&#x7684;&#x6570;&#xFF0C;1&#x4E0D;&#x662F;&#x8D28;&#x6570;&#x4E5F;&#x4E0D;&#x662F;&#x5408;&#x6570;&#xFF0C;&#x8D28;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x5927;&#x4E8E;1&#x7684;&#x81EA;&#x7136;&#x6570;&#x3002;
+         */</span>
+
+            <span class="hljs-keyword">var</span> num = prompt(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;1&#x7684;&#x6574;&#x6570;:&apos;</span>);
+
+            <span class="hljs-comment">//&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+            <span class="hljs-keyword">if</span> (num &lt;= <span class="hljs-number">1</span>) {
+                alert(<span class="hljs-string">&apos;&#x8BE5;&#x503C;&#x4E0D;&#x5408;&#x6CD5;&#xFF01;&apos;</span>);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">//&#x5148;&#x7528;flag&#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x6765;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x7684;&#x6570;&#x7684;&#x72B6;&#x6001;</span>
+                <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x5F53;&#x524D;num&#x662F;&#x8D28;&#x6570;</span>
+                <span class="hljs-keyword">var</span> flag = <span class="hljs-literal">true</span>;
+
+                <span class="hljs-comment">//&#x5224;&#x65AD;num&#x662F;&#x5426;&#x662F;&#x8D28;&#x6570;</span>
+                <span class="hljs-comment">//&#x83B7;&#x53D6;2-num&#x4E4B;&#x95F4;&#x7684;&#x6570;</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">2</span>; i &lt; num; i++) {
+                    <span class="hljs-comment">//console.log(i);</span>
+                    <span class="hljs-comment">//&#x5224;&#x65AD;num&#x662F;&#x5426;&#x80FD;&#x88AB;i&#x6574;&#x9664;</span>
+                    <span class="hljs-keyword">if</span> (num % i == <span class="hljs-number">0</span>) {
+                        <span class="hljs-comment">//&#x4E00;&#x65E6;&#x53D1;&#x73B0;&#xFF1A;&#x5982;&#x679C;num&#x80FD;&#x88AB;i&#x6574;&#x9664;&#xFF0C;&#x5219;&#x8BF4;&#x660E;num&#x4E00;&#x5B9A;&#x4E0D;&#x662F;&#x8D28;&#x6570;&#xFF0C;</span>
+                        <span class="hljs-comment">//&#x6B64;&#x65F6;&#xFF1A;&#x8BBE;&#x7F6E;flag&#x4E3A;false&#xFF0C;&#x7136;&#x540E;&#x8DF3;&#x51FA; for &#x5FAA;&#x73AF;</span>
+                        flag = <span class="hljs-literal">false</span>;
+                        <span class="hljs-keyword">break</span>;
+                    }
+                }
+
+                <span class="hljs-comment">//&#x5982;&#x679C;num&#x662F;&#x8D28;&#x6570;&#x5219;&#x8F93;&#x51FA;</span>
+                <span class="hljs-keyword">if</span> (flag) {
+                    alert(num + <span class="hljs-string">&apos;&#x662F;&#x8D28;&#x6570;&#xFF01;&#xFF01;&#xFF01;&apos;</span>);
+                } <span class="hljs-keyword">else</span> {
+                    alert(<span class="hljs-string">&apos;&#x8FD9;&#x4E2A;&#x4E0D;&#x662F;&#x8D28;&#x6570;&apos;</span>);
+                }
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="&#x7EC3;&#x4E60;&#x4E8C;&#xFF1A;&#x8D28;&#x6570;&#x76F8;&#x5173;">&#x7EC3;&#x4E60;&#x4E8C;&#xFF1A;&#x8D28;&#x6570;&#x76F8;&#x5173;</h3>
+<p><strong>&#x9898;&#x76EE;</strong>&#xFF1A;&#x6253;&#x5370; 1~100 &#x4E4B;&#x95F4;&#x7684;&#x6240;&#x6709;&#x8D28;&#x6570;</p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+            <span class="hljs-comment">/*
+             * &#x6253;&#x5370;&#x51FA;1-100&#x4E4B;&#x95F4;&#x6240;&#x6709;&#x7684;&#x8D28;&#x6570;
+             */</span>
+
+            <span class="hljs-comment">//&#x6253;&#x5370;2-100&#x4E4B;&#x95F4;&#x6240;&#x6709;&#x7684;&#x6570;</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++) {
+                <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#xFF0C;&#x9ED8;&#x8BA4;i&#x662F;&#x8D28;&#x6570;</span>
+                <span class="hljs-keyword">var</span> flag = <span class="hljs-literal">true</span>;
+
+                <span class="hljs-comment">//&#x5224;&#x65AD;i&#x662F;&#x5426;&#x662F;&#x8D28;&#x6570;</span>
+                <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5230;2-i&#x4E4B;&#x95F4;&#x7684;&#x6240;&#x6709;&#x7684;&#x6570;</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">2</span>; j &lt; i; j++) {
+                    <span class="hljs-comment">//&#x5224;&#x65AD;i&#x662F;&#x5426;&#x80FD;&#x88AB;j&#x6574;&#x9664;</span>
+                    <span class="hljs-keyword">if</span> (i % j == <span class="hljs-number">0</span>) {
+                        <span class="hljs-comment">//&#x5982;&#x679C;&#x8FDB;&#x5165;&#x5224;&#x65AD;&#x5219;&#x8BC1;&#x660E;i&#x4E0D;&#x662F;&#x8D28;&#x6570;,&#x4FEE;&#x6539;flag&#x503C;&#x4E3A;false</span>
+                        flag = <span class="hljs-literal">false</span>;
+                    }
+                }
+
+                <span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x8D28;&#x6570;&#xFF0C;&#x5219;&#x6253;&#x5370;i&#x7684;&#x503C;</span>
+                <span class="hljs-keyword">if</span> (flag) {
+                    <span class="hljs-built_in">console</span>.log(i);
+                }
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20181229_1415.png" alt=""></p>
+<h3 id="&#x7EC3;&#x4E60;&#x4E09;&#xFF1A;99-&#x4E58;&#x6CD5;&#x8868;">&#x7EC3;&#x4E60;&#x4E09;&#xFF1A;99 &#x4E58;&#x6CD5;&#x8868;</h3>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="css">
+            <span class="hljs-selector-tag">body</span> {
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">2000px</span>;
+            }
+
+            <span class="hljs-selector-tag">span</span> {
+                <span class="hljs-attribute">display</span>: inline-block;
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+            <span class="hljs-comment">/*
+             * 1.&#x6253;&#x5370;99&#x4E58;&#x6CD5;&#x8868;
+             *   1*1=1
+             *   1*2=2 2*2=4
+             *   1*3=3 2*3=6 3*3=9
+             *   1*4=4 2*4=8 3*4=12 4*4=16
+             *                      ....9*9=81
+             *
+             * 2.&#x6253;&#x5370;&#x51FA;1-100&#x4E4B;&#x95F4;&#x6240;&#x6709;&#x7684;&#x8D28;&#x6570;
+             */</span>
+
+            <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#xFF0C;&#x7528;&#x6765;&#x63A7;&#x5236;&#x4E58;&#x6CD5;&#x8868;&#x7684;&#x9AD8;&#x5EA6;</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">9</span>; i++) {
+                <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5185;&#x5C42;&#x5FAA;&#x73AF;&#x6765;&#x63A7;&#x5236;&#x56FE;&#x5F62;&#x7684;&#x5BBD;&#x5EA6;</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">1</span>; j &lt;= i; j++) {
+                    <span class="hljs-built_in">document</span>.write(<span class="hljs-string">&apos;&lt;span&gt;&apos;</span> + j + <span class="hljs-string">&apos;*&apos;</span> + i + <span class="hljs-string">&apos;=&apos;</span> + i * j + <span class="hljs-string">&apos;&lt;/span&gt;&apos;</span>);
+                }
+
+                <span class="hljs-comment">//&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6362;&#x884C;</span>
+                <span class="hljs-built_in">document</span>.write(<span class="hljs-string">&apos;&lt;br /&gt;&apos;</span>);
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x9875;&#x9762;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/20181229_1410.png" alt=""></p>
+<h2 id="&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;">&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;</h2>
+<p>&#x60F3;&#x5B66;&#x4E60;<font color="#0000ff"><strong>&#x4EE3;&#x7801;&#x4E4B;&#x5916;&#x7684;&#x6280;&#x80FD;</strong></font>&#xFF1F;&#x4E0D;&#x59A8;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#xFF1A;<strong>&#x5343;&#x53E4;&#x58F9;&#x53F7;</strong>&#xFF08;id&#xFF1A;<code>qianguyihao</code>&#xFF09;&#x3002;</p>
+<p>&#x626B;&#x4E00;&#x626B;&#xFF0C;&#x4F60;&#x5C06;&#x53D1;&#x73B0;&#x53E6;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x800C;&#x8FD9;&#x5C06;&#x662F;&#x4E00;&#x573A;&#x7F8E;&#x4E3D;&#x7684;&#x610F;&#x5916;&#xFF1A;</p>
+<p><img src="http://img.smyhvae.com/2016040102.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="09-流程控制语句：选择结构（if和switch）.html" class="navigation navigation-prev " aria-label="Previous page: 09-流程控制语句：选择结构（if和switch）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11-对象简介.html" class="navigation navigation-next " aria-label="Next page: 11-对象简介">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"10-流程控制语句：循环结构（for和while）","level":"1.5.11","depth":2,"next":{"title":"11-对象简介","level":"1.5.12","depth":2,"path":"04-JavaScript基础/11-对象简介.md","ref":"04-JavaScript基础/11-对象简介.md","articles":[]},"previous":{"title":"09-流程控制语句：选择结构（if和switch）","level":"1.5.10","depth":2,"path":"04-JavaScript基础/09-流程控制语句：选择结构（if和switch）.md","ref":"04-JavaScript基础/09-流程控制语句：选择结构（if和switch）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-JavaScript基础/10-流程控制语句：循环结构（for和while）.md","mtime":"2020-06-17T03:21:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T06:31:18.810Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
