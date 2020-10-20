@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lao5专题制作</title>
+  
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700'>
+
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      Lao5专题制作
+    </h1>
+  </header>
+  
+  <div class="container">
+
+    <!-- <h2>实验室</h2> -->
+
+    <div class="grid">
+
+      <div class="card" url="2019ncov/index.html">
+        <div class="card--image"><img src="img/2019ncov.jpg"/></div>
+        <div class="card--content">
+          <div class="card--category">app</div>
+          <h3>新冠病毒全纪录</h3>
+          <p>见证历史</p>
+        </div>
+      </div>
+
+      <div class="card" url="ffdaily/index.html">
+        <div class="card--image"><img src="img/ffdaily.jpg"/></div>
+        <div class="card--content">
+          <div class="card--category">app</div>
+          <h3>方方武汉日记</h3>
+          <p>争议作品</p>
+        </div>
+      </div>
+
+      
+
+  </div>
+</div>
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script>
+
+
+
+    $('.card').click(function(event) {
+      var event=event||e;
+      //console.log(event.currentTarget.id);  //获取id属性值
+      //console.log(event.currentTarget.dataset.name);  //获取自定义data-属性值
+
+      //获取div里的值  2种方法
+      //console.log($(this).html());
+      //console.log($(this).text());   
+      //获取自定义属性的属性值 
+      console.log($(this).attr("url"));  
+
+      var url = $(this).attr("url");
+      //获取当前操作下标
+      //console.log($(this).index());
+      //console.log($('.card').index(this));
+
+      window.open(url); 
+
+    });
+
+  </script>
+
+  
+
+</body>
+
+</html>
