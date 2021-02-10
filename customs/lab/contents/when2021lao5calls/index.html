@@ -2,12 +2,12 @@
 <!doctype html>
 <html lang="sl">
 <head>
-<title>2021</title>
+<title>WHEN 2021 LAO5 CALLS</title>
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/default_format.css">
 <!--[if lt IE 9]>
 <script>
 document.createElement('header');
@@ -81,7 +81,7 @@ document.createElement('hgroup');
               </g>
           </g>
       </svg>-->
-      <span class="logoText">WHEN<br>2021 <br>LAO5<br>CALLS</span>
+      <span class="logoText">WHEN<br>2021辛丑牛<br>LAO5<br>CALLS</span>
     </a>
   </div>
   
@@ -92,6 +92,10 @@ document.createElement('hgroup');
 </header>
 
 <div id="grain"></div>
+
+<!--<audio id="ring" loop playsinline preload="auto" style="visibility:hidden;">
+	<source src="audio/ring.mp3" type="audio/mpeg">
+</audio>-->
 
 <main class="hp posRel">
     <section class="container">
@@ -126,9 +130,13 @@ document.createElement('hgroup');
 			</circle>
 		</div>
     </div>
+	
+	
      
-    <div class="posnZglas posnZglas1 fWeight600 upper">你好啊，某某某
+    <div id="txt_name" class="posnZglas posnZglas1 fWeight600 upper fSize16">你好啊，某某某
     
+	
+		
             
       <audio id="odg1a" playsinline preload="auto" style="visibility:hidden;">
         <source src="audio/Rec_016.mp3" type="audio/mpeg">
@@ -140,13 +148,13 @@ document.createElement('hgroup');
 	  <audio id="odg1c" src="audio/Rec_012.wav">
       </audio>
       
-       <audio id="mus" playsinline preload="auto" style="visibility:hidden;">
+       <audio id="bgm" playsinline preload="auto" style="visibility:hidden;">
         <source src="audio/bg.mp3" type="audio/mpeg">
       </audio>
       
     </div>
 	
-    <div class="posnZglas posnZglas2 fWeight600 upper">Hello? Sir, are you there? Hello?</div>
+    <!--<div class="posnZglas posnZglas2 fWeight600 upper">Hello? Sir, are you there? Hello?</div>-->
     
     <div class="videoContainer" >
       <!--<video id="savaVideo" class="" playsinline  preload="auto" disablePictureInPicture controlslist="nodownload">
@@ -156,15 +164,15 @@ document.createElement('hgroup');
     </div>
     
     <div class="odgovoriWrapp odgovoriWrapp1">
-      <div class="odg odg1a upper fWeight600" data-odg="#odg1a">你好啊，Lao5 ！</div>
-      <div class="odg odg1b upper fWeight600" data-odg="#odg1b">对不起，你谁啊？</div>
+      <div class="odg odg1a upper fWeight600 fSize16" data-odg="#odg1a">你好啊，Lao5 ！</div>
+      <!--<div class="odg odg1b upper fWeight600" data-odg="#odg1b">对不起，你谁啊？</div>-->
     </div>
     <div class="odgovoriWrapp odgovoriWrapp2">
-      <div class="odg odg2a upper fWeight600" data-odg="#odg1a">Lao5,你的祝福我收下了</div>
+      <div class="odg odg2a upper fWeight600 fSize16" data-odg="#odg1a">Lao5,你的祝福我收下了</div>
       <!--<div class="odg odg2b upper fWeight600" data-odg="#odg1b">Sir, please don’t raise your voice.</div>-->
     </div>
     <div class="odgovoriWrapp odgovoriWrapp3">
-      <div class="odg odg3a upper fWeight600" data-odg="#odg1a">拜拜...</div>
+      <div class="odg odg3a upper fWeight600 fSize16" data-odg="#odg1a">拜拜...</div>
       <!--<div class="odg odg3b upper fWeight600" data-odg="#odg1b">I don’t know either, if you don’t tell me what the problem is.</div>-->
     </div>
 	
@@ -280,14 +288,14 @@ document.createElement('hgroup');
 
 <script>
 
-	var n = "";
+	//var n = "";
 
 	$('.loader').delay(500).fadeIn(400);
 	
 	
 	
 	//获取url参数，准备get请求
-	function GetUrlParam() {  
+	/*function GetUrlParam() {  
 		var url = location.search; //获取url中"?"符后的字串  
 		var theRequest = new Object();  
 		if (url.indexOf("?") != -1) {  
@@ -313,7 +321,7 @@ document.createElement('hgroup');
 		n = "亲爱的朋友";
 	}
 	
-	//if(canA1 == true && canA2 == true){
+	if(canA1 == true && canA2 == true){
 	
 		setTimeout(function(){
 			$('.ring, .stText, .oglasiteSe').addClass('aktiven');
@@ -321,7 +329,7 @@ document.createElement('hgroup');
 			$('.loader').stop(true,true).fadeOut();
 		}, 2000);
 	
-	//}
+	}*/
 
 	
 	
