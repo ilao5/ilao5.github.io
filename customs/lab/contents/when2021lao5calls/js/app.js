@@ -76,7 +76,7 @@ $((function() {
 		
 		t_odg1c.attr('src',n_path);
 		
-		/*$.ajax({
+		$.ajax({
 			url: "audio/Rec_016.mp3",
 			success: function() {
 				canA1 = true;
@@ -103,20 +103,9 @@ $((function() {
 					}
 				})
 			}
-		})*/
-		
-		$.ajax({
-							
-			url: n_path,
-			success: function() {
-				canA1 = true;
-				canA2 = true;
-				canA3 = true;
-				console.log('>>canA3 = ',canA3);
-				
-				audioReady();
-			}
 		})
+		
+
 	}
 	
 	function audioReady() {
