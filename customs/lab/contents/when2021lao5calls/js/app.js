@@ -12,9 +12,6 @@ var canA3 = false;
 var id = "";
 var n = "";
 
-var data = ["fls","wls","gls","gxy","lyh","hql","lyls","jh","ct","wxh","djy","lang","lwei","lchang","lj","ly","vv","qin","peng","lily","zz","tzc","wdx","wwt","wr","wyh","wwx","xx","joyce","xwl","wyj","sz","zwj","zm","zf","zxp"];
-//方老师，王老师，高老师，小勇，老黄，李燕老师，金慧,老崔,老第,老董,李昂,老刘,刘畅，刘精 罗亦君 vv姐 覃爷 彭爷 lily 周折 谈则次 王鼎香 王文涛 无染 无一豪 王维希 小小 笑笑 文利老师  张文君 默默 周芳 祝小佩 王远君 嫂子
-
 var data = [
 	{id:"fls",n:"方老师"},
 	{id:"wls",n:"王老师"},
@@ -45,34 +42,29 @@ var data = [
 	{id:"xx",n:"小小"},
 	{id:"joyce",n:"笑笑"},
 	{id:"xwl",n:"文莉老师"},
+	{id:"wyj",n:"老哥"},
 	{id:"zwj",n:"张文君"},
 	{id:"zm",n:"默默"},
 	{id:"zf",n:"周芳"},
-	{id:"zxp",n:"祝晓佩"}
+	{id:"zxp",n:"祝晓佩"},
+	{id:"sz",n:"嫂子"},
+	{id:"af",n:"锋哥"}
 ];
 
 
 
 $((function() {
 	
-	console.log('>>========== ready');
-	
-	
-	
-	
+
 	init();
-	
-	//t_ring.trigger("play");
-	//t_ring.loop = true;
+
 	
 	function init() {
 		
-		console.log('>>========= init');
 		
 		getName();
 
 		var n_path = "audio/" + id + ".mp3";
-		console.log('>>n_path = ',n_path);
 		
 		t_odg1c.attr('src',n_path);
 		
@@ -80,21 +72,17 @@ $((function() {
 			url: "audio/Rec_016.mp3",
 			success: function() {
 				canA1 = true;
-				console.log('>>>>canA1 = ',canA1);
 				
 				$.ajax({
 					url: "audio/bg.mp3",
 					success: function() {
 						canA2 = true;
-						console.log('>>canA2 = ',canA2);
-						
-						
+
 						$.ajax({
 							
 							url: n_path,
 							success: function() {
 								canA3 = true;
-								console.log('>>canA3 = ',canA3);
 								
 								audioReady();
 							}
@@ -110,7 +98,7 @@ $((function() {
 	
 	function audioReady() {
 		
-		console.log('>>>>======= audioReady');
+
 		
 		if(canA1 == true && canA2 == true && canA3 == true){
 	
@@ -128,40 +116,31 @@ $((function() {
 		
 		
 		var param = GetUrlParam();
-		console.log('>>param = ',param);
+
 		
 		if(param.id != null)
 		{
-			//n = param.n;
-			
-			//let result = data.findIndex(item => {
-			//	return item.id == param.id;
-			//});
+
 			
 			let result = data.find(item => {
 				return item.id == param.id;
 			});
 			
-			//if(result > -1)
 			if(result != undefined)	
 			{
 				id = param.id;
 				
 				n = result.n;
-				
-				console.log('>>1.n = ',n);
 			}
 			else
 			{
 				id = "friend";
 				n = "亲爱的朋友";
-				console.log('>>2.n = ',n);
 			}
 		}
 		else{
 			id = "friend";
 			n = "亲爱的朋友";
-			console.log('>>3.n = ',n);
 		}
 		
 		var str_name = "你好啊，" + n;
@@ -170,9 +149,8 @@ $((function() {
 		
 	}
 	
-	//获取url参数，准备get请求
 	function GetUrlParam() {  
-		var url = location.search; //获取url中"?"符后的字串  
+		var url = location.search;
 		var theRequest = new Object();  
 		if (url.indexOf("?") != -1) {  
 			var str = url.substr(1);  
@@ -205,34 +183,11 @@ $((function() {
             }), 3500)
         }), 650);
 		
-        
-
-			
 		t_odg1a.trigger("play");
-	
-		//t_odg1b.src = "audio/Rec_013.wav";
-		
-		//t_odg1b.trigger("play");
-		//t_odg1b.prop("muted", false);
-		//var e_odg1b = $("#odg1b");
-		//e_odg1b.trigger("play");
-		//e_odg1b.prop("muted", true);
-		
-		//t_odg1c.src = "audio/Rec_013.wav";
 
-		
-		
 		t_odg1b.trigger("play");
-		//t_odg1b.volume = 0.1;
 		t_odg1b[0].volume = 0.3;
-		
-		//$("#bgm").volume = .3;
-		//$("#bgm").trigger("play");
-		
-		//var bgm = document.getElementById("bgm");
-		//bgm.volume = .3;
-		//bgm.play();
-		
+
 		vprOdg1();
   
     }));
@@ -244,42 +199,19 @@ $((function() {
 	
 		t_odg1a.on("timeupdate", (function() {
 		
-			//if(this.currentTime > 4 && this.currentTime < 4.4) {
-			//	$(".vprasanjaWrapp1").addClass("aktiven");
-			//}
-		
-			console.log("currentTime = ",this.currentTime);
-		
-		
 		
 			if(this.currentTime > 2.5 && this.currentTime < 2.8) {
 
 				t_odg1c.trigger("play");
 			}
 			
-			else if(this.currentTime > 4.5 && this.currentTime < 4.8) {
+			else if(this.currentTime > 4.5 && this.currentTime <= 4.7) {
 			
 				$("#odg1a, #odg1b").prop("muted", true);
 				
 				t_odg1a.trigger("pause");
 				
 				$(".odgovoriWrapp1").addClass("aktiven").children().addClass("zaKlik");
-			
-				/*setTimeout((function() {
-					
-					//$(".timerWrapp").addClass("aktiven sec7 on");
-					//odstevalnik(7),
-					setTimeout((function() {
-						//$(".timerWrapp.aktiven").length && randOdg();
-						setTimeout((function() {
-							$(".odgovoriWrapp1").removeClass("aktiven").children().removeClass("zaKlik");
-						}), 3000);
-						
-						//$(".timerWrapp").removeClass("on");
-					}), 4000);
-				}), 350);*/
-				
-			
 			}
 			
 			else if(this.currentTime > 6.5 && this.currentTime < 6.9){
@@ -324,7 +256,7 @@ $((function() {
 				$(".vprasanjaWrapp6").removeClass("aktiven");
 			}
 			
-			else if(this.currentTime > 65.5 && this.currentTime < 65.8) {
+			else if(this.currentTime > 65.5 && this.currentTime <= 65.7) {
 				$("#odg1a, #odg1b").prop("muted", true);
 				
 				t_odg1a.trigger("pause");
@@ -332,7 +264,7 @@ $((function() {
 				$(".odgovoriWrapp2").addClass("aktiven").children().addClass("zaKlik");
 			}
 			
-			else if(this.currentTime > 69.5 && this.currentTime < 69.8) {
+			else if(this.currentTime > 69.5 && this.currentTime <= 69.7) {
 				$("#odg1a, #odg1b").prop("muted", true);
 				
 				t_odg1a.trigger("pause");
@@ -342,19 +274,18 @@ $((function() {
 		}));
 	
 		t_odg1a.on("ended", (function() {
-			//toOprojektu()
+
 		}));
 	
 		$("body").on("click", ".odgovoriWrapp1 .odg.zaKlik", (function() {
 			$(".zaKlik").removeClass("zaKlik"),
 			$(this).addClass("aktiven").siblings().addClass("pasiven");
 			
-			//$(".timerWrapp").removeClass("aktiven sec7");
-			//$(".odstevalnikWrapp").removeClass("aktiven");
+
 			$(".odgovoriWrapp1").removeClass("aktiven").children().removeClass("zaKlik");
 			
 			var t_item = $(this).data("odg");
-			console.log("t_item = ",t_item);
+
 			
 			if(t_item == "#odg1a"){
 				console.log("odg1a");
@@ -362,7 +293,7 @@ $((function() {
 				$(t_item).prop("muted", false);
 			}
 			else{
-				//toAgainPage()
+
 			}
 			
 		}));
@@ -372,12 +303,9 @@ $((function() {
 			$(".zaKlik").removeClass("zaKlik"),
 			$(this).addClass("aktiven").siblings().addClass("pasiven");
 			
-			//$(".timerWrapp").removeClass("aktiven sec7");
-			//$(".odstevalnikWrapp").removeClass("aktiven");
 			$(".odgovoriWrapp2").removeClass("aktiven").children().removeClass("zaKlik");
 			
 			var t_item = $(this).data("odg");
-			console.log("t_item = ",t_item);
 			
 			if(t_item == "#odg1a"){
 				console.log("odg1a");
@@ -392,28 +320,19 @@ $((function() {
 		$("body").on("click", ".odgovoriWrapp3 .odg.zaKlik", (function() {
 			$(".zaKlik").removeClass("zaKlik"),
 			$(this).addClass("aktiven").siblings().addClass("pasiven");
-			
-			//$(".timerWrapp").removeClass("aktiven sec7");
-			//$(".odstevalnikWrapp").removeClass("aktiven");
+
 			$(".odgovoriWrapp3").removeClass("aktiven").children().removeClass("zaKlik");
 			
 			var t_item = $(this).data("odg");
-			console.log("t_item = ",t_item);
 			
 			if(t_item == "#odg1a"){
-				//toEndPage();
-				//t_odg1a.trigger("play");
-				//$(t_item).prop("muted", false);
+
 			}
 
 			
 		}));
-	
-	
+
 	}
-	
-	
-	
 
 
 }))
