@@ -7,7 +7,7 @@ description: i,Lao5
 url: "https://ilao5.github.io"
 domain: "http://ilao5.cn"
 github_username: ilao5
-github_site_repo: ilao5/ilao5.github.io
+
 #disqus: monsterslayer
 
 
@@ -35,4 +35,3 @@ tags_path: tags/
 
 gems:
   - jekyll-sitemap
-theme: jekyll-theme-minimal
