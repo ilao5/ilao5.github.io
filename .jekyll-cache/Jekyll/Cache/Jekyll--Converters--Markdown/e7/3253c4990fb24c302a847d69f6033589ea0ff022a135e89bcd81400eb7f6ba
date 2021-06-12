@@ -1,0 +1,52 @@
+I"h	<p>使用Github Pages和Jekyll搭建个人博客</p>
+
+<h1 id="步骤">步骤</h1>
+<p>1.在github上面注册 username;</p>
+
+<p>2.创建仓库 username.github.io;</p>
+
+<p>3.下载,安装git命令行工具,地址:https://git-scm.com/download/win;</p>
+
+<p>4.下载,安装ruby(jekyll基于ruby),官方地址:http://rubyinstaller.org/downloads/;</p>
+
+<p>5.ruby安装完成后，命令行输入查看ruby安装成功与否;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -v
+</code></pre></div></div>
+
+<p>6.命令行安装jekyll</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll
+</code></pre></div></div>
+
+<p>7.jekyll安装完成后，命令行输入查看jekyll安装成功与否;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll -v
+</code></pre></div></div>
+
+<p>8.克隆仓库到本地指定位置;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/username/username.github.io.git /f/wamp/www/username.github.io.git
+</code></pre></div></div>
+
+<p>9.到http://jekyllthemes.org/找钟意到主题,下载;</p>
+
+<p>10.解压缩,拷贝到f/wamp/www/username.github.io;</p>
+
+<p>11.命令行进入/f/wamp/www/username.github.io;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /f/wamp/www/username.github.io
+</code></pre></div></div>
+
+<p>12.添加上传文件;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add .
+</code></pre></div></div>
+
+<p>13.提交本地指令;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -a -m "modiy somewhere"
+</code></pre></div></div>
+
+<p>14.会提示设置个人github信息，需要运行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git config --global user.email "xxx@163.com"
+$ git config --global user.name "username"
+</code></pre></div></div>
+
+<p>15.提交到github；</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin master
+</code></pre></div></div>
+:ET

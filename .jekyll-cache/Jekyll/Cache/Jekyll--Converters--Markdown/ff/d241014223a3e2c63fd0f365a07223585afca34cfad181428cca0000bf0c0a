@@ -1,0 +1,37 @@
+I"\<p>Github,Jekyll博客添加Intensedebate评论</p>
+
+<h1 id="步骤">步骤</h1>
+
+<p>1.先去IntenseDebate注册一个账号 https://www.intensedebate.com</p>
+
+<p>2.会得到一串javascript代码</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+var idcomments_acct = '你的acct_id';
+var idcomments_post_id;
+var idcomments_post_url;
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>3.在Jekyll站点的_includes目录下创建intensedebate-comments.html文件.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    &lt;script&gt;
+    var idcomments_acct = '你的acct_id';
+    var idcomments_post_id = '/%E4%B8%80%E4%B8%9A/2017/08/17/intensedebateComment/';
+    var idcomments_post_url;
+    &lt;/script&gt;
+    &lt;span id="IDCommentsPostTitle" style="display:none"&gt;&lt;/span&gt;
+    &lt;script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'&gt;&lt;/script&gt;
+
+</code></pre></div></div>
+
+<p>4.在站点配置文件_config.yml中添加评论配置参数，方便灵活的enable/disable评论功能</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#enable intensedebate_comments or not
+intensedebate_comments: true
+</code></pre></div></div>
+
+<p>5.在post.html文件末尾后面添加代码引用intensedebate-comments.html来显示评论框</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p>6.测试完成。</p>
+:ET

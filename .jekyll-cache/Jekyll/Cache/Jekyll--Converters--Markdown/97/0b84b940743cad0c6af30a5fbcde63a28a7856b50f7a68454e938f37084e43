@@ -1,0 +1,124 @@
+I"�	<h2 id="1标题">1.标题</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+</code></pre></div></div>
+
+<ul>
+  <li>效果如下：
+    <h1 id="h1">H1</h1>
+    <h2 id="h2">H2</h2>
+    <h3 id="h3">H3</h3>
+    <h4 id="h4">H4</h4>
+    <h5 id="h5">H5</h5>
+    <h6 id="h6">H6</h6>
+  </li>
+</ul>
+
+<h2 id="2列表">2.列表</h2>
+
+<h5 id="方式1">方式1：</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 列表1
+	- 列表1.1
+	- 列表 1.2
+- 列表2
+	- 列表2.1
+	- 列表 2.2
+</code></pre></div></div>
+
+<ul>
+  <li>列表1
+    <ul>
+      <li>列表1.1</li>
+      <li>列表1.2</li>
+    </ul>
+  </li>
+  <li>列表2
+    <ul>
+      <li>列表2.1</li>
+      <li>列表2.2</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="方式2">方式2：</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 列表3
+	* 列表3.1
+	* 列表3.2
+* 列表4
+	* 列表4.1
+	* 列表4.2
+</code></pre></div></div>
+
+<ul>
+  <li>列表3
+    <ul>
+      <li>列表3.1</li>
+      <li>列表 3.2</li>
+    </ul>
+  </li>
+  <li>列表4
+    <ul>
+      <li>列表4.1</li>
+      <li>列表4.2</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="方式3">方式3：</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 列表5
+	+ 列表5.1
+	+ 列表5.2
++ 列表6
+	+ 列表6.1
+	+ 列表6.2
+</code></pre></div></div>
+<ul>
+  <li>列表5
+    <ul>
+      <li>列表5.1</li>
+      <li>列表5.2</li>
+    </ul>
+  </li>
+  <li>列表6
+    <ul>
+      <li>列表6.1</li>
+      <li>列表6.2</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3分割线">3.分割线</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * *
+***
+*****
+- - -
+---
+</code></pre></div></div>
+
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+<h2 id="4超链接">4.超链接</h2>
+
+<h5 id="简单方式">简单方式：</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[百度](http://www.baidu.com)
+</code></pre></div></div>
+
+<p><a href="http://www.baidu.com">百度</a></p>
+
+<h5 id="变量定义方式">变量定义方式：</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[var百度][] - 变量方式
+[var百度]: http://www.baidu.com
+</code></pre></div></div>
+<p><a href="http://www.baidu.com">var百度</a> - 变量方式</p>
+
+:ET

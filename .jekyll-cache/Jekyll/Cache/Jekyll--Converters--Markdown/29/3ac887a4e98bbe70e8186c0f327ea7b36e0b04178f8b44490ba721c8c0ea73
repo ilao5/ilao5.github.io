@@ -1,0 +1,25 @@
+I"�<p>百度高德地图api，http转换https</p>
+
+<h1 id="百度地图">百度地图</h1>
+
+<p>由原先的</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=密钥"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>改成</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=密钥&amp;s=1"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="高德地图">高德地图</h1>
+
+<p>由原先的</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&amp;key=密钥&amp;plugin=AMap.Geocoder"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>改成</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&amp;key=密钥&amp;plugin=AMap.Geocoder"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+:ET
