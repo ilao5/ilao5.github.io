@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<title>中国地质大学综合校情多维展示平台</title>
+	<link rel="stylesheet" href="main.css"/>
+	<link rel="stylesheet" href="sidebar.css"/>
+</head>
+
+<style type="text/css">
+
+.amap-marker-label{
+    /* width: 80px; */ 
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    height: 18px;
+	padding: 5px 10px;
+    /* font-family: STLiti; */
+    /* color: rgb(255, 255, 255); */
+    border-radius: 15px;
+    /* background-color: rgba(58, 54, 54, 0.8);*/
+    border: solid 2px rgba(42, 42, 43, 0.8); 
+
+	background: #333;
+    color: #E086D3;
+    /* padding: 10px 20px;
+    border-radius: 56px; */
+
+	animation: odsoky 1s ease-in-out infinite  alternate;
+}
+
+@keyframes odsoky {
+  0%{
+    transform: translateY(6px);	
+  }
+
+  100%{
+    transform: translateY(1px);	
+  }
+
+}
+
+
+#page-wrapper {
+	width: 340px;
+	background: #FFF;
+	padding: 1em;
+	margin: 1em auto;
+	border-top: 5px solid #69c773;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  }
+  
+  #page-wrapper h4 {
+	font-size: 30px;
+	margin-top: 0;
+  }
+  
+  #page-wrapper #status {
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+  }
+  
+  #page-wrapper .open {
+	color: green;
+  }
+  
+  #page-wrapper .closed {
+	color: red;
+  }
+  
+  
+  #page-wrapper ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0.95rem;
+  }
+  
+  #page-wrapper ul li {
+	padding: 0.5rem 0.75rem;
+	border-bottom: 1px solid #EEE;
+  }
+  
+  #page-wrapper ul li:first-child {
+	border-top: 1px solid #EEE;
+  }
+  
+  #page-wrapper ul li span {
+	display: inline-block;
+	width: 90px;
+	font-weight: bold;
+	color: #999;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  }
+  
+  #page-wrapper .sent {
+	background-color: #F7F7F7;
+  }
+  
+
+  
+  #page-wrapper #message-form {
+	margin-top: 1.5rem;
+  }
+  
+  #page-wrapper textarea {
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+	min-height: 100px;
+	margin-bottom: 1rem;
+  }
+  
+  #page-wrapper button {
+	display: inline-block;
+	border-radius: 3px;
+	border: none;
+	font-size: 0.9rem;
+	padding: 0.6rem 1em;
+	color: white;
+	margin: 0 0.25rem;
+	text-align: center;
+	/* background: #BABABA; 
+	border-bottom: 1px solid #999;*/
+	background: #86b32d;
+	border-bottom: 1px solid #5d7d1f;
+  }
+  
+  #page-wrapper button[type="submit"] {
+	background: #86b32d;
+	border-bottom: 1px solid #5d7d1f;
+  }
+  
+  #page-wrapper button:hover {
+	opacity: 0.75;
+	cursor: pointer;
+  }
+
+
+  .amap-logo{
+	display: none;
+	opacity:0;
+	}
+.amap-copyright{
+	display: none;
+	opacity:0;
+}
+
+
+</style>
+
+<body>
+
+	<div class="box">
+
+		<div class="header-box" style="background: rgba(7, 90, 82, 0.66);">
+
+			<img class="map-logo" src="assets/img/logo.png" >
+		</div>
+
+		<div id="container"></div>
+		<div id="panel"></div>
+
+		<div class="container-box paddLeft">
+
+			<div class="tab-interaction-box">
+
+				<div class="interaction-basics-box-box">
+
+					<div class="Modular-box" style="background: rgba(255, 255, 255, 0.84); height: 667px;">
+
+						<div class="interaction-basics-box" style="overflow-y: auto; height: 667px;">
+
+							<div class="interaction-Modular-list-box">
+
+								
+
+								<div >
+									<div  class="interaction-Modular-li">
+										<h3  class="interaction-Modular-title">功能列表:</h3> 
+										<ul  class="search-organizational-list">
+											
+											<li >
+												<img src="assets/img/15d732f7-c91f-4931-95e1-fc4c45802157.svg"> 
+												<p >管理机构</p>
+											</li>
+											<li >
+												<img src="assets/img/5b202979-59d1-41bf-a487-b4a3916d2f5f.svg"> 
+												<p >直属机构</p>
+											</li>
+											<li >
+												<img src="assets/img/2a882459-7104-466f-858f-07febd8ba242.svg"> 
+												<p >院系设置</p>
+											</li>
+											<li >
+												<img src="assets/img/1cecce95-9e32-45bc-bf7d-98d516443010.svg"> 
+												<p >校园建筑</p>
+											</li>
+											<li >
+												<img src="assets/img/09e66749-3670-4960-8dcf-281bed4297fd.svg"> 
+												<p >校园风景</p>
+											</li>
+											<li >
+												<img src="assets/img/412a2ed3-cfab-4ca0-8c74-6b5f6a282544.svg"> 
+												<p >校园文化</p>
+											</li>
+											<li >
+												<img src="assets/img/72823068-9ed2-4502-84bd-98c624dc8c04.svg"> 
+												<p >校园运动</p>
+											</li>
+											<li >
+												<img src="assets/img/1769174d-4689-4d06-afc3-bea98fd03341.svg"> 
+												<p >生活服务</p>
+											</li>
+											
+											<li >
+												<img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAqFBMVEUAAAD5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH5uDH/+/X////+9uv97dX95L/71pn826b6x237zHz+8uD96cr84LP6wlv5vUiEpOO4AAAAKXRSTlMA7jLwhd67Cgb66NvHxH0h9OO1y8CwaFIQ0qKRb0MoJYFOL3teOzgcqs/eqyEAAAGWSURBVDjL5ZTZcoIwFIZDgCBrQZTFXdtqTwIiru//Zk2A1KUO2t70ot/NmZAvc8hMzo/+kg72errdH+HE6Fx97xjJJNaIrvc8zHcMrLk+gEWG0RyvDCRJpu9xpA1CFcB3NWwgrFlQYQZkOIqXkxfOdDF+8wZuYEKNpWH06oDEt+zU6XX7/S5xw1RXuCZxPERUaMNMSagAqATp0Io1G49CXnWktIt2jHCfVwWp7WIwG0fiFuoj0bRD269EBZ5C+Z2Y5c+JOWOFPEJr2PqOuGfbjTSzLK+g38Xjjm4BNmxfi5vmwI0ojOwo6pYKH3aiLeUcbsScZrRh17Qv63ojXjcq6AUtImcvtQJuxYP4Kya38hwq2KattRAZrXgowmHNV+W+PF9GvScWNCv56nQQtUJtxC07k0G5K2Bdt13nJ4CfPTP9OVGXU/gAlVzONZhKkIYuEZPdc1Lb8i/nWiSFjAp34L2NF9MXzmQZj4bdwPxKCpk9ijPQovh9miCJscLziLtN9sg0687mEx5n13lmJIvow67T7H/yCVCcpAs15utlAAAAAElFTkSuQmCC"> 
+												<p >全景漫游</p>
+											</li>
+											<li >
+												<img  src="data:image/png;base64,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"> 
+												<p >校车路线</p>
+											</li>
+											<li >
+												<img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAjVBMVEUAAABe0L5ez75dz75ez75ez75ez75d0L9ez79ezr5e0L5ez75e0L5ez75fzr9gz71g0bxgzr1ez75ez79ez75d0L9e0L5ez75ez75e0L5ez75dz75fzrlez79ez75e0L5ez75dz79d0MBgzrto0L1ez75ez75ez75dzr1dzr9d0L5f0L9fz75dzr1ez740kI7aAAAALnRSTlMA+PVU/MORhlwn19O8r0giFA7wyH9O586zpYtECriqmmxjIBsG6+LceHM5LnlolBCDMQAAAbVJREFUSMftlcmWgjAQRYsgCgg4ASI4z0N3/f/nNQdNhyRU4Lhw5V2Sc6FS9ULgy8eYJHl2mfZ6Uz/Lo0lnLQktrGGto06a66PG0G7VPAcbCTyzt7OQgLkmr48GBrS3QCMb4/fe+OYOW2nc58MyGJbDqg419XZGWtOFvXztI9A9l7I2yRFK5lihJ+HSZJ02xREqRjxDqmfr1rl/F+tX/lTNbaZYl1xYvNKKteyNe5LmPEBmL/q7NFU6AoWbWIsMoZk9T/Nd+DMqPoEk3sonx75VvsHjlQpCSTxL4v4/8OlYrRR9SWRypWJusZaqkyRinWutWysoOUixlUStpxEfDJRsJZEsdV61lNV66EgxJJvzU8tYOlYrRZ8cx2sE2xQx22uVYkgFQOT/8EqXY/h/JGIhBjDmuKAWPcWbrIWkhxzC5r1P3NBCiQV1kAd1KxMWdZCBXzUPXvxu1UOdOfWz8p/Wb8AthQQ0HF7pYUtYPLoKHqumGDtIMx29eQUQ92ve5sVAsDF7fSDJzd8z4DKyLzYY8QJiDiNowx425CWBLkRrKaJsUUBXlsUgHKaMpcMwLo7w5VP8AQEA1nwTeYp0AAAAAElFTkSuQmCC"> 
+												<p >活动引导</p>
+											</li>
+											<li >
+												<img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAA21BMVEUAAABhvw16ySp2xyVhvw1gsA58yi1hvg1qvhdhwA1hwA5hwA1rwhdgvQtzySFcpQ9cpQ98yixcpQ9hvQxcpQ58yyxhvg18yStiwA1cpA9hvw15ySlcpg5cpg9cpQ5hvw1bpQ9cpRBhvwxbpQ93ySdbpg9gvg5cpw5ivwxevA1ftQ5cpQ9ftw9cpQ97yStbpQ5cpQ95yClbpQ93yChfsg1cpQ9bpg52xyVcoxBbpA51yCReqA1bpBJeoQ19yi5hvw1cpQ90xyRrwxlvxR5jwA9gvA15ySlvxR1guQ2CUuheAAAAPnRSTlMAsMh74Af4+A38qJ08Lhf9+etra1nu6OHRyL+zsKmjo5iTkYSDd0o+KRP37+Th3dS9u7iemYh+bk5JRiYcE6lkTUoAAAFFSURBVEjH7dTJcoJAEIDhcUFWNe7GXaNGs+977FZBff8nyijJYbCAHstYHPxP01R9xdAH2LGDphQMo6DIu3EVeNWxNDRgkyHrNN2FuiYJR/DbSPaNqutUTXanVy68+JSEDVyt3Qqvv6RcCxGfer3CJeLtt4TrcjdgvPMTxFOF7M64e3aP71w+UOWAu87fUORDk+byiNgSxy7FFbOIDe/FX8LdG3d34kd1uMwHGd81NhGzRR8wrCXXlR3HUZNbqfxxeXOqDUVn6WDP5qHNbNAtAbbBXkwILWxoCzAG8wmpOcQ8cEqD0/3CXD8h1r+hwVfm7YMG7zWPUx63YESWs/tW44Hl/GAqwwLLpPYNJ6V4YKUIbXVXmLJYYJbfciospIrfVeuJwOoRWc6SBpceaNJ/j6YA0yrAjBCAmmaiNGOkzDQ79n/9APPt6GN0+2dEAAAAAElFTkSuQmCC"> 
+												<p >校园公告</p>
+											</li>
+
+											
+										
+										</ul>
+									</div>
+								</div>
+								
+								
+
+							</div>
+							
+						</div>	
+					</div>
+				</div>
+
+
+			</div>
+		
+		</div>
+		
+		<div class="info" id="text" style="display: none;"></div>
+
+	</div>
+		
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=2e919fefb6c045b2085180daccbd8b26&plugin=Map3D,AMap.ControlBar,AMap.PlaceSearch,AMap.DistrictSearch,ElasticMarker,AMamp.InfoWindow,AMap.Walking,AMap.Riding,AMap.Driving"></script>
+	
+	<script src="libs/model/js/three.js"></script>
+	<script src="libs/model/js/loaders/MTLLoader.js"></script>
+	<script src="libs/model/js/loaders/LoaderSupport.js"></script>
+	<script src="libs/model/js/loaders/OBJLoader2.js"></script>
+	<script src="dat.gui.min.js"></script>
+	
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+
+	
+</body>
+
+</html>
