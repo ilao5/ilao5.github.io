@@ -352,22 +352,22 @@ window.onload = function(){
 
     function showInfoWindow(e)
     {
-        console.log("showInfoWindow");
-        console.log("showInfoWindow e= ",e);
-        console.log("target.postion = ",e.target.getPosition());
-        console.log("target.label = ",e.target.getLabel());
-        console.log("str = ",e.target.getTitle());
+        //console.log("showInfoWindow");
+        //console.log("showInfoWindow e= ",e);
+        //console.log("target.postion = ",e.target.getPosition());
+        //console.log("target.label = ",e.target.getLabel());
+        //console.log("str = ",e.target.getTitle());
 
         targetPos = e.target.getPosition();
 
         var obj = e.target.getLabel();
-        console.log("obj = ",obj);
+        //console.log("obj = ",obj);
 
         var jsonObj = JSON.stringify(obj);
-        console.log("jsonObj = ",jsonObj);
+        //console.log("jsonObj = ",jsonObj);
 
         var name = e.target.buildingName;
-        console.log("buildingName = ",name);
+        //console.log("buildingName = ",name);
 
 
         infoWindow.setContent(
@@ -428,7 +428,7 @@ window.onload = function(){
     {
         infoWindow.close();
         clearRoute();
-        console.log("walkHere");
+        //console.log("walkHere");
 
         walking.search(selfPos, targetPos,function(status, result) {
             if (status === 'complete') {
@@ -702,7 +702,7 @@ window.onload = function(){
 
     function toggleNorthArea(b)
     {
-        console.log("北区 = ",b);
+        //console.log("北区 = ",b);
         
         if(b)
         {
@@ -718,7 +718,7 @@ window.onload = function(){
 
     function toggleEastArea(b)
     {
-        console.log("东区 = ",b);
+        //console.log("东区 = ",b);
         
         if(b)
         {
@@ -734,7 +734,7 @@ window.onload = function(){
 
     function toggleWestArea(b)
     {
-        console.log("西区 = ",b);
+        //console.log("西区 = ",b);
         
         if(b)
         {
@@ -806,18 +806,18 @@ window.onload = function(){
         var f1 = datGui.addFolder('区域显示');
 
         var north = f1.add(parameters,'showNorth').name('北区').listen().onChange(val=>{
-            console.log("val = ",val);
+            //console.log("val = ",val);
             toggleNorthArea(val);
         });
 
         var east = f1.add(parameters,'showEast').name('东区').listen().onChange(val=>{
-            console.log("val = ",val);
+            //console.log("val = ",val);
             toggleEastArea(val);
         });
 
 
         var west = f1.add(parameters,'showWest').name('西区').listen().onChange(val=>{
-            console.log("val = ",val);
+            //console.log("val = ",val);
             toggleWestArea(val);
         });
 
@@ -825,7 +825,7 @@ window.onload = function(){
 
         var f2 = datGui.addFolder('模型');
         var model = f2.add(parameters,'showModel').name('显示模型').listen().onChange(val=>{
-            console.log("val = ",val);
+            //console.log("val = ",val);
             toggleModelShow(val);
         });
 
@@ -833,12 +833,12 @@ window.onload = function(){
 
         var f3 = datGui.addFolder('图层');
         var sate = f3.add(parameters,'showSatallite').name('显示卫星图').listen().onChange(val=>{
-            console.log("val = ",val);
+            //console.log("val = ",val);
             toggleSateShow(val);
         });
 
         var sateOpacity = f3.add(parameters,'satelliteOpacity',0,1).name('卫星图透明度').listen().onChange(val=>{
-            console.log("透明度val = ",val.toFixed(2));
+            //console.log("透明度val = ",val.toFixed(2));
             setSatelliteOpacity(val.toFixed(2));
         });
         f3.open();
