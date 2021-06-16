@@ -2,18 +2,78 @@
 <html lang="zh">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
 	<title>ilao5-vue</title>
 	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css">
+
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 	
 </head>
 
+<!-- https://www.jianshu.com/p/42ed3648d6c9 -->
+
 <body>
 
 	<div id="app">
-	{{ message }}
+
+		<!-- <div>
+			<input type="button" value="获取元素" @click="getElement" ref="mybtn">
+	
+	
+			<div ref="mydiv">{{ message }}</div>
+
+	
+
+			<page1 ref="myPage1"></page1>
+		</div> -->
+
+
+
+		<div id="wrapper" class="wrapper">
+
+			<div id="carousel" class="carousel">
+				<div class="carousel__item">
+					<!-- <img src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Conifer sapling"> -->
+				
+					<page1 ref="myPage1"></page1>
+				</div>
+				<div class="carousel__item">
+					<!-- <img src="https://images.unsplash.com/photo-1496060169243-453fde45943b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=672&q=80" alt="Autumn woods across the lake"> -->
+				</div>
+				<div class="carousel__item">
+					<!-- <img src="https://images.unsplash.com/photo-1599220144359-d4b723bd476d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="green trees on brown soil"> -->
+				</div>
+				<div class="carousel__item">
+					<!-- <img src="https://images.unsplash.com/photo-1553755322-56baa43a31d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="forest at daytime"> -->
+				</div>
+				<div class="carousel__item">
+					<!-- <img src="https://images.unsplash.com/photo-1490100667990-4fced8021649?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1352&q=80" alt="green leafed trees covered by fog during daytime"> -->
+				</div>
+				<!-- <div class="carousel__item">
+					<img src="https://images.unsplash.com/photo-1546976005-bc2627d29abb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="forest with tall and green trees during daytime">
+				</div>
+				<div class="carousel__item">
+					<img src="https://images.unsplash.com/photo-1595351058863-44eedc511480?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="brown dried leaves on ground">
+				</div>
+				<div class="carousel__item">
+					<img src="https://images.unsplash.com/photo-1591779027110-e4facf8784d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="green grass and trees during daytime">
+				</div>
+				<div class="carousel__item">
+					<img src="https://images.unsplash.com/photo-1581175404089-851f507f2956?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="white flower field near brown bare trees during daytime">
+				</div>
+				<div class="carousel__item">
+					<img src="https://images.unsplash.com/photo-1614898418537-c40df3df9beb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80" alt="forest">
+				</div> -->
+			</div>
+
+		</div>
+		
+
+
 	</div>
 
 
@@ -21,17 +81,12 @@
 
 </body>
 
-<script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src='js/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src='js/libs/gsap/3.2.6/Draggable.min.js'></script>
+<script src='js/libs/gsap/3.7.0/ScrollTrigger.min.js'></script>
+<script src="js/rem.js"></script>
+<script src="js/app.js"></script>
 
-var app = new Vue({
-	
-	el:"#app",
-	data:{
-		message:'Hello World'
-	}
-
-})
-
-</script>
 
 </html>
