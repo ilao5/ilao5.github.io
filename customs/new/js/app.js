@@ -59,6 +59,30 @@ var app = new Vue({
 
 })
 
+// rags-to-riches
+// limerence 
+//muah
+//endlessly
+//Deja-vu
+//iinii旖旎
+//Cul-de-sa
+//afflatus
+//Nirvana 
+//cozy
+
+// https://www.zhihu.com/question/268323709
+// https://www.jianshu.com/p/54ac2a881129
+// https://blog.csdn.net/screaming_color/article/details/51586964
+// https://www.cnblogs.com/chakson/p/4972286.html
+// https://www.cnblogs.com/wangsongbai/p/10215141.html
+// https://www.cnblogs.com/tcxq/p/10938413.html
+// https://segmentfault.com/a/1190000011358507
+// https://www.jianshu.com/p/5818ff8c31b8
+// https://css-tricks.com/centering-css-complete-guide/
+
+
+
+
 
 /* https://codepen.io/andymerskin/pen/XNMWvQ?editors=1010
 https://codepen.io/GreenSock/pen/BajexOQ
