@@ -1,11 +1,11 @@
 
 var page1 = {
-    template:'<div class="neu">{{text}}</div>',
+    template:'<div class="neu"><div class="stuidoname">{{text}}</div></div>',
     props:[],
     data(){
         return {
             name:'page1',
-            text:'NEW'
+            text:'Lao5 Studio'
         }
     },
     methods:{
@@ -36,7 +36,7 @@ var app = new Vue({
             bounds: wrapper,
             type: "x",
             edgeResistance: 0.8,
-            dragResistance: 0.5,
+            dragResistance: 0.4,
             overshootTolerance: 0,
             inertia: true
         });
