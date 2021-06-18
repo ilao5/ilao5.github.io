@@ -1,38 +1,96 @@
-body{
-    background-color: #eeeeee;
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
 }
 
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  height: 100%;
+
+  background: var(--greyLight-1);
+  /* overflow: hidden; */
+}
+body{
+    /* background-color: #eeeeee; */
+
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+#app{
+  height: 100%;
+
+}
 
 .wrapper {
     /* padding: 0.4rem 0.5rem; */
 
-    border: #1eff00 solid 2px;
+    /* background-color: #ccc; */
+
+    background: var(--greyLight-1);
+    /* padding: 0.1rem; */
+    border: #1eff00 solid 1px;
+    /* margin: 0.1rem; */
+    
+
 
     /* width: 100%; */
-    height: 98vh;
+    /* height: 98vh; */
     
-    overflow: hidden;
+    /* overflow: hidden; */
     /* margin-top: 0.64rem;  */
     /* width: 100%;
     height: 100%; */
+
+
+    height: 100%;
+
+
+
   }
   
+
   .carousel {
+    /* height: 100%; */
     display: inline-flex;
-    /* padding: 0 calc(5% + 0.1rem); */
-    /* padding: 0.1rem 0.1rem ; */
+    /* min-height: 100vh; */
+    height: 100%;
+  }
+
+  .carousel__item {
+    flex-shrink: 0;
+    
+    /* min-width: 96vw; */
+    width: 96vw;
+    
+    /* margin-right: 0.1rem; */
+    border: #ff0000 solid 1px;
+    margin: 0 0.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--greyLight-1);
+  }
+
+  /* .carousel {
+    display: inline-flex;
     margin-top: 1vh;
   }
   
   .carousel__item {
-    /* flex-shrink: 0;
-    min-height: 200px;
-    height: 50vh;
-    min-width: 200px;
-    width: 50vh;
-    margin-right: 24px;
-    background: #fff; */
-    /* padding: 0.5rem 0.2rem; */
 
     padding: 1vh auto;
 
@@ -42,7 +100,6 @@ body{
     min-width: 96vw;
     width: 96vw;
     margin-right: 0.1rem;
-    /* background-color: #222020; */
     border: #ff0000 solid 2px;
   }
   
@@ -57,4 +114,4 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  } */
