@@ -5,7 +5,7 @@ var page1 = {
     data(){
         return {
             name:'page1',
-            text:'Lao5 Studio'
+            text:'Test'
         }
     },
     methods:{
@@ -13,6 +13,71 @@ var page1 = {
             console.log('调用page1');
         }
     }
+}
+
+var page2 ={
+    template:   '<div class="page2">'+
+                    '<div class="page2-grid">'+
+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+                        '<div class="grid-item"></div>'+
+
+                        
+                    '</div>'+
+                '</div>',
+    props:[],
 }
 
 
@@ -54,7 +119,8 @@ var app = new Vue({
     },
 
     components: {
-        page1
+        page1,
+        page2
     }
 
 })
