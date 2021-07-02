@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>深入了解 z-index_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="深入了解 z-index">
+  <meta name="keywords" content="CSS,z-index,层级,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>深入了解 z-index</h1>
+<h2>概述</h2>
+<p>从视觉上来看，页面是在一个平面内显示的。但实际上，页面中所有的元素的显示是有层级顺序的。我们可以使用负 margin 简单模拟下，让两个元素发生重叠，这会导致一个元素盖在另一个元素的上面，这就形成了层级。所以其实每个元素盒子都是在一个三维空间定位位置的，这个 Z 轴方向上的层级我们暂且叫做 stack level，stack level 的层级权重越高就越在前面。如下图，就是一个简单的多个元素层级覆盖的效果：</p>
+<p><img src="../img/2018-02-09-18-31-38.png" alt=""></p>
+<p>当然实际情况肯定没有这么简单了，除了 stack level 之外，其实还有一个叫做 stacking context 的东西来限制 stack level 的作用范围。</p>
+<p>下面举个不是很恰当的例子，来辅助理解下它们的关系。</p>
+<p>假如有三个学生 A、B、C。A、B 在甲班，C 在乙班。有一次考试，A、B 在甲班级上排名分别是3、10，C 在乙班排名是5。</p>
+<p>我们可以很容易得出 A 的成绩比 B 的排名靠前，但是因为班级不同，我们不能直接比较 A/B 与 C 的排名，如果要比较 A、B、C 三个的排名，只能跨越班级，再来比较。</p>
+<p>一个人的学习成绩排名，有班级，学校，区，城市等来限制。同样我们元素的层级排序 stack level 的限制就是 stacking context，所有的 stack level 排序都必须放在同一个 stacking context 中比较才有意义，而一个页面中往往有很多个 stacking context，所以元素的层级排序就没那么简单了。</p>
+<h2>Stacking context（堆叠上下文）</h2>
+<p>首先根元素 HTML 会创建一个堆叠上下文，除此以外，还有很多 CSS 属性都可以创建一个新的堆叠上下文。如下任意一个场景都可以创建一个堆叠上下文：</p>
+<ul>
+<li>Root element of document (HTML).</li>
+<li>Element with a position value &quot;absolute&quot; or &quot;relative&quot; and z-index value other than &quot;auto&quot;.</li>
+<li>Element with a position value &quot;fixed&quot; or &quot;sticky&quot; (sticky for all mobile browsers, but not older desktop).</li>
+<li>Element that is a child of a flex (flexbox) container, with z-index value other than &quot;auto&quot;.</li>
+<li>Element with a opacity value less than 1 (See the specification for opacity).</li>
+<li>Element with a mix-blend-mode value other than &quot;normal&quot;.</li>
+<li>Element with any of the following properties with value other than &quot;none&quot;:<ul>
+<li>transform</li>
+<li>filter</li>
+<li>perspective</li>
+<li>clip-path</li>
+<li>mask / mask-image / mask-border</li>
+</ul>
+</li>
+<li>Element with a isolation value &quot;isolate&quot;.</li>
+<li>Element with a -webkit-overflow-scrolling value &quot;touch&quot;.</li>
+<li>Element with a will-change value specifying any property that would create a stacking context on non-initial value (see this post).</li>
+</ul>
+<p>具体可参考：<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a></p>
+<p>PS：由于有些翻译可能会造成理解误差，所以干脆就上英文标准。</p>
+<h2>Stack level（堆叠层级）</h2>
+<p>在同一堆叠上下文中，堆叠层级顺序如下递增：</p>
+<ol>
+<li>the background and borders of the element forming the stacking context.</li>
+<li>the child stacking contexts with negative stack levels (most negative first).</li>
+<li>the in-flow, non-inline-level, non-positioned descendants.</li>
+<li>the non-positioned floats.</li>
+<li>the in-flow, inline-level, non-positioned descendants, including inline tables and inline blocks.</li>
+<li>the child stacking contexts with stack level 0 and the positioned descendants with stack level 0.</li>
+<li>the child stacking contexts with positive stack levels (least positive first).</li>
+</ol>
+<p>大概翻译为：</p>
+<ol>
+<li>创建堆叠上下文环境的元素的背景与边框</li>
+<li>拥有负 z-index 的创建了堆叠上下文的子元素 （负的越高越堆叠层级越低）</li>
+<li>常规流布局中，非行内级，无 position 定位（static 除外）的子元素</li>
+<li>无 position 定位（static除外）的 float 浮动子元素</li>
+<li>常规流布局中，行内级，无 position 定位（static 除外）的子元素</li>
+<li>stack level 为 0 的 position 定位（static 除外）的子元素</li>
+<li>stack level 为正值的position 定位的子元素（z-index 正值越大就越高）</li>
+</ol>
+<p>下面我们开始验证同一个堆叠上下文中的堆叠层级规则。</p>
+<h3>没有 z-index 属性</h3>
+<p>在元素的 position 计算值为 static 值时，其层级顺序大概如下递增：</p>
+<ul>
+<li>块级元素</li>
+<li>float 元素</li>
+<li>行内级元素</li>
+<li>position 定位（非 static 值）元素</li>
+</ul>
+<p>在线 demo ：<a href="https://codepen.io/anon/pen/MQpyqX">没有 z-index 属性的元素堆叠层级顺序</a>。效果图如下：</p>
+<p><img src="../img/2018-02-09-23-15-28.png" alt=""></p>
+<h3>设置 z-index 属性</h3>
+<p>z-index 属性用来表示一个具有定位属性的元素及其子代元素的 Z 轴上的层级。它指定了：</p>
+<ul>
+<li>元素在当前堆叠上下文中的堆叠层级。</li>
+<li>元素是否创建一个新的本地堆叠上下文。</li>
+</ul>
+<p>特别强调：z-index 只作用于 position 属性值为非 static 的元素，对static 元素设置 z-index 值是没有任何意义的。</p>
+<p>其取值有：</p>
+<ul>
+<li><code>auto</code>: the stack level of the generated box in the current stacking context is 0. If the box has &#39;position: fixed&#39; or if it is the root, it also establishes a new stacking context.</li>
+<li><code>&lt;integer&gt;</code>: this integer is the stack level of the generated box in the current stacking context. The box also establishes a new stacking context.</li>
+</ul>
+<p>大概的意思就是：如果为 <code>auto</code> ，则其堆叠层级为 0，且不会创建一个新的堆叠上下文，除非为 fixed 元素或根元素；如果为 <code>&lt;integer&gt;</code>，则该数值就是
+该元素在其当前堆叠上下文中的堆叠层级，同时该元素会创建一个新的堆叠上下文，其子元素的堆叠层级将根据新的堆叠上下文进行排序。</p>
+<p>下面几个来自 MDN 的具体实例，可以帮助你深入理解 z-index 层级设置：</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a></li>
+</ul>
+<h4><code>auto</code> 与 <code>0</code> 的区别</h4>
+<p>虽然 <code>auto</code> 值和 <code>0</code> 值的 stack level 都为 0，但是 <code>0</code> 值肯定会创建一个新的堆叠上下文，而 <code>auto</code> 值则不会创建一个新的堆叠上下文（除非是fixed元素或根元素），所以它们还是有区别的。而创建一个层叠上下文之后，其子元素的层叠顺序就相对于父元素计算，不会与外部元素比较。这样说比较抽象，我们来看个例子。</p>
+<pre><code class="lang-html">&lt;div class=&quot;dog-container&quot;&gt;
+  &lt;img class=&quot;dog&quot; src=&quot;http://coding.imweb.io/img/p3/z-index/dog.png&quot; alt=&quot;dog&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;cat-container&quot;&gt;
+  &lt;img class=&quot;cat&quot; src=&quot;http://coding.imweb.io/img/p3/z-index/cat.png&quot; alt=&quot;cat&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">img {
+  width: 200px;
+}
+.dog-container {
+  width: 200px;
+  height: 100px;
+  background: red;
+  position: relative;
+  z-index: auto; /* 默认值auto */
+}
+.dog {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  z-index: 2;
+}
+.cat {
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  z-index: 1;
+}
+</code></pre>
+<p>上面例子中，我们给 <code>.dog</code> 和 <code>.cat</code> 增加了容器 <code>.dog-container</code> 和 <code>.cat-container</code>, 并且 <code>.dog</code> 和 <code>.cat</code> 都设置了 <code>z-index</code> 值，所以都显示在红色背景的 <code>.container</code> 之上，而且 <code>.dog</code> z-index 数值比较大，所以显示在上面。</p>
+<p><img src="http://coding.imweb.io/img/p3/z-index/z-index-3.png" alt="z-index"></p>
+<p>但是当我们设置了 <code>.dog-container</code> 的 z-index 属性值为0之后，我们发现，z-index 值比较大的 <code>.dog</code> 元素反而到 z-index值比较小的 <code>.cat</code> 下面了</p>
+<pre><code class="lang-css">.dog-container {
+  width: 200px;
+  height: 100px;
+  background: red;
+  position: relative;
+  z-index: 0; /* 将 z-index 值改成0 */
+}
+</code></pre>
+<p>效果：</p>
+<p><img src="http://coding.imweb.io/img/p3/z-index/z-index-4.png" alt="z-index"></p>
+<p>其原因就在于我们给 <code>.dog-container</code> 设置了 <code>z-index:0</code> 之后，<code>.dog-container</code> 就创建了自己的层叠上下文，其子元素 <code>.dog</code> 在比较层叠顺序的时候只会在 <code>.dog-container</code> 内比较，而不会与外面的 <code>.cat</code> 比较。如下图所示:</p>
+<p><img src="http://coding.imweb.io/img/p3/z-index/z-index-5.png" alt="z-index"></p>
+<h2>总结</h2>
+<p>如果要比较两个元素的层级，首先要确定它们的堆叠上下文。</p>
+<ul>
+<li>如果在同一个堆叠上下文中进行比较，则直接按照堆叠层级的7条规则进行比较。</li>
+<li>如果不在同一个堆叠上下文（如 A 元素与 B 元素的父级元素在同一个堆叠上下文或 A、B 元素的父级元素在同一个堆叠上下文），则向上找父级元素，直接找到它们在同一个堆叠上下文，再按照堆叠层级的7条规则进行比较。</li>
+</ul>
+<h2>参考文档</h2>
+<ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/">深入理解CSS中的层叠上下文和层叠顺序</a></li>
+<li><a href="https://www.w3.org/TR/CSS22/visuren.html#layers">Layered presentation</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index">理解CSS的 z-index属性</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">层叠上下文-MDN</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

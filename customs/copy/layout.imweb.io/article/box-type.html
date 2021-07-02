@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 盒类型_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 盒类型">
+  <meta name="keywords" content="CSS,盒类型,box type,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>盒类型</h1>
+<p>盒的不同类型关键取决于 CSS 的属性 <code>display</code> 值，如 <code>block</code> 值的盒跟 <code>inline</code> 值的盒就是不一样的类型。而不同的盒又参与不同的格式化上下文，最终渲染出来效果就不一样了。如下图（<code>block</code> 值的盒为一整行，<code>inline</code> 值的盒为内容大小）：</p>
+<p><img src="../img/2017-09-25-20-21-46.png" alt=""></p>
+<h2>块级盒与行内级盒（block-level boxex and inline-level boxex）</h2>
+<p>当元素的 CSS 属性 <code>display</code> 为 <code>block</code>, <code>list-item</code>, <code>table</code>, <code>flex</code>, <code>grid</code> 时，它就是块级元素（block-level elements），块级元素会生成块级盒（block-level boxes）。</p>
+<p>同样当元素的 CSS 属性 <code>display</code> 为 <code>inline</code>, <code>inline-block</code>, <code>inline-table</code>, <code>inline-flex</code>, <code>inline-grid</code> 时，它就是行内级元素（inline-level elements），行内级元素生成行内级级盒（inline-level boxes）。</p>
+<h3>块容器盒（block container box）</h3>
+<p>所谓块容器盒，就是该元素的直接子元素只能是块级盒，或只能是行内级盒。其原文定义如下：</p>
+<p>A block container box either contains only block-level boxes or establishes an inline formatting context and thus contains only inline-level boxes.</p>
+<p>这样理解起来还是有点费力，不如来个图直接：</p>
+<p><img src="../img/2017-09-26-16-05-55.png" alt=""></p>
+<p>灰色表示父元素生成的盒子，三种颜色表示其直接子元素生成的盒子。左边的直接子元素全是块级盒，右边的子元素全是行内级盒，所以其父元素生成的盒子也叫块容器盒</p>
+<h2>块盒与行内盒（block boxes and inline boxes）</h2>
+<p>块盒（block boxes）由 <code>display</code> 值为 <code>block</code> 的元素生成，属于块<strong>级</strong>盒中的其中一种。</p>
+<p>行内盒（inline boxes）由 <code>display</code> 值为 <code>inline</code> 的<strong>非替换</strong>元素（non-replaced element）生成，属于行内<strong>级</strong>盒中的一种。除了行内盒之外，其余的行内<strong>级</strong>盒都是原子行内级盒(atomic inline-level boxes)，它的典型特征就是作为一个整体，不能拆分换行。</p>
+<p>下面我们以实例说明下行内盒与原子行内级盒的区别。</p>
+<p>这里“最美的海”由于是行内盒（ <code>display</code> 值为 <code>inline</code>），所以如果一行显示不下的话，会折行显示，如下图：</p>
+<p><img src="../img/2017-09-25-23-41-40.png" alt=""></p>
+<p>但是如果我们将其 <code>display</code> 设置为 <code>inline-block</code> 时，它会成为原子行内级盒，然后我们发现整个“最美的海”都掉下去了，已经不能折行拆分了，如下图：</p>
+<p><img src="../img/2017-09-25-23-42-45.png" alt=""></p>
+<h2>匿名盒</h2>
+<p>有时为了需要会添加补充性盒，这些盒称为匿名盒（anonymous boxes）,  它们没有名字，不能被 CSS 选择器选中。所以匿名盒不能为其设置样式，所有样式均来自继承（inherit）或初始值（initial）。</p>
+<h3>匿名块盒（Anonymous block boxes）</h3>
+<p>如下，我们有个 div 元素，里面有两个直接文本及一个 p 元素</p>
+<pre><code class="lang-html">&lt;div class=&quot;block&quot;&gt;
+        我是直接文本
+        &lt;p class=&quot;block-p&quot;&gt;我是块级元素，但是我的前后都不是&lt;/p&gt;
+        我也是直接文本
+&lt;/div&gt;
+</code></pre>
+<p>这个时候就会为 p 元素上下的直接文本创建匿名块盒，大概如下（红色圈起来的我们可以理解为匿名块盒，它是不能被 CSS 选择器选中的）：</p>
+<p><img src="../img/2017-09-26-10-59-19.png" alt=""></p>
+<h3>匿名行内盒（Anonymous inline boxes）</h3>
+<p>同样也有匿名行内盒，HTML 代码如下：</p>
+<pre><code class="lang-html">&lt;p&gt;&lt;span&gt;课程名称：&lt;/span&gt;前端工程师 NEXT 学位&lt;/p&gt;
+</code></pre>
+<p>因为“前端工程师 NEXT 学位”没有元素包裹，属于直接文本，所以 CSS 引擎将会为其创建匿名行内盒。</p>
+<h2>行盒（line boxes）</h2>
+<p>注意行盒与行<strong>内</strong>盒是不一样的，简单来说，行盒是由行内格式化上下文(inline formatting context)产生的盒，用于表示一行。如下图，整个文本显示为5行，而每行都会有一个看不见的行盒在发挥作用。</p>
+<p><img src="../img/2017-09-25-23-41-40.png" alt=""></p>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/CSS22/visuren.html#box-gen">Controlling box generation</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

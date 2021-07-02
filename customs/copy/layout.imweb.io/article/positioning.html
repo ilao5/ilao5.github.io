@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 绝对定位_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 绝对定位">
+  <meta name="keywords" content="CSS,position,绝对定位,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>Positioning</h1>
+<h2>概述</h2>
+<p>Position 属性用来设置元素的定位方式，它有传统的四种取值 <code>static | relative | absolute | fixed</code>，另外还有一个新晋的取值 <code>sticky</code>。</p>
+<p>在我们的网页中，随处可见 position 的影子，如下图，红色圈起来的都是 position 的应用：</p>
+<p><img src="../img/2017-09-29-11-22-18.png" alt=""></p>
+<p>既然是定位，那么肯定有一个参考点。在一个二维坐标体系中，我们可以使用 (x, y) 来表示一个点，这个坐标是相对于原点 (0, 0) 来进行定位的，如下图：</p>
+<p><img src="../img/2017-09-27-22-51-38.png" alt=""></p>
+<p>但是在我们的 CSS 中，因为每个元素都会被渲染成一个个盒子，所以 position 的定位是根据矩形盒子的四条边来的。<code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code> 分别表示四边，如下图：</p>
+<p><img src="../img/2017-09-29-22-57-42.png" alt=""></p>
+<p>于是，对于偏移位置来说：</p>
+<ul>
+<li>x轴方向上，可以使用 <code>left</code>、<code>right</code> 属性来表示偏移位置</li>
+<li>y轴方向上，可以使用 <code>top</code>、<code>bottom</code> 属性来表示偏移位置</li>
+</ul>
+<p>对于参考位置来说，不同的属性将采用不同的参考对象：
+</p>
+<ul>
+<li><code>static</code>：默认值，将不会发生任何偏移</li>
+<li><code>relative</code>：相对于自己的位置偏移</li>
+<li><code>absolute</code>：相对于非static最近的父级元素</li>
+<li><code>fixed</code>：一般来说相对于视窗</li>
+<li><code>sticky</code>： 相对于视窗</li>
+</ul>
+<h2>属性取值深入</h2>
+<h3>static</h3>
+<p>默认所有元素 <code>position</code> 的取值都为 <code>static</code>，也就是没有任何效果，即使设置 <code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code> 也没有任何作用。</p>
+<p>如果某个元素一开始设置了非 <code>static</code> 值，后面需要重置该值的时候，就可以将其设置为 <code>static</code> 了。</p>
+<p>Demo 效果可查阅：<a href="http://coding.imweb.io/demo/p3/position-dive.html">深入 position</a>（包括下面所有的 demo 演示）</p>
+<h3>relative</h3>
+<p><code>relative</code> 一般用于给子元素 <code>absolute</code> 设置参考点。所以它们两个一般是好搭档。只有极少的情况下，才是给自己设置偏移用的。</p>
+<p>如下图，虚线框表示原本的位置，设置 <code>relative</code> 后，再使用 <code>left</code> 和 <code>top</code> 来设置偏移：</p>
+<p><img src="../img/2017-09-28-19-58-14.png" alt=""></p>
+<p>对 <code>relative</code> 元素进行偏移不会影响其兄弟元素的布局排版（兄弟元素还是以它原始位置进行排版的）。可点击上面 <a href="http://coding.imweb.io/demo/p3/position-dive.html">demo</a> 中的按钮“点击查看偏移前后对比”切换效果。</p>
+<h3>absolute</h3>
+<p><code>absolute</code> 为绝对定位，会脱离文档流，作为一个独立的盒子。其偏移参考点为 <code>position</code> 属性值不是 <code>static</code> 值的最近的父级元素。如果任何父级元素都不匹配，则追溯到视窗，如下图：</p>
+<p><img src="../img/2017-09-28-19-58-51.png" alt=""></p>
+<p>可点击上面 <a href="http://coding.imweb.io/demo/p3/position-dive.html">demo</a> 中的按钮“点击切换有无设置 absolute”切换效果。</p>
+<p>对于 <code>absolute</code>，如果该元素的宽高为 <code>auto</code>，同时设置 <code>left</code> 和 <code>right</code>，<code>top</code> 和 <code>bottom</code> 都生效，所围成的区域就是该元素的大小。如果已经设置了宽或高，同时设置 <code>left</code> 和 <code>right</code>，或 <code>top</code> 和 <code>bottom</code> 时，会只取 <code>left</code> 和 <code>top</code> 的值。下面的 fixed 元素也是这样的。</p>
+<h3>fixed</h3>
+<p><code>fixed</code> 为固定定位，同样会脱离文档流，作为一个独立的盒子。其偏移参考为视窗，如下图：</p>
+<p><img src="../img/2017-09-28-20-08-47.png" alt=""></p>
+<p>可点击上面 <a href="http://coding.imweb.io/demo/p3/position-dive.html">demo</a> 中的按钮“点击切换有无设置 fixed”切换效果。</p>
+<p>如果其父级元素有设置 <code>transform</code> 属性，则其偏移参考为最近设置了 <code>transform</code> 属性的父级元素。可点击上面 <a href="http://coding.imweb.io/demo/p3/position-dive.html">demo</a> 中的按钮“点击切换有无设置 transform”切换效果。具体解释可参考：<a href="https://www.w3.org/TR/css-transforms-1/">transform 规范</a>，原文如下：</p>
+<p>For elements whose layout is governed by the CSS box model, any value other than none for the transform results in the creation of both a stacking context and a containing block. The object acts as a containing block for fixed positioned descendants.</p>
+<p>简单来说就是生成了一个容器块，关于容器块的解释可参考前面的视觉格式化模型。</p>
+<h3>sticky</h3>
+<p>同样相对于视窗，但是在滚动条滚动该元素位置之前，其效果相当于 <code>relative</code>，只有等到滚动条滚动该元素位置，才变成 <code>fixed</code>。由于是新晋值，所以还有些兼容性问题，具体可参考：<a href="http://caniuse.com/#search=sticky">sticky 兼容</a></p>
+<p>我们之前 table 要实现滚动到顶部的时候 thead 要 fixed 的效果就可以用此属性完成，不过该属性对 table 的支持效果更惨。</p>
+<p><img src="../img/2017-09-29-16-08-32.png" alt=""></p>
+<p>注意：如果是上下滚动的 sticky， 则 <code>left</code>、<code>right</code> 属性无效。左右滚动的请自己测试。</p>
+<p>PS：<code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code> 四个属性的取值如果是百分比，则其参考计算的是其容器块的宽高。</p>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

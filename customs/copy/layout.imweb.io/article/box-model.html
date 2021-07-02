@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>盒模型详解_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 盒模型详解">
+  <meta name="keywords" content="CSS,盒模型,box-model,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>盒模型详解</h1>
+<h2>认识盒模型</h2>
+<p>HTML文档中的每个元素在渲染的时候都会被描绘成一个矩形盒子，而盒模型(box model)正是用来表示每个元素盒子所占用空间大小的模型。</p>
+<p>如下图，每个元素都是以一个矩形的形式来呈现：</p>
+<p><img src="../img/2017-09-25-19-43-17.png" alt=""></p>
+<p>在我们现实生活中，描述一个矩形直接用宽和高即可。但是在CSS中主要通过四个部分来描述，分别为：margin（外边距），border（边框），padding（内边距），content（内容区域）。如下图：</p>
+<p><img src="../img/p2/box-1.png" alt=""></p>
+<h2>盒模型计算方式</h2>
+<p>一般来说，默认的盒模型实际占用空间计算模式为：</p>
+<ul>
+<li>水平空间大小 = margin(左右) + border(左右) + padding(左右) + width</li>
+<li>垂直空间大小 = margin(上下) +border(上下) + padding(上下) + height</li>
+</ul>
+<p>因为外边距(margin)为元素之间的距离，所以如果扣除它，则一个元素的实际大小就是 <code>border + padding + width/height</code> 。</p>
+<p>这种计算模式在对于非 px 为单位的宽高设置时，会带来非常大的计算困扰。如下：</p>
+<pre><code class="lang-css">.box {
+    width: 50%;
+    border: 1px solid #ccc;
+}
+</code></pre>
+<p>我们想要的肯定是50%，但是实际的大小却是 50% + 2px ，这多出的 2px 就很让人无奈了，于是为了不破坏这 50% 的宽度，往往得再内嵌一层元素用来设置 border ，就成了下面这样：</p>
+<pre><code class="lang-css">.box {
+    width: 50%;
+}
+.box .box-inner {
+    border: 1px solid #ccc;
+}
+</code></pre>
+<p>这种解决方式显然不太科学，至少导致了 HTML 结构的臃肿，而 <code>box-sizing</code> 属性的出现就解决了这个问题，它就是用来改变元素宽高的计算方式。</p>
+<p><code>box-sizing</code> 属性有两个常用的取值 <code>content-box</code> 和 <code>border-box</code> 。</p>
+<p>如为 <code>content-box</code> （这也是默认值）则实际宽度为上面所说的计算方式：</p>
+<pre><code>实际宽高 = border + padding + width/height
+</code></pre><p>如为 <code>border-box</code> 则是另一种计算方式，其实际宽高就是设置的 <code>width/height</code> ，如下图：</p>
+<p><img src="../img/p2/box-2.png" alt=""></p>
+<p>其实从字母意思就可以看出来：一个为 <code>content-box</code> ，说明宽高是 content 内容的宽高；另一个是 <code>border-box</code> ，则说明宽高是包括了 border 和 padding 的。</p>
+<p>了解盒模型的计算方式是非常重要的，现在的网页，尤其是移动端的页面，需要适应于不同的屏幕大小，所以一般都会提前设置所有元素的盒模型都为 <code>border-box</code> 模式，以方便以后宽高的计算。代码设置如下：</p>
+<pre><code class="lang-css">* {
+    box-sizing: border-box;
+}
+</code></pre>
+<h2>盒模型相关属性</h2>
+<p>上面我们已经说了 <code>box-sizing</code> 属性可以控制元素宽高的计算方式，除此之外，盒模型还有下面几个相关属性需要掌握：</p>
+<ul>
+<li>width(包括min-width, max-width)：宽</li>
+<li>height(包括min-height, max-height)：高</li>
+<li>padding：内边距</li>
+<li>border：边框</li>
+<li>margin：外边距</li>
+</ul>
+<p>上面五大属性，除了 width 和 height 以外，padding、border 和margin 属性都是由四边组成的，每边都可以设置自己的单独值，还可以简写。这里以 margin 为例具体讲解下简写的取值模式。</p>
+<p>在讲解之前，我们先说下盒模型的四边，方向分别为上、下、左、右，而 CSS 中表示就分别是 top、bottom、left、right，如下图表示：</p>
+<p><img src="../img/p2/margin-2.png" alt=""></p>
+<p>首先，我们可以单独给每个方向设置各自的margin，分别对应我们下面四个属性：</p>
+<ul>
+<li>margin-top：top 方向单个值</li>
+<li>margin-right：right 方向单个值</li>
+<li>margin-bottom：bottom 方向单个值</li>
+<li>margin-left：left 方向单个值</li>
+</ul>
+<p>很显然，如果四个方向都有值的话，上面四个每个都要写一次是一件多么费力的事，于是我们又有了一条总的属性 margin</p>
+<ul>
+<li>margin：总的，四个方向的值</li>
+</ul>
+<p>简单来个例子，如下：</p>
+<pre><code class="lang-css">/* 简写之前 */
+.box {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+/* 简写之后 */
+.box {
+    margin: 10px 20px 30px 40px; /* 注意顺序以top开始，顺时针方向 */
+}
+</code></pre>
+<p>这样是不是省力很多了，但是如果四个值都是相等的呢，难道要写成<code>margin: 10px 10px 10px 10px;</code>吗？</p>
+<p>这当然不可能的。margin 的取值可以有1-4个值，各种情况分别表示如下：</p>
+<ul>
+<li><p><code>margin: 10px;</code>，表示四个方向的值都是10px，如下图：</p>
+<p>  <img src="../img/p2/margin-3.png" alt=""></p>
+</li>
+<li><p><code>margin: 10px 20px;</code>，表示top和bottom方向是10px，left和right方向是20px，如下图：</p>
+<p>  <img src="../img/p2/margin-4.png" alt=""></p>
+</li>
+<li><p><code>margin: 10px 20px 30px;</code>，表示top是10px，left和right是20px，bottom是30px，如下图：</p>
+<p>  <img src="../img/p2/margin-5.png" alt=""></p>
+</li>
+<li><p><code>margin: 10px 20px 30px 40px;</code>，以顺时针分别表示top，right，bottom，left值，如下图：</p>
+<p>  <img src="../img/p2/margin-6.png" alt=""></p>
+</li>
+</ul>
+<p>这种取值模式其实并不是 margin 所独有的，同样 padding 也是按照这个模式来的。而且是一模一样的，而 border 相对来说还要更复杂点，border的简写，其简写模式为：<code>border: 1px solid #ccc;</code>。</p>
+<p>看起来是不是跟我们的 margin 不一样啊？不要急。我们先解释下这到底是什么个意思。</p>
+<p>border 的简写其实是由 border-width，border-style，border-color 三个属性组合而成的。1px 就是 border-width，solid 就是 border-style，#ccc 就是 border-color。</p>
+<p>而这三个属性，它们如果单独来写，其取值模式就和margin是一样的了，都可以设置1-4个值，如：</p>
+<pre><code class="lang-css">.box {
+    border-color: #f00 #ccc #ccc; /* top left和right bottom */
+    border-width: 2px 1px; /* top和bottom left和right*/
+    border-style: solid; /* all */
+}
+</code></pre>
+<p>除此之外，border当然也有表示方向的属性，如<code>border-left: 1px solid #f00;</code>，则表示左边框为1px红色的实线。同样还有border-top，border-right，border-bottom。</p>
+<p>而方向又可以和边框属性结合，如border-top-width，border-top-style，border-top-color。</p>
+<p>所以，如果我们要设置不一样的边框，一般可以先设置个默认一样的，然后再通过单边的，或者通过border-width，border-style，border-color去特殊设置</p>
+<p>来个简单的例子，如下：</p>
+<pre><code class="lang-css">.box1{
+    padding: 15px 20px;
+    border: 1px solid #f00; /* 先设置所有的边框颜色都为#f00 */
+    border-color: #f00 #ccc; /* 再设置上下为#f00, 左右为#ccc */
+}
+</code></pre>
+<p>注：outline 属性不属于盒模型部分，它不占据空间大小，目前来说使用很少，大概了解即可。</p>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/CSS22/box.html">Box model</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flexbox 布局_弹性布局_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="flexbox 布局">
+  <meta name="keywords" content="CSS,flexbox,弹性,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>Flexbox</h1>
+<h2>概述</h2>
+<p>在 flexbox 出现之前，布局的主力一直是 float 和 position，虽然他们表现得很是优秀，但是对于一些复杂或灵活的布局它们还是有些能力不及。比如下面这两种要求：</p>
+<ul>
+<li>剩余宽度的自动分配</li>
+<li>分布对齐（现在已经有了独立的 <a href="https://drafts.csswg.org/css-align/">CSS Box Alignment Module</a>）</li>
+</ul>
+<p>为了能更好的解决这些问题，新的布局技术 flexbox 应时而生，当然其诞生也并非一帆风顺，而是经历了两次浴火焚身，最终才得以带领布局走向华丽新篇。</p>
+<p>和从前的布局不一样，flexbox 的布局由两层结构组成，父元素设置 <code>display: flex</code> 形成 flex container，直接子元素就此成为 flex items，如下图：</p>
+<p><img src="../img/2017-09-29-19-25-03.png" alt=""></p>
+<p>这样父子元素一组合就构成了 flex 布局模型，然后就可以通过给父子元素设置一些 CSS 属性，轻松实现一些以前 float 和 position 不好搞定的布局了。</p>
+<p>下面是其一些优秀布局能力的体现：</p>
+<ul>
+<li>水平垂直居中
+<img src="../img/2017-09-29-19-59-56.png" alt=""></li>
+<li>自动获得剩余宽度（第三个 item）
+<img src="../img/2017-09-29-20-01-41.png" alt=""></li>
+<li>间距等分（item 之间的间距自动相等）
+<img src="../img/2017-09-29-20-05-45.png" alt=""></li>
+<li>改变排列方向（横排变竖排，这个切换能力很关键，直接影响到我们后面的基本术语）
+<img src="../img/2017-09-29-20-03-13.png" alt=""></li>
+</ul>
+<h2>基本术语</h2>
+<p>在欣赏了 flexbox 的一些优秀能力之后，我们接着来看下它的基本术语。如下图：</p>
+<p><img src="../img/2017-09-30-10-56-18.png" alt=""></p>
+<ul>
+<li>给一个元素设置 <code>display: flex;</code> 则该元素就会成为 flex container，而该元素的直接子元素就是 flex items；</li>
+<li>一般来说，分布对齐都是基于 x 轴或 y 轴的，但是因为 flexbox 布局可以纵横排列切换，如果纵横排列一换，x 轴和 y 轴就乱了。所以这里提出了主轴（main axis）和交叉轴（cross axis）的概念。主轴就是布局的方向，如果是横向排列，则主轴就是 x 轴，如果是纵向排列，则主轴就是 y 轴。</li>
+<li>同样因为 flexbox 布局可以纵横切换，所以我们用主轴大小（main size） 和 交叉轴大小（cross size）来表示宽（width）高（height）。当为横向排列时，主轴大小就是宽，反之当为纵向排列时，主轴大小就是高。</li>
+<li>不同于 x 轴和 y 轴是无线延伸的，我们的 flex container 是一个矩形容器，所以主轴和交叉轴都是有开始位置和结束位置的，如是横向排列主轴开始位置（main start）就是 left 边，结束位置（main end）就是 right 边，同样交叉轴的开始位置（cross start）就是 top 边，结束位置（cross end）就是 bottom 边。这样就可以设置 flex item 的分布与对齐，剩余空间分配了。</li>
+</ul>
+<h2>flex container 属性</h2>
+<h3>display</h3>
+<p>定义一个 flex container，可以设置为 <code>flex</code> 或 <code>inline-flex</code>。</p>
+<p><img src="../img/2017-09-30-20-55-36.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  display: flex | inline-flex;
+}
+</code></pre>
+<h3>flex-direction</h3>
+<p>用来设置主轴的方向，控制 flex items 排列方向的。默认为横向排列，取值有：<code>row | row-reverse | column | column-reverse</code>。（默认取值为第一个，如无特殊说明，以下属性默认取值都是第一个。）</p>
+<p><img src="../img/2017-09-30-20-56-05.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+</code></pre>
+<h3>flex-wrap</h3>
+<p>用来设置 flex items 是否换行（在不缩放一行显示不下的情况下）。默认不换行，取值有：<code>nowrap | wrap | wrap-reverse</code>。</p>
+<p><img src="../img/2017-09-30-20-56-56.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+</code></pre>
+<p><code>nowrap</code> 为不换行，如果 flex container 的宽度不够，则会按照一定比例缩放 flex items， 以达到一行显示在 flex container 中，如上图中的 <code>nowrap</code> 就是缩放了 flex items。</p>
+<h3>flex-flow</h3>
+<p>上面 <code>flex-direction</code> 属性和 <code>flex-wrap</code> 属性的简写形式，默认为其两个属性的默认值。语法为：<code>&lt;flex-direction&gt; || &lt;flex-wrap&gt;</code>。简单示例如下：</p>
+<pre><code class="lang-css">.parent {
+  flex-flow: column wrap;
+}
+</code></pre>
+<h3>justify-content</h3>
+<p>定义 flex items 在主轴上的分布方式。默认从主轴开始位置排列，取值有：<code>flex-start | flex-end | center | space-between | space-around</code>。</p>
+<p><img src="../img/2017-09-30-20-45-22.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+</code></pre>
+<ul>
+<li><code>flex-start</code> 表示主轴开始位置。</li>
+<li><code>flex-end</code> 表示主轴结束位置。</li>
+<li><code>center</code> 表示主轴中间位置。</li>
+<li><code>space-between</code> 表示 flex container 的多余空间在 flex items 之间平均分掉。</li>
+<li><code>space-around</code> 表示 flex container 的多余空间平均分配到每个 flex item 的左右（跟设置左右 margin 效果一样）。</li>
+</ul>
+<h3>align-items</h3>
+<p>定义 flex items 在交叉轴上的对齐方式。默认为拉伸，取值有：<code>flex-start | flex-end | center | baseline | stretch</code>。（stretch 为默认值）</p>
+<p><img src="../img/2017-09-30-20-51-40.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+</code></pre>
+<ul>
+<li><code>flex-start</code> 表示交叉轴开始位置。</li>
+<li><code>flex-end</code> 表示交叉轴结束位置。</li>
+<li><code>center</code> 表示交叉轴中间位置。</li>
+<li><code>baseline</code> 表示 flex items 中的文字 baseline。</li>
+<li><code>stretch</code> 表示所有 flex items 拉伸至 flex container 的交叉轴大小。</li>
+</ul>
+<h3>align-content</h3>
+<p>用来定义 flex items 显示为多行的时候，交叉轴上的分布方式。默认从交叉轴开始位置排列，取值有：<code>flex-start | flex-end | center | space-between | space-around | stretch</code>。</p>
+<p><img src="../img/2017-09-30-20-52-52.png" alt="">
+<img src="../img/2017-09-30-20-53-21.png" alt=""></p>
+<pre><code class="lang-css">.parent {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+</code></pre>
+<p>除了 <code>stretch</code> 外，其余的和 <code>justify-content</code> 的值是一样的，只是方向为交叉轴。而这里的 <code>stretch</code> 拉伸的标准为交叉轴剩余空间的分配。</p>
+<h2>flex item 属性</h2>
+<h3>align-self</h3>
+<p>可以用来改变单个 flex item 的交叉轴对齐方式。默认 flex item 的交叉轴对齐方式是继承 flex container 的 <code>align-items</code>，取值有：<code>auto | flex-start | flex-end | center | baseline | stretch</code>。</p>
+<p><img src="../img/2017-09-30-21-30-55.png" alt=""></p>
+<pre><code class="lang-css">.child:nth-of-type(2) {
+  align-self: flex-end;
+}
+</code></pre>
+<h3>order</h3>
+<p>定义 flex item 的在页面上显示的排列顺序。数值越小，排列越靠前，默认为0，可以为负。取值为：<code>&lt;integer&gt;</code>。</p>
+<p><img src="../img/2017-09-30-21-31-30.png" alt=""></p>
+<pre><code class="lang-css">.child:nth-of-type(2) {
+  order: -1;
+}
+</code></pre>
+<h3>flex-grow</h3>
+<p>定义 flex item 在 flex container 中还存在剩余空间时的分配比例。默认为 0，即不分配任何空间，取值为：<code>&lt;number&gt;</code>。</p>
+<p><img src="../img/2017-09-30-21-31-53.png" alt=""></p>
+<pre><code class="lang-css">.child {
+  flex-grow: 1;
+}
+.child:nth-of-type(2) {
+  flex-grow: 2;
+}
+</code></pre>
+<p>关于剩余宽度如何分配，我们再继续深入下，如下图：</p>
+<p><img src="../img/2017-09-30-22-23-48.png" alt=""></p>
+<p>整个 flex container 的容器宽度为 612px，每个 flex item 占用的空间为 120px，那么 flex container 就还有 252px 未被占满，这就是剩余空间，其计算公式为：</p>
+<pre><code>剩余空间 = flex container 的宽度 - 所有 flex items 占用空间之和
+</code></pre><p>而 <code>flex-grow</code> 则用来表示如何按比例分配剩余空间，其值表示分配到的份数，至于每份大小的计算公式为：</p>
+<pre><code>每份大小 = 剩余空间 / 所有 flex items 的 flex-grow 之和
+</code></pre><p>如果我们给 flex items 的第一个和第三个设置 <code>flex-grow: 1</code>，而第二个设置 <code>flex-grow: 2</code>，则总共就是 4 （1+2+1）份，每份的大小就是：252px / 4 = 63px。这样第一个和第三个就会得到 63px 的额外宽度，而第二个则会得到 126px（63px * 2）的宽度。效果就会如下：</p>
+<p><img src="../img/2017-09-30-21-31-53.png" alt=""></p>
+<h3>flex-shrink</h3>
+<p>定义 flex item 在 flex container 空间不足时如何缩放。默认为 1，取值为：<code>&lt;number&gt;</code>。</p>
+<p><img src="../img/2017-09-30-21-32-11.png" alt=""></p>
+<pre><code class="lang-css">.child:nth-of-type(3) {
+  flex-shrink: 2;
+}
+</code></pre>
+<p>其跟 <code>flex-grow</code> 是差不多的，只是一个用于分配剩余空间，一个用于超过空间时如何缩放。其需要缩放空间大小的计算公司为：</p>
+<pre><code>需要挤压的空间大小 = 所有 flex items 占用空间之和 - flex container 的宽度
+</code></pre><p>然后按 flex-shrink 的份数进行计算，最后每个 flex item 的实际宽度 =  初始宽度 - 分配到的要缩放空间</p>
+<h3>flex-basis</h3>
+<p>定义 flex item 在分配或缩放空间时的的初始大小，默认为 auto，即由 flex item 内容决定，取值为：<code>&lt;length&gt; | auto</code> 。该属性跟设置 <code>width</code> 或 <code>height</code> 差不多，如果同时设置了 <code>flex-basis</code> 和 <code>width</code> 或 <code>height</code>， 其权重要大于 <code>width</code> 或 <code>height</code>。</p>
+<p><img src="../img/2017-09-30-21-32-33.png" alt=""></p>
+<pre><code class="lang-css">.child:nth-of-type(3) {
+  flex-basis: 150px;
+}
+</code></pre>
+<h3>flex</h3>
+<p>该属性是 <code>flex-grow</code>、<code>flex-shrink</code>、<code>flex-basis</code> 的简写，默认值即为其三个的默认值。语法为： <code>none | [ &lt;&#39;flex-grow&#39;&gt; &lt;&#39;flex-shrink&#39;&gt;? || &lt;&#39;flex-basis&#39;&gt; ]</code></p>
+<p><img src="../img/2017-09-30-21-33-02.png" alt=""></p>
+<p>除此之外，该属性还有几个特别的值需要注意：</p>
+<ul>
+<li><code>auto</code> 等同于 <code>1 1 auto</code>;</li>
+<li><code>none</code> 等同于 <code>0 0 auto</code>;</li>
+<li><code>&lt;positive-number&gt;</code> 等同于 <code>&lt;positive-number&gt; 1 0</code>，如 <code>flex: 2</code> 等同于 <code>flex: 2 1 0</code>。</li>
+</ul>
+<p>这样整个 flexbox 相关属性就完了，所有的 demo 效果可移步：<a href="http://coding.imweb.io/demo/p3/flexbox-dive.html">flexbox demo</a>。需要注意的是，flex items 元素的 <code>float</code>、<code>clear</code> 和 <code>vertical-align</code> 属性都是无效的。</p>
+<h2>flexbox 兼容</h2>
+<h3>功能性兼容</h3>
+<p>首先，flexbox 有三大版本：</p>
+<ul>
+<li>标准版，上面的介绍的，目前多数浏览器都是标准版；</li>
+<li>中间版，IE10 浏览器，仅此一个；</li>
+<li>最古老的版本，安卓 4.3- 和 IOS 6，考虑到国内还有些手机厂商就是基于安卓4定制的系统，所以可能还是需要兼容的。</li>
+</ul>
+<p>版本不一样，其属性的名字也是千差万别，但是其实现的功能还是有相同的。这里以标准版的功能为参考，说下最古老版本所欠缺的功能（中间版的功能跟标准版一样，就是属性名不一样而已）：</p>
+<ul>
+<li>不支持的功能有 <code>align-content</code>、 <code>align-self</code>、<code>flex-wrap</code>；</li>
+<li><code>justify-content</code> 属性欠缺 <code>space-around</code> 功能；</li>
+<li><code>flex</code> 属性只对应标准版的 <code>flex-grow</code> 属性，没有 <code>flex-shrink</code> 和 <code>flex-basis</code>。</li>
+</ul>
+<p>所以如果要兼容安卓 4.3-，一定不要使用这些不支持的功能。</p>
+<p>在实际使用中，我们只负责写标准版的样式即可，其余的可以通过 <a href="https://github.com/postcss/autoprefixer">autoprefix</a> 来生成其他版本的兼容即可。</p>
+<h3>剩余空间分配兼容</h3>
+<p>在移动端上，我们有很多需要等分的情况，比如这种菜单：</p>
+<p><img src="../img/2017-09-30-18-46-33.png" alt=""></p>
+<p>一般为了兼容，我们会直接给 flex item 设置 <code>flex: 1;</code>。这在标准浏览器中是没问题的，但是我们在安卓4.3- 上会发现并没有等分。</p>
+<p>这是因为标准浏览器中 <code>flex: 1;</code> 实际等于的是 <code>flex: 1 1 0;</code>，也就是 <code>flex-basis</code> 被设置为0了，这样每个 flex item 初始的宽度其实就是 0，然后整个剩余宽度平分，当然就是等分的了。</p>
+<p>但是对于古老的版本中，因为我们没有宽度设置，所以每个 flex item 的初始宽度是由它的内容决定的，这样字数不同当然也就初始宽度不同了，最后再把平分的剩余空间加上内容的初始宽度就是最后的宽度了。由于内容宽度不一样，最后的宽度也就不等了。所以为了使最后的宽度相等，我们可以先设置一个相等的初始宽度，如<code>width: 1%;</code>。</p>
+<p>整个兼容代码如下：</p>
+<pre><code class="lang-css">.item {
+  flex: 1;
+  width: 1%; /* 兼容老版本 */
+}
+</code></pre>
+<h3>inline 元素无法布局的问题</h3>
+<p>如果子元素是 inline 元素，设置父元素为 <code>display: flex;</code> 的话，在安卓4.3- 以下将无法进行布局，解决办法也很简单就是将 inline 元素通过 <code>display</code> 设置为 <code>block</code> 或 <code>inline-block</code>。如下有一段代码：</p>
+<pre><code class="lang-html">&lt;div class=&quot;flexbox&quot;&gt;
+  &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.flexbox {
+  display: flex;
+}
+.item {
+  display: block; /* 转 inline 为 block 或 inline */
+}
+</code></pre>
+<h2>总结</h2>
+<p>如果说 float 已经是垂暮老人了，那么 flexbox 就是血气方刚正年轻了。如果你还不太了解，那是时候要把它磨砺成你的一柄好剑了。至于什么时候可以用到它，答案是到处可用（只要有不定宽度或分布对齐的时候都可以考虑）。</p>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://drafts.csswg.org/css-flexbox/">CSS Flexible Box Layout Module Level 1</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

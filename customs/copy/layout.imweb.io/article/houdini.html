@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS houdini_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS houdini">
+  <meta name="keywords" content="CSS,houdini,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>CSS Houdini</h1>
+<h2>概述</h2>
+<p>到目前为止（2017-10-05），JS 只能改变浏览器渲染过程中的 DOM 和 CSSOM，而无法去改变后面 layout、 painting 和 composite 的进程。这样当 CSS 新技术出现的时候，开发者就只能眼睁睁的看着老浏览器不支持而无能为力了，因为浏览器并没有提供相应的接口让开发人员去进行 polyfills。</p>
+<p>这不 CSS Houdini 就打算把整个渲染过程都打通，让 JS 参与进来。那样未来的 CSS 就有了更多的可能。</p>
+<p>当前状态，JS 能力有限：</p>
+<p><img src="../img/2017-10-05-14-20-39.png" alt=""></p>
+<p>CSS houdini 蓝图：</p>
+<p><img src="../img/2017-10-05-14-21-05.png" alt=""></p>
+<h2>CSS Layout API</h2>
+<p>CSS houdini 蓝图中其中有一块是 CSS Layout API，如下红色圈起来部分：</p>
+<p><img src="../img/2017-10-05-14-22-45.png" alt=""></p>
+<p>这样就让 JS 改变 layout 这个进程有了相应的接口，这就为 CSS 的布局实现了无限想象的可能，比如<a href="https://masonry.desandro.com/">瀑布流布局</a>。</p>
+<p>现在假设要实现一个居中的布局，那么就可以先用 JS 注册一个 <code>centering</code> 布局：</p>
+<pre><code class="lang-js">registerLayout(&#39;centering&#39;, class extends Layout {
+  static blockifyChildren = true;
+
+  static inputProperties = super.inputProperties;
+
+  *layout(constraintSpace, children, styleMap) {
+
+    // 处理代码
+    ...
+
+    // return
+    return {
+      inlineSize: inlineSize,
+      blockSize: blockSize,
+      inlineOverflowSize: maxChildInlineSize,
+      blockOverflowSize: blockOverflowSize,
+      childFragments: childFragments,
+    }
+  }
+});
+</code></pre>
+<p>然后在 CSS 中调用该布局：</p>
+<pre><code class="lang-css">.centering {
+  display: layout(centering);
+}
+</code></pre>
+<p>详细可参考：<a href="https://github.com/w3c/css-houdini-drafts/blob/master/css-layout-api/EXPLAINER.md">CSS Layout API Explained</a>。</p>
+<p>总之有了该能力之后，以后要搞什么布局，或者出现什么新的布局技术，开发人员都可以通过 JS 来注册一个布局完成该效果或去兼容浏览器。</p>
+<p>当然由于目前 CSS houdini 还是草稿状态，也没有浏览器实现该功能，所以继续保持关注，一起期待那天的到来。</p>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://github.com/w3c/css-houdini-drafts">css-houdini-drafts</a></li>
+<li><a href="https://www.w3cplus.com/css/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of.html">Houdini：也许是你从未听过的在CSS领域最令人兴奋的发展</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

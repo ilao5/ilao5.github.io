@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 格式化上下文_formatting context_BFC_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 格式化上下文">
+  <meta name="keywords" content="CSS,格式化上下文,formatting context,BFC,IFC,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>格式化上下文</h1>
+<p>默认情况下，盒子按照元素在 HTML 中的先后位置从左至右自上而下一个接着一个排列摆放。如下图：</p>
+<p><img src="http://coding.imweb.io/img/p3/vfm/vfm.png" alt=""></p>
+<p>在图中我们可以看到，有些元素的盒子被渲染为完整的一行，如h1、p、div；而有些元素的盒子则被渲染为水平排列，直到该行被占满然后换行，如span、a、strong。</p>
+<p>这是因为不同的盒子使用的是不同的格式化上下文（formatting context）来布局，每个格式化上下文都拥有一套不同的渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。就如使用不同的容器来装水一样，呈现出来的形态也将不一样。</p>
+<p><img src="../img/2017-09-26-17-41-31.png" alt=""></p>
+<p>最基本的两个格式化上下文分别为：块格式化上下文（block formatting context 简称 BFC）和行内格式化上下文（inline formatting context 简称 IFC）</p>
+<h2>BFC</h2>
+<p>默认根元素（html 元素）会创建一个 BFC，除此以外，下面的任何一个条件都可以创建一个新的 BFC。</p>
+<ul>
+<li>浮动元素 (元素的 float 不是 none)</li>
+<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
+<li>内联块 (元素具有 display: inline-block)</li>
+<li>表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)</li>
+<li>表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)</li>
+<li>具有overflow 且值不是 visible 的块元素，</li>
+<li>display: flow-root</li>
+<li>column-span: all 应当总是会创建一个新的格式化上下文，即便具有 column-span: all 的元素并不被包裹在一个多列容器中。</li>
+<li>flex item 和 grid item</li>
+</ul>
+<p>BFC 规定的是其<strong>块级子元素</strong>的排列方式，而不是创建 BFC 的元素本身。如下图：</p>
+<p><img src="../img/2017-09-26-18-04-25.png" alt=""></p>
+<p>在一个 BFC 中，其块级盒子元素将会按照如下规则进行渲染：</p>
+<ul>
+<li>块级盒会在垂直方向，一个接一个地放置，每个盒子水平占满整个容器空间；</li>
+<li>块级盒的垂直方向距离由上下 margin 决定，同属于一个 BFC 中的两个或以上块级盒的相接的 margin 会发生重叠；</li>
+<li>BFC 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此；</li>
+<li>计算 BFC 的高度时，浮动元素也参与计算。</li>
+</ul>
+<p>具体渲染效果可参看 DEMO：<a href="http://coding.imweb.io/demo/p3/vfm/bfc.html">块格式化上下文</a></p>
+<h2>IFC</h2>
+<p>当块容器盒（block container box）不包括任何块级盒（block-level boxes）时，就会创建一个行内格式化上下文（IFC）。</p>
+<p>IFC 规定的是行内级子元素的排列方式，其渲染规则比较多，这里把几个重要点简单罗列如下：</p>
+<ul>
+<li>盒子一个接一个的在水平方向摆放，当容器宽度不够时就会换行；</li>
+<li>每一行将生成一个匿名行盒（line box），包括该行的所有行内级盒；</li>
+<li>水平方向上，当所有盒的总宽度小于匿名行盒的宽度时，那么水平方向排版由 <code>text-align</code> 属性来决定；</li>
+<li>垂直方向上，行内级盒的对齐方式由 <code>vertical-align</code> 控制，默认对齐为 <code>baseline</code>；</li>
+<li>行盒的高度由内部子元素中实际高度最高的盒子计算出来，值得注意的是，行内盒（inline boxes）的垂直的 <code>border</code>，<code>padding</code> 与 <code>margin</code> 都不会撑开行盒的高度。</li>
+</ul>
+<p>注：在 IFC 的环境中，是不能存在块级元素的，如果将块级元素插入到 IFC 中，那么此 IFC 将会被破坏掉变成 BFC，而块级元素前的元素或文本和块级元素后的元素或文本将会各自自动产生一个匿名块盒其包围，这在前面匿名块盒的时候已经讨论了。</p>
+<p>具体行盒高度及垂直对齐方式渲染效果可参看：</p>
+<ul>
+<li><a href="http://coding.imweb.io/demo/p3/vfm/ifc-vertical-align.html">行内级元素垂直对齐方式</a></li>
+<li><a href="http://coding.imweb.io/demo/p3/vfm/ifc-height.html">行盒高度</a></li>
+</ul>
+<h3>其他格式化上下文</h3>
+<p>除此之外，还有一些其他格式化上下文，如 table formatting context（table 布局）、flex formatting context（flexbox 布局）、grid formatting context（grid 布局），这些我们将在随后的课程中继续深入。</p>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/CSS22/visuren.html#block-formatting">Block formatting contexts</a></li>
+<li><a href="https://www.w3.org/TR/CSS22/visuren.html#inline-formatting">Inline formatting contexts</a></li>
+<li><a href="http://www.cnblogs.com/rainman/archive/2011/08/05/2128068.html">深入理解CSS中的行高</a></li>
+</ul>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

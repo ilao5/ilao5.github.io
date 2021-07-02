@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float 布局_浮动布局_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 浮动布局">
+  <meta name="keywords" content="CSS,float,浮动,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>Floats</h1>
+<h2>概述</h2>
+<p>Float 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。原本设计是为了实现文字环绕图片的效果（报纸上常见的效果），大概如下图（灰色块表示图片，灰色行表示文字）：</p>
+<p><img src="../img/2017-09-27-16-32-10.png" alt=""></p>
+<p>但是在那个没有 flexbox 的年代，就得靠大家各自发挥想象力来实现了各种效果了，于是又了下面这样的列表：</p>
+<p><img src="../img/2017-09-27-16-52-15.png" alt=""></p>
+<p>还有这样的布局：</p>
+<p><img src="../img/2017-09-27-16-56-05.png" alt=""></p>
+<p>上面的几种效果简单 demo 可见：</p>
+<ul>
+<li><a href="http://coding.imweb.io/demo/p3/float.html">文字环绕图片浮动</a></li>
+<li><a href="http://coding.imweb.io/demo/p3/float-list.html">列表图文</a></li>
+<li><a href="http://coding.imweb.io/demo/p3/layout/float-fluid.html">浮动布局</a></li>
+</ul>
+<p>就这样 float 既肩负着布局的使命，也遭受着无数的谩骂，然后越走越远。</p>
+<h2>改变 display 计算值</h2>
+<p>由于 float 意味着使用块布局，某些情况下它会修改 display 值的计算值。如 inline、inline-block 都会成为 block。所以如果行内级元素设置float，是不需要再去设置 display 的，如下面代码：</p>
+<pre><code class="lang-css">span {
+    float: left;
+    display: inline-block; /* 多余的设置 */
+}
+</code></pre>
+<h2>如何定位</h2>
+<p>当一个元素浮动之后，它会被移出正常的文档流，然后向左或向右平移，一直碰到所处的容器块的边缘，或者碰到另外一个浮动的元素。如果有个行盒，则对齐于行盒的顶部。原文如下：</p>
+<p> “A floated box is shifted to the left or right until its outer edge touches the containing block edge or the outer edge of another float. If there is a line box, the outer top of the floated box is aligned with the top of the current line box.”</p>
+<p>一般的浮动效果，这里就忽略了，下面主要探讨下如果有行盒的情况，效果图如下（<a href="http://coding.imweb.io/demo/p3/float-line-box.html">demo</a>）：</p>
+<p><img src="../img/2018-03-14-11-23-49.png" alt=""></p>
+<p>从上面的 demo 中，我们可以看到如果浮动元素的上一个兄弟元素是块级元素的，浮动元素直接在新的一行进行左右平移。而如果浮动元素的上一个兄弟元素是行内级元素的话，就涉及到行盒的情况了，那么就在当前行盒进行左右平移，且外顶部对齐当前行盒的顶部。</p>
+<p>最后，如果浮动元素比较多的话，会一个接一个，直到填满容器一整行，之后换行至下一行。</p>
+<p><img src="../img/2018-02-09-11-42-53.png" alt=""></p>
+<p>更多具体规则请参考：<a href="https://www.w3.org/TR/CSS22/visuren.html#float-position">positioning the float</a></p>
+<h2>清除浮动</h2>
+<p>Float 为什么会遭受无数的谩骂，这很大程度跟它带来的两个问题有关：</p>
+<ul>
+<li>对后面的元素布局产生影响</li>
+<li>父元素的高度坍塌</li>
+</ul>
+<p>而解决这两个问题的方案，我们可以统称为<strong>清除浮动</strong>：清除前面兄弟元素浮动和闭合子元素浮动（解决父元素高度坍塌）。</p>
+<h2>清除前面兄弟元素浮动</h2>
+<p>清除前面兄弟元素浮动很简单，只需要在不想受到浮动元素影响的元素上使用 <code>clear:both</code> 即可， HTML &amp; CSS 代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;fl&quot;&gt;我是左浮动元素&lt;/div&gt;
+&lt;div class=&quot;fr&quot;&gt;我是右浮动元素&lt;/div&gt;
+&lt;div class=&quot;cb&quot;&gt;我不受浮动元素的影响&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cb {
+    clear: both;
+}
+</code></pre>
+<p>在 CSS2 以前，clear 的原理为自动增加元素的上外边距（margin-top）值，使之最后落在浮动元素的下面。在 CSS2.1 中引入了一个<strong>清除区域</strong>（clearance）——在元素上外边距之上增加的额外间距，使之最后落在浮动元素的下面。所以如果需要设置浮动元素与 clear 元素的间距，得设置浮动的元素的 margin-bottom，而不是 clear 元素的 margin-top。</p>
+<p>demo 可见：<a href="http://coding.imweb.io/demo/p3/float-clear-margin.html">clear 清除浮动</a></p>
+<h2>闭合子元素浮动</h2>
+<p>我们知道，在计算页面排版的时候，如果没有设置父元素的高度，那么该父元素的高度是由他的子元素高度撑开的。但是如果子元素是设置了浮动，脱离了文档流，那么父元素计算高度的时候就会忽略该子元素，甚至当所有子元素都是浮动的时候，就会出现父元素高度为 0 的情况，这就是所谓的父元素高度坍塌问题。为了能让父元素正确包裹子元素的高度，不发生坍塌，我们就需要闭合子元素的浮动。</p>
+<p>一般我们有两种办法可以用来闭合子元素浮动：</p>
+<ul>
+<li>给最后一个元素设置 <code>clear: both</code> </li>
+<li>给父元素新建一个 BFC</li>
+</ul>
+<h3><code>clear:both</code></h3>
+<p>由于我们最后一个元素使用 <code>clear:both</code>，所以该元素就能不受浮动元素影响出现在父元素的最底部，而父元素计算高度的时候需要考虑到这个正常元素的位置，所以高度自然包裹到了最底部，也就没有了坍塌。</p>
+<p>对于这个方法，以前我们是利用新增一个空元素（<code>&lt;b&gt;</code> 或 <code>&lt;span&gt;</code> 或 <code>&lt;div&gt;</code> 等）来实现的，如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;span class=&quot;clear-box&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.box {
+    float: left;
+}
+.clear-box {
+    clear: both;
+}
+</code></pre>
+<p>虽然这种办法比较直观，但是不是很优雅，因为增加了一个无用的空白标签，比较冗余而且不方便后期维护（一般不太建议使用该办法）。所以后期有了通过父元素的伪元素（::after）实现的著名 clearfix 方法，代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;container clearfix&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.clearfix::after {
+    content:&quot;&quot;;
+    display:table;
+    clear: both;
+}
+</code></pre>
+<p>上面方法给父元素增加一个专门用于处理闭合子元素浮动的 <code>clearfix</code> 类名，该类使用 <code>::after</code> 伪元素类选择器增加一个内容为空的结构来清除浮动，可能你们比较疑惑的是为什么要设置 <code>display:table</code> 属性，这其实涉及到一个比较复杂的进化过程，具体可以参考资料——<a href="http://web.jobbole.com/85965/">clearfix浮动进化史</a></p>
+<h3>新建 BFC</h3>
+<p>该方法的原理是：父元素在新建一个 BFC 时，其高度计算时会把浮动子元素的包进来。</p>
+<p>下面我们以实例为证：如下图我们的图片为浮动，父元素 article 的高度就出现了坍塌（没有包括图片），而根元素 HTML （默认情况下我们的根元素 HTML 就是一个 BFC）的高度则包括了图片的高度。</p>
+<p><img src="../img/p3/float-clearfix-1.png" alt=""></p>
+<p><img src="../img/p3/float-clearfix-2.png" alt=""></p>
+<p>既然新建一个 BFC 可以解决父元素高度坍陷问题，那就好办了，前面文章中我们提到的那么多新建 BFC 的办法就有用武之地了。不过一般我习惯常用的就是 <code>overflow: hidden</code>，代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div
+</code></pre>
+<pre><code class="lang-css">.container {
+    overflow: hidden;
+}
+.box {
+    float: left;
+}
+</code></pre>
+<h2>负 margin 布局</h2>
+<p>如果说前面的清除浮动是基础必备技能，那么这个负 margin 与 float 的综合应用就有点属于高级技能了。它尤其适合在流体布局中。</p>
+<p>我们具体以一个实例来详细了解下（<a href="http://coding.imweb.io/demo/p3/float-negative-margin-layout.html">demo</a>）：</p>
+<p><img src="../img/2017-09-27-18-19-00.png" alt=""></p>
+<p>如上图，左边栏宽度为200px，右边栏宽度为 300px，内容栏的宽度等于浏览器的宽度扣除左右边栏与中间间距的宽度，由于浏览器宽度的可变性，所以内容栏宽度是可变的。</p>
+<p>在 CSS2 年代，不能 calc 也不能 flex，唯一的能用的也就是嵌套层级了，一个层级不行我就再套一个。</p>
+<p>HTML 代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;main&quot;&gt;
+  &lt;div class=&quot;main-inner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 边栏将会使用负 margin 回到该显示的位置 --&gt;
+&lt;div class=&quot;aside-left&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;aside-right&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<p>样式的核心思想是，main 为浮动的 100% 宽度，然后左边边栏的空间通过 main-inner 的左右 margin 来空出来，最后给浮动的左右边栏设置负的 margin 回到视觉效果的位置上。</p>
+<p>先来实现第一步，设置浮动，将左边边栏的位置空出来，大概效果如下（由于 main 的宽度为 100%，所以 left 和 right 就换行显示了，掉了下来）：</p>
+<p><img src="../img/2017-09-27-18-49-04.png" alt=""></p>
+<p>CSS 代码如下：</p>
+<pre><code class="lang-css">.main,
+.aside-left,
+.aside-right {
+  float: left;
+}
+.main {
+  width: 100%;
+}
+.main-inner {
+  margin-left: 220px; 
+  margin-right: 320px;
+}
+.aside-left {
+  width: 200px;
+}
+.aside-right {
+  width: 300px;
+}
+</code></pre>
+<p>再来实现第二步，通过负 margin 把掉下来的拉回去。</p>
+<pre><code class="lang-css">.aside-left {
+  width: 200px;
+  margin-left: -100%; /* 拉到左边栏位置 */
+}
+.aside-right {
+  width: 300px;
+  margin-left: -300px;  /* 拉到右边栏位置 */
+}
+</code></pre>
+<p>当然这涉及到一个问题：为什么负 margin 能够把掉下去的内容拉起来呢？</p>
+<p>简单来说，这是因为它的换行是因为内容挤不下，所以掉下去了，跟行内元素有点相似，而不像是块级元素那样，是硬性的换行。</p>
+<p>如下图，如果设置 main 为 50% 的宽度，左右边栏就不会掉了，如果这个时候我们再演示负的 margin-left 就可以很清楚了：</p>
+<p><img src="../img/2017-09-27-19-04-45.png" alt=""></p>
+<p>而块级元素的换行是强行的换行，并不是内容的多少，哪怕你前面的块级元素只有10px的宽度，下面的块级元素也只有10px，该换行还是会换行，它的负左右 margin 就是直接在本行进行偏移了，偏移的值再多也是在本行。</p>
+<p>如下两个块级元素，宽度再小也是独占一行，所以左右的负 margin 也就只能在本行进行偏移了：</p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 10px;height: 10px;&quot;&gt;&lt;div&gt;
+&lt;div style=&quot;width: 10px;height: 10px;&quot;&gt;&lt;div&gt;
+</code></pre>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 布局简介_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS 布局简介">
+  <meta name="keywords" content="CSS,简介,layout,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>CSS 布局简介</h1>
+<p>简单来说，CSS 布局就是将元素显示在<strong>视窗的正确位置</strong>。打个简单的比喻就是把乱七八糟的狗窝变得干净整洁。</p>
+<!-- <p><img src="../img/2017-09-25-16-50-41.png" alt=""></p> -->
+<h2>table 时代</h2>
+<p>在很久很久之前，网页都是使用 table 来搞定的，每个格子里面填进对应的内容，就形成了最终的网页。</p>
+<p><img src="../img/2017-09-25-16-58-44.png" alt=""></p>
+<p>那个时代，Adobe Fireworks 是网页三剑客之一，必学软件之一。但是随着技术的发展，时代的需求，table 终将慢慢落幕，回归到它的本质工作。</p>
+<h2>CSS 时代</h2>
+<p>但是在2003年5月，随着 <a href="http://www.csszengarden.com/">CSS Zen Garden</a> 的横空出世，宣告正式由 table 布局进入了 CSS 布局时代。其作者 Dave Shea 更是对一份 <a href="www.csszengarden.com/00/">HTML 结构</a>，通过设计不同的 CSS 带来了5个风格迥异的作品，于是 CSS 正式华丽走入布局舞台，table 慢慢成为被遗弃的孩子。</p>
+<p>由于 CSS 布局对于标签要求不是很严格，主要的火候在于对 CSS 的控制，而 div 标签又没有什么特殊的语义，除了默认是个块级元素外，其他什么都没有，于是正好搭上 CSS 顺风车，遍地开花。甚至于有了一个不成明的布局对比：table 布局 与 div + CSS 布局。当然我们要明白的是真正的主角是不可替换的 CSS，div 只是为了与 table 标签形成对比而辅助赠送的。</p>
+<p>虽然 CSS 布局开始如火如荼烧遍整个 Web 战场，但其常用的布局技术就是：inline-block、float、position，而且整整十年没变。这并不是说这些技术已经够用了，相反这些都算不上真正的为布局而生的技术，都是被逼上布局这个“梁山”的。譬如剩余宽度的处理，分布对齐的问题始终是个难题。</p>
+<p>然而技术终究是发展的，时代的年轮总是滚滚向前。CSS3 的到来给整个 CSS 带来了翻天覆地的变化，而真正为布局而生的 flexbox 更是经历了三次浴火重生来到我们面前，一扫从前的荆棘，为我们提供更好的布局服务。除此之外，另一布局担当 Grid 也已拥有洪荒之力，就看你的能耐发挥了。（同样 HTML5 也是带来了更多语义化标签来替代千变一律的 div）</p>
+<p>稍微再展望下未来，我们还有 CSS Houdini 这一强大利器蓄势待发。所以一路走来，也许磕磕碰碰，但是前景还是值得憧憬的。</p>
+<p><img src="../img/2017-09-25-18-16-08.png" alt=""></p>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

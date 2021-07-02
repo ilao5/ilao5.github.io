@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>深入了解 inline-block_深入浅出 CSS 布局</title>
+  <meta itemprop="name" content="CSS inline-block">
+  <meta name="keywords" content="CSS,inline-block,间隙,布局">
+  <meta name="description" itemprop="description" content="深入浅出介绍各种 CSS 布局概念及技术：视觉格式化模型、盒模型、盒类型、格式化上下文、inline-block、float、position、flexbox、grid等">
+  <meta itemprop="image" content="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/next.png">
+  <link rel="shortcut icon" href="https://9.url.cn/edu/lego_modules/edu-ui/0.0.1/img/nohash/favicon.ico">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="top-nav">
+  <a href="../index.html" class="nav-icon icon--home">首页</a>
+  <span class="nav-icon icon--list">导航</span>
+</header>
+<nav class="nav">
+  <ul class="article-list">
+      <li><a href="intro.html">CSS 布局简介</a></li>
+      <li><a href="how-to-render.html">浏览器如何渲染 HTML & CSS</a></li>
+      <li><a href="box-model.html">盒模型详解</a></li>
+      <li><a href="visual-formatting-model.html">视觉格式化模型</a></li>
+      <li><a href="box-type.html">盒类型</a></li>
+      <li><a href="positioning-scheme.html">定位方案简述</a></li>
+      <li><a href="formatting-context.html">格式化上下文</a></li>
+      <li><a href="inline-block.html">深入了解 inline-block</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="floats.html">Floats</a></li>
+      <li><a href="positioning.html">Positioning</a></li>
+      <li><a href="z-index.html">深入了解 z-index</a></li>
+      <li><a href="flexbox.html">Flexbox</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="houdini.html">CSS Houdini</a></li>
+    </ul>
+</nav>
+<article class="article">
+<h1>深入了解 inline-block</h1>
+<h2>概述</h2>
+<p>我们知道，block 元素每个都会新起一行，而 inline 元素又不能设置宽高等，那么有没有办法可以实现一个元素既能设置宽高，又可以在行内显示呢？</p>
+<p>这就是 inline-block 元素，它综合了 block 元素与 inline 元素的一些特点，从而形成它自己的一些优势，如下图：</p>
+<p><img src="../img/2017-09-26-20-07-27.png" alt=""></p>
+<p>下面我们来个简单的示例，如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.list .item {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+}
+</code></pre>
+<p>效果图如下：</p>
+<p><img src="../img/2017-09-27-10-21-17.png" alt=""></p>
+<p>这样，我们本来是块级元素的 item，将会在一行显示，当然同样我们也可以把 item 元素的标签换成 span，会发现可以设置了宽高。</p>
+<p>虽然 inline-block 有着 block 与 inline 结合的好处的，在某些布局上可以贡献些力量，但是同时它也存在一些问题。</p>
+<h2>水平间隙问题</h2>
+<p>我们创建一个导航列表，并将其列表 item 设置为 inline-block，主要代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;nav&quot;&gt;
+  &lt;a class=&quot;nav-item&quot; href=&quot;#&quot;&gt;导航&lt;/a&gt;
+  &lt;a class=&quot;nav-item&quot; href=&quot;#&quot;&gt;导航&lt;/a&gt;
+  &lt;a class=&quot;nav-item&quot; href=&quot;#&quot;&gt;导航&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-css">.nav {
+  background: #999;
+}
+.nav-item{
+  display:inline-block; /* 设置为inline-block */
+  width: 100px;
+  background: #ddd;
+}
+</code></pre>
+<p>效果图如下：</p>
+<p><img src="http://coding.imweb.io/img/p3/inline-block-demo.png" alt=""></p>
+<p>我们从效果图中可以看到列表 item 之间有一点小空隙，但是我们在代码中并没有设置 margin 水平间距。那么这个空隙是如何产生的呢？</p>
+<p>这是因为我们编写代码时输入空格、换行都会产生空白符。而浏览器是不会忽略空白符的，且对于多个连续的空白符浏览器会自动将其合并成一个，故产生了所谓的间隙。</p>
+<p>对于上面实例，我们在列表 item 元素之间输入了回车换行以方便阅读，而这间隙正是这个回车换行产生的空白符。</p>
+<p>同样对于所有的行内元素（inline，inline-block），换行都会产生空白符的间隙。</p>
+<h3>如何消除空白符</h3>
+<p>从上面我们了解到空白符，是浏览器正常的表现行为。但是对于某些场景来说，并不美观，而且间隙大小非可控，所以我们往往需要去掉这个空白间隙。一般来说我们有两种方法来去掉这个换行引起间隙：代码不换行和设置 font-size。</p>
+<h4>代码不换行</h4>
+<p>我们了解到，由于换行空格导致产生换行符，因此我们可以将上述例子中的列表 item 写成一行，这样空白符便消失，间隙就不复存在了。其代码如下：</p>
+<pre><code class="lang-html">&lt;div class=&quot;nav&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;导航&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;导航&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;导航&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>但考虑到代码可读及维护性，我们一般不建议连成一行的写法。</p>
+<h4>设置 font-size</h4>
+<p>首先要理解空白符归根结底是个字符，因此，我们可以通过设置 font-size 属性来控制其产生的间隙的大小。我们知道如果将 font-size 设置为 0，文字字符是没法显示的，那么同样这个空白字也没了，间隙也就没了。</p>
+<p>于是顺着这个思路就有了另一个解决方案：通过设置父元素的 font-size 为 0 来去掉这个间隙，然后重置子元素的 font-size，让其恢复子元素文字字符。</p>
+<p>所以该方法代码如下：</p>
+<pre><code class="lang-css">.nav {
+  background: #999;
+  font-size: 0; /* 空白字符大小为0 */
+}
+.nav-item{
+  display:inline-block;
+  width: 100px;
+  font-size: 16px; /* 重置 font-size 为16px*/
+  background: #ddd;
+}
+</code></pre>
+<p>使用该方法时需要特别注意其子元素一定要重置 font-size，不然很容易掉进坑里（文字显示不出来）。</p>
+<h2>垂直间隙问题</h2>
+<p>由于 inline-block 垂直对齐使用的是 <code>vertical-align</code> 属性，而该属性默认的对齐方式为 <code>baseline</code>，在前面 IFC 的 demo 中，我们已经了解到，基线的位置为小写英文字母<code>x</code>的下端沿。该线离底线（text-bottom）还是有点距离的。</p>
+<p>下面以实例论证，如下：</p>
+<pre><code class="lang-html">&lt;div style=&quot;background: #ccc;&quot;&gt;&lt;img src=&quot;next-banner.png&quot; alt=&quot;前端工程师 NEXT 学位&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>效果图如下：</p>
+<p><img src="../img/2017-09-27-10-37-31.png" alt=""></p>
+<p>按道理来说，div 的高度应该是图片撑开的高度，所以不可能看到如图所示的大概 3px （不同的字体大小，这个灰色间隙会不一样）的背景色。所以为了解决这个问题，我们可以设置 img 的 <code>vertical-align</code> 的值为 <code>middle</code>，<code>text-top</code>，<code>text-bottom</code>都可以（前提是父元素 <code>line-height</code> 计算的高度要小于图片的高度）。</p>
+<p>所以一般为了避免这个垂直的间隙，在设置 inline-block 的时候，还需要顺手带个 <code>vertical-align: middle;</code></p>
+<p>其余对齐方式可参考：<a href="http://coding.imweb.io/demo/p3/vfm/ifc-vertical-align.html">行内级元素垂直对齐方式</a></p>
+</article>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
