@@ -24,37 +24,37 @@
     <div class="grid">
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/1.png" />
+          <img data-lazy-src="img/1.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/2.png" />
+          <img data-lazy-src="img/2.png" />
          
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/3.png">
+          <img data-lazy-src="img/3.png">
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <img src="img/4.png" />
+          <img data-lazy-src="img/4.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <img src="img/5.png" />
+          <img data-lazy-src="img/5.png" />
           
         </figure>
       </div>
       <div class="column-xs-12">
         <figure class="img-container">
-          <img src="img/6.png" />
+          <img data-lazy-src="img/6.png" />
           
         </figure>
       </div>
@@ -65,31 +65,31 @@
 	  
 	  <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/7.png" />
+          <img data-lazy-src="img/7.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/8.png" />
+          <img data-lazy-src="img/8.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/9.png">
+          <img data-lazy-src="img/9.png">
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <img src="img/10.png" />
+          <img data-lazy-src="img/10.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <img src="img/11.png" />
+          <img data-lazy-src="img/11.png" />
           
         </figure>
       </div>
@@ -97,44 +97,44 @@
 	  
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/12.png" />
+          <img data-lazy-src="img/12.png" />
           
         </figure>
       </div>
 	  
 	  <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/13.png" />
+          <img data-lazy-src="img/13.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/14.png" />
+          <img data-lazy-src="img/14.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/15.png">
+          <img data-lazy-src="img/15.png">
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/16.png" />
+          <img data-lazy-src="img/16.png" />
           
         </figure>
       </div>
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <img src="img/17.png" />
+          <img data-lazy-src="img/17.png" />
           
         </figure>
       </div>
       <div class="column-xs-12">
         <figure class="img-container">
-          <img src="img/18.png" />
+          <img data-lazy-src="img/18.png" />
         </figure>
       </div>
 	  
@@ -154,7 +154,25 @@
   </div>
 </footer>
 
-  <script  src="./script.js"></script>
+	<script src="./jquery.min.js"></script>
+	<script src="./EasyLazyload.min.js"></script>
+	<script  src="./script.js"></script>
+	<script>
+		lazyLoadInit({
+			coverColor:"white",
+			coverDiv:"<h1></h1>",
+			offsetBottom:0,
+			offsetTopm:0,
+			showTime:1100,
+			onLoadBackEnd:function(i,e){
+				//console.log("onLoadBackEnd:"+i);
+			}
+			,onLoadBackStart:function(i,e){
+				//console.log("onLoadBackStart:"+i);
+			}
+		});
+	</script>
+  
 
 </body>
 </html>
