@@ -1,0 +1,10 @@
+body, #starfield {
+  width: 100%;
+  height: 100%;
+  /* font-size:50px; */
+  font-size:14px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
