@@ -285,7 +285,7 @@
 			
 
 
-			let urlTxt = "https://www.baidu.com?from="+txtFrom+"&to="+txtTo;
+			let urlTxt = "https://www.ilao5.cn/pages/year/2023/index.html?from="+txtFrom+"&to="+txtTo;
 			// let qrcode = new QRCode("output",{
 			// 	colorDark:"#000000",
 			// 	colorLight:"#ffffff",
