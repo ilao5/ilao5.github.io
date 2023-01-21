@@ -497,7 +497,7 @@ textarea {
 #output img{
     width:250px;
     height:250px;
-    margin: 15px;
+    padding: 20px 0 0 30px;
     /* display: inline-block !important; */
     display: inline-block;
     border-radius: 10px;
