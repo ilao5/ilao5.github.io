@@ -498,6 +498,7 @@ textarea {
     width:250px;
     height:250px;
     margin: 15px;
-    display: inline-block !important;
+    /* display: inline-block !important; */
+    display: inline-block;
     border-radius: 10px;
 }
