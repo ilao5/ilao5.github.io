@@ -10,7 +10,7 @@ const HILLS_HEIGHT = 200;
 const COLORS = {
   BLACK: "#000000",
   LESS_BLACK: "#101010",
-  EVEN_LESS_BLACK: "#1A1A1A",
+  EVEN_LESS_BLACK: "#161823",
   DARK_BLUE: "#050D1E",
   BLUE: "#22324B",
   ORANGE: "orange",
@@ -52,7 +52,7 @@ class StarField {
     this.cleanup();
   }
   render(context) {
-    this.drawBackground(context);
+    //this.drawBackground(context);
     this.drawMilkyWay(context);
     this.drawCityLights(context);
     this.stars.forEach(star => star.render(context));
@@ -182,7 +182,7 @@ class Car {
 }
 
 
-const HILL_MARGIN = 500;
+const HILL_MARGIN = 800;
 class Hills {
   constructor(canvas, color, distance) {
     this.canvas = canvas;
@@ -251,7 +251,7 @@ class Scene {
     this.context = canvas.getContext("2d");
     this.items = [
     new StarField(canvas),
-    new Hills(canvas, COLORS.EVEN_LESS_BLACK, 4),
+    new Hills(canvas, COLORS.EVEN_LESS_BLACK, 6),
     new Hills(canvas, COLORS.LESS_BLACK, 2),
     new Road(canvas)
     //new Car(canvas)

@@ -308,9 +308,9 @@ button {
   /* min-width: 80%;
   min-height: 80%; */
   width: 98%;
-  height: 70%;
+  height: 60%;
 	max-width:750px;
-	max-height:90%;
+	max-height:60%;
 	margin:10px 10px;
 	overflow-x:hidden;
 	overflow-y:auto;
@@ -428,13 +428,7 @@ textarea {
 
 }
 
-div img {
-  width:250px;
-  height:250px;
-  margin: 15px;
-  display: inline-block !important;
-  border-radius: 10px;
-}
+
 
 /* /////////////////////////////////////////////////// */
 
@@ -496,4 +490,14 @@ div img {
   display: block;
   /* 居中 */
   margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* div img { */
+#output img{
+    width:250px;
+    height:250px;
+    margin: 15px;
+    display: inline-block !important;
+    border-radius: 10px;
 }

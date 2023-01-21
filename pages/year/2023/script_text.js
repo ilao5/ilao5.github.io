@@ -34,7 +34,7 @@
 			'移山趟水',
 			'跨海挥川',
 			'衣袂带霜',
-			'始终胸襟坦荡荡',
+			'始终胸襟坦荡荡!',
 			'',
 			'',
 			'',
@@ -45,6 +45,7 @@
 			'两袖词赋',
 			'三章五文',
 			'敬你年少写意傥风流',
+			'敬你春风一杯酒',
 			'世故几载',
 			'大口吃愁',
 			'快意飞马',
@@ -69,7 +70,8 @@
 			'',
 			'',
 			'',
-			'最后虚构一个树深小窝',
+			'最后',
+			'虚构一个树深小窝',
 			'柴门日照',
 			'用一场火暖',
 			'软橘猫',
@@ -78,9 +80,7 @@
 			'粲若天上星', 
 			'溅起一次相逢',
 			'终遇佳人话不休',
-			'自你心间',
-			'两行脚印',
-			'走出雪地白头',
+			'......',
 			'',
 			'',
 			'',
@@ -91,10 +91,8 @@
 			'2023',
 			'祝您',
 			'身体健康',
-			'家兴百和',
-			'万福骈臻',
-			'喜乐平安',
-			'诸事顺遂'
+			'财源广进',
+			'万事如意'
 		],
 
   		init: function () {
@@ -106,9 +104,7 @@
 			console.log("to = ",app.toName);
 
 			app.words[63] = app.toName;
-			app.words[66] = app.fromName + "祝您";
-
-
+			app.words[67] = app.fromName + "祝您";
 
 			app.charIndex = -1;
 
@@ -199,6 +195,8 @@
 		onBtnAgain:function () {
 			console.log('onBtnAgain');
 			app.charIndex = -1;
+			app.btnAgain.disabled = true;
+			app.btnAgain.innerHTML = "祝福语播放中";
 			// app.popwindow.classList.toggle('away');
 			// window.setTimeout(function(){
 			// 	app.popwindow.classList.toggle('out');
@@ -294,6 +292,7 @@
 
 			app.qrcode.makeCode(urlTxt);
 			app.qrOutput.style.opacity = 1;
+
 		},
 
 		onBtnCloseSharePage:function(){
@@ -374,7 +373,7 @@
 			{
 				//app.btnAgain.style.opacity = 1;
 				app.btnAgain.disabled = false;
-				app.btnAgain.innerHTML = "祝福语";
+				app.btnAgain.innerHTML = "再一次祝福语";
 			}
 		},
 
