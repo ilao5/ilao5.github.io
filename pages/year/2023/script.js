@@ -52,7 +52,7 @@ class StarField {
     this.cleanup();
   }
   render(context) {
-    //this.drawBackground(context);
+    
     this.drawMilkyWay(context);
     this.drawCityLights(context);
     this.stars.forEach(star => star.render(context));
@@ -97,11 +97,11 @@ class StarField {
   }
 
   initialize(width, height) {
-    // first pass everywhere
+    
     this.createStarStripe(0, width);
-    // then reduce the width
+    
     this.createStarStripe(width / 4, width * 3 / 4);
-    // and reduce it more
+    
     this.createStarStripe(width / 2 - 150, width / 2 + 150);
   }
 
@@ -125,7 +125,7 @@ class Road {
     this.canvas = canvas;
   }
   render(context) {
-    // black rectangular shape
+ 
     context.fillStyle = "black";
     context.fillRect(
     0,
@@ -133,7 +133,7 @@ class Road {
     this.canvas.width,
     this.canvas.height);
 
-    // yellow offset lines
+    
     context.strokeStyle = "yellow";
     context.lineDashOffset = this.offset;
     context.beginPath();
@@ -211,19 +211,7 @@ class Hills {
     this.pikes.forEach(pike => {
       context.lineTo(pike.x, baseY - pike.y);
     });
-    /** buggy when odd pikes number 
-        
-    for(let i = 0; i<this.pikes.length-1;i+=2) {
-        const pike = this.pikes[i];
-        const pikeTo = this.pikes[i+1];
-        
-        context.quadraticCurveTo(
-            pike.x, 
-            baseY - pike.y,
-            pikeTo.x, 
-            baseY - pikeTo.y,
-        );
-    **/
+    
     context.lineTo(this.canvas.width + HILL_MARGIN, baseY);
     context.lineTo(-HILL_MARGIN, baseY);
     context.closePath();
@@ -254,12 +242,12 @@ class Scene {
     new Hills(canvas, COLORS.EVEN_LESS_BLACK, 6),
     new Hills(canvas, COLORS.LESS_BLACK, 2),
     new Road(canvas)
-    //new Car(canvas)
+   
   ];
 
   }
   resize() {
-    // reset positions.
+   
     this.items[0] = new StarField(canvas);
   }
   render() {

@@ -422,7 +422,7 @@ textarea {
   /* border: 1px solid black; */
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 25px;
   box-shadow: 0 0 5px rgba(0,0,0, 0.2);
 
@@ -497,8 +497,8 @@ textarea {
 #output img{
     width:250px;
     height:250px;
-    padding: 20px 0 0 30px;
-    /* display: inline-block !important; */
-    display: inline-block;
+    margin: 15px;
+    display: inline-block !important;
+    /* display: inline-block; */
     border-radius: 10px;
 }

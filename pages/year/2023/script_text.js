@@ -97,7 +97,6 @@
 
   		init: function () {
 
-			//recalc();
 			app.fromName = new URL(window.location.href).searchParams.get('from');
 			app.toName = new URL(window.location.href).searchParams.get('to');
 			console.log("from = ",app.fromName);
@@ -110,8 +109,6 @@
 
 			app.zIndexTop = 999;
 			app.zIndexBottom = 0;
-			
-			// app.qrcodeImg = null;
 			
 			app.pageStart = document.getElementById('div-start');
 			app.pageStart.style.zIndex = app.zIndexTop;
@@ -156,24 +153,8 @@
 			app.inputFrom = document.getElementById('input-from');
 			app.inputTo = document.getElementById('input-to');
 
-			//app.inputFrom.addEventListener('keyup',app.onInputKeyup);
-
 			app.popwindow = document.getElementById('popupwindow');
-
-			// app.qrcode = new QRCode(app.qrOutput,{
-			// 	colorDark:"#000000",
-			// 	colorLight:"#ffffff",
-			// 	correctLevel:QRCode.CorrectLevel.H
-			// });
-
-			// btnStart.onclick =function(){
-			// 	console.log('showMainScene');
-			// }
-			//btnStart.onclick = showMainScene;
-			// app.container = document.createElement('div');
-			// app.container.className = 'animation-container';
-			// document.body.appendChild(app.container);
-			// window.setInterval(app.add, 2000);
+			
 		},
 
 		onBtnStart:function () {
@@ -278,10 +259,6 @@
 				app.qrcode.clear();
 			}
 
-			
-
-			
-
 
 			let urlTxt = "https://www.ilao5.cn/pages/year/2023/index.html?from="+txtFrom+"&to="+txtTo;
 			// let qrcode = new QRCode("output",{
@@ -321,24 +298,6 @@
 			
 				
 		},
-
-		// onInputKeyup:function(e)
-		// {
-		// 	console.log("onInputKeyup");
-		// 	var value = e.target.value;
-		// 	console.log("value = ",value);
-
-		// 	app.changeInputLabelStyle(e.target,value);
-		// },
-
-		// changeInputLabelStyle:function(ele,val){
-		// 	var label = ele.previousElementSibling;
-		// 	//console.log("label = ",label);
-			
-			
-		// },
-		
-
 
 		add: function () {
 			var element = document.createElement('span');
