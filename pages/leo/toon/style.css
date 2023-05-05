@@ -1,0 +1,36 @@
+html {
+	overflow: hidden;
+	height: 100vh;
+	max-height: -webkit-fill-available;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+.leo-box {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.leo {
+	float: left;
+	margin: 2px;
+	width: 120px;
+	height: 120px;
+	background: 50% 50% no-repeat;
+	background-size: 120px;
+	border-radius: 3px;
+	transition: background-image 2s ease,background-size 2s ease;
+}
+
+.leo:hover {
+	background-size: 124px;
+}
